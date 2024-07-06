@@ -60,12 +60,13 @@ END STANDOUT FEATURE
 <!-- PRICING -->
 PRICING
 <br/>
-<?php 
-echo get_field('pricing_title')['small_text'];
-echo get_field('pricing_title')['title'];
-echo get_field('pricing_title')['description'];
-?>
-
+<section>
+<div class="title-section">
+    <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
+    <h2><?php echo get_field('pricing_title')['title']; ?></h2>
+    <p><?php echo get_field('pricing_title')['description']; ?></p>
+</div>
+</section>
 <br/>
 END PRICING
 <br/><br/>
@@ -73,11 +74,13 @@ END PRICING
 <!-- TESTIMONIALS -->
 TESTIMONIALS
 <br/>
-<?php 
-echo get_field('testimonials_title')['small_text'];
-echo get_field('testimonials_title')['title'];
-echo get_field('testimonials_title')['description'];
-?>
+<section>
+<div class="title-section">
+    <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
+    <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
+    <p><?php echo get_field('testimonials_title')['description']; ?></p>
+</div>
+</section>
 <br/>
 END TESTIMONIALS
 <br/><br/>
@@ -85,11 +88,13 @@ END TESTIMONIALS
 <!-- FAQS -->
 FAQS
 <br/>
-<?php 
-echo get_field('faqs_title')['small_text'];
-echo get_field('faqs_title')['title'];
-echo get_field('faqs_title')['description'];
-?>
+<section>
+<div class="title-section">
+    <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
+    <h2><?php echo get_field('faqs_title')['title']; ?></h2>
+    <p><?php echo get_field('faqs_title')['description']; ?></p>
+</div>
+</section>
 <br/>
 END FAQS
 <br/>

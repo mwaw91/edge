@@ -95,20 +95,18 @@ add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_co
 
 
 // CUSTOM FUNCTIONS
-if (function_exists('acf_register_block_type')){
-	add_action('acf/init', 'register_acf_block_types');
-}
+// if (function_exists('acf_register_block_type')){
+// 	add_action('acf/init', 'register_acf_block_types');
+// }
 
-function register_acf_block_types(){
-	acf_register_block_type(
-	array(
-		'name' => 'hero',
-		'title' => __('Hero'),
-		'description' => __('The top section of the homepage'),
-		'render_template' => 'template-parts/blocks/hero/hero.php',
-		'icon' => 'editor-paste-text',
-		'keywords' => array('hero', 'top section')
-		)
-	);
-}
+// function register_acf_block_types(){
+// 	acf_register_block_type(array(
+// 			'name' => 'hero',
+// 			'title' => __('Hero'),
+// 			'description' => __('The top section of the homepage'),
+// 			'render_template' => 'template-parts/blocks/hero/hero.php',
+// 			'icon' => 'editor-paste-text',
+// 			'keywords' => array('hero', 'top section')
+// 		));
+// }
 
