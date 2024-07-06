@@ -73,6 +73,15 @@ $footer_column = $edge_settings['edge_footer_column_section'];
 			</div>
 			<!-- LOGO -->
 
+			<?php the_custom_logo(); ?>
+
+			<ul class="social-media-menu">
+				<li><a class="sm-icon sm-" href="" target="_blank">1</a></li>
+				<li><a class="sm-icon sm-" href="" target="_blank">2</a></li>
+				<li><a class="sm-icon sm-" href="" target="_blank">3</a></li>
+				<li><a class="sm-icon sm-" href="" target="_blank">4</a></li>
+				<li><a class="sm-icon sm-" href="" target="_blank">5</a></li>
+			</ul>
 			<!-- 
 			X
 			INSTA
