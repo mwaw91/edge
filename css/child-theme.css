@@ -15074,6 +15074,10 @@ p {
   color: #24f4ab;
 }
 
+body {
+  color: white;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

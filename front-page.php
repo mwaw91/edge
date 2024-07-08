@@ -1,3 +1,4 @@
+<!-- DISSAPPEARING MENU -->
 <div class='main-tool-bar'>Header</div>
 
 <?php 
@@ -11,6 +12,7 @@ get_header();
 <!-- HERO -->
 HERO
 <br/>
+<p>
 <?php 
 $title = get_field('title');
 $subtitle = get_field('subtitle');
@@ -23,6 +25,7 @@ echo $button['url'];
 echo $button['title'];
 echo $hero_img['url'];
 ?>
+</p>
 <br/>
 END HERO
 <br/><br/>
@@ -47,6 +50,7 @@ STANDOUT FEATURE
     <p><?php echo get_field('standout_features_title')['description']; ?></p>
 </div>
 
+<p>
 <?php
 echo get_field('feature_1')['title'];
 echo get_field('feature_1')['subtitle'];
@@ -61,10 +65,13 @@ echo get_field('feature_3')['title'];
 echo get_field('feature_3')['subtitle'];
 echo get_field('feature_3')['background_image'];
 ?>
+</p>
 </section>
 <br/>
 END STANDOUT FEATURE
 <br/><br/>
+
+<div class="bg-gradient"></div>
 
 <!-- PRICING -->
 PRICING
@@ -97,6 +104,7 @@ END TESTIMONIALS
 <!-- FAQS -->
 FAQS
 <br/>
+
 <section>
 <div class="title-section">
     <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>

@@ -17,6 +17,7 @@
 
 		<?php the_custom_logo(); ?>
 
+		<!-- TODO - SVG -->
 		<ul class="social-media-menu">
 				<li><a class="sm-icon sm-x" href="<?php echo get_field('x');?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/src/img/sm-x.png" alt="social media icon x"></a></li>
 				<li><a class="sm-icon sm-ig" href="<?php echo get_field('instagram');?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/src/img/sm-ig.png" alt="social media icon instagram"></a></li>

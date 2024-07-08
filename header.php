@@ -66,8 +66,12 @@ $edge_settings = edge_get_theme_options(); ?>
 				 do_action('edge_site_branding'); ?>
 			</div> <!-- end .container -->
 		</div> <!-- end .top-header -->
+
+
 		<!-- Main Header============================================= -->
-				<div id="sticky_header">
+				<!-- <div id="sticky_header"> -->
+				<div id="">
+					
 					<div class="container clearfix">
 						<!-- Main Nav ============================================= -->
 						<?php
