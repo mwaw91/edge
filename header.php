@@ -96,7 +96,7 @@ $edge_settings = edge_get_theme_options(); ?>
 							<?php wp_nav_menu($args);//extract the content from apperance-> nav menu ?>
 						</nav> <!-- end #site-navigation -->
 						<?php } // extract the content from page menu only ?>
-						<nav id="site-navigation" class="main-navigation clearfix" role="navigation" aria-label="<?php esc_attr_e('Main Menu','edge');?>">
+						<!-- <nav id="site-navigation" class="main-navigation clearfix" role="navigation" aria-label="<?php //esc_attr_e('Main Menu','edge');?>"> -->
 							<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
 								<span class="line-one"></span>
 					  			<span class="line-two"></span>
@@ -104,9 +104,10 @@ $edge_settings = edge_get_theme_options(); ?>
 						  	</button> -->
 					  	<!-- end .menu-toggle -->
 							<?php	// wp_page_menu(array('menu_class' => 'menu', 'items_wrap'     => '<ul id="primary-menu" class="menu nav-menu">%3$s</ul>')); ?>
-						</nav> <!-- end #site-navigation -->
+						<!-- </nav> -->
+						 <!-- end #site-navigation -->
 						
-						<div>login logout</div>
+						<div class="login">login logout</div>
 			</div> <!-- end .container -->
 			</div> <!-- end #sticky_header -->
 			<?php 

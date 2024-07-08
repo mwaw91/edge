@@ -83,13 +83,20 @@ body {
   }
 }
 .header-content {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: space-between;
+
+  .login {
+    text-align: right;
+  }
 }
 #site-navigation {
-  width: min-content;
+  // width: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   #primary-menu {
     width: min-content;
@@ -102,9 +109,11 @@ body {
     }
   }
 }
-// .scrollable-area {
-//   height: 200vh;
-// }
+.custom-logo-link {
+  img {
+    max-width: 100px;
+  }
+}
 
 // TITLE SECTIONS
 .title-section {
@@ -127,16 +136,20 @@ body {
 // FOOTER
 footer {
   .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
     align-items: center;
 
+    .custom-logo-link {
+      text-align: center;
+    }
     .social-media-menu {
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: row;
+      justify-content: end;
       column-gap: 20px;
       row-gap: 20px;
       li {
