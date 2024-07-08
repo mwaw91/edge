@@ -6750,23 +6750,7 @@
 	  // GSAP
 	  gsap.registerPlugin(ScrollTrigger);
 
-	  // const showAnim = gsap.from('.main-tool-bar', { 
-	  //   yPercent: -100,
-	  //   paused: true,
-	  //   duration: 0.2
-	  // }).progress(1);
-
-	  // ScrollTrigger.create({
-	  //   start: "top top",
-	  //   end: "top 1px",
-	  // //    onEnter: showCube,
-	  // //     onEnterBack: showCube
-	  // //   end: "max",
-	  //   onUpdate: (self) => {
-	  //     self.direction === -1 ? showAnim.play() : showAnim.reverse()
-	  //   }
-	  // });
-
+	  // DISSAPPEARING NAV
 	  ScrollTrigger.create({
 	    start: 'top -80',
 	    end: 99999,
@@ -6775,20 +6759,6 @@
 	      targets: '.main-tool-bar'
 	    }
 	  });
-
-	  // gsap.to(".site-header", {
-	  // gsap.to(".main-tool-bar", {
-	  //   //   x: 700,
-	  //   duration: 1,
-	  //   scrollTrigger: {
-	  //     trigger: ".site-header",
-	  //     // trigger: ".main-tool-bar",
-	  //     start: "top -10px",
-	  //     end: "top 10px",
-	  //     markers: true,
-	  //     toggleClass: "main-tool-bar--scrolled",
-	  //   },
-	  // });
 	});
 
 	exports.Alert = alert;

@@ -1,4 +1,19 @@
-// TEST
+// BODY GRADIENT
+body {
+  background: $black;
+}
+
+// DROP SHADOW
+.green-shadow {
+  box-shadow: 0 0 30px $green;
+}
+
+// RADIUS
+.radius {
+  border-radius: 27px;
+}
+
+// AOS
 .fade-up {
   background-color: red;
   width: 500px;
@@ -48,6 +63,15 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  h6 {
+    color: $green;
+  }
+  h2 {
+    color: white;
+  }
+  p {
+    color: $grey;
+  }
 }
 
 // FOOTER
