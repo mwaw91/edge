@@ -18,13 +18,13 @@ $title = get_field('title');
 $subtitle = get_field('subtitle');
 $button = get_field('button');
 $hero_img = get_field('image');
-
-echo $title;
-echo $subtitle;
-echo $button['url'];
-echo $button['title'];
-echo $hero_img['url'];
 ?>
+<h1><?php echo $title;?></h1>
+<p><?php echo $subtitle;?></p>
+<button><?php echo $button['url']; echo $button['title'];?></button>
+
+<img src="<?php echo $hero_img['url'];?>">
+
 </p>
 <br/>
 END HERO
@@ -58,22 +58,24 @@ STANDOUT FEATURE
     <p><?php echo get_field('standout_features_title')['description']; ?></p>
 </div>
 
-<p>
-<?php
-echo get_field('feature_1')['title'];
-echo get_field('feature_1')['subtitle'];
-echo get_field('feature_1')['button'];
-echo get_field('feature_1')['background_image'];
 
-echo get_field('feature_2')['title'];
-echo get_field('feature_2')['subtitle'];
-echo get_field('feature_2')['background_image'];
+    <div class="" style="background-image: url(<?php echo get_field('feature_1')['background_image'];?>)">
+        <h3><?php echo get_field('feature_1')['title'];?></h3>
+        <p><?php echo get_field('feature_1')['subtitle']; ?></p>
+        <button><?php echo get_field('feature_1')['button'];?></button>
 
-echo get_field('feature_3')['title'];
-echo get_field('feature_3')['subtitle'];
-echo get_field('feature_3')['background_image'];
-?>
-</p>
+    </div>
+    <div class="" style="background-image: url(<?php echo get_field('feature_2')['background_image']; ?>)">
+        <h3><?php echo get_field('feature_2')['title']; ?></h3>
+        <p><?php echo get_field('feature_2')['subtitle']; ?></p>
+        
+    </div>
+    <div class="" style="background-image: url(<?php echo get_field('feature_3')['background_image']; ?>)">
+        <h3><?php echo get_field('feature_3')['title'];?></h3>
+<p><?php echo get_field('feature_3')['subtitle']; ?></p>
+
+    </div>
+
 </section>
 <br/>
 END STANDOUT FEATURE
