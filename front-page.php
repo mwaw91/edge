@@ -41,7 +41,7 @@ FEATURES
 
 <br/><br/>
 
-<section>
+<section id="features">
     <div  data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('standout_features_title')['small_text']; ?></h6>
     <h2><?php echo get_field('standout_features_title')['title']; ?></h2>
@@ -86,7 +86,7 @@ END FEATURES
 <!-- PRICING -->
 PRICING
 <br/>
-<section>
+<section id="pricing">
 
     <!-- toggle -->
 <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
@@ -142,7 +142,7 @@ END CTA
 FAQS
 <br/>
 
-<section>
+<section id="faq">
 <div data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
     <h2><?php echo get_field('faqs_title')['title']; ?></h2>
