@@ -35,7 +35,15 @@ END HERO
 
 <!-- FEATURES -->
 FEATURES
+
 <br/><br/>
+
+<!-- toggle -->
+<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+<label for="toggle-on" class="btn">Yes</label>
+<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+<label for="toggle-off" class="btn">No</label>
+
 <br/>
 END FEATURES
 <br/><br/>
