@@ -9,7 +9,7 @@ get_header();
 <div class="fade-right" data-aos="fade-right"></div> -->
 
 <!-- HERO -->
-HERO
+
 <br/>
 <section class="hero" data-aos="fade-up">
 <?php 
@@ -34,16 +34,116 @@ $hero_img = get_field('image');
 </section>
 
 <br/>
-END HERO
+
+<br/><br/>
+<!-- END HERO -->
+
+
+<!-- TESTED AND USED -->
 <br/><br/>
 
-<!-- TODO - STAT CONTAINER -->
+<br/><br/>
+<!-- END TESTED AND USED -->
+
+
+<!-- STAT CONTAINER -->
+<br/><br/>
+
+<br/><br/>
+<!-- END STAT CONTAINER -->
+
+
+<!-- IMPROVE YOUR GAMEPLAY -->
+<br/><br/>
+
+<br/><br/>
+<!-- END IMPROVE YOUR GAMEPLAY -->
+
+<!-- ALTERNATING VIDEO COLUMNS -->
+<!-- END ALTERNATING VIDEO COLUMNS -->
 
 </div>
 <div class="bg-gradient bg-gradient--top-left"></div>
 <div class="container">
+
+
+
+<!-- PRICING -->
+<br/>
+<section id="pricing">
+
+    <!-- toggle -->
+<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+<label for="toggle-on" class="btn">Yes</label>
+<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+<label for="toggle-off" class="btn">No</label>
+
+
+<div data-aos="fade-up" class="title-section">
+    <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
+    <h2><?php echo get_field('pricing_title')['title']; ?></h2>
+    <p><?php echo get_field('pricing_title')['description']; ?></p>
+</div>
+</section>
+<br/>
+<br/><br/>
+<!-- END PRICING -->
+
+<!-- TESTIMONIALS -->
+
+<br/>
+<section>
+<div data-aos="fade-up" class="title-section">
+    <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
+    <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
+    <p><?php echo get_field('testimonials_title')['description']; ?></p>
+</div>
+</section>
+<br/>
+
+<br/><br/>
+<!-- END TESTIMONIALS -->
+
+
+<!-- CTA -->
+
+<br/>
+<section>
+
+
+</section>
+<br/>
+
+<!-- END CTA -->
+<br/><br/>
+</div>
+
+<div class="bg-gradient bg-gradient--bottom-right"></div>
+<div class="container">
+
+
+
+
+<!-- FAQS -->
+
+<br/>
+
+<section id="faq">
+<div data-aos="fade-up" class="title-section">
+    <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
+    <h2><?php echo get_field('faqs_title')['title']; ?></h2>
+    <p><?php echo get_field('faqs_title')['description']; ?></p>
+</div>
+</section>
+<br/>
+
+<br/>
+<!-- END FAQS -->
+
+
+<!-- deprecated beneath -->
 <!-- CORE FEATURES -->
-FEATURES
+
 
 <br/><br/>
 
@@ -82,82 +182,17 @@ FEATURES
 </section>
 
 <br/>
-END FEATURES
-<br/><br/>
-
-<!-- TODO - IMPROVE YOUR GAMEPLAY -->
-
-<!-- TODO - ALTERNATING VIDEO COLUMNS -->
-
-<!-- PRICING -->
-PRICING
-<br/>
-<section id="pricing">
-
-    <!-- toggle -->
-<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-<label for="toggle-on" class="btn">Yes</label>
-<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-<label for="toggle-off" class="btn">No</label>
-
-
-<div data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('pricing_title')['title']; ?></h2>
-    <p><?php echo get_field('pricing_title')['description']; ?></p>
-</div>
-</section>
-<br/>
-END PRICING
-<br/><br/>
-
-<!-- TESTIMONIALS -->
-TESTIMONIALS
-<br/>
-<section>
-<div data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
-    <p><?php echo get_field('testimonials_title')['description']; ?></p>
-</div>
-</section>
-<br/>
-END TESTIMONIALS
-<br/><br/>
-
-<!-- CTA -->
-CTA
-<br/>
-<section>
-
-
-</section>
-<br/>
-END CTA
 
 <br/><br/>
-</div>
-
-<div class="bg-gradient bg-gradient--bottom-right"></div>
-<div class="container">
 
 
 
 
-<!-- FAQS -->
-FAQS
-<br/>
 
-<section id="faq">
-<div data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('faqs_title')['title']; ?></h2>
-    <p><?php echo get_field('faqs_title')['description']; ?></p>
-</div>
-</section>
-<br/>
-END FAQS
-<br/>
+
+
+
+
 
 
 <?php 
