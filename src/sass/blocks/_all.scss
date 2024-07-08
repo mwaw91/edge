@@ -5,10 +5,11 @@ html {
 
 // BODY GRADIENT
 .bg-gradient {
+  filter: blur(250px);
   z-index: -1;
   position: relative;
-  // box-shadow: 0 0 190px 91px #24f4ab;
-  box-shadow: 0 0 550px 260px #24f4ab;
+  // box-shadow: 0 0 550px 260px #24f4ab;
+  box-shadow: 0 0 350px 260px #24f4ab;
   opacity: 0.25;
   width: 0;
   height: 100px;
