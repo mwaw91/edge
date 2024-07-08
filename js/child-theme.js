@@ -6775,6 +6775,20 @@
 	      targets: '.main-tool-bar'
 	    }
 	  });
+
+	  // gsap.to(".site-header", {
+	  // gsap.to(".main-tool-bar", {
+	  //   //   x: 700,
+	  //   duration: 1,
+	  //   scrollTrigger: {
+	  //     trigger: ".site-header",
+	  //     // trigger: ".main-tool-bar",
+	  //     start: "top -10px",
+	  //     end: "top 10px",
+	  //     markers: true,
+	  //     toggleClass: "main-tool-bar--scrolled",
+	  //   },
+	  // });
 	});
 
 	exports.Alert = alert;

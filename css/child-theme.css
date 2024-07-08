@@ -15000,7 +15000,8 @@ figure.woocommerce-product-gallery__wrapper {
   transition: ease 0.4s;
 }
 .main-tool-bar--scrolled {
-  height: 40px;
+  height: 0px;
+  background: green;
 }
 
 .title-section {
