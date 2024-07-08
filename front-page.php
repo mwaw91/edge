@@ -4,9 +4,9 @@
 get_header();
 ?>
 
-<div class="green-shadow radius fade-up" data-aos="fade-up"></div>
+<!-- <div class="green-shadow radius fade-up" data-aos="fade-up"></div>
 <div class="fade-left" data-aos="fade-left"></div>
-<div class="fade-right" data-aos="fade-right"></div>
+<div class="fade-right" data-aos="fade-right"></div> -->
 
 <!-- HERO -->
 HERO
@@ -27,6 +27,7 @@ echo $hero_img['url'];
 END HERO
 <br/><br/>
 
+<div class="bg-gradient"></div>
 
 
 <!-- FEATURES -->

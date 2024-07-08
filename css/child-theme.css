@@ -14964,6 +14964,13 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+.bg-gradient {
+  box-shadow: 0 0 190px 91px #24f4ab;
+  width: 0;
+  height: 100px;
+  display: block;
+}
+
 body {
   background: #1e1e1e;
 }
