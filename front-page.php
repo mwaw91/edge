@@ -11,20 +11,27 @@ get_header();
 <!-- HERO -->
 HERO
 <br/>
-
+<section class="hero" data-aos="fade-up">
 <?php 
 $title = get_field('title');
 $subtitle = get_field('subtitle');
 $button = get_field('button');
 $hero_img = get_field('image');
 ?>
-<div data-aos="fade-up">
+
 <h1><?php echo $title;?></h1>
 <p><?php echo $subtitle;?></p>
-<button><?php echo $button['url']; echo $button['title'];?></button>
+<button class="btn"><?php echo $button['title'];?></button>
+<button class="btn btn--solid"><?php echo $button['title'];?></button>
+<button class="btn btn--solid-white"><?php echo $button['title'];?></button>
+<button class="btn btn--solid-grey"><?php echo $button['title'];?></button>
+<button class="btn btn--outline"><?php echo $button['title'];?></button>
+
+
+<!-- echo $button['url']; -->
 
 <img src="<?php echo $hero_img['url'];?>">
-</div>
+</section>
 
 <br/>
 END HERO

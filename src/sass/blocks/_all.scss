@@ -123,6 +123,11 @@ body {
     column-gap: 10px;
     li {
       list-style: none;
+      a {
+        font-family: "Blinker", sans-serif;
+        color: white;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -198,12 +203,48 @@ footer {
 // https://www.sliderrevolution.com/resources/css-toggle-switch/#:~:text=and%20the%20Empire.-,Simple%20Toggle,-Author%3A%20magnificode
 
 .btn {
-  border: 3px solid #1a1a1a;
+  border-radius: 6px;
+  padding: 8px 19px;
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
   display: inline-block;
-  padding: 10px;
   position: relative;
   text-align: center;
-  transition: background 600ms ease, color 600ms ease;
+  // border: 3px solid #1a1a1a;
+  // transition: background 600ms ease, color 600ms ease;
+  &--solid {
+    background-color: $green;
+    color: $black-text;
+    &:hover {
+      // background-color: $green;
+      // border: 1px solid white;
+    }
+  }
+  &--solid-white {
+    background-color: white;
+    color: $black-text;
+    &:hover {
+      // background-color: $green;
+      // border: 1px solid white;
+    }
+  }
+  &--solid-grey {
+    background-color: $black-3;
+    color: white;
+    &:hover {
+      // background-color: $green;
+      // border: 1px solid white;
+    }
+  }
+  &--outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid $green;
+    &:hover {
+      // background-color: $green;
+      border: 1px solid white;
+    }
+  }
 }
 
 input[type="radio"].toggle {
@@ -252,4 +293,12 @@ input[type="radio"].toggle {
 .standout-feature-grid {
   display: grid;
   grid-template-columns: auto auto;
+}
+
+// HERO
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

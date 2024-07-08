@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -15082,6 +15083,11 @@ body {
 #site-navigation #primary-menu li {
   list-style: none;
 }
+#site-navigation #primary-menu li a {
+  font-family: "Blinker", sans-serif;
+  color: white;
+  text-decoration: none;
+}
 
 .custom-logo-link img {
   max-width: 100px;
@@ -15135,12 +15141,33 @@ footer .container .social-media-menu li a img {
   height: auto;
 }
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
-  border: 3px solid #1a1a1a;
+  border-radius: 6px;
+  padding: 8px 19px;
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
   display: inline-block;
-  padding: 10px;
   position: relative;
   text-align: center;
-  transition: background 600ms ease, color 600ms ease;
+}
+.btn--solid {
+  background-color: #24f4ab;
+  color: #0b0f11;
+}
+.btn--solid-white {
+  background-color: white;
+  color: #0b0f11;
+}
+.btn--solid-grey {
+  background-color: #282f39;
+  color: white;
+}
+.btn--outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #24f4ab;
+}
+.btn--outline:hover {
+  border: 1px solid white;
 }
 
 input[type=radio].toggle {
@@ -15190,7 +15217,47 @@ input[type=radio].toggle:checked + label:after {
   grid-template-columns: auto auto;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "signsbold";
+  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.blinker-regular {
+  font-family: "Blinker", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.blinker-semibold {
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "signsbold", sans-serif;
+}
+
 p {
+  font-family: "Blinker", sans-serif;
   color: #bababa;
 }
 
