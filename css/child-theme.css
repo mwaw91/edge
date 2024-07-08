@@ -15023,6 +15023,30 @@ body {
   background: green;
 }
 
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#site-navigation {
+  width: -moz-min-content;
+  width: min-content;
+}
+#site-navigation #primary-menu {
+  width: -moz-min-content;
+  width: min-content;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+#site-navigation #primary-menu li {
+  list-style: none;
+}
+
 .title-section {
   display: flex;
   flex-direction: column;
@@ -15076,6 +15100,16 @@ p {
 
 body {
   color: white;
+}
+
+::-moz-selection {
+  color: #24f4ab;
+  background-color: #282f39;
+}
+
+::selection {
+  color: #24f4ab;
+  background-color: #282f39;
 }
 
 .has-blue-color,

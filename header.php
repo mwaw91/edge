@@ -52,28 +52,33 @@ $edge_settings = edge_get_theme_options(); ?>
 		} else { ?>
 		<a href="<?php echo esc_url(home_url('/'));?>"><img src="<?php header_image(); ?>" class="header-image" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display'));?>" /> </a>
 		<?php } ?>
-		<div class="top-header">
-			<div class="container clearfix">
+		<!-- <div class="top-header"> -->
+			<!-- <div class="container clearfix"> -->
 				<?php
-				if( is_active_sidebar( 'edge_header_info' )) {
-					dynamic_sidebar( 'edge_header_info' );
-				}
-				if($edge_settings['edge_top_social_icons'] == 0):
-					echo '<div class="header-social-block">';
-						do_action('social_links');
-					echo '</div>'.'<!-- end .header-social-block -->';
-				endif;
-				 do_action('edge_site_branding'); ?>
-			</div> <!-- end .container -->
-		</div> <!-- end .top-header -->
+				// if( is_active_sidebar( 'edge_header_info' )) {
+				// 	dynamic_sidebar( 'edge_header_info' );
+				// }
+				// if($edge_settings['edge_top_social_icons'] == 0):
+				// 	echo '<div class="header-social-block">';
+				// 		do_action('social_links');
+				// 	echo '</div>'.'<!-- end .header-social-block -->';
+				// endif;
+				// do_action('edge_site_branding'); ?>
+			<!-- </div> -->
+			 <!-- end .container -->
+		<!-- </div>  -->
+		<!-- end .top-header -->
 
 
 		<!-- Main Header============================================= -->
 				<!-- <div id="sticky_header"> -->
 				<div id="">
-					
-					<div class="container clearfix">
-						<!-- Main Nav ============================================= -->
+
+					<div class="header-content container clearfix">
+					<!-- LOGO  -->
+						<?php do_action('edge_site_branding'); ?>
+
+					<!-- Main Nav ============================================= -->
 						<?php
 							if (has_nav_menu('primary')) { ?>
 						<?php $args = array(
@@ -82,49 +87,51 @@ $edge_settings = edge_get_theme_options(); ?>
 							'items_wrap'     => '<ul id="primary-menu" class="menu nav-menu">%3$s</ul>',
 							); ?>
 						<nav id="site-navigation" class="main-navigation clearfix" role="navigation" aria-label="<?php esc_attr_e('Main Menu','edge');?>">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
+							<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
 								<span class="line-one"></span>
 					  			<span class="line-two"></span>
 					  			<span class="line-three"></span>
-						  	</button>
+						  	</button> -->
 					  		<!-- end .menu-toggle -->
 							<?php wp_nav_menu($args);//extract the content from apperance-> nav menu ?>
 						</nav> <!-- end #site-navigation -->
-						<?php } else {// extract the content from page menu only ?>
+						<?php } // extract the content from page menu only ?>
 						<nav id="site-navigation" class="main-navigation clearfix" role="navigation" aria-label="<?php esc_attr_e('Main Menu','edge');?>">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
+							<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
 								<span class="line-one"></span>
 					  			<span class="line-two"></span>
 					  			<span class="line-three"></span>
-						  	</button>
+						  	</button> -->
 					  	<!-- end .menu-toggle -->
-							<?php	wp_page_menu(array('menu_class' => 'menu', 'items_wrap'     => '<ul id="primary-menu" class="menu nav-menu">%3$s</ul>')); ?>
+							<?php	// wp_page_menu(array('menu_class' => 'menu', 'items_wrap'     => '<ul id="primary-menu" class="menu nav-menu">%3$s</ul>')); ?>
 						</nav> <!-- end #site-navigation -->
-						<?php }
-			echo '</div> <!-- end .container -->
-			</div> <!-- end #sticky_header -->';
-		$enable_slider = $edge_settings['edge_enable_slider'];
-		edge_slider_value();
-		if ($enable_slider=='frontpage'|| $enable_slider=='enitresite'){
-			if(is_front_page() && ($enable_slider=='frontpage') ) {
-				if($edge_settings['edge_slider_type'] == 'default_slider') {
-						edge_page_sliders();
-				}else{
-					if(class_exists('Edge_Plus_Features')):
-						edge_image_sliders();
-					endif;
-				}
-			}
-			if($enable_slider=='enitresite'){
-				if($edge_settings['edge_slider_type'] == 'default_slider') {
-						edge_page_sliders();
-				}else{
-					if(class_exists('Edge_Plus_Features')):
-						edge_image_sliders();
-					endif;
-				}
-			}
-		} ?>
+						
+						<div>login logout</div>
+			</div> <!-- end .container -->
+			</div> <!-- end #sticky_header -->
+			<?php 
+		// $enable_slider = $edge_settings['edge_enable_slider'];
+		// edge_slider_value();
+		// if ($enable_slider=='frontpage'|| $enable_slider=='enitresite'){
+		// 	if(is_front_page() && ($enable_slider=='frontpage') ) {
+		// 		if($edge_settings['edge_slider_type'] == 'default_slider') {
+		// 				edge_page_sliders();
+		// 		}else{
+		// 			if(class_exists('Edge_Plus_Features')):
+		// 				edge_image_sliders();
+		// 			endif;
+		// 		}
+		// 	}
+		// 	if($enable_slider=='enitresite'){
+		// 		if($edge_settings['edge_slider_type'] == 'default_slider') {
+		// 				edge_page_sliders();
+		// 		}else{
+		// 			if(class_exists('Edge_Plus_Features')):
+		// 				edge_image_sliders();
+		// 			endif;
+		// 		}
+		// 	}
+		// } ?>
 </header> <!-- end #masthead -->
 <!-- Main Page Start ============================================= -->
 <div id="content">

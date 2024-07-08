@@ -15,3 +15,8 @@ p {
 body {
   color: white;
 }
+
+::selection {
+  color: $green;
+  background-color: $black-3;
+}
