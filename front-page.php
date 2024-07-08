@@ -31,29 +31,18 @@ $hero_img = get_field('image');
 END HERO
 <br/><br/>
 
-<div class="bg-gradient"></div>
+<!-- TODO - STAT CONTAINER -->
 
-
-<!-- FEATURES -->
+</div>
+<div class="bg-gradient bg-gradient--top-left"></div>
+<div class="container">
+<!-- CORE FEATURES -->
 FEATURES
 
 <br/><br/>
 
-<!-- toggle -->
-<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-<label for="toggle-on" class="btn">Yes</label>
-<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-<label for="toggle-off" class="btn">No</label>
-
-<br/>
-END FEATURES
-<br/><br/>
-
-<!-- STANDOUT FEATURE -->
-STANDOUT FEATURE
-<br/>
 <section>
-<div  data-aos="fade-up" class="title-section">
+    <div  data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('standout_features_title')['small_text']; ?></h6>
     <h2><?php echo get_field('standout_features_title')['title']; ?></h2>
     <p><?php echo get_field('standout_features_title')['description']; ?></p>
@@ -85,16 +74,27 @@ STANDOUT FEATURE
     </div>
 
 </section>
+
 <br/>
-END STANDOUT FEATURE
+END FEATURES
 <br/><br/>
 
-<div class="bg-gradient"></div>
+<!-- TODO - IMPROVE YOUR GAMEPLAY -->
+
+<!-- TODO - ALTERNATING VIDEO COLUMNS -->
 
 <!-- PRICING -->
 PRICING
 <br/>
 <section>
+
+    <!-- toggle -->
+<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+<label for="toggle-on" class="btn">Yes</label>
+<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+<label for="toggle-off" class="btn">No</label>
+
+
 <div data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
     <h2><?php echo get_field('pricing_title')['title']; ?></h2>
@@ -118,6 +118,25 @@ TESTIMONIALS
 <br/>
 END TESTIMONIALS
 <br/><br/>
+
+<!-- CTA -->
+CTA
+<br/>
+<section>
+
+
+</section>
+<br/>
+END CTA
+
+<br/><br/>
+</div>
+
+<div class="bg-gradient bg-gradient--bottom-right"></div>
+<div class="container">
+
+
+
 
 <!-- FAQS -->
 FAQS

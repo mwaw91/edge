@@ -14965,10 +14965,16 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 .bg-gradient {
-  box-shadow: 0 0 190px 91px #24f4ab;
+  z-index: -1;
+  position: relative;
+  box-shadow: 0 0 550px 260px #24f4ab;
+  opacity: 0.25;
   width: 0;
   height: 100px;
   display: block;
+}
+.bg-gradient--bottom-right {
+  left: 100%;
 }
 
 body {
@@ -14978,6 +14984,7 @@ body {
 .follow-gradient {
   height: 500px;
   overflow: hidden;
+  background-color: #111619;
 }
 .follow-gradient .blob {
   display: flex;
@@ -14986,14 +14993,13 @@ body {
   width: 650px;
   height: 650px;
   border-radius: 100%;
-  background-image: linear-gradient(#1100ff 10%, #ff00f2);
+  background: linear-gradient(#24f4ab 10%, transparent);
   filter: blur(250px);
   transition: all 450ms ease-out;
   position: fixed;
   pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
+  right: 0;
+  bottom: 0;
   z-index: -1;
 }
 
