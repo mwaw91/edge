@@ -141,6 +141,7 @@ body {
   text-align: center;
   h6 {
     color: $green;
+    filter: drop-shadow(0 0 10px $green);
   }
   h2 {
     color: white;
@@ -178,6 +179,11 @@ footer {
           img {
             width: 100%;
             height: auto;
+            &:hover {
+              // filter: drop-shadow(0 0 6px $green);
+              // filter: drop-shadow(0 0 12px $green);
+              // filter: drop-shadow(0 0 12px $black);
+            }
           }
         }
       }

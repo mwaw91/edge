@@ -15096,6 +15096,7 @@ body {
 }
 .title-section h6, .title-section .h6 {
   color: #24f4ab;
+  filter: drop-shadow(0 0 10px #24f4ab);
 }
 .title-section h2, .title-section .h2 {
   color: white;
@@ -15133,7 +15134,6 @@ footer .container .social-media-menu li a img {
   width: 100%;
   height: auto;
 }
-
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
   border: 3px solid #1a1a1a;
   display: inline-block;
