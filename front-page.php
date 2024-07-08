@@ -1,3 +1,6 @@
+<div class='main-tool-bar'>Header</div>
+<!-- <div class="scrollable-area"></div> -->
+
 <?php 
 get_header();
 ?>
