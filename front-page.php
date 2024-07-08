@@ -1,6 +1,6 @@
 <!-- DISSAPPEARING MENU -->
 <!-- <div class='main-tool-bar'></div> -->
-<?php 
+<?php
 get_header();
 ?>
 
@@ -9,192 +9,104 @@ get_header();
 <div class="fade-right" data-aos="fade-right"></div> -->
 
 <!-- HERO -->
+<div class="container">
+    <section class="hero" data-aos="fade-up">
+        <?php
+        $title = get_field('title');
+        $subtitle = get_field('subtitle');
+        $button = get_field('button');
+        $hero_img = get_field('image');
+        ?>
 
-<br/>
-<section class="hero" data-aos="fade-up">
-<?php 
-$title = get_field('title');
-$subtitle = get_field('subtitle');
-$button = get_field('button');
-$hero_img = get_field('image');
-?>
-
-<h1><?php echo $title;?></h1>
-<p><?php echo $subtitle;?></p>
-<button class="btn"><?php echo $button['title'];?></button>
-<button class="btn btn--solid"><?php echo $button['title'];?></button>
-<button class="btn btn--solid-white"><?php echo $button['title'];?></button>
-<button class="btn btn--solid-grey"><?php echo $button['title'];?></button>
-<button class="btn btn--outline"><?php echo $button['title'];?></button>
-
-
-<!-- echo $button['url']; -->
-
-<img src="<?php echo $hero_img['url'];?>">
-</section>
-
-<br/>
-
-<br/><br/>
-<!-- END HERO -->
+        <h1><?php echo $title; ?></h1>
+        <p><?php echo $subtitle; ?></p>
+        <button class="btn"><?php echo $button['title']; ?></button>
+        <button class="btn btn--solid"><?php echo $button['title']; ?></button>
+        <button class="btn btn--solid-white"><?php echo $button['title']; ?></button>
+        <button class="btn btn--solid-grey"><?php echo $button['title']; ?></button>
+        <button class="btn btn--outline"><?php echo $button['title']; ?></button>
 
 
-<!-- TESTED AND USED -->
-<br/><br/>
+        <!-- echo $button['url']; -->
 
-<br/><br/>
-<!-- END TESTED AND USED -->
-
-
-<!-- STAT CONTAINER -->
-<br/><br/>
-
-<br/><br/>
-<!-- END STAT CONTAINER -->
+        <img src="<?php echo $hero_img['url']; ?>">
+    </section>
+    <!-- END HERO -->
 
 
-<!-- IMPROVE YOUR GAMEPLAY -->
-<br/><br/>
+    <!-- TESTED AND USED -->
+    <!-- END TESTED AND USED -->
 
-<br/><br/>
-<!-- END IMPROVE YOUR GAMEPLAY -->
 
-<!-- ALTERNATING VIDEO COLUMNS -->
-<!-- END ALTERNATING VIDEO COLUMNS -->
+    <!-- STAT CONTAINER -->
+    <!-- END STAT CONTAINER -->
+
+
+    <!-- IMPROVE YOUR GAMEPLAY -->
+    <!-- END IMPROVE YOUR GAMEPLAY -->
+
+    <!-- ALTERNATING VIDEO COLUMNS -->
+    <!-- END ALTERNATING VIDEO COLUMNS -->
 
 </div>
+
+<!-- GRADIENT -->
 <div class="bg-gradient bg-gradient--top-left"></div>
+
 <div class="container">
+    <!-- PRICING -->
+    <section id="pricing">
+
+        <!-- toggle -->
+        <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+        <label for="toggle-on" class="btn">Yes</label>
+        <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+        <label for="toggle-off" class="btn">No</label>
 
 
+        <div data-aos="fade-up" class="title-section">
+            <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
+            <h2><?php echo get_field('pricing_title')['title']; ?></h2>
+            <p><?php echo get_field('pricing_title')['description']; ?></p>
+        </div>
+    </section>
+    <!-- END PRICING -->
 
-<!-- PRICING -->
-<br/>
-<section id="pricing">
-
-    <!-- toggle -->
-<input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-<label for="toggle-on" class="btn">Yes</label>
-<input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-<label for="toggle-off" class="btn">No</label>
-
-
-<div data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('pricing_title')['title']; ?></h2>
-    <p><?php echo get_field('pricing_title')['description']; ?></p>
-</div>
-</section>
-<br/>
-<br/><br/>
-<!-- END PRICING -->
-
-<!-- TESTIMONIALS -->
-
-<br/>
-<section>
-<div data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
-    <p><?php echo get_field('testimonials_title')['description']; ?></p>
-</div>
-</section>
-<br/>
-
-<br/><br/>
-<!-- END TESTIMONIALS -->
+    <!-- TESTIMONIALS -->
+    <section>
+        <div data-aos="fade-up" class="title-section">
+            <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
+            <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
+            <p><?php echo get_field('testimonials_title')['description']; ?></p>
+        </div>
+    </section>
+    <!-- END TESTIMONIALS -->
 
 
-<!-- CTA -->
-
-<br/>
-<section>
+    <!-- CTA -->
+    <section>
 
 
-</section>
-<br/>
-
-<!-- END CTA -->
-<br/><br/>
+    </section>
+    <!-- END CTA -->
 </div>
 
+<!-- GRADIENT -->
 <div class="bg-gradient bg-gradient--bottom-right"></div>
+
 <div class="container">
-
-
-
-
-<!-- FAQS -->
-
-<br/>
-
-<section id="faq">
-<div data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('faqs_title')['title']; ?></h2>
-    <p><?php echo get_field('faqs_title')['description']; ?></p>
-</div>
-</section>
-<br/>
-
-<br/>
-<!-- END FAQS -->
-
-
-<!-- deprecated beneath -->
-<!-- CORE FEATURES -->
-
-
-<br/><br/>
-
-<section id="features">
-    <div  data-aos="fade-up" class="title-section">
-    <h6><?php echo get_field('standout_features_title')['small_text']; ?></h6>
-    <h2><?php echo get_field('standout_features_title')['title']; ?></h2>
-    <p><?php echo get_field('standout_features_title')['description']; ?></p>
+    <!-- FAQS -->
+    <section id="faq">
+        <div data-aos="fade-up" class="title-section">
+            <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
+            <h2><?php echo get_field('faqs_title')['title']; ?></h2>
+            <p><?php echo get_field('faqs_title')['description']; ?></p>
+        </div>
+    </section>
+    <!-- END FAQS -->
 </div>
 
-<!-- 1 -->
-    <div data-aos="fade-up" class="follow-gradient">
-        <div class="blob"></div>
-        <h3><?php echo get_field('feature_1')['title'];?></h3>
-        <p><?php echo get_field('feature_1')['subtitle']; ?></p>
-        <button><?php echo get_field('feature_1')['button'];?></button>
-        <img src="<?php echo get_field('feature_1')['background_image'];?>">
-    </div>
-   
 
-    <!-- 2 & 3 -->
-<div class="standout-feature-grid">
-    <div  data-aos="fade-right" class="" style="background-image: url(<?php echo get_field('feature_2')['background_image']; ?>)">
-        <h3><?php echo get_field('feature_2')['title']; ?></h3>
-        <p><?php echo get_field('feature_2')['subtitle']; ?></p>
-        
-    </div>
-
-    <div  data-aos="fade-left" class="" style="background-image: url(<?php echo get_field('feature_3')['background_image']; ?>)">
-        <h3><?php echo get_field('feature_3')['title'];?></h3>
-<p><?php echo get_field('feature_3')['subtitle']; ?></p>
-
-    </div>
-    </div>
-
-</section>
-
-<br/>
-
-<br/><br/>
-
-
-
-
-
-
-
-
-
-
-
-<?php 
+<?php
 get_footer();
 ?>
