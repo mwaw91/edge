@@ -6752,7 +6752,8 @@
 
 	  // DISSAPPEARING NAV
 	  ScrollTrigger.create({
-	    start: 'top -80',
+	    //   start: 'top -80',
+	    start: 'top -1px',
 	    end: 99999,
 	    toggleClass: {
 	      className: 'main-tool-bar--scrolled',

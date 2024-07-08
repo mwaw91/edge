@@ -83,20 +83,20 @@ body {
 // NAV
 .main-tool-bar {
   height: 80px;
-  background: red;
+  background: blue;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  position: fixed;
+  // position: fixed;
+  position: relative;
   width: 100%;
   left: 0;
   top: 0;
   transition: ease 0.4s;
   &--scrolled {
     height: 0px;
-    background: green;
   }
 }
 .header-content {

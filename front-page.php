@@ -1,6 +1,5 @@
 <!-- DISSAPPEARING MENU -->
-<!-- <div class='main-tool-bar'>Header</div> -->
-
+<!-- <div class='main-tool-bar'></div> -->
 <?php 
 get_header();
 ?>
