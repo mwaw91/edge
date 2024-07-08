@@ -6744,7 +6744,10 @@
 	})();
 
 	document.addEventListener("DOMContentLoaded", () => {
-	  // gsap code here!
+	  // AOS
+	  AOS.init();
+
+	  // GSAP
 	  gsap.registerPlugin(ScrollTrigger);
 
 	  // const showAnim = gsap.from('.main-tool-bar', { 

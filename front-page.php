@@ -5,6 +5,10 @@
 get_header();
 ?>
 
+<!-- <div class="fade-up" data-aos="fade-up"></div>
+<div class="fade-left" data-aos="fade-left"></div>
+<div class="fade-right" data-aos="fade-right"></div> -->
+
 <!-- HERO -->
 HERO
 <br/>
@@ -23,6 +27,8 @@ echo $hero_img['url'];
 <br/>
 END HERO
 <br/><br/>
+
+
 
 <!-- FEATURES -->
 FEATURES
@@ -101,6 +107,7 @@ FAQS
 <br/>
 END FAQS
 <br/>
+
 
 <?php 
 get_footer();

@@ -14964,6 +14964,27 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+.fade-up {
+  background-color: red;
+  width: 500px;
+  padding: 100px;
+  height: 200px;
+}
+
+.fade-left {
+  background-color: orange;
+  width: 500px;
+  padding: 100px;
+  height: 200px;
+}
+
+.fade-right {
+  background-color: green;
+  width: 500px;
+  padding: 100px;
+  height: 200px;
+}
+
 .main-tool-bar {
   height: 80px;
   background: red;
