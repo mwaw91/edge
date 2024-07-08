@@ -12,20 +12,21 @@ get_header();
 <!-- HERO -->
 HERO
 <br/>
-<p>
+
 <?php 
 $title = get_field('title');
 $subtitle = get_field('subtitle');
 $button = get_field('button');
 $hero_img = get_field('image');
 ?>
+<div data-aos="fade-up">
 <h1><?php echo $title;?></h1>
 <p><?php echo $subtitle;?></p>
 <button><?php echo $button['url']; echo $button['title'];?></button>
 
 <img src="<?php echo $hero_img['url'];?>">
+</div>
 
-</p>
 <br/>
 END HERO
 <br/><br/>
@@ -52,28 +53,35 @@ END FEATURES
 STANDOUT FEATURE
 <br/>
 <section>
-<div class="title-section">
+<div  data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('standout_features_title')['small_text']; ?></h6>
     <h2><?php echo get_field('standout_features_title')['title']; ?></h2>
     <p><?php echo get_field('standout_features_title')['description']; ?></p>
 </div>
 
-
-    <div class="" style="background-image: url(<?php echo get_field('feature_1')['background_image'];?>)">
+<!-- 1 -->
+    <div data-aos="fade-up" class="follow-gradient">
+        <div class="blob"></div>
         <h3><?php echo get_field('feature_1')['title'];?></h3>
         <p><?php echo get_field('feature_1')['subtitle']; ?></p>
         <button><?php echo get_field('feature_1')['button'];?></button>
-
+        <img src="<?php echo get_field('feature_1')['background_image'];?>">
     </div>
-    <div class="" style="background-image: url(<?php echo get_field('feature_2')['background_image']; ?>)">
+   
+
+    <!-- 2 & 3 -->
+<div class="standout-feature-grid">
+    <div  data-aos="fade-right" class="" style="background-image: url(<?php echo get_field('feature_2')['background_image']; ?>)">
         <h3><?php echo get_field('feature_2')['title']; ?></h3>
         <p><?php echo get_field('feature_2')['subtitle']; ?></p>
         
     </div>
-    <div class="" style="background-image: url(<?php echo get_field('feature_3')['background_image']; ?>)">
+
+    <div  data-aos="fade-left" class="" style="background-image: url(<?php echo get_field('feature_3')['background_image']; ?>)">
         <h3><?php echo get_field('feature_3')['title'];?></h3>
 <p><?php echo get_field('feature_3')['subtitle']; ?></p>
 
+    </div>
     </div>
 
 </section>
@@ -87,7 +95,7 @@ END STANDOUT FEATURE
 PRICING
 <br/>
 <section>
-<div class="title-section">
+<div data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
     <h2><?php echo get_field('pricing_title')['title']; ?></h2>
     <p><?php echo get_field('pricing_title')['description']; ?></p>
@@ -101,7 +109,7 @@ END PRICING
 TESTIMONIALS
 <br/>
 <section>
-<div class="title-section">
+<div data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
     <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
     <p><?php echo get_field('testimonials_title')['description']; ?></p>
@@ -116,7 +124,7 @@ FAQS
 <br/>
 
 <section>
-<div class="title-section">
+<div data-aos="fade-up" class="title-section">
     <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
     <h2><?php echo get_field('faqs_title')['title']; ?></h2>
     <p><?php echo get_field('faqs_title')['description']; ?></p>
