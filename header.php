@@ -38,7 +38,7 @@ $edge_settings = edge_get_theme_options(); ?>
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'edge'); ?></a>
 		<!-- Masthead ============================================= -->
 		<header id="masthead" class="site-header" role="banner">
-			<div class='main-tool-bar'></div>
+			<!-- <div class='main-tool-bar'></div> -->
 
 			<?php if (function_exists('the_custom_header_markup')) {
 				if (is_header_video_active() && (has_header_video() || is_customize_preview())) {
@@ -115,7 +115,7 @@ $edge_settings = edge_get_theme_options(); ?>
 					<!-- </nav> -->
 					<!-- end #site-navigation -->
 
-					<button class="btn btn--solid login--grey">login</button>
+					<button class="btn btn--solid btn--solid-grey">login</button>
 				</div> <!-- end .container -->
 			</div> <!-- end #sticky_header -->
 			<?php

@@ -10,7 +10,7 @@ get_header();
 
 <!-- HERO -->
 <div class="container">
-    <section class="hero" data-aos="fade-up">
+    <section id="hero" data-aos="fade-up">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -18,8 +18,10 @@ get_header();
         $hero_img = get_field('image');
         ?>
 
-        <h1><?php echo $title; ?></h1>
-        <p><?php echo $subtitle; ?></p>
+        <!-- <h1><?php // echo $title; 
+                    ?></h1> -->
+        <h1>Track your CS2 Stats like the Pros</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <button class="btn btn--solid"><?php echo $button['title']; ?></button>
         <!-- <button class="btn"><?php //echo $button['title']; 
@@ -34,21 +36,53 @@ get_header();
 
         <!-- echo $button['url']; -->
 
-        <img src="<?php echo $hero_img['url']; ?>">
+        <img class="radius green-shadow" src="<?php echo $hero_img['url']; ?>">
     </section>
     <!-- END HERO -->
 
 
     <!-- TESTED AND USED -->
     <section>
-        <div class="tested">
+        <div id="tested">
             <h2>Tested and used by the best</h2>
-            <div class="">
-                <img src="<?php echo $hero_img['url']; ?>">
-                <img src="<?php echo $hero_img['url']; ?>">
-                <img src="<?php echo $hero_img['url']; ?>">
-                <img src="<?php echo $hero_img['url']; ?>">
-                <img src="<?php echo $hero_img['url']; ?>">
+            <div class="top-row">
+                <div class="grid-item">
+                    <img src="<?php echo $hero_img['url']; ?>">
+                    <div>
+                        <span>@ESL</span>
+                        <span>ICON 3.2M</span>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="<?php echo $hero_img['url']; ?>">
+                    <div>
+                        <span>@ESL</span>
+                        <span>ICON 3.2M</span>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="<?php echo $hero_img['url']; ?>">
+                    <div>
+                        <span>@ESL</span>
+                        <span>ICON 3.2M</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div class="grid-item">
+                    <img src="<?php echo $hero_img['url']; ?>">
+                    <div>
+                        <span>@ESL</span>
+                        <span>ICON 3.2M</span>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="<?php echo $hero_img['url']; ?>">
+                    <div>
+                        <span>@ESL</span>
+                        <span>ICON 3.2M</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -56,8 +90,19 @@ get_header();
 
 
     <!-- STAT CONTAINER -->
-    <section>
-        <div class="">STAT</div>
+    <section id="stat-container">
+        <div class="stats">
+
+            <div class="stat">
+                <span>100+</span>
+                <p>Lorum ipsum dolar sit amet</p>
+            </div>
+
+        </div>
+        <p>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. </p>
+        <div class="logo-container">
+            IMG HERE
+        </div>
     </section>
     <!-- END STAT CONTAINER -->
 
@@ -69,14 +114,18 @@ get_header();
             <h2>IMPROVE YOUR GAMEPLAY</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
+        TODO - CAROUSEL WITH 3 BUTTONS HERE
+        <img class="radius green-shadow" src="<?php echo $hero_img['url']; ?>">
     </section>
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
     <!-- ALTERNATING VIDEO COLUMNS -->
     <section>
         <!-- row 1 -->
-        <div class="alternating-video-column">
-            <img src="<?php echo $hero_img['url']; ?>">
+        <div id="alternating-video-column">
+            <div>
+                <img src="<?php echo $hero_img['url']; ?>">
+            </div>
             <div data-aos="fade-up" class="title-section">
                 <h6>skybox edge for teams</h6>
                 <h2>Lorum ipsum dolar sit amet</h2>
@@ -85,7 +134,9 @@ get_header();
         </div>
         <!-- row 2 -->
         <div class="alternating-video-column">
-            <img src="<?php echo $hero_img['url']; ?>">
+            <div>
+                <img src="<?php echo $hero_img['url']; ?>">
+            </div>
             <div data-aos="fade-up" class="title-section">
                 <h6>skybox edge for teams</h6>
                 <h2>Lorum ipsum dolar sit amet</h2>
@@ -120,7 +171,7 @@ get_header();
     <!-- END PRICING -->
 
     <!-- TESTIMONIALS -->
-    <section>
+    <section id="testimonials">
         <div data-aos="fade-up" class="title-section">
             <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
             <h2>Take their word for it</h2>
@@ -128,13 +179,25 @@ get_header();
                         ?></h2> -->
             <p><?php echo get_field('testimonials_title')['description']; ?></p>
         </div>
+
+        <div class="testimonial radius">
+            <div>
+                <img src="<?php echo $hero_img['url']; ?>">
+                <div>
+                    <h3>Jane smith</h3>
+                    <h5>fnatic</h5>
+                </div>
+            </div>
+            <p>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. </p>
+
+        </div>
     </section>
     <!-- END TESTIMONIALS -->
 
 
     <!-- CTA -->
-    <section>
-        <div data-aos="fade-up" class="cta">
+    <section data-aos="fade-up" id="cta">
+        <div>
             <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
             <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
             <p><?php echo get_field('testimonials_title')['description']; ?></p>
@@ -142,12 +205,12 @@ get_header();
         <img src="<?php echo $hero_img['url']; ?>">
     </section>
     <!-- END CTA -->
-</div>
+    <!-- </div> -->
 
-<!-- GRADIENT -->
-<div class="bg-gradient bg-gradient--bottom-right"></div>
+    <!-- GRADIENT -->
+    <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
 
-<div class="container">
+    <!-- <div class="container"> -->
     <!-- FAQS -->
     <section id="faq">
         <div data-aos="fade-up" class="title-section">
@@ -157,6 +220,41 @@ get_header();
                         ?></h2> -->
             <p><?php echo get_field('faqs_title')['description']; ?></p>
         </div>
+
+        <!-- CODEPEN -->
+        <div class='faq'>
+            <input id='faq-a' type='checkbox'>
+            <label for='faq-a'>
+                <p class="faq-heading">Is this Dropbox upgrade safe?</p>
+                <div class='faq-arrow'></div>
+                <p class="faq-text">It is completely safe and totally legal! There will is no record of this process to your shared Dropbox users.</p>
+            </label>
+            <input id='faq-b' type='checkbox'>
+            <label for='faq-b'>
+                <p class="faq-heading">How long does it take to upgrade my Dropbox?</p>
+                <div class='faq-arrow'></div>
+                <p class="faq-text">Upgrading is a slow process and will take around 3-10 days. <strong>In order to control the risk and secure the space you earned, we will gradually process it.</strong> during this time you can still use your account as normal as usual.</p>
+            </label>
+            <input id='faq-c' type='checkbox'>
+            <label for='faq-c'>
+                <p class="faq-heading">What do you need to do the upgrade?</p>
+                <div class='faq-arrow'></div>
+                <p class="faq-text">NO ACCESS TO YOUR PERSONAL ACCOUNT OR INFO IS REQUIRED! All I need from you is your Dropbox referral link.</p>
+            </label>
+            <input id='faq-d' type='checkbox'>
+            <label for='faq-d'>
+                <p class="faq-heading">Where do I find my personal Dropbox referral link?</p>
+                <div class='faq-arrow'></div>
+                <p class="faq-text">Log in to the Dropbox website and get your referral link: www.dropbox.com/referral. Copy the link (example link: <strong>https://db.tt/xYxYzyXy</strong>) and send it via eBay message. </p>
+            </label>
+            <input id='faq-e' type='checkbox'>
+            <label for='faq-e'>
+                <p class="faq-heading">Can I split the purchased space between several accounts?</p>
+                <div class='faq-arrow'></div>
+                <p class="faq-text">Yes, you can! Just send me all the referral links during the checkout process, including a short note, what account should receive which amount of space.</p>
+            </label>
+        </div>
+        <!-- CODEPEN -->
     </section>
     <!-- END FAQS -->
 </div>
