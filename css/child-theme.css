@@ -15224,6 +15224,15 @@ input[type=radio].toggle:checked + label:after {
   align-items: center;
 }
 
+.alternating-video-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.alternating-video-column:nth-child(even) img {
+  order: 2;
+}
+
 @font-face {
   font-family: "signsbold";
   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");

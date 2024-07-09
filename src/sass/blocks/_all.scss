@@ -302,3 +302,15 @@ input[type="radio"].toggle {
   justify-content: center;
   align-items: center;
 }
+
+// ALTERNATING VIDEO COLUMN
+.alternating-video-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  &:nth-child(even) {
+    img {
+      order: 2;
+    }
+  }
+}
