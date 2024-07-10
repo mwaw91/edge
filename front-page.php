@@ -240,17 +240,26 @@ get_header();
             <p><?php echo get_field('testimonials_title')['description']; ?></p>
         </div>
 
-        <div class="testimonial radius">
-            <div>
-                <img src="<?php echo $hero_img['url']; ?>">
-                <div>
-                    <h3>Jane smith</h3>
-                    <h5>fnatic</h5>
-                </div>
-            </div>
-            <p>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. </p>
+        <?php
 
-        </div>
+        $testimonials = get_field('testimonials');
+        if ($testimonials) {
+            foreach ($testimonials as $testimonial) {
+        ?>
+                <div class="testimonial radius">
+                    <div>
+                        <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
+                        <div>
+                            <h3><?php echo $testimonial['name']; ?></h3>
+                            <h5><?php echo $testimonial['company']; ?></h5>
+                        </div>
+                    </div>
+                    <p><?php echo $testimonial['testimonial']; ?></p>
+                </div>
+        <?php
+            }
+        }
+        ?>
     </section>
 
     <!-- SWIPER -->
