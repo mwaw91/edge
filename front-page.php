@@ -180,28 +180,29 @@ get_header();
 
     <!-- ALTERNATING VIDEO COLUMNS -->
     <section>
-        <!-- row 1 -->
-        <div id="alternating-video-column">
-            <div>
-                <img src="<?php echo $hero_img['url']; ?>">
-            </div>
-            <div data-aos="fade-up" class="title-section">
-                <h6>skybox edge for teams</h6>
-                <h2>Lorum ipsum dolar sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-        <!-- row 2 -->
-        <div class="alternating-video-column">
-            <div>
-                <img src="<?php echo $hero_img['url']; ?>">
-            </div>
-            <div data-aos="fade-up" class="title-section">
-                <h6>skybox edge for teams</h6>
-                <h2>Lorum ipsum dolar sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
+        <?php
+        $alternating_videos = get_field('alternating_videos');
+        if ($alternating_videos) {
+            foreach ($alternating_videos as $row) {
+        ?>
+                <div id="alternating-video-column">
+                    <div>
+                        <video class="radius" width="100%">
+                            <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                            <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div data-aos="fade-up" class="title-section">
+                        <h6><?php echo $row['small_text']; ?></h6>
+                        <h2><?php echo $row['title']; ?></h2>
+                        <p><?php echo $row['description']; ?></p>
+                    </div>
+                </div>
+        <?php
+            }
+        }
+        ?>
     </section>
     <!-- END ALTERNATING VIDEO COLUMNS -->
 
@@ -280,11 +281,14 @@ get_header();
     <!-- CTA -->
     <section data-aos="fade-up" id="cta">
         <div>
-            <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
-            <h2><?php echo get_field('testimonials_title')['title']; ?></h2>
-            <p><?php echo get_field('testimonials_title')['description']; ?></p>
+
+            <h2><?php echo get_field('cta_title_section')['title']; ?></h2>
+            <p><?php echo get_field('cta_title_section')['description']; ?></p>
+            <button class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
+                <?php echo get_field('cta_title_section')['button']['title']; ?>
+            </button>
         </div>
-        <img src="<?php echo $hero_img['url']; ?>">
+        <img src="<?php echo get_field('cta_image')['url']; ?>" alt="<?php echo get_field('cta_image')['alt']; ?>">
     </section>
     <!-- END CTA -->
     <!-- </div> -->
