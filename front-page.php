@@ -100,7 +100,7 @@ get_header();
 
 
     <!-- STAT CONTAINER -->
-    <section id="stat-container">
+    <section id="stat-container" class="radius">
         <div class="stats">
             <?php
             $stats = get_field('statistics');
@@ -114,7 +114,8 @@ get_header();
             }
             ?>
         </div>
-        <p><?php echo get_field('Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.'); ?></p>
+        <p>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
+                                                                    ?></p>
         <div class="logo-container">
             <?php
             $logos = get_field('logos');
@@ -140,28 +141,10 @@ get_header();
             <p><?php echo get_field('title_section')['description']; ?></p>
         </div>
 
-        <img class="radius green-shadow" src="<?php echo $hero_img['url']; ?>">
-
         <?php $image_buttons = get_field('image_buttons');
         if ($image_buttons) {
 
-
-
             $i = 0;
-            // $len = count($image_buttons);
-            // foreach ($array as $item) {
-            //     if ($i == 0
-            //     ) {
-            //         // first
-            //     } else if ($i == $len - 1) {
-            //         // last
-            //     }
-            //     // …
-            //     $i++;
-            // }
-
-
-
 
             echo '<div class="tab-btns">';
             $k = 0;
@@ -268,7 +251,7 @@ get_header();
                         </div> -->
                         <div class="period-toggle-container">
                             <label class="switch">
-                                <input type="checkbox">
+                                <input class="annual-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div>
