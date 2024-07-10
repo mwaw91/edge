@@ -48,4 +48,14 @@ document.addEventListener('mousemove', function(e){
   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 });
 
+// TABS
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab-image");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+
 });

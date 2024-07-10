@@ -500,3 +500,11 @@ input[type="radio"].toggle {
     display: none;
   }
 }
+
+// TABS
+.tab-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

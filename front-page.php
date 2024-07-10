@@ -48,44 +48,52 @@ get_header();
     <!-- TESTED AND USED -->
     <section>
         <div id="tested">
-            <h2><?php echo get_field('tested-title');?></h2>
-            
-<?php 
-$top-row = get_field('top-row-of-videos');
-if ($top-row){
-echo '<div class="top-row">';
-foreach($top-row as $row ) 
-                <div class="grid-item">
-                    <video class="radius green-shadow" width="100%">
-                        <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-                        <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div>
-                        <span>@ESL</span>
-                        <span>ICON 3.2M</span>
-                    </div>
-                </div>
+            <h2><?php echo get_field('tested-title'); ?></h2>
 
+            <?php
+            $top_row = get_field('top_row_of_videos');
+            if ($top_row) {
+                echo '<div class="top-row">';
+                foreach ($top_row as $row) {
+            ?>
+                    <div class="grid-item">
+                        <video class="radius green-shadow" width="100%">
+                            <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                            <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div>
+                            <span><?php echo $row['nametag']; ?>@ESL</span>
+                            <span><?php echo $row['followers']; ?>ICON 3.2M</span>
+                        </div>
+                    </div>
+            <?php
+                }
                 echo '</div>';
-}?>
+            } ?>
 
-            
-            <div class="bottom-row">
-
-                <div class="grid-item">
-                    <video class="radius green-shadow" width="100%">
-                        <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-                        <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div>
-                        <span>@ESL</span>
-                        <span>ICON 3.2M</span>
+            <?php
+            $bottom_row = get_field('bottom_row_of_videos');
+            if ($bottom_row) {
+                echo '<div class="bottom-row">';
+                foreach ($bottom_row as $bottomrow) {
+            ?>
+                    <div class="grid-item">
+                        <video class="radius green-shadow" width="100%">
+                            <source src="<?php echo $bottomrow['video']['url']; ?>" type="video/mp4">
+                            <source src="<?php echo $bottomrow['video']['url']; ?>" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div>
+                            <span><?php echo $bottomrow['nametag']; ?>@ESL</span>
+                            <span><?php echo $bottomrow['followers']; ?>ICON 3.2M</span>
+                        </div>
                     </div>
-                </div>
+            <?php
+                }
+                echo '</div>';
+            } ?>
 
-            </div>
         </div>
     </section>
     <!-- END TESTED AND USED -->
@@ -94,16 +102,28 @@ foreach($top-row as $row )
     <!-- STAT CONTAINER -->
     <section id="stat-container">
         <div class="stats">
-
-            <div class="stat">
-                <span>100+</span>
-                <p>Lorum ipsum dolar sit amet</p>
-            </div>
-
+            <?php
+            $stats = get_field('statistics');
+            if ($stats) {
+                foreach ($stats as $stat) {
+                    echo '<div class="stat">
+                <span>' . $stat['stat'] . '</span>
+                <p>' . $stat['description'] . '</p>
+            </div>';
+                }
+            }
+            ?>
         </div>
-        <p>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet. </p>
+        <p><?php echo get_field('Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.'); ?></p>
         <div class="logo-container">
-            IMG HERE
+            <?php
+            $logos = get_field('logos');
+            if ($logos) {
+                foreach ($logos as $logo) {
+                    echo '<img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
+                }
+            }
+            ?>
         </div>
     </section>
     <!-- END STAT CONTAINER -->
@@ -112,12 +132,49 @@ foreach($top-row as $row )
     <!-- IMPROVE YOUR GAMEPLAY -->
     <section>
         <div data-aos="fade-up" class="title-section">
-            <h6>skybox edge for teams</h6>
-            <h2>IMPROVE YOUR GAMEPLAY</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+
+            <h6><?php echo get_field('title_section')['small_text']; ?></h6>
+            <h2><?php echo get_field('title_section')['title']; ?></h2>
+            <p><?php echo get_field('title_section')['description']; ?></p>
         </div>
-        TODO - CAROUSEL WITH 3 BUTTONS HERE
+
         <img class="radius green-shadow" src="<?php echo $hero_img['url']; ?>">
+
+        <?php $image_buttons = get_field('image_buttons');
+        if ($image_buttons) {
+
+            $i = 0;
+            // $len = count($image_buttons);
+            // foreach ($array as $item) {
+            //     if ($i == 0
+            //     ) {
+            //         // first
+            //     } else if ($i == $len - 1) {
+            //         // last
+            //     }
+            //     // …
+            //     $i++;
+            // }
+
+            echo '<div class="tab-btns">';
+            foreach ($image_buttons as $tab) {
+
+                echo '<button onclick="openTab(' . $tab['title'] . ')" class="btn btn--outline">' . $tab['title'] . '</button>';
+            }
+            echo '</div>';
+            foreach ($image_buttons as $tab_image) {
+                echo '<img id="' . $tab_image['title'] . '" class="tab-image green-gradient radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '" ';
+                if ($i > 0) {
+                    echo ' style="display:none"';
+                }
+                echo '/>';
+                $i++;
+            }
+        }
+
+        ?>
     </section>
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
