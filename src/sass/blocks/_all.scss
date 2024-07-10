@@ -257,12 +257,12 @@ footer {
     color: $grey-text;
     border: 1px solid $black-3;
 
-    background: linear-gradient(
-      90deg,
-      rgba(7, 22, 103, 1) 0%,
-      rgba(55, 83, 198, 1) var(--x),
-      rgba(7, 22, 103, 1) 100%
-    );
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(7, 22, 103, 1) 0%,
+    //   rgba(55, 83, 198, 1) var(--x),
+    //   rgba(7, 22, 103, 1) 100%
+    // );
 
     span.hover-gradient {
       display: none;
@@ -310,6 +310,23 @@ footer {
       color: white;
     }
   }
+}
+
+.btn--outline-grey-gradient::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.btn--outline-grey-gradient:hover::before {
+  --size: 200px;
 }
 
 // BTN HOVER GRADIENT

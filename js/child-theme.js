@@ -6825,15 +6825,27 @@
 	  // });
 
 	  function btnHoverGradient() {
-	    var gradientBtn = document.querySelectorAll('.btn--outline-grey-gradient');
-	    gradientBtn.forEach(element => {
-	      element.onmousemove = function (e) {
+	    let btns = document.querySelectorAll('.btn--outline-grey-gradient');
+	    btns.forEach(btn => {
+	      btn.addEventListener('mousemove', e => {
 	        let rect = e.target.getBoundingClientRect();
 	        let x = e.clientX - rect.left;
-	        element.style.setProperty("--x", x + "px");
-	      };
+	        let y = e.clientY - rect.top;
+	        btn.style.setProperty('--x', x + 'px');
+	        btn.style.setProperty('--y', y + 'px');
+	      });
 	    });
+
+	    // var gradientBtn = document.querySelectorAll('.btn--outline-grey-gradient');
+	    // gradientBtn.forEach(element => {
+	    //   element.onmousemove = function (e) {
+	    //     let rect = e.target.getBoundingClientRect();
+	    //     let x = e.clientX - rect.left;
+	    //     element.style.setProperty("--x", x + "px");
+	    //   };
+	    // });
 	  }
+
 	  btnHoverGradient();
 	  function openImageTab() {
 	    const buttons = document.querySelectorAll('.image-toggle');
