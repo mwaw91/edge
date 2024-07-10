@@ -85,131 +85,33 @@ document.addEventListener("DOMContentLoaded", () => {
   //   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
   // });
 
-  // TABS
-  function openTab() {
-
-    // var i;
-    // var x = document.getElementsByClassName("tab-image");
-    // for (i = 0; i < x.length; i++) {
-    //   x[i].style.display = "none";
-    // }
-    // document.getElementById(tabName).style.display = "block";
-
-    let imageToggle = document.querySelectorAll('.image-toggle');
-
-    imageToggle.forEach(element => {
-      element.addEventListener("click", function () {
-        console.log('click');
-        if (!element.classList.contains('.active')) {
-          element.classList.add('active')
-        }
-        // document.getElementById(tabName).style.display = "block";
-
-
-
-      })
-    });
-
-
-
-
-
-    function toggleImage(clickedImage, otherImage) {
-      if (!clickedImage.classList.contains('active')) {
-        clickedImage.classList.add('active');
-        otherImage.classList.remove('active');
-
-        // if (team.classList.contains('active')) {
-        //   prices.forEach(element => {
-        //     if (!element.classList.contains('team')) {
-        //       element.style.display = "none";
-        //     } else {
-        //       element.style.display = "block";
-        //     }
-        //   });
-        // }
-
-        // if (individual.classList.contains('active')) {
-        //   prices.forEach(element => {
-        //     if (!element.classList.contains('individual')) {
-        //       element.style.display = "none";
-        //     } else {
-        //       element.style.display = "block";
-        //     }
-        //   });
-        // }
-        checkBilling();
-      }
-    }
-    team.addEventListener('click', function () {
-      toggleActive(team, individual);
-    });
-    individual.addEventListener('click', function () {
-      toggleActive(individual, team);
-    });
-
-
-  }
-  // openTab();
-  function newTabTest() {
+  function openImageTab() {
     const buttons = document.querySelectorAll('.image-toggle');
-    // Select all images with the class 'tab-image'
     const images = document.querySelectorAll('.tab-image');
-
-    // Add click event listeners to each button
     buttons.forEach(button => {
       button.addEventListener('click', () => {
-
-        // Remove 'active' class from all buttons
         buttons.forEach(btn => btn.classList.remove('active'));
-        // Add 'active' class to the clicked button
         button.classList.add('active');
-
-        // Remove 'active' class from all images
         images.forEach(img => img.classList.remove('active'));
-        // Add 'active' class to the corresponding image
-        console.log(document.getElementById(button.classList[0]))
         const correspondingImage = document.getElementById(button.classList[0]);
-        console.log(correspondingImage)
         if (correspondingImage) {
           correspondingImage.classList.add('active');
         }
       });
     });
   }
-  newTabTest();
+  openImageTab();
 
-  // PRICING MONTHLY YEARLY
-  function monthlyYearly() {
+  // PRICING TEAM INDIVDUAL
+  function teamIndividual() {
     let team = document.getElementById('team');
     let individual = document.getElementById('individual');
     let prices = document.querySelectorAll('.price');
-    //    let toggles = document.querySelectorAll('.pricing-toggle');
 
     function toggleActive(clickedSpan, otherSpan) {
       if (!clickedSpan.classList.contains('active')) {
         clickedSpan.classList.add('active');
         otherSpan.classList.remove('active');
-
-        // if (team.classList.contains('active')) {
-        //   prices.forEach(element => {
-        //     if (!element.classList.contains('team')) {
-        //       element.style.display = "none";
-        //     } else {
-        //       element.style.display = "block";
-        //     }
-        //   });
-        // }
-
-        // if (individual.classList.contains('active')) {
-        //   prices.forEach(element => {
-        //     if (!element.classList.contains('individual')) {
-        //       element.style.display = "none";
-        //     } else {
-        //       element.style.display = "block";
-        //     }
-        //   });
-        // }
         checkBilling();
       }
     }
@@ -219,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
     individual.addEventListener('click', function () {
       toggleActive(individual, team);
     });
-
 
     function checkBilling() {
       if (team.classList.contains('active')) {
@@ -245,7 +146,36 @@ document.addEventListener("DOMContentLoaded", () => {
     checkBilling();
 
   }
-  monthlyYearly();
+  teamIndividual();
 
-  // PRICING TEAMS INDIVIDUAL
+  // PRICING ANNUAL MONTHLY
+  function monthlyAnnually() {
+    console.log('TEST')
+    // Get all elements with class 'annual-switch'
+    const switches = document.querySelectorAll('.annual-switch');
+    console.log(switches);
+    // Loop through each switch
+    switches.forEach(switchInput => {
+      // Add click event listener to each switch
+      switchInput.addEventListener('click', function () {
+        // Get the parent div with class 'tier'
+        const parentDiv = this.closest('.tier');
+
+        // Find the h3 elements inside the parent div
+        const monthElement = parentDiv.querySelector('.month');
+        const yearElement = parentDiv.querySelector('.year');
+
+        // Toggle visibility of 'month' and 'year' h3 elements
+        if (this.checked) {
+          monthElement.style.display = 'block';
+          yearElement.style.display = 'block';
+        } else {
+          monthElement.style.display = 'none';
+          yearElement.style.display = 'none';
+        }
+      });
+    });
+
+  }
+  monthlyAnnually();
 });

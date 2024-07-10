@@ -6815,65 +6815,41 @@
 	      targets: '.main-tool-bar'
 	    }
 	  });
-	  // openTab();
-	  function newTabTest() {
-	    const buttons = document.querySelectorAll('.image-toggle');
-	    // Select all images with the class 'tab-image'
-	    const images = document.querySelectorAll('.tab-image');
 
-	    // Add click event listeners to each button
+	  // FOLLOW GRADIENT
+	  // var cursor = document.querySelector('.blob');
+	  // document.addEventListener('mousemove', function(e){
+	  //   var x = e.clientX;
+	  //   var y = e.clientY;
+	  //   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+	  // });
+
+	  function openImageTab() {
+	    const buttons = document.querySelectorAll('.image-toggle');
+	    const images = document.querySelectorAll('.tab-image');
 	    buttons.forEach(button => {
 	      button.addEventListener('click', () => {
-	        // Remove 'active' class from all buttons
 	        buttons.forEach(btn => btn.classList.remove('active'));
-	        // Add 'active' class to the clicked button
 	        button.classList.add('active');
-
-	        // Remove 'active' class from all images
 	        images.forEach(img => img.classList.remove('active'));
-	        // Add 'active' class to the corresponding image
-	        console.log(document.getElementById(button.classList[0]));
 	        const correspondingImage = document.getElementById(button.classList[0]);
-	        console.log(correspondingImage);
 	        if (correspondingImage) {
 	          correspondingImage.classList.add('active');
 	        }
 	      });
 	    });
 	  }
-	  newTabTest();
+	  openImageTab();
 
-	  // PRICING MONTHLY YEARLY
-	  function monthlyYearly() {
+	  // PRICING TEAM INDIVDUAL
+	  function teamIndividual() {
 	    let team = document.getElementById('team');
 	    let individual = document.getElementById('individual');
 	    let prices = document.querySelectorAll('.price');
-	    //    let toggles = document.querySelectorAll('.pricing-toggle');
-
 	    function toggleActive(clickedSpan, otherSpan) {
 	      if (!clickedSpan.classList.contains('active')) {
 	        clickedSpan.classList.add('active');
 	        otherSpan.classList.remove('active');
-
-	        // if (team.classList.contains('active')) {
-	        //   prices.forEach(element => {
-	        //     if (!element.classList.contains('team')) {
-	        //       element.style.display = "none";
-	        //     } else {
-	        //       element.style.display = "block";
-	        //     }
-	        //   });
-	        // }
-
-	        // if (individual.classList.contains('active')) {
-	        //   prices.forEach(element => {
-	        //     if (!element.classList.contains('individual')) {
-	        //       element.style.display = "none";
-	        //     } else {
-	        //       element.style.display = "block";
-	        //     }
-	        //   });
-	        // }
 	        checkBilling();
 	      }
 	    }
@@ -6905,9 +6881,37 @@
 	    }
 	    checkBilling();
 	  }
-	  monthlyYearly();
+	  teamIndividual();
 
-	  // PRICING TEAMS INDIVIDUAL
+	  // PRICING ANNUAL MONTHLY
+	  function monthlyAnnually() {
+	    console.log('TEST');
+	    // Get all elements with class 'annual-switch'
+	    const switches = document.querySelectorAll('.annual-switch');
+	    console.log(switches);
+	    // Loop through each switch
+	    switches.forEach(switchInput => {
+	      // Add click event listener to each switch
+	      switchInput.addEventListener('click', function () {
+	        // Get the parent div with class 'tier'
+	        const parentDiv = this.closest('.tier');
+
+	        // Find the h3 elements inside the parent div
+	        const monthElement = parentDiv.querySelector('.month');
+	        const yearElement = parentDiv.querySelector('.year');
+
+	        // Toggle visibility of 'month' and 'year' h3 elements
+	        if (this.checked) {
+	          monthElement.style.display = 'block';
+	          yearElement.style.display = 'block';
+	        } else {
+	          monthElement.style.display = 'none';
+	          yearElement.style.display = 'none';
+	        }
+	      });
+	    });
+	  }
+	  monthlyAnnually();
 	});
 
 	exports.Alert = alert;

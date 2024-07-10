@@ -237,10 +237,10 @@ get_header();
     <!-- PRICING -->
     <section id="pricing">
 
-        <!-- toggle -->
-        <div class="pricing-toggle-container">
-            <span id="team" class="active pricing-toggle">Team</span>
-            <span id="individual" class="pricing-toggle">Individual</span>
+        <!-- TOGGLE TEAM INDIVIDUAL -->
+        <div class="team-toggle-container">
+            <span id="team" class="active">Team</span>
+            <span id="individual">Individual</span>
         </div>
 
 
@@ -257,11 +257,21 @@ get_header();
                 foreach ($tiers as $tier) {
             ?>
                     <div class="tier radius">
-                        <h3 class="price team month"><?php echo $tier['team_price_per_month']; ?></h3>
-                        <h3 class="price team year"><?php echo $tier['team_price_per_year']; ?></h3>
-                        <h3 class="price individual month"><?php echo $tier['individual_price_per_month']; ?></h3>
-                        <h3 class="price individual year"><?php echo $tier['individual_price_per_year']; ?></h3>
+                        <h3 class="price team month">€<?php echo $tier['team_price_per_month']; ?><span> /month</span></h3>
+                        <h3 class="price team year">€<?php echo $tier['team_price_per_year']; ?><span> /year</span></h3>
+                        <h3 class="price individual month">€<?php echo $tier['individual_price_per_month']; ?><span> /month</span></h3>
+                        <h3 class="price individual year">€<?php echo $tier['individual_price_per_year']; ?><span> /year</span></h3>
 
+                        <!-- <div class="period-toggle-container">
+                            <span id="yearly" class="active period-toggle">Billed Yearly</span>
+                            <span id="monthly" class="period-toggle">Individual</span>
+                        </div> -->
+                        <div class="period-toggle-container">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
 
                         <ul>
                             <?php

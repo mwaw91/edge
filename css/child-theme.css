@@ -15388,7 +15388,7 @@ footer .container .social-media-menu li a img {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.pricing-toggle-container {
+.team-toggle-container {
   background-color: #282f39;
   display: flex;
   flex-direction: row;
@@ -15398,11 +15398,11 @@ footer .container .social-media-menu li a img {
   width: max-content;
   margin: 0 auto;
 }
-.pricing-toggle-container span {
+.team-toggle-container span {
   background-color: #282f39;
   color: #fff;
 }
-.pricing-toggle-container span.active {
+.team-toggle-container span.active {
   background-color: #24f4ab;
   color: #0b0f11;
 }
@@ -15425,6 +15425,59 @@ footer .container .social-media-menu li a img {
 }
 .tiers-container .tier ul li:before {
   content: "&check";
+}
+
+/* The switch - the box around the slider */
+.period-toggle-container {
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+.period-toggle-container .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.period-toggle-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.period-toggle-container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.period-toggle-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.period-toggle-container input:checked + .slider {
+  background-color: #2196f3;
+}
+.period-toggle-container input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.period-toggle-container input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.period-toggle-container .slider.round {
+  border-radius: 34px;
+}
+.period-toggle-container .slider.round:before {
+  border-radius: 50%;
 }
 
 @font-face {
