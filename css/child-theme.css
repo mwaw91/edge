@@ -15382,6 +15382,63 @@ input[type=radio].toggle:checked + label:after {
   align-items: center;
 }
 
+.codepen .faq-header {
+  font-size: 42px;
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+}
+.codepen .faq-content {
+  margin: 0 auto;
+}
+.codepen .faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+.codepen .panel-title {
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+.codepen .panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.codepen .panel:checked ~ .panel-content {
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+.codepen .plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  transition: 0.2s ease;
+}
+.codepen .panel:checked ~ .plus {
+  transform: rotate(45deg);
+}
+.codepen .panel {
+  display: none;
+}
+
 @font-face {
   font-family: "signsbold";
   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
