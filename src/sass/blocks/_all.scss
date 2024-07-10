@@ -52,12 +52,12 @@ body {
 
 // DROP SHADOW
 .green-shadow {
-  box-shadow: 0 0 30px $green;
+  box-shadow: 0 0 30px -10px $green;
 }
 
 // RADIUS
 .radius {
-  border-radius: 27px;
+  border-radius: 17px;
 }
 
 // AOS
@@ -252,7 +252,81 @@ footer {
       border: 1px solid white;
     }
   }
+  &--outline-grey-gradient {
+    background-color: transparent;
+    color: $grey-text;
+    border: 1px solid $black-3;
+
+    span.hover-gradient {
+      // width: 650px;
+      // height: 650px;
+      width: 60px;
+      height: 60px;
+
+      // background: linear-gradient($green 10%, transparent);
+      // filter: blur(250px);
+      // background: linear-gradient($green 10%, transparent);
+      background: linear-gradient(red 10%, transparent);
+      filter: blur(30px);
+
+      // position: fixed;
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 100%;
+
+      transition: all 450ms ease-out;
+
+      pointer-events: none;
+      right: 0;
+      bottom: 0;
+      // transform: translate(calc(-50% + 15px), -50%);
+      // transform: translate(calc(-50% + 15px), 0);
+      z-index: 10;
+    }
+    overflow: hidden;
+
+    &:hover {
+      // background-color: $green;
+      border: 1px solid white;
+      overflow: hidden;
+    }
+
+    &.active {
+      background-color: $green-dark;
+      border: 1px solid $green;
+      color: white;
+    }
+  }
 }
+
+// BTN HOVER GRADIENT
+// .follow-gradient {
+//   height: 500px;
+//   overflow: hidden;
+//   background-color: $black-1;
+//   .blob {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 650px;
+//     height: 650px;
+//     border-radius: 100%;
+//     background: linear-gradient($green 10%, transparent);
+//     filter: blur(250px);
+//     transition: all 450ms ease-out;
+//     position: fixed;
+//     pointer-events: none;
+//     right: 0;
+//     bottom: 0;
+//     // transform: translate(calc(-50% + 15px), -50%);
+//     // transform: translate(calc(-50% + 15px), 0);
+//     z-index: -1;
+//   }
+// }
 
 // input[type="radio"].toggle {
 //   display: none;
@@ -317,10 +391,22 @@ footer {
     max-width: 374px;
     text-align: center;
   }
-  video {
+  .video-container {
+    position: relative;
     margin-top: 60px;
-    aspect-ratio: 1.79;
-    max-width: 972px;
+    span {
+      width: 0;
+      height: 0;
+      display: block;
+      box-shadow: 0 0 340px 190px rgba(255, 255, 255, 0.2);
+      position: relative;
+      margin: 0 auto;
+      top: 0;
+    }
+    video {
+      aspect-ratio: 1.79;
+      max-width: 972px;
+    }
   }
 }
 
@@ -344,6 +430,7 @@ footer {
     justify-content: center;
   }
   .grid-item {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 340px;
     display: flex;
     flex-direction: column;
@@ -355,13 +442,17 @@ footer {
       justify-content: space-between;
       align-items: center;
       span {
+        color: $grey-1;
       }
     }
   }
 }
 
 // STAT CONTAINER
+
 #stat-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin: 90px auto;
   background-color: $black-1;
   border: 1px solid $black-3;
@@ -372,16 +463,23 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 60px;
     .stat {
       max-width: max-content;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      span {
+      }
+      p {
+      }
     }
   }
-  p {
+  h6 {
     text-align: center;
-    margin: 0 auto;
+    margin: 60px auto 30px auto;
+    color: white;
+    width: 100%;
   }
   .logo-container {
     gap: 30px;
@@ -537,9 +635,10 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 .tab-image {
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
   display: none;
 }
 .tab-image.active {

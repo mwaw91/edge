@@ -53,11 +53,14 @@ get_header();
 
 
         <!-- echo $button['url']; -->
-        <video class="radius green-shadow" width="100%">
-            <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-            <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
+        <div class="video-container">
+            <span></span>
+            <video class="radius green-shadow" width="100%">
+                <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
     <!-- END HERO -->
 
@@ -74,14 +77,14 @@ get_header();
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
-                        <video class="radius green-shadow" width="100%">
+                        <video class="" width="100%">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                         <div>
-                            <span><?php echo $row['nametag']; ?>@ESL</span>
-                            <span><?php echo $row['followers']; ?>ICON 3.2M</span>
+                            <span class="font-signs"><?php echo $row['nametag']; ?></span>
+                            <span class="font-signs"><?php echo $row['followers']; ?></span>
                         </div>
                     </div>
             <?php
@@ -96,14 +99,14 @@ get_header();
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
-                        <video class="radius green-shadow" width="100%">
+                        <video class="" width="100%">
                             <source src="<?php echo $bottomrow['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $bottomrow['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                         <div>
-                            <span><?php echo $bottomrow['nametag']; ?>@ESL</span>
-                            <span><?php echo $bottomrow['followers']; ?>ICON 3.2M</span>
+                            <span class="font-signs"><?php echo $bottomrow['nametag']; ?></span>
+                            <span class="font-signs"><?php echo $bottomrow['followers']; ?></span>
                         </div>
                     </div>
             <?php
@@ -121,6 +124,8 @@ get_header();
         INTERACTION
  LOGOS
  CONTINUOUS SWIPER SCROLL
+
+ HOVER BG FOLLOW GRADIENT WHITE
  -->
     <section id="stat-container" class="radius">
         <div class="stats">
@@ -129,15 +134,15 @@ get_header();
             if ($stats) {
                 foreach ($stats as $stat) {
                     echo '<div class="stat">
-                <span>' . $stat['stat'] . '</span>
+                <span class="font-signs">' . $stat['stat'] . '</span>
                 <p>' . $stat['description'] . '</p>
             </div>';
                 }
             }
             ?>
         </div>
-        <p>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
-                                                                    ?></p>
+        <h6>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
+                                                                    ?></h6>
         <div class="logo-container">
             <?php
             $logos = get_field('logos');
@@ -182,11 +187,11 @@ get_header();
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<button class="' . $tab_title . ' image-toggle btn btn--outline';
+                echo '<button class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
                 if ($k == 0) {
                     echo ' active';
                 }
-                echo '">' . $tab['title'] . '</button>';
+                echo '"><span class="hover-gradient"></span>' . $tab['title'] . '</button>';
                 $k++;
             }
             echo '</div>';
