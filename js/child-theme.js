@@ -6747,27 +6747,57 @@
 	  // SWIPER
 	  // import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
-	  // const swiper = new Swiper('.swiper', {
-	  //   // Optional parameters
-	  //   direction: 'vertical',
-	  //   loop: true,
-
-	  //   // If we need pagination
-	  //   pagination: {
-	  //     el: '.swiper-pagination',
-	  //   },
+	  // const swiper = new Swiper('.swiper', { 
+	  // //   loop: true,
+	  // slidesPerView: 6,
+	  // slidesPerColumn: 2,
+	  // slidesPerGroup: 3,
 
 	  //   // Navigation arrows
 	  //   navigation: {
 	  //     nextEl: '.swiper-button-next',
 	  //     prevEl: '.swiper-button-prev',
 	  //   },
-
-	  //   // And if we need scrollbar
-	  //   scrollbar: {
-	  //     el: '.swiper-scrollbar',
-	  //   },
 	  // });
+
+	  new Swiper('.swiper', {
+	    loop: true,
+	    grid: {
+	      rows: 2,
+	      // your amount of slides
+	      fill: "row"
+	    },
+	    slidesPerView: 3,
+	    slidesPerColumn: 2,
+	    slidesPerGroup: 3,
+	    // spaceBetween: 30,
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev'
+	    }
+
+	    // pagination: {
+	    //   el: '.swiper-pagination',
+	    //   clickable: true,
+	    // },
+	    // on: {
+	    //   init: function () {},
+	    //   orientationchange: function(){},
+	    //   beforeResize: function(){
+	    //     let vw = window.innerWidth;
+	    //     if(vw > 1000){
+	    //       mySwiper.params.slidesPerView = 3
+	    //         mySwiper.params.slidesPerColumn = 3
+	    //         mySwiper.params.slidesPerGroup = 3;
+	    //     } else {
+	    //       mySwiper.params.slidesPerView = 4
+	    //         mySwiper.params.slidesPerColumn = 2
+	    //         mySwiper.params.slidesPerGroup =4;
+	    //     }
+	    //     mySwiper.init();
+	    //   },
+	    // },
+	  });
 
 	  // AOS
 	  AOS.init();
