@@ -593,3 +593,26 @@ input[type="radio"].toggle {
     background: rgba(255, 255, 255, 0.1);
   }
 }
+
+// PRICING
+.tiers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+
+  .tier {
+    background-color: $black-1;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        &:before {
+          content: "&check";
+        }
+        // &#10003; &#x2713; &check;
+      }
+    }
+  }
+}

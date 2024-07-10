@@ -15444,6 +15444,26 @@ input[type=radio].toggle:checked + label:after {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.tiers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+.tiers-container .tier {
+  background-color: #111619;
+}
+.tiers-container .tier ul {
+  margin: 0;
+  padding: 0;
+}
+.tiers-container .tier ul li {
+  list-style: none;
+}
+.tiers-container .tier ul li:before {
+  content: "&check";
+}
+
 @font-face {
   font-family: "signsbold";
   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");

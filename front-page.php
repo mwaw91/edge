@@ -227,6 +227,35 @@ get_header();
             <h2>start from today</h2>
             <p><?php echo get_field('pricing_title')['description']; ?></p>
         </div>
+
+        <div class="tiers-container">
+            <?php
+            $tiers = get_field('tiers');
+            if ($tiers) {
+                foreach ($tiers as $tier) {
+            ?>
+                    <div class="tier radius">
+                        <h3 class="price team month"><?php echo $tier['team_price_per_month']; ?></h3>
+                        <h3 class="price team year"><?php echo $tier['team_price_per_year']; ?></h3>
+                        <h3 class="price individual month"><?php echo $tier['individual_price_per_month']; ?></h3>
+                        <h3 class="price individual year"><?php echo $tier['individual_price_per_year']; ?></h3>
+                        <button class="btn btn--solid btn--solid-green">
+                            <?php echo $tier['link']['url']; ?>
+                            <?php echo $tier['link']['title']; ?>
+                        </button>
+
+                        <ul>
+                            <?php
+                            foreach ($tier['package_includes'] as $item) {
+                                echo '<li>' . $item['item'] . '</li>';
+                            } ?>
+                        </ul>
+                    </div>
+            <?php
+                }
+            }
+            ?>
+        </div>
     </section>
     <!-- END PRICING -->
 
