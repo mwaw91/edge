@@ -1,11 +1,15 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
+:root {
+  --x: 0%;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -15158,15 +15162,16 @@ footer .container .social-media-menu li a img {
   background-color: transparent;
   color: #a4aabb;
   border: 1px solid #282f39;
+  background: linear-gradient(90deg, rgb(7, 22, 103) 0%, rgb(55, 83, 198) var(--x), rgb(7, 22, 103) 100%);
   overflow: hidden;
 }
 .btn--outline-grey-gradient span.hover-gradient {
+  display: none;
   width: 60px;
   height: 60px;
   background: linear-gradient(red 10%, transparent);
   filter: blur(30px);
   position: absolute;
-  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;

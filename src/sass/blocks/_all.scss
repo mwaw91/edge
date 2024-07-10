@@ -257,7 +257,17 @@ footer {
     color: $grey-text;
     border: 1px solid $black-3;
 
+    background: linear-gradient(
+      90deg,
+      rgba(7, 22, 103, 1) 0%,
+      rgba(55, 83, 198, 1) var(--x),
+      rgba(7, 22, 103, 1) 100%
+    );
+
     span.hover-gradient {
+      display: none;
+      // display: flex;
+
       // width: 650px;
       // height: 650px;
       width: 60px;
@@ -272,7 +282,6 @@ footer {
       // position: fixed;
       position: absolute;
 
-      display: flex;
       justify-content: center;
       align-items: center;
 

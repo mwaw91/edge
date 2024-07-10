@@ -6825,12 +6825,13 @@
 	  // });
 
 	  function btnHoverGradient() {
-	    var hoverGradient = document.querySelector('.hover-gradient');
-	    var gradientBtn = document.querySelector('.btn--outline-grey-gradient');
-	    gradientBtn.addEventListener('mousemove', function (e) {
-	      e.clientX;
-	      e.clientY;
-	      hoverGradient.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+	    var gradientBtn = document.querySelectorAll('.btn--outline-grey-gradient');
+	    gradientBtn.forEach(element => {
+	      element.onmousemove = function (e) {
+	        let rect = e.target.getBoundingClientRect();
+	        let x = e.clientX - rect.left;
+	        element.style.setProperty("--x", x + "px");
+	      };
 	    });
 	  }
 	  btnHoverGradient();
