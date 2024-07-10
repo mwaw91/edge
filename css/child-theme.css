@@ -15238,6 +15238,9 @@ input[type=radio].toggle:checked + label:after {
   max-width: 374px;
   text-align: center;
 }
+#hero video {
+  aspect-ratio: 1.79;
+}
 
 #tested h2, #tested .h2 {
   text-align: center;

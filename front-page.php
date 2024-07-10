@@ -16,6 +16,7 @@ get_header();
         $subtitle = get_field('subtitle');
         $button = get_field('button');
         $hero_img = get_field('image');
+        $hero_video = get_field('hero-video');
         ?>
 
         <!-- <h1><?php // echo $title; 
@@ -35,8 +36,11 @@ get_header();
 
 
         <!-- echo $button['url']; -->
-
-        <img class="radius green-shadow" src="<?php echo $hero_img['url']; ?>">
+        <video class="radius green-shadow" width="100%">
+            <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+            <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
     </section>
     <!-- END HERO -->
 
@@ -44,45 +48,43 @@ get_header();
     <!-- TESTED AND USED -->
     <section>
         <div id="tested">
-            <h2>Tested and used by the best</h2>
-            <div class="top-row">
+            <h2><?php echo get_field('tested-title');?></h2>
+            
+<?php 
+$top-row = get_field('top-row-of-videos');
+if ($top-row){
+echo '<div class="top-row">';
+foreach($top-row as $row ) 
                 <div class="grid-item">
-                    <img src="<?php echo $hero_img['url']; ?>">
+                    <video class="radius green-shadow" width="100%">
+                        <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                        <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
                     <div>
                         <span>@ESL</span>
                         <span>ICON 3.2M</span>
                     </div>
                 </div>
-                <div class="grid-item">
-                    <img src="<?php echo $hero_img['url']; ?>">
-                    <div>
-                        <span>@ESL</span>
-                        <span>ICON 3.2M</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <img src="<?php echo $hero_img['url']; ?>">
-                    <div>
-                        <span>@ESL</span>
-                        <span>ICON 3.2M</span>
-                    </div>
-                </div>
-            </div>
+
+                echo '</div>';
+}?>
+
+            
             <div class="bottom-row">
+
                 <div class="grid-item">
-                    <img src="<?php echo $hero_img['url']; ?>">
+                    <video class="radius green-shadow" width="100%">
+                        <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                        <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
                     <div>
                         <span>@ESL</span>
                         <span>ICON 3.2M</span>
                     </div>
                 </div>
-                <div class="grid-item">
-                    <img src="<?php echo $hero_img['url']; ?>">
-                    <div>
-                        <span>@ESL</span>
-                        <span>ICON 3.2M</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -192,7 +194,30 @@ get_header();
 
         </div>
     </section>
+
+    <!-- SWIPER -->
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
     <!-- END TESTIMONIALS -->
+
 
 
     <!-- CTA -->
