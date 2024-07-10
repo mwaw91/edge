@@ -6815,6 +6815,35 @@
 	      targets: '.main-tool-bar'
 	    }
 	  });
+	  // openTab();
+	  function newTabTest() {
+	    const buttons = document.querySelectorAll('.image-toggle');
+	    // Select all images with the class 'tab-image'
+	    const images = document.querySelectorAll('.tab-image');
+
+	    // Add click event listeners to each button
+	    buttons.forEach(button => {
+	      button.addEventListener('click', () => {
+	        // Remove 'active' class from all buttons
+	        buttons.forEach(btn => btn.classList.remove('active'));
+	        // Add 'active' class to the clicked button
+	        button.classList.add('active');
+
+	        // Remove 'active' class from all images
+	        images.forEach(img => img.classList.remove('active'));
+	        // Add 'active' class to the corresponding image
+	        console.log(document.getElementById(button.classList[0]));
+	        const correspondingImage = document.getElementById(button.classList[0]);
+	        console.log(correspondingImage);
+	        if (correspondingImage) {
+	          correspondingImage.classList.add('active');
+	        }
+	      });
+	    });
+	  }
+	  newTabTest();
+
+	  // PRICING MONTHLY YEARLY
 	  function monthlyYearly() {
 	    let team = document.getElementById('team');
 	    let individual = document.getElementById('individual');
@@ -6877,6 +6906,8 @@
 	    checkBilling();
 	  }
 	  monthlyYearly();
+
+	  // PRICING TEAMS INDIVIDUAL
 	});
 
 	exports.Alert = alert;

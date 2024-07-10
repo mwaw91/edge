@@ -145,6 +145,8 @@ get_header();
         <?php $image_buttons = get_field('image_buttons');
         if ($image_buttons) {
 
+
+
             $i = 0;
             // $len = count($image_buttons);
             // foreach ($array as $item) {
@@ -158,18 +160,38 @@ get_header();
             //     $i++;
             // }
 
+
+
+
             echo '<div class="tab-btns">';
+            $k = 0;
             foreach ($image_buttons as $tab) {
 
-                echo '<button onclick="openTab(' . $tab['title'] . ')" class="btn btn--outline">' . $tab['title'] . '</button>';
+
+                $tab_title = $tab['title'];
+                $tab_title = strtolower($tab_title);
+                $tab_title = str_replace(' ', '_', $tab_title);
+                $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
+
+                echo '<button class="' . $tab_title . ' image-toggle btn btn--outline';
+                if ($k == 0) {
+                    echo ' active';
+                }
+                echo '">' . $tab['title'] . '</button>';
+                $k++;
             }
             echo '</div>';
             foreach ($image_buttons as $tab_image) {
-                echo '<img id="' . $tab_image['title'] . '" class="tab-image green-gradient radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '" ';
-                if ($i > 0) {
-                    echo ' style="display:none"';
+                $tab_title = $tab_image['title'];
+                $tab_title = strtolower($tab_title);
+                $tab_title = str_replace(' ', '_', $tab_title);
+                $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
+
+                echo '<img id="' . $tab_title . '" class="';
+                if ($i == 0) {
+                    echo 'active ';
                 }
-                echo '/>';
+                echo 'tab-image green-gradient radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '"/>';
                 $i++;
             }
         }

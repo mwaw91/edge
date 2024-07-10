@@ -15318,6 +15318,14 @@ footer .container .social-media-menu li a img {
   align-items: center;
 }
 
+.tab-image {
+  display: none;
+}
+
+.tab-image.active {
+  display: block;
+}
+
 .codepen .faq-header {
   font-size: 42px;
   border-bottom: 1px dotted #ccc;

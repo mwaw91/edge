@@ -508,6 +508,12 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.tab-image {
+  display: none;
+}
+.tab-image.active {
+  display: block;
+}
 
 .codepen {
   .faq-header {
