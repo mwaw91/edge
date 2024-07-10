@@ -216,10 +216,10 @@ get_header();
     <section id="pricing">
 
         <!-- toggle -->
-        <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-        <label for="toggle-on" class="btn">Yes</label>
-        <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-        <label for="toggle-off" class="btn">No</label>
+        <div class="pricing-toggle-container">
+            <span id="team" class="active pricing-toggle">Team</span>
+            <span id="individual" class="pricing-toggle">Individual</span>
+        </div>
 
 
         <div data-aos="fade-up" class="title-section">
@@ -239,10 +239,7 @@ get_header();
                         <h3 class="price team year"><?php echo $tier['team_price_per_year']; ?></h3>
                         <h3 class="price individual month"><?php echo $tier['individual_price_per_month']; ?></h3>
                         <h3 class="price individual year"><?php echo $tier['individual_price_per_year']; ?></h3>
-                        <button class="btn btn--solid btn--solid-green">
-                            <?php echo $tier['link']['url']; ?>
-                            <?php echo $tier['link']['title']; ?>
-                        </button>
+
 
                         <ul>
                             <?php
@@ -250,6 +247,11 @@ get_header();
                                 echo '<li>' . $item['item'] . '</li>';
                             } ?>
                         </ul>
+
+                        <button class="btn btn--solid btn--solid-green">
+                            <?php echo $tier['link']['url']; ?>
+                            <?php echo $tier['link']['title']; ?>
+                        </button>
                     </div>
             <?php
                 }

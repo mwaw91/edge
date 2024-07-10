@@ -6815,14 +6815,68 @@
 	      targets: '.main-tool-bar'
 	    }
 	  });
+	  function monthlyYearly() {
+	    let team = document.getElementById('team');
+	    let individual = document.getElementById('individual');
+	    let prices = document.querySelectorAll('.price');
+	    //    let toggles = document.querySelectorAll('.pricing-toggle');
 
-	  // FOLLOW GRADIENT
-	  var cursor = document.querySelector('.blob');
-	  document.addEventListener('mousemove', function (e) {
-	    e.clientX;
-	    e.clientY;
-	    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
-	  });
+	    function toggleActive(clickedSpan, otherSpan) {
+	      if (!clickedSpan.classList.contains('active')) {
+	        clickedSpan.classList.add('active');
+	        otherSpan.classList.remove('active');
+
+	        // if (team.classList.contains('active')) {
+	        //   prices.forEach(element => {
+	        //     if (!element.classList.contains('team')) {
+	        //       element.style.display = "none";
+	        //     } else {
+	        //       element.style.display = "block";
+	        //     }
+	        //   });
+	        // }
+
+	        // if (individual.classList.contains('active')) {
+	        //   prices.forEach(element => {
+	        //     if (!element.classList.contains('individual')) {
+	        //       element.style.display = "none";
+	        //     } else {
+	        //       element.style.display = "block";
+	        //     }
+	        //   });
+	        // }
+	        checkBilling();
+	      }
+	    }
+	    team.addEventListener('click', function () {
+	      toggleActive(team, individual);
+	    });
+	    individual.addEventListener('click', function () {
+	      toggleActive(individual, team);
+	    });
+	    function checkBilling() {
+	      if (team.classList.contains('active')) {
+	        prices.forEach(element => {
+	          if (!element.classList.contains('team')) {
+	            element.style.display = "none";
+	          } else {
+	            element.style.display = "block";
+	          }
+	        });
+	      }
+	      if (individual.classList.contains('active')) {
+	        prices.forEach(element => {
+	          if (!element.classList.contains('individual')) {
+	            element.style.display = "none";
+	          } else {
+	            element.style.display = "block";
+	          }
+	        });
+	      }
+	    }
+	    checkBilling();
+	  }
+	  monthlyYearly();
 	});
 
 	exports.Alert = alert;
