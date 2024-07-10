@@ -240,45 +240,42 @@ get_header();
             <p><?php echo get_field('testimonials_title')['description']; ?></p>
         </div>
 
-        <?php
 
-        $testimonials = get_field('testimonials');
-        if ($testimonials) {
-            foreach ($testimonials as $testimonial) {
-        ?>
-                <div class="testimonial radius">
-                    <div>
-                        <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
-                        <div>
-                            <h3><?php echo $testimonial['name']; ?></h3>
-                            <h5><?php echo $testimonial['company']; ?></h5>
+        <!-- SWIPER -->
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+                <?php
+
+                $testimonials = get_field('testimonials');
+                if ($testimonials) {
+                    foreach ($testimonials as $testimonial) {
+                ?>
+                        <div class="swiper-slide testimonial radius">
+                            <div>
+                                <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
+                                <div>
+                                    <h3><?php echo $testimonial['name']; ?></h3>
+                                    <h5><?php echo $testimonial['company']; ?></h5>
+                                </div>
+                            </div>
+                            <p><?php echo $testimonial['testimonial']; ?></p>
                         </div>
-                    </div>
-                    <p><?php echo $testimonial['testimonial']; ?></p>
-                </div>
-        <?php
-            }
-        }
-        ?>
-    </section>
+                <?php
+                    }
+                }
+                ?>
+            </div>
 
-    <!-- SWIPER -->
-    <div class="swiper">
-
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
+
+
+    </section>
+
+
     <!-- END TESTIMONIALS -->
 
 

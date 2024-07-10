@@ -15439,6 +15439,11 @@ input[type=radio].toggle:checked + label:after {
   display: none;
 }
 
+.swiper-slide:nth-child(3n-1) {
+  margin-top: -55px !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 @font-face {
   font-family: "signsbold";
   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");

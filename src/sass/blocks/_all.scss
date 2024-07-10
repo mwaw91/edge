@@ -585,3 +585,11 @@ input[type="radio"].toggle {
     display: none;
   }
 }
+
+// TESTIMONIALS
+.swiper-slide {
+  &:nth-child(3n-1) {
+    margin-top: -55px !important;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
