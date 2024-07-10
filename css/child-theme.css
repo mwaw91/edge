@@ -15200,6 +15200,10 @@ footer .container .social-media-menu li a img {
 }
 #tested .grid-item {
   max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }
 #tested .grid-item div {
   display: flex;
@@ -15353,6 +15357,7 @@ footer .container .social-media-menu li a img {
 }
 
 .tab-image {
+  margin: 0 auto;
   display: none;
 }
 

@@ -6767,7 +6767,7 @@
 	      // your amount of slides
 	      fill: "row"
 	    },
-	    slidesPerView: 3,
+	    slidesPerView: 3.2,
 	    slidesPerColumn: 2,
 	    slidesPerGroup: 3,
 	    // spaceBetween: 30,

@@ -8,7 +8,24 @@ get_header();
 <div class="fade-left" data-aos="fade-left"></div>
 <div class="fade-right" data-aos="fade-right"></div> -->
 
+<!-- INTERACTIONS -->
+<!-- 
+ FADE IN UP AND LEFT RIGHT
+ SMOOTHLY  
+ 
+ BTNS
+ HOVER, GRADIENT FOLLOW CURSOR
+ -->
+
 <!-- HERO -->
+<!-- INTERACTIONS -->
+<!-- 
+ LOGOS
+ ENTER FROM TOP, SLOW JIGGLE/WOBBLE ON HOVER
+ VIDEO
+ ZOOM ON HOVER, FADE IN
+ -->
+
 <div class="container">
     <section id="hero" data-aos="fade-up">
         <?php
@@ -100,6 +117,11 @@ get_header();
 
 
     <!-- STAT CONTAINER -->
+    <!-- 
+        INTERACTION
+ LOGOS
+ CONTINUOUS SWIPER SCROLL
+ -->
     <section id="stat-container" class="radius">
         <div class="stats">
             <?php
@@ -131,6 +153,10 @@ get_header();
 
 
     <!-- IMPROVE YOUR GAMEPLAY -->
+    <!-- 
+        INTERACTION
+
+ -->
     <section>
         <div data-aos="fade-up" class="title-section">
 
@@ -174,7 +200,7 @@ get_header();
                 if ($i == 0) {
                     echo 'active ';
                 }
-                echo 'tab-image green-gradient radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '"/>';
+                echo 'tab-image green-shadow radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '"/>';
                 $i++;
             }
         }
@@ -277,6 +303,11 @@ get_header();
     <!-- END PRICING -->
 
     <!-- TESTIMONIALS -->
+    <!-- 
+        INTERACTION
+DRAGGABLE WITH ARROW
+CLICK MOVE ONLY 1 SLIDE
+ -->
     <section id="testimonials">
         <div data-aos="fade-up" class="title-section">
             <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
@@ -346,6 +377,10 @@ get_header();
 
     <!-- <div class="container"> -->
     <!-- FAQS -->
+    <!-- 
+        INTERACTION
++ SPIN INTO CROSS
+ -->
     <section id="faq">
         <div data-aos="fade-up" class="title-section">
             <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
@@ -409,6 +444,13 @@ get_header();
     <!-- END FAQS -->
 </div>
 
+<!-- 
+ FOOTER
+INTERACTION
+ 
+HOVER GREEN
+ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
+ -->
 
 <?php
 get_footer();

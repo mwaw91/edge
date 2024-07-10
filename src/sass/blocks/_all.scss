@@ -345,6 +345,10 @@ footer {
   }
   .grid-item {
     max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
     div {
       display: flex;
       flex-direction: row;
@@ -535,6 +539,7 @@ footer {
   align-items: center;
 }
 .tab-image {
+  margin: 0 auto;
   display: none;
 }
 .tab-image.active {
