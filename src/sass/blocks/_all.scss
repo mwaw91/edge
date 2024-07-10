@@ -256,54 +256,27 @@ footer {
     background-color: transparent;
     color: $grey-text;
     border: 1px solid $black-3;
-
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(7, 22, 103, 1) 0%,
-    //   rgba(55, 83, 198, 1) var(--x),
-    //   rgba(7, 22, 103, 1) 100%
-    // );
-
-    span.hover-gradient {
-      display: none;
-      // display: flex;
-
-      // width: 650px;
-      // height: 650px;
-      width: 60px;
-      height: 60px;
-
-      // background: linear-gradient($green 10%, transparent);
-      // filter: blur(250px);
-      // background: linear-gradient($green 10%, transparent);
-      background: linear-gradient(red 10%, transparent);
-      filter: blur(30px);
-
-      // position: fixed;
-      position: absolute;
-
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 100%;
-
-      transition: all 450ms ease-out;
-
-      pointer-events: none;
-      right: 0;
-      bottom: 0;
-      // transform: translate(calc(-50% + 15px), -50%);
-      // transform: translate(calc(-50% + 15px), 0);
-      z-index: 10;
-    }
     overflow: hidden;
-
+    &::before {
+      --size: 0;
+      content: "";
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: var(--size);
+      height: var(--size);
+      filter: blur(30px);
+      background: radial-gradient(circle closest-side, $green, transparent);
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease;
+    }
+    &:hover::before {
+      --size: 200px;
+    }
     &:hover {
-      // background-color: $green;
       border: 1px solid white;
       overflow: hidden;
     }
-
     &.active {
       background-color: $green-dark;
       border: 1px solid $green;
@@ -312,22 +285,7 @@ footer {
   }
 }
 
-.btn--outline-grey-gradient::before {
-  --size: 0;
-  content: "";
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, pink, transparent);
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
-}
-
-.btn--outline-grey-gradient:hover::before {
-  --size: 200px;
-}
+.btn--outline-grey-gradient .btn--outline-grey-gradient
 
 // BTN HOVER GRADIENT
 // .follow-gradient {

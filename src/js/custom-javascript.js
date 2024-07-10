@@ -99,16 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.style.setProperty('--y', y + 'px');
       });
     });
-
-
-    // var gradientBtn = document.querySelectorAll('.btn--outline-grey-gradient');
-    // gradientBtn.forEach(element => {
-    //   element.onmousemove = function (e) {
-    //     let rect = e.target.getBoundingClientRect();
-    //     let x = e.clientX - rect.left;
-    //     element.style.setProperty("--x", x + "px");
-    //   };
-    // });
   }
   btnHoverGradient();
 

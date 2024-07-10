@@ -191,7 +191,7 @@ get_header();
                 if ($k == 0) {
                     echo ' active';
                 }
-                echo '"><span class="hover-gradient"></span>' . $tab['title'] . '</button>';
+                echo '">' . $tab['title'] . '</button>';
                 $k++;
             }
             echo '</div>';
