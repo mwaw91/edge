@@ -38,7 +38,7 @@ get_header();
 
         <!-- <h1><?php // echo $title; 
                     ?></h1> -->
-        <h1>Track your CS2 Stats like the Pros</h1>
+        <h1 class="text-h1">Track your CS2 Stats like the Pros</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <button class="btn btn--solid"><?php echo $button['title']; ?></button>
@@ -68,7 +68,7 @@ get_header();
     <!-- TESTED AND USED -->
     <section>
         <div id="tested">
-            <h2><?php echo get_field('tested-title'); ?></h2>
+            <h2 class="text-h1"><?php echo get_field('tested-title'); ?></h2>
 
             <?php
             $top_row = get_field('top_row_of_videos');
@@ -83,8 +83,8 @@ get_header();
                             Your browser does not support the video tag.
                         </video>
                         <div>
-                            <span class="font-signs"><?php echo $row['nametag']; ?></span>
-                            <span class="font-signs"><?php echo $row['followers']; ?></span>
+                            <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
+                            <span class="font-signs text-h4"><?php echo $row['followers']; ?></span>
                         </div>
                     </div>
             <?php
@@ -105,8 +105,8 @@ get_header();
                             Your browser does not support the video tag.
                         </video>
                         <div>
-                            <span class="font-signs"><?php echo $bottomrow['nametag']; ?></span>
-                            <span class="font-signs"><?php echo $bottomrow['followers']; ?></span>
+                            <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
+                            <span class="font-signs text-h4"><?php echo $bottomrow['followers']; ?></span>
                         </div>
                     </div>
             <?php
@@ -134,15 +134,15 @@ get_header();
             if ($stats) {
                 foreach ($stats as $stat) {
                     echo '<div class="stat">
-                <span class="font-signs">' . $stat['stat'] . '</span>
+                <span class="font-signs text-h2">' . $stat['stat'] . '</span>
                 <p>' . $stat['description'] . '</p>
             </div>';
                 }
             }
             ?>
         </div>
-        <h6>Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
-                                                                    ?></h6>
+        <h4 class="text-h4">Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
+                                                                                    ?></h4>
         <div class="logo-container">
             <?php
             $logos = get_field('logos');
@@ -164,8 +164,8 @@ get_header();
  -->
     <section id="improve-your-gameplay">
         <div data-aos="fade-up" class="title-section">
-            <h6><?php echo get_field('title_section')['small_text']; ?></h6>
-            <h2><?php echo get_field('title_section')['title']; ?></h2>
+            <h6 class="text-h6"><?php echo get_field('title_section')['small_text']; ?></h6>
+            <h2 class="text-h1"><?php echo get_field('title_section')['title']; ?></h2>
             <p><?php echo get_field('title_section')['description']; ?></p>
         </div>
 
@@ -229,8 +229,8 @@ get_header();
                         </video>
                     </div>
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
-                        <h6><?php echo $row['small_text']; ?></h6>
-                        <h2><?php echo $row['title']; ?></h2>
+                        <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
+                        <h2 class="text-h1"><?php echo $row['title']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
                     </div>
                 </div>
@@ -253,8 +253,8 @@ get_header();
     <section id="pricing">
 
         <div data-aos="fade-up" class="title-section">
-            <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
-            <h2>start from today</h2>
+            <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
+            <h2 class="text-h1">start from today</h2>
             <p><?php echo get_field('pricing_title')['description']; ?></p>
         </div>
 
@@ -271,11 +271,11 @@ get_header();
                 foreach ($tiers as $tier) {
             ?>
                     <div class="tier radius">
-                        <h2><?php echo $tier['name']; ?></h2>
-                        <p class="price team month"><span class="font-signs">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
-                        <p class="price team year"><span class="font-signs">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
-                        <p class="price individual month"><span class="font-signs">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
-                        <p class="price individual year"><span class="font-signs">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
+                        <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
+                        <p class="price team month"><span class="font-signs text-h3">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
+                        <p class="price team year"><span class="font-signs text-h3">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
+                        <p class="price individual month"><span class="font-signs text-h3">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
+                        <p class="price individual year"><span class="font-signs text-h3">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
 
                         <!-- <div class="period-toggle-container">
                             <span id="yearly" class="active period-toggle">Billed Yearly</span>
@@ -318,8 +318,8 @@ CLICK MOVE ONLY 1 SLIDE
 </div>
 <section id="testimonials">
     <div data-aos="fade-up" class="title-section">
-        <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
-        <h2>Take their word for it</h2>
+        <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
+        <h2 class="text-h1">Take their word for it</h2>
         <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
                     ?></h2> -->
         <p><?php echo get_field('testimonials_title')['description']; ?></p>
@@ -350,8 +350,8 @@ CLICK MOVE ONLY 1 SLIDE
                                 <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
                             </div>
                             <div class="details">
-                                <h3><?php echo $testimonial['name']; ?></h3>
-                                <h5><?php echo $testimonial['company']; ?></h5>
+                                <h3 class="text-h3"><?php echo $testimonial['name']; ?></h3>
+                                <h5 class="text-h4"><?php echo $testimonial['company']; ?></h5>
                             </div>
                         </div>
                         <p><?php echo $testimonial['testimonial']; ?></p>
@@ -378,7 +378,7 @@ CLICK MOVE ONLY 1 SLIDE
     <section id="cta">
         <div class="cta" data-aos="fade-up">
             <div class="copy">
-                <h2><?php echo get_field('cta_title_section')['title']; ?></h2>
+                <h2 class="text-h1"><?php echo get_field('cta_title_section')['title']; ?></h2>
                 <p><?php echo get_field('cta_title_section')['description']; ?></p>
                 <button class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
                     <?php echo get_field('cta_title_section')['button']['title']; ?>
@@ -401,8 +401,8 @@ CLICK MOVE ONLY 1 SLIDE
  -->
     <section id="faq">
         <div data-aos="fade-up" class="title-section">
-            <h6><?php echo get_field('faqs_title')['small_text']; ?></h6>
-            <h2>Questions</h2>
+            <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
+            <h2 class="text-h1">Questions</h2>
             <!-- <h2><?php //echo get_field('faqs_title')['title']; 
                         ?></h2> -->
             <p><?php echo get_field('faqs_title')['description']; ?></p>
@@ -421,8 +421,10 @@ CLICK MOVE ONLY 1 SLIDE
                         <div class="faq-question">
                             <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
                             <div class="plus">+</div>
-                            <label for="q<?php echo $j; ?>" class="panel-title"><?php echo $faq['question']; ?></label>
-                            <div class="panel-content"><?php echo $faq['answer']; ?></div>
+                            <label for="q<?php echo $j; ?>" class="panel-title font-signs"><?php echo $faq['question']; ?></label>
+                            <div class="panel-content">
+                                <p><?php echo $faq['answer']; ?></p>
+                            </div>
                         </div>
                 <?php
                         $j++;
