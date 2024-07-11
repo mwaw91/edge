@@ -15480,12 +15480,10 @@ footer .container .social-media-menu li a img {
   display: none;
 }
 
-.swiper-slide:nth-child(3n-1) {
-  margin-top: -55px !important;
-  background: rgba(255, 255, 255, 0.1);
+#pricing {
+  margin-bottom: 60px;
 }
-
-.team-toggle-container {
+#pricing .team-toggle-container {
   background-color: #282f39;
   display: flex;
   flex-direction: row;
@@ -15494,34 +15492,48 @@ footer .container .social-media-menu li a img {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 7px;
 }
-.team-toggle-container span {
+#pricing .team-toggle-container span {
+  padding: 7px 21px;
   background-color: #282f39;
   color: #fff;
+  border-radius: 7px;
 }
-.team-toggle-container span.active {
+#pricing .team-toggle-container span:hover {
+  cursor: pointer;
+}
+#pricing .team-toggle-container span.active {
   background-color: #24f4ab;
   color: #0b0f11;
 }
-
-.tiers-container {
+#pricing .tiers-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  gap: 30px;
 }
-.tiers-container .tier {
+#pricing .tiers-container .tier {
   background-color: #111619;
+  border: 1px solid #282f39;
+  padding: 30px;
 }
-.tiers-container .tier ul {
+#pricing .tiers-container .tier ul {
   margin: 0;
   padding: 0;
 }
-.tiers-container .tier ul li {
+#pricing .tiers-container .tier ul li {
   list-style: none;
 }
-.tiers-container .tier ul li:before {
+#pricing .tiers-container .tier ul li:before {
   content: "&check";
+}
+#pricing .all-features {
+  text-align: center;
+  width: 100%;
 }
 
 /* The switch - the box around the slider */
@@ -15575,6 +15587,89 @@ footer .container .social-media-menu li a img {
 }
 .period-toggle-container .slider.round:before {
   border-radius: 50%;
+}
+
+#testimonials {
+  margin-bottom: 90px;
+}
+#testimonials .swiper-buttons-container {
+  position: relative;
+  top: -81px;
+}
+#testimonials .swiper-buttons-container .swiper-buttons {
+  right: 0;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+#testimonials .swiper-buttons-container .swiper-buttons .swiper-button-next,
+#testimonials .swiper-buttons-container .swiper-buttons .swiper-button-prev {
+  border-radius: 9999px;
+  background-color: #111619;
+  border: 1px solid #282f39;
+  width: 60px;
+  height: 60px;
+}
+#testimonials .swiper-buttons-container .swiper-buttons .swiper-button-next::after,
+#testimonials .swiper-buttons-container .swiper-buttons .swiper-button-prev::after {
+  color: white;
+  font-size: 20px;
+}
+#testimonials .swiper-wrapper {
+  padding-top: 70px;
+  margin-top: 40px;
+}
+#testimonials .swiper-wrapper .testimonial {
+  background: #111619;
+  border: 1px solid #282f39;
+  padding: 30px;
+  min-height: 308px;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(3n-1) {
+  margin-top: -55px !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(2) {
+  margin-bottom: 88px !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(8) {
+  margin-bottom: 88px !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(14) {
+  margin-bottom: 88px !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(20) {
+  margin-bottom: 88px !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(26) {
+  margin-bottom: 88px !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(32) {
+  margin-bottom: 88px !important;
+}
+#testimonials .swiper-wrapper .testimonial > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+#testimonials .swiper-wrapper .testimonial > div .img-container {
+  background-color: #1d2329;
+  border: 1px solid #282f39;
+  margin-right: 30px;
+  border-radius: 9999px;
+  width: 70px;
+  height: 70px;
+  -o-object-position: center;
+  object-position: center;
+}
+#testimonials .swiper-wrapper .testimonial > div .img-container img {
+  max-width: 45px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 @font-face {

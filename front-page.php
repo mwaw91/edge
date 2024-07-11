@@ -252,17 +252,16 @@ get_header();
     <!-- PRICING -->
     <section id="pricing">
 
-        <!-- TOGGLE TEAM INDIVIDUAL -->
-        <div class="team-toggle-container">
-            <span id="team" class="active">Team</span>
-            <span id="individual">Individual</span>
-        </div>
-
-
         <div data-aos="fade-up" class="title-section">
             <h6><?php echo get_field('pricing_title')['small_text']; ?></h6>
             <h2>start from today</h2>
             <p><?php echo get_field('pricing_title')['description']; ?></p>
+        </div>
+
+        <!-- TOGGLE TEAM INDIVIDUAL -->
+        <div class="team-toggle-container">
+            <span id="team" class="active">Team</span>
+            <span id="individual">Individual</span>
         </div>
 
         <div class="tiers-container">
@@ -272,10 +271,11 @@ get_header();
                 foreach ($tiers as $tier) {
             ?>
                     <div class="tier radius">
-                        <h3 class="price team month">€<?php echo $tier['team_price_per_month']; ?><span> /month</span></h3>
-                        <h3 class="price team year">€<?php echo $tier['team_price_per_year']; ?><span> /year</span></h3>
-                        <h3 class="price individual month">€<?php echo $tier['individual_price_per_month']; ?><span> /month</span></h3>
-                        <h3 class="price individual year">€<?php echo $tier['individual_price_per_year']; ?><span> /year</span></h3>
+                        <h2><?php echo $tier['name']; ?></h2>
+                        <p class="price team month"><span class="font-signs">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
+                        <p class="price team year"><span class="font-signs">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
+                        <p class="price individual month"><span class="font-signs">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
+                        <p class="price individual year"><span class="font-signs">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
 
                         <!-- <div class="period-toggle-container">
                             <span id="yearly" class="active period-toggle">Billed Yearly</span>
@@ -295,7 +295,7 @@ get_header();
                             } ?>
                         </ul>
 
-                        <button class="btn btn--solid btn--solid-green">
+                        <button class="btn btn--solid-grey">
                             <?php echo $tier['link']['url']; ?>
                             <?php echo $tier['link']['title']; ?>
                         </button>
@@ -305,6 +305,7 @@ get_header();
             }
             ?>
         </div>
+        <p class="all-features">See all features UPWARDS CHEVRON</p>
     </section>
     <!-- END PRICING -->
 
@@ -314,54 +315,64 @@ get_header();
 DRAGGABLE WITH ARROW
 CLICK MOVE ONLY 1 SLIDE
  -->
-    <section id="testimonials">
-        <div data-aos="fade-up" class="title-section">
-            <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
-            <h2>Take their word for it</h2>
-            <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
-                        ?></h2> -->
-            <p><?php echo get_field('testimonials_title')['description']; ?></p>
-        </div>
+</div>
+<section id="testimonials">
+    <div data-aos="fade-up" class="title-section">
+        <h6><?php echo get_field('testimonials_title')['small_text']; ?></h6>
+        <h2>Take their word for it</h2>
+        <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
+                    ?></h2> -->
+        <p><?php echo get_field('testimonials_title')['description']; ?></p>
+    </div>
 
 
-        <!-- SWIPER -->
-        <div class="swiper">
-
-            <div class="swiper-wrapper">
-                <?php
-
-                $testimonials = get_field('testimonials');
-                if ($testimonials) {
-                    foreach ($testimonials as $testimonial) {
-                ?>
-                        <div class="swiper-slide testimonial radius">
-                            <div>
-                                <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
-                                <div>
-                                    <h3><?php echo $testimonial['name']; ?></h3>
-                                    <h5><?php echo $testimonial['company']; ?></h5>
-                                </div>
-                            </div>
-                            <p><?php echo $testimonial['testimonial']; ?></p>
-                        </div>
-                <?php
-                    }
-                }
-                ?>
-            </div>
-
-            <div class="swiper-button-prev"></div>
+    <!-- SWIPER -->
+    <div class="container swiper-buttons-container">
+        <div class="swiper-buttons">
             <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="swiper">
+
+
+
+        <div class="swiper-wrapper">
+            <?php
+
+            $testimonials = get_field('testimonials');
+            if ($testimonials) {
+                foreach ($testimonials as $testimonial) {
+            ?>
+                    <div class="swiper-slide testimonial radius">
+                        <div>
+                            <div class="img-container">
+                                <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
+                            </div>
+                            <div class="details">
+                                <h3><?php echo $testimonial['name']; ?></h3>
+                                <h5><?php echo $testimonial['company']; ?></h5>
+                            </div>
+                        </div>
+                        <p><?php echo $testimonial['testimonial']; ?></p>
+                    </div>
+            <?php
+                }
+            }
+            ?>
         </div>
 
 
-
-    </section>
-
-
-    <!-- END TESTIMONIALS -->
+    </div>
 
 
+
+</section>
+
+
+<!-- END TESTIMONIALS -->
+
+<div class="container">
 
     <!-- CTA -->
     <section data-aos="fade-up" id="cta">
