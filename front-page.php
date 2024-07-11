@@ -162,11 +162,8 @@ get_header();
         INTERACTION
 
  -->
-    <section>
+    <section id="improve-your-gameplay">
         <div data-aos="fade-up" class="title-section">
-
-
-
             <h6><?php echo get_field('title_section')['small_text']; ?></h6>
             <h2><?php echo get_field('title_section')['title']; ?></h2>
             <p><?php echo get_field('title_section')['description']; ?></p>
@@ -219,23 +216,27 @@ get_header();
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
+            $l = 0;
             foreach ($alternating_videos as $row) {
         ?>
-                <div id="alternating-video-column">
-                    <div>
+                <div class="alternating-video-column">
+
+                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
                         <video class="radius" width="100%">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div data-aos="fade-up" class="title-section">
+                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
                         <h6><?php echo $row['small_text']; ?></h6>
                         <h2><?php echo $row['title']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
                     </div>
                 </div>
+
         <?php
+                $l++;
             }
         }
         ?>

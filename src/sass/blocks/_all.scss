@@ -473,44 +473,35 @@ footer {
     justify-content: center;
   }
 }
+
+// IMPROVE YOUR GAMEPLAY
+#improve-your-gameplay {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
 // ALTERNATING VIDEO COLUMN
-#alternating-video-column {
+.alternating-video-column {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  // grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 60px;
   // grid-template-rows: 1fr;
   // grid-column-gap: 0px;
   // grid-row-gap: 0px;
+  align-items: center;
 
   div {
     max-width: 600px;
-    grid-area: 1 / 1 / 2 / 8;
-    &:nth-child(even) {
+    &.title-section {
       max-width: 383px;
-      grid-area: 1 / 8 / 2 / 13;
     }
   }
-  // div {
-  //   max-width: 383px;
-  //   grid-area: 1 / 8 / 2 / 13;
-  // }
 
-  align-items: center;
   &:nth-child(even) {
-    //     img { grid-area: 1 / 1 / 2 / 8; }
-    // div { grid-area: 1 / 8 / 2 / 13; }
-
-    // img {
-    //   order: 2;
-    // }
     div {
-      // max-width: 600px;
-      max-width: 383px;
-      grid-area: 1 / 1 / 2 / 8;
-      &:nth-child(even) {
-        // max-width: 383px;
-        max-width: 600px;
-        grid-area: 1 / 8 / 2 / 13;
+      order: 2;
+      &.title-section {
         order: 1;
       }
     }

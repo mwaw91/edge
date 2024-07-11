@@ -15300,27 +15300,27 @@ footer .container .social-media-menu li a img {
   justify-content: center;
 }
 
-#alternating-video-column {
+#improve-your-gameplay {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.alternating-video-column {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 60px;
   align-items: center;
 }
-#alternating-video-column div {
+.alternating-video-column div {
   max-width: 600px;
-  grid-area: 1/1/2/8;
 }
-#alternating-video-column div:nth-child(even) {
+.alternating-video-column div.title-section {
   max-width: 383px;
-  grid-area: 1/8/2/13;
 }
-#alternating-video-column:nth-child(even) div {
-  max-width: 383px;
-  grid-area: 1/1/2/8;
+.alternating-video-column:nth-child(even) div {
+  order: 2;
 }
-#alternating-video-column:nth-child(even) div:nth-child(even) {
-  max-width: 600px;
-  grid-area: 1/8/2/13;
+.alternating-video-column:nth-child(even) div.title-section {
   order: 1;
 }
 
