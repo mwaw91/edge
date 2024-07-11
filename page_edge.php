@@ -45,7 +45,31 @@
         $hero_img = get_field('image');
         $hero_video = get_field('hero-video');
         ?>
+        <div class="hero-logos">
+            <div class="lhs-logos" data-aos="fade-down">
+                <?php
+                $lhs_logos = get_field('lhs_logos');
+                // var_dump($lhs_logos);
+                if ($lhs_logos) {
+                    foreach ($lhs_logos as $lhs) {
+                        echo '<img src="' . $lhs['logo'] . '"/>';
+                    }
+                }
+                ?>
+            </div>
+            <div class="rhs-logos" data-aos="fade-down">
+                <?php
+                $rhs_logos = get_field('rhs_logos');
+                if ($rhs_logos) {
+                    foreach ($rhs_logos as $rhs) {
+                        echo '<img src="' . $rhs['logo'] . '"/>';
+                    }
+                }
+                ?>
+            </div>
 
+
+        </div>
         <!-- <h1><?php // echo $title; 
                     ?></h1> -->
         <h1 class="text-h1">Track your CS2 Stats like the Pros</h1>
