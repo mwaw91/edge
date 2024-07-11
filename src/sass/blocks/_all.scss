@@ -83,7 +83,7 @@ body {
 // NAV
 .main-tool-bar {
   height: 80px;
-  background: blue;
+  background: white;
   text-align: center;
   display: flex;
   align-items: center;
@@ -862,10 +862,12 @@ footer {
     padding-top: 70px;
     margin-top: 40px;
     .testimonial {
+      margin-right: 30px;
       &:nth-child(3n-1) {
         margin-top: -55px !important;
         // margin-bottom: 30px !important;
       }
+      margin-top: 0;
       // top row
       &:nth-child(2) {
         margin-bottom: 88px !important;

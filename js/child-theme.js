@@ -6762,7 +6762,7 @@
 
 	  new Swiper('.swiper', {
 	    loop: true,
-	    spaceBetween: 30,
+	    // spaceBetween: 30,
 	    grid: {
 	      rows: 2,
 	      // your amount of slides

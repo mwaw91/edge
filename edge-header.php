@@ -42,7 +42,7 @@
 
 
         <header id="masthead" class="site-header" role="banner">
-            <!-- <div class='main-tool-bar'></div> -->
+            <div class='main-tool-bar'></div>
             <div id="">
                 <div class="header-content container clearfix">
                     <!-- LOGO  -->

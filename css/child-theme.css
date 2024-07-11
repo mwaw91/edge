@@ -15022,7 +15022,7 @@ body {
 
 .main-tool-bar {
   height: 80px;
-  background: blue;
+  background: white;
   text-align: center;
   display: flex;
   align-items: center;
@@ -15630,6 +15630,8 @@ footer .container .social-media-menu li a img {
   margin-top: 40px;
 }
 #testimonials .swiper-wrapper .testimonial {
+  margin-right: 30px;
+  margin-top: 0;
   background: #111619;
   border: 1px solid #282f39;
   padding: 30px;
