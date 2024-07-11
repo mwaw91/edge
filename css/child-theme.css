@@ -15586,27 +15586,27 @@ footer .container .social-media-menu li a:hover svg path {
   display: block;
 }
 
-.codepen .faq-content {
+.faq-container .faq-content {
   margin: 0 auto;
   background-color: #111619;
   border: 1px solid #282f39;
-  padding: 30px;
+  padding: 15px 30px 25px 30px;
 }
-.codepen .faq-question {
-  padding: 20px 0;
+.faq-container .faq-question {
+  padding-top: 20px;
 }
-.codepen .panel-title {
-  font-size: 24px;
+.faq-container .panel-title {
   width: 100%;
   position: relative;
   margin: 0;
-  padding: 10px 10px 0 48px;
+  padding: 10px 10px 0 75px;
   display: block;
   cursor: pointer;
+  font-family: "blinkersemibold", sans-serif;
 }
-.codepen .panel-content {
-  font-size: 20px;
-  padding: 0px 14px;
+.faq-container .panel-content {
+  color: #bababa;
+  padding: 14px 14px 0 35px;
   margin: 0 40px;
   height: 0;
   overflow: hidden;
@@ -15614,16 +15614,18 @@ footer .container .social-media-menu li a:hover svg path {
   position: relative;
   opacity: 0;
   transition: 0.4s ease;
+  font-family: "blinkerregular", sans-serif;
 }
-.codepen .panel:checked ~ .panel-content {
+.faq-container .panel:checked ~ .panel-content {
   height: auto;
   opacity: 1;
-  padding: 14px;
+  padding: 14px 14px 0 35px;
+  z-index: 0;
 }
-.codepen .plus {
+.faq-container .plus {
   position: absolute;
   margin-left: 20px;
-  margin-top: 4px;
+  margin-top: -5px;
   z-index: 5;
   font-size: 42px;
   line-height: 100%;
@@ -15632,11 +15634,12 @@ footer .container .social-media-menu li a:hover svg path {
   -o-user-select: none;
   user-select: none;
   transition: 0.2s ease;
+  font-weight: 200;
 }
-.codepen .panel:checked ~ .plus {
-  transform: rotate(45deg);
+.faq-container .panel:checked ~ .plus {
+  transform: rotate(405deg);
 }
-.codepen .panel {
+.faq-container .panel {
   display: none;
 }
 

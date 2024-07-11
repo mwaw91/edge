@@ -6953,6 +6953,30 @@
 	    });
 	  }
 	  monthlyAnnually();
+
+	  // CUSTOM PLAY BUTTON FOR VIDEOS
+	  function customPlayButton() {
+	    var playButton = document.querySelectorAll("video");
+	    // Event listener for the play/pause button
+	    playButton.forEach(btn => {
+	      btn.addEventListener("click", function () {
+	        if (video.paused == true) {
+	          // Play the video
+	          video.play();
+
+	          // Update the button text to 'Pause'
+	          playButton.innerHTML = "Pause";
+	        } else {
+	          // Pause the video
+	          video.pause();
+
+	          // Update the button text to 'Play'
+	          playButton.innerHTML = "Play";
+	        }
+	      });
+	    });
+	  }
+	  customPlayButton();
 	});
 
 	exports.Alert = alert;

@@ -875,31 +875,34 @@ footer {
   display: block;
 }
 
-.codepen {
+.faq-container {
   .faq-content {
     margin: 0 auto;
     background-color: $black-1;
     border: 1px solid $black-3;
-    padding: 30px;
+    padding: 15px 30px 25px 30px;
   }
 
   .faq-question {
-    padding: 20px 0;
+    padding-top: 20px;
   }
 
   .panel-title {
-    font-size: 24px;
     width: 100%;
     position: relative;
     margin: 0;
-    padding: 10px 10px 0 48px;
+    padding: 10px 10px 0 75px;
     display: block;
     cursor: pointer;
+    font-family: "blinkersemibold", sans-serif;
   }
 
   .panel-content {
-    font-size: 20px;
-    padding: 0px 14px;
+    color: $grey;
+    // font-size: 20px;
+    // padding: 0px 14px;
+    // padding: 0px 14px 0 35px;
+    padding: 14px 14px 0 35px;
     margin: 0 40px;
     height: 0;
     overflow: hidden;
@@ -910,18 +913,20 @@ footer {
     -moz-transition: 0.4s ease;
     -o-transition: 0.4s ease;
     transition: 0.4s ease;
+    font-family: "blinkerregular", sans-serif;
   }
 
   .panel:checked ~ .panel-content {
     height: auto;
     opacity: 1;
-    padding: 14px;
+    padding: 14px 14px 0 35px;
+    z-index: 0;
   }
 
   .plus {
     position: absolute;
     margin-left: 20px;
-    margin-top: 4px;
+    margin-top: -5px;
     z-index: 5;
     font-size: 42px;
     line-height: 100%;
@@ -934,13 +939,14 @@ footer {
     -moz-transition: 0.2s ease;
     -o-transition: 0.2s ease;
     transition: 0.2s ease;
+    font-weight: 200;
   }
 
   .panel:checked ~ .plus {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    transform: rotate(405deg);
   }
 
   .panel {

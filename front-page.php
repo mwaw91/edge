@@ -86,7 +86,7 @@ get_header();
         <!-- echo $button['url']; -->
         <div class="video-container">
             <span></span>
-            <video class="radius green-shadow" width="100%">
+            <video controls class="radius green-shadow" width="100%">
                 <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
                 <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
                 Your browser does not support the video tag.
@@ -108,7 +108,7 @@ get_header();
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
-                        <video class="" width="100%">
+                        <video controls class="" width="100%">
                             <source src="<?php echo $row['video']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
@@ -142,7 +142,7 @@ get_header();
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
-                        <video class="" width="100%">
+                        <video controls class="" width="100%">
                             <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
                             <source src="<?php echo $bottomrow['video']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
@@ -332,7 +332,7 @@ get_header();
                 <div class="alternating-video-column">
 
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
-                        <video class="radius" width="100%">
+                        <video controls class="radius" width="100%">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
@@ -516,7 +516,7 @@ CLICK MOVE ONLY 1 SLIDE
             <p><?php echo get_field('faqs_title')['description']; ?></p>
         </div>
         <!-- NEW CODEPEN -->
-        <div class="codepen">
+        <div class="faq-container">
 
             <div class="faq-content radius">
 
@@ -529,9 +529,9 @@ CLICK MOVE ONLY 1 SLIDE
                         <div class="faq-question">
                             <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
                             <div class="plus">+</div>
-                            <label for="q<?php echo $j; ?>" class="panel-title font-signs"><?php echo $faq['question']; ?></label>
+                            <label for="q<?php echo $j; ?>" class="panel-title p2"><?php echo $faq['question']; ?></label>
                             <div class="panel-content">
-                                <p><?php echo $faq['answer']; ?></p>
+                                <p class="p2"><?php echo $faq['answer']; ?></p>
                             </div>
                         </div>
                 <?php
