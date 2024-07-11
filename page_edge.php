@@ -1,14 +1,17 @@
+<?php include 'edge-page/edge-header.php'; ?>
+
+<?php /* Template Name: EDGE Template */ ?>
 <!-- DISSAPPEARING MENU -->
 <!-- <div class='main-tool-bar'></div> -->
 <?php
-get_header();
+// get_header();
 ?>
+
+
 <!-- CSS -->
-<!-- child-theme.min.css.map -->
-<!--  <link rel="stylesheet" type="text/css" href="edge-page/child-theme.min.css.map"> -->
+<!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.min.css"> -->
 <!-- JS -->
-<!-- child-theme.min -->
-<!-- <script type='text/javascript' src='edge-page/child-theme.min'></script> -->
+<!-- <script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.min'></script> -->
 
 
 <!-- <div class="green-shadow radius fade-up" data-aos="fade-up"></div>
@@ -34,7 +37,7 @@ get_header();
  -->
 
 <div class="container">
-    <section id="hero" data-aos="fade-up">
+    <section id="hero">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -170,7 +173,7 @@ get_header();
 
  -->
     <section id="improve-your-gameplay">
-        <div data-aos="fade-up" class="title-section">
+        <div class="title-section">
             <h6 class="text-h6"><?php echo get_field('title_section')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('title_section')['title']; ?></h2>
             <p><?php echo get_field('title_section')['description']; ?></p>
@@ -228,14 +231,14 @@ get_header();
         ?>
                 <div class="alternating-video-column">
 
-                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
+                    <div>
                         <video class="radius" width="100%">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
+                    <div class="title-section">
                         <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
                         <h2 class="text-h1"><?php echo $row['title']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
@@ -259,7 +262,7 @@ get_header();
     <!-- PRICING -->
     <section id="pricing">
 
-        <div data-aos="fade-up" class="title-section">
+        <div class="title-section">
             <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
             <h2 class="text-h1">start from today</h2>
             <p><?php echo get_field('pricing_title')['description']; ?></p>
@@ -324,7 +327,7 @@ CLICK MOVE ONLY 1 SLIDE
  -->
 </div>
 <section id="testimonials">
-    <div data-aos="fade-up" class="title-section">
+    <div class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1">Take their word for it</h2>
         <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
@@ -383,7 +386,7 @@ CLICK MOVE ONLY 1 SLIDE
 
     <!-- CTA -->
     <section id="cta">
-        <div class="cta" data-aos="fade-up">
+        <div class="cta">
             <div class="copy">
                 <h2 class="text-h1"><?php echo get_field('cta_title_section')['title']; ?></h2>
                 <p><?php echo get_field('cta_title_section')['description']; ?></p>
@@ -407,7 +410,7 @@ CLICK MOVE ONLY 1 SLIDE
 + SPIN INTO CROSS
  -->
     <section id="faq">
-        <div data-aos="fade-up" class="title-section">
+        <div class="title-section">
             <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
             <h2 class="text-h1">Questions</h2>
             <!-- <h2><?php //echo get_field('faqs_title')['title']; 
@@ -452,14 +455,6 @@ CLICK MOVE ONLY 1 SLIDE
     <!-- END FAQS -->
 </div>
 
-<!-- 
- FOOTER
-INTERACTION
- 
-HOVER GREEN
-ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
- -->
 
-<?php
-get_footer();
-?>
+
+<?php include 'edge-page/edge-footer.php'; ?>
