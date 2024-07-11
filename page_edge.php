@@ -89,7 +89,7 @@
         <!-- echo $button['url']; -->
         <div class="video-container">
             <span></span>
-            <video class="radius green-shadow" width="100%">
+            <video controls class="radius green-shadow" width="100%">
                 <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
                 <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
                 Your browser does not support the video tag.
@@ -111,9 +111,9 @@
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
-                        <video class="" width="100%">
-                            <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
-                            <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
+                        <video controls class="" width="100%">
+                            <source src="<?php echo $row['video']; ?>" type="video/mp4">
+                            <source src="<?php echo $row['video']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                         <div>
@@ -145,9 +145,9 @@
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
-                        <video class="" width="100%">
-                            <source src="<?php echo $bottomrow['video']['url']; ?>" type="video/mp4">
-                            <source src="<?php echo $bottomrow['video']['url']; ?>" type="video/ogg">
+                        <video controls class="" width="100%">
+                            <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
+                            <source src="<?php echo $bottomrow['video']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                         <div>
@@ -186,6 +186,7 @@
  HOVER BG FOLLOW GRADIENT WHITE
  -->
     <section id="stat-container" class="radius">
+        <span class="stat-gradient"></span>
         <div class="stats">
             <?php
             $stats = get_field('statistics');
@@ -230,62 +231,21 @@
             <!-- </ul>
             </div> -->
 
-            <div class="slider test-slider">
+            <div class="logo-carousel">
                 <div class="slide-track">
-                    <div class="slide">
+                    <!-- <div class="slide">
                         <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
-                    </div>
+                    </div> -->
+
+                    <?php
+                    $logos = get_field('logos');
+                    if ($logos) {
+                        foreach ($logos as $logo) {
+                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                        }
+                    }
+                    ?>
+
                 </div>
             </div>
 
@@ -337,11 +297,11 @@
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<a href="#" class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
+                echo '<button class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
                 if ($k == 0) {
                     echo ' active';
                 }
-                echo '">' . $tab['title'] . '</a>';
+                echo '">' . $tab['title'] . '</button>';
                 $k++;
             }
             echo '</div>';
@@ -375,7 +335,7 @@
                 <div class="alternating-video-column">
 
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
-                        <video class="radius" width="100%">
+                        <video controls class="radius" width="100%">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
@@ -559,7 +519,7 @@ CLICK MOVE ONLY 1 SLIDE
             <p><?php echo get_field('faqs_title')['description']; ?></p>
         </div>
         <!-- NEW CODEPEN -->
-        <div class="codepen">
+        <div class="faq-container">
 
             <div class="faq-content radius">
 
@@ -572,9 +532,9 @@ CLICK MOVE ONLY 1 SLIDE
                         <div class="faq-question">
                             <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
                             <div class="plus">+</div>
-                            <label for="q<?php echo $j; ?>" class="panel-title font-signs"><?php echo $faq['question']; ?></label>
+                            <label for="q<?php echo $j; ?>" class="panel-title p2"><?php echo $faq['question']; ?></label>
                             <div class="panel-content">
-                                <p><?php echo $faq['answer']; ?></p>
+                                <p class="p2"><?php echo $faq['answer']; ?></p>
                             </div>
                         </div>
                 <?php
@@ -596,5 +556,12 @@ CLICK MOVE ONLY 1 SLIDE
     <!-- END FAQS -->
 </div>
 
+<!-- 
+ FOOTER
+INTERACTION
+ 
+HOVER GREEN
+ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
+ -->
 
 <?php include 'edge-page/edge-footer.php'; ?>

@@ -21,13 +21,13 @@ ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
 <footer id="colophon" class="site-footer clearfix" role="contentinfo">
     <div class="container">
         <div class="copyright">
-            Skybox Technologies ApSHQ Copenhagen DenmarkBus Reg: DK-39429063
+            <span>Skybox Technologies ApSHQ Copenhagen</span> <span>DenmarkBus Reg: DK-39429063</span>
         </div>
         <!-- LOGO -->
-        <a href="/" class="custom-logo-link">
-            <?php echo '<img src="' . get_field('edge_logo')['url'] . '" class="custom-logo">'; ?>
-        </a>
 
+        <?php the_custom_logo(); ?>
+
+        <!-- TODO - SVG -->
         <ul class="social-media-menu">
             <li>
                 <a class="sm-icon sm-x" href="<?php echo get_field('x'); ?>" target="_blank">
@@ -76,10 +76,10 @@ ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
                 </a>
             </li>
         </ul>
+
     </div> <!-- end .container -->
 
 </footer> <!-- end #colophon -->
-
 </div> <!-- end #page -->
 <?php //wp_footer(); 
 ?>
