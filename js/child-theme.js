@@ -6841,13 +6841,17 @@
 	  });
 
 	  // FOLLOW GRADIENT
-	  // var cursor = document.querySelector('.blob');
-	  // document.addEventListener('mousemove', function(e){
-	  //   var x = e.clientX;
-	  //   var y = e.clientY;
-	  //   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-	  // });
-
+	  function statGradient() {
+	    var gradient = document.querySelector('.stat-gradient');
+	    document.getElementById('stat-container');
+	    // statConstainer.addEventListener('mousemove', function (e) {
+	    document.addEventListener('mousemove', function (e) {
+	      e.clientX;
+	      e.clientY;
+	      gradient.style.transform = `translate3d(calc(${e.clientX}px), calc(${e.clientY}px), 0)`;
+	    });
+	  }
+	  statGradient();
 	  function btnHoverGradient() {
 	    let btns = document.querySelectorAll('.btn--outline-grey-gradient');
 	    btns.forEach(btn => {

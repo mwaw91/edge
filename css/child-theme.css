@@ -15371,13 +15371,40 @@ footer .container .social-media-menu li a:hover svg path {
   color: #586373;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}
 #stat-container {
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 90px auto;
-  background-color: #111619;
   border: 1px solid #282f39;
   gap: 60px;
+  overflow: hidden !important;
+  position: relative;
+  transform-style: preserve-3d;
+}
+#stat-container .stat-gradient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 650px;
+  border-radius: 100%;
+  background: linear-gradient(#1e1e1e 10%, #bababa);
+  filter: blur(250px);
+  transition: all 450ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: -1;
 }
 #stat-container .stats {
   display: flex;
@@ -15385,7 +15412,7 @@ footer .container .social-media-menu li a:hover svg path {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 60px;
+  gap: 120px;
 }
 #stat-container .stats .stat {
   max-width: -moz-max-content;
@@ -15410,12 +15437,21 @@ footer .container .social-media-menu li a:hover svg path {
   align-items: center;
   justify-content: center;
 }
-#stat-container .logo-container .swiper-slide {
-  text-align: center;
-  /* Center slide text vertically */
+#stat-container .logo-container .logo-carousel .slide {
+  width: 50px;
+}
+#stat-container .logo-container .logo-carousel .slide img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center center;
+  object-position: center center;
+  animation: scroll 30s linear infinite;
+}
+#stat-container .logo-container .logo-carousel .slide-track {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 60px;
+  overflow: hidden;
 }
 
 #improve-your-gameplay {
@@ -15717,33 +15753,6 @@ footer .container .social-media-menu li a:hover svg path {
   transition-timing-function: linear !important;
 }
 
-.test-slider {
-  margin-top: 70px;
-  padding: 8em 2em;
-}
-.test-slider img {
-  width: 100px;
-  height: 100px;
-  animation: scroll 60s linear infinite;
-}
-.test-slider .slide {
-  width: 50px;
-}
-.test-slider .slide-track {
-  width: 100%;
-  display: flex;
-  gap: 3em;
-  overflow: hidden;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translatex(-1000%);
-  }
-}
 #testimonials {
   margin-bottom: 90px;
 }
@@ -15849,19 +15858,19 @@ footer .container .social-media-menu li a:hover svg path {
 
 @font-face {
   font-family: "signsbold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkerregular";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkersemibold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

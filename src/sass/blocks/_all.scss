@@ -30,7 +30,7 @@ body {
 //   height: 500px;
 //   overflow: hidden;
 //   background-color: $black-1;
-//   .blob {
+//   .blob, stat-gradient {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
@@ -605,21 +605,55 @@ footer {
 }
 
 // STAT CONTAINER
-
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}
 #stat-container {
+  // background-color: $black-1;
+  // background: radial-gradient(ellipse at 50% 200%, red 0, green 100%);
+  // background: radial-gradient(ellipse at 50% 200%, #111619 0%, #1e1e1e 100%);
+  // $black: #1e1e1e;
+  // $black-1: #111619;
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 90px auto;
-  background-color: $black-1;
+
   border: 1px solid $black-3;
   gap: 60px;
+  overflow: hidden !important;
+  position: relative;
+  transform-style: preserve-3d;
+  .stat-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 650px;
+    border-radius: 100%;
+    background: linear-gradient($black 10%, $grey);
+    filter: blur(250px);
+    transition: all 450ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    // transform: translate(calc(-50% + 15px), 0);
+    z-index: -1;
+  }
+
   .stats {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 60px;
+    gap: 120px;
     .stat {
       max-width: max-content;
       display: flex;
@@ -644,23 +678,44 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    .swiper-slide {
-      text-align: center;
-      // font-size: 18px;
-      // background: #fff;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
+    // .swiper-slide {
+    //   text-align: center;
+    //   // font-size: 18px;
+    //   // background: #fff;
+    //   /* Center slide text vertically */
+    //   display: -webkit-box;
+    //   display: -ms-flexbox;
+    //   display: -webkit-flex;
+    //   display: flex;
+    //   -webkit-box-pack: center;
+    //   -ms-flex-pack: center;
+    //   -webkit-justify-content: center;
+    //   justify-content: center;
+    //   -webkit-box-align: center;
+    //   -ms-flex-align: center;
+    //   -webkit-align-items: center;
+    //   align-items: center;
+    // }
+    .logo-carousel {
+      .slide {
+        width: 50px;
+        // width: max-content;
+        // object-fit: contain;
+        // object-position: center;
+        img {
+          // height: 90px;
+          // width: auto;
+          object-fit: contain;
+          object-position: center center;
+          animation: scroll 30s linear infinite;
+        }
+      }
+      .slide-track {
+        width: 100%;
+        display: flex;
+        gap: 60px;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -1029,34 +1084,7 @@ footer {
 // test slider 2
 
 // .slider {
-.test-slider {
-  margin-top: 70px;
 
-  padding: 8em 2em;
-  img {
-    width: 100px;
-    height: 100px;
-    animation: scroll 60s linear infinite;
-  }
-  .slide {
-    width: 50px;
-  }
-  .slide-track {
-    width: 100%;
-    display: flex;
-    gap: 3em;
-    overflow: hidden;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translatex(-1000%);
-  }
-}
 // end test slider 2
 
 // test new slider
