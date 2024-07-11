@@ -213,7 +213,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   }
-  monthlyAnnually();
+  function monthlyAnnually2() {
+    console.log('test');
+    let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
+    annualSwitch.forEach(switchBtn => {
+
+      switchBtn.addEventListener('click', () => {
+        console.log('test');
+        switchBtn.classList.toggle('active');
+
+        const parentDiv = switchBtn.closest('.tier');
+
+        // Find the h3 elements inside the parent div
+        const monthElement = parentDiv.querySelectorAll('.month');
+        const yearElement = parentDiv.querySelectorAll('.year');
+        console.log(monthElement)
+        console.log(yearElement)
+        // Toggle visibility of 'month' and 'year' h3 elements
+        if (switchBtn.classList.contains('active')) {
+          monthElement.forEach(monthEl => {
+            monthEl.style.display = 'none';
+          })
+          yearElement.forEach(yearEl => {
+            yearEl.style.display = 'block';
+          })
+          // monthElement.style.display = 'none';
+          // yearElement.style.display = 'block';
+        } else {
+          // monthElement.style.display = 'block';
+          // yearElement.style.display = 'none';
+          //monthElement.forEach(monthEl, function () {
+          monthElement.forEach(monthEl => {
+            monthEl.style.display = 'block';
+          })
+          // yearElement.forEach(yearEl, function () {
+          yearElement.forEach(yearEl => {
+            yearEl.style.display = 'none';
+          })
+        }
+      });
+    });
+
+  }
+  // monthlyAnnually();
+  monthlyAnnually2();
 
   // CUSTOM PLAY BUTTON FOR VIDEOS
   function customPlayButton() {
