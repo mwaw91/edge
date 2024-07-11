@@ -131,7 +131,8 @@ body {
     li {
       list-style: none;
       a {
-        font-family: "Blinker", sans-serif;
+        // font-family: "Blinker", sans-serif;
+        font-family: "blinkerregular", sans-serif;
         color: white;
         text-decoration: none;
       }
@@ -217,7 +218,8 @@ footer {
 .btn {
   border-radius: 6px;
   padding: 8px 19px;
-  font-family: "Blinker", sans-serif;
+  // font-family: "Blinker", sans-serif;
+  font-family: "blinkersemibold", sans-serif;
   font-weight: 600;
   max-width: max-content;
   // display: inline-block;
@@ -479,7 +481,9 @@ footer {
     }
   }
   h1 {
-    max-width: 430px;
+    // max-width: 440px !important;
+    width: 440px !important;
+    // width: 100%;
     text-align: center;
   }
   p {
