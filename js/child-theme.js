@@ -6931,7 +6931,9 @@
 	    checkBilling();
 	  }
 	  teamIndividual();
-	  function monthlyAnnually2() {
+
+	  // PRICING ANNUAL MONTHLY
+	  function monthlyAnnually() {
 	    console.log('test');
 	    let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
 	    annualSwitch.forEach(switchBtn => {
@@ -6983,18 +6985,12 @@
 	            yearEl.classList.toggle('show');
 	            yearEl.classList.toggle('hide');
 	          });
-	          // monthElement.style.display = 'none';
-	          // yearElement.style.display = 'block';
 	        } else {
-	          // monthElement.style.display = 'block';
-	          // yearElement.style.display = 'none';
-	          //monthElement.forEach(monthEl, function () {
 	          monthElement.forEach(monthEl => {
 	            // monthEl.style.display = 'block';
 	            monthEl.classList.toggle('show');
 	            monthEl.classList.toggle('hide');
 	          });
-	          // yearElement.forEach(yearEl, function () {
 	          yearElement.forEach(yearEl => {
 	            // yearEl.style.display = 'none';
 	            yearEl.classList.toggle('hide');
@@ -7004,8 +7000,7 @@
 	      });
 	    });
 	  }
-	  // monthlyAnnually();
-	  monthlyAnnually2();
+	  monthlyAnnually();
 
 	  // CUSTOM PLAY BUTTON FOR VIDEOS
 	  function customPlayButton() {

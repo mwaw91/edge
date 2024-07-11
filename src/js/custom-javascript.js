@@ -196,36 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
     annualSwitch.forEach(switchBtn => {
 
-      switchBtn.addEventListener('click', () => {
-        console.log('test');
-        switchBtn.classList.toggle('active');
-
-        const parentDiv = switchBtn.closest('.tier');
-
-        // Find the h3 elements inside the parent div
-        const monthElement = parentDiv.querySelector('.month');
-        const yearElement = parentDiv.querySelector('.year');
-
-        // Toggle visibility of 'month' and 'year' h3 elements
-        if (switchBtn.classList.contains('active')) {
-          // monthElement.forEach(el, function(){
-          //   el.style.display = 'none';
-          // })
-          monthElement.style.display = 'none';
-          yearElement.style.display = 'block';
-        } else {
-          monthElement.style.display = 'block';
-          yearElement.style.display = 'none';
-        }
-      });
-    });
-
-  }
-  function monthlyAnnually2() {
-    console.log('test');
-    let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
-    annualSwitch.forEach(switchBtn => {
-
       // init
       const parentDivInit = switchBtn.closest('.tier');
       const monthElementInit = parentDivInit.querySelectorAll('.month');
@@ -275,18 +245,12 @@ document.addEventListener("DOMContentLoaded", () => {
             yearEl.classList.toggle('show')
             yearEl.classList.toggle('hide')
           })
-          // monthElement.style.display = 'none';
-          // yearElement.style.display = 'block';
         } else {
-          // monthElement.style.display = 'block';
-          // yearElement.style.display = 'none';
-          //monthElement.forEach(monthEl, function () {
           monthElement.forEach(monthEl => {
             // monthEl.style.display = 'block';
             monthEl.classList.toggle('show')
             monthEl.classList.toggle('hide')
           })
-          // yearElement.forEach(yearEl, function () {
           yearElement.forEach(yearEl => {
             // yearEl.style.display = 'none';
             yearEl.classList.toggle('hide')
@@ -297,8 +261,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   }
-  // monthlyAnnually();
-  monthlyAnnually2();
+  monthlyAnnually();
+
 
   // CUSTOM PLAY BUTTON FOR VIDEOS
   function customPlayButton() {
