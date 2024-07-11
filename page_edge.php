@@ -154,14 +154,18 @@
         <h4 class="text-h4">Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
                                                                                     ?></h4>
         <div class="logo-container">
-            <?php
-            $logos = get_field('logos');
-            if ($logos) {
-                foreach ($logos as $logo) {
-                    echo '<img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
-                }
-            }
-            ?>
+            <div class="slider">
+                <div class="slide-track">
+                    <?php
+                    $logos = get_field('logos');
+                    if ($logos) {
+                        foreach ($logos as $logo) {
+                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
     </section>
     <!-- END STAT CONTAINER -->
