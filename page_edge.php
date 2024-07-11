@@ -37,7 +37,7 @@
  -->
 
 <div class="container">
-    <section id="hero">
+    <section id="hero" data-aos="fade-up">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -173,7 +173,7 @@
 
  -->
     <section id="improve-your-gameplay">
-        <div class="title-section">
+        <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('title_section')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('title_section')['title']; ?></h2>
             <p><?php echo get_field('title_section')['description']; ?></p>
@@ -231,14 +231,14 @@
         ?>
                 <div class="alternating-video-column">
 
-                    <div>
+                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
                         <video class="radius" width="100%">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                             <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="title-section">
+                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
                         <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
                         <h2 class="text-h1"><?php echo $row['title']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
@@ -262,7 +262,7 @@
     <!-- PRICING -->
     <section id="pricing">
 
-        <div class="title-section">
+        <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
             <h2 class="text-h1">start from today</h2>
             <p><?php echo get_field('pricing_title')['description']; ?></p>
@@ -327,7 +327,7 @@ CLICK MOVE ONLY 1 SLIDE
  -->
 </div>
 <section id="testimonials">
-    <div class="title-section">
+    <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1">Take their word for it</h2>
         <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
@@ -386,7 +386,7 @@ CLICK MOVE ONLY 1 SLIDE
 
     <!-- CTA -->
     <section id="cta">
-        <div class="cta">
+        <div class="cta" data-aos="fade-up">
             <div class="copy">
                 <h2 class="text-h1"><?php echo get_field('cta_title_section')['title']; ?></h2>
                 <p><?php echo get_field('cta_title_section')['description']; ?></p>
@@ -410,7 +410,7 @@ CLICK MOVE ONLY 1 SLIDE
 + SPIN INTO CROSS
  -->
     <section id="faq">
-        <div class="title-section">
+        <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
             <h2 class="text-h1">Questions</h2>
             <!-- <h2><?php //echo get_field('faqs_title')['title']; 

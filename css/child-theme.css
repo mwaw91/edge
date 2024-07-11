@@ -15656,6 +15656,24 @@ footer .container .social-media-menu li a img {
 #testimonials .swiper-wrapper .testimonial:nth-child(32) {
   margin-bottom: 88px !important;
 }
+#testimonials .swiper-wrapper .testimonial:nth-child(4) {
+  margin-top: 0 !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(6) {
+  margin-top: 0 !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(10) {
+  margin-top: 0 !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(12) {
+  margin-top: 0 !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(16) {
+  margin-top: 0 !important;
+}
+#testimonials .swiper-wrapper .testimonial:nth-child(18) {
+  margin-top: 0 !important;
+}
 #testimonials .swiper-wrapper .testimonial > div {
   display: flex;
   flex-direction: row;

@@ -866,6 +866,7 @@ footer {
         margin-top: -55px !important;
         // margin-bottom: 30px !important;
       }
+      // top row
       &:nth-child(2) {
         margin-bottom: 88px !important;
       }
@@ -883,6 +884,25 @@ footer {
       }
       &:nth-child(32) {
         margin-bottom: 88px !important;
+      }
+      // bottom row
+      &:nth-child(4) {
+        margin-top: 0 !important;
+      }
+      &:nth-child(6) {
+        margin-top: 0 !important;
+      }
+      &:nth-child(10) {
+        margin-top: 0 !important;
+      }
+      &:nth-child(12) {
+        margin-top: 0 !important;
+      }
+      &:nth-child(16) {
+        margin-top: 0 !important;
+      }
+      &:nth-child(18) {
+        margin-top: 0 !important;
       }
       background: $black-1;
       border: 1px solid $black-3;
