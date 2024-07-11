@@ -268,10 +268,12 @@ document.addEventListener("DOMContentLoaded", () => {
           monthElement.forEach(monthEl => {
             // monthEl.style.display = 'none';
             monthEl.classList.toggle('hide')
+            monthEl.classList.toggle('show')
           })
           yearElement.forEach(yearEl => {
             // yearEl.style.display = 'block';
             yearEl.classList.toggle('show')
+            yearEl.classList.toggle('hide')
           })
           // monthElement.style.display = 'none';
           // yearElement.style.display = 'block';
@@ -282,11 +284,13 @@ document.addEventListener("DOMContentLoaded", () => {
           monthElement.forEach(monthEl => {
             // monthEl.style.display = 'block';
             monthEl.classList.toggle('show')
+            monthEl.classList.toggle('hide')
           })
           // yearElement.forEach(yearEl, function () {
           yearElement.forEach(yearEl => {
             // yearEl.style.display = 'none';
             yearEl.classList.toggle('hide')
+            yearEl.classList.toggle('show')
           })
         }
       });
