@@ -194,15 +194,58 @@ footer {
         padding: 0;
         list-style: none;
         a {
-          img {
-            width: 100%;
-            height: auto;
-            &:hover {
-              // filter: drop-shadow(0 0 6px $green);
-              // filter: drop-shadow(0 0 12px $green);
-              // filter: drop-shadow(0 0 12px $black);
+          &:hover {
+            svg {
+              path {
+                fill: $green;
+              }
             }
           }
+          // &.sm-x {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: $green;
+          //       }
+          //     }
+          //   }
+          // }
+          // &.sm-ig {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: $green;
+          //       }
+          //     }
+          //   }
+          // }
+          // &.sm-yt {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: $green;
+          //       }
+          //     }
+          //   }
+          // }
+          // &.sm-dc {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: $green;
+          //       }
+          //     }
+          //   }
+          // }
+          // &.sm-fb {
+          //   &:hover {
+          //     svg {
+          //       path {
+          //         fill: $green;
+          //       }
+          //     }
+          //   }
+          // }
         }
       }
     }
@@ -523,19 +566,33 @@ footer {
     margin-bottom: 60px;
   }
   .bottom-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 110px;
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
     justify-content: center;
+    .grid-item {
+      &:nth-child(1) {
+        justify-content: flex-end;
+        margin: 0 0 0 0;
+      }
+      &:nth-child(2) {
+        justify-content: flex-start;
+        margin: 0 0 0 0;
+      }
+    }
   }
   .grid-item {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    video {
+      border-radius: 7px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
     div {
+      margin-top: 12px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -571,10 +628,11 @@ footer {
       span {
       }
       p {
+        text-align: center;
       }
     }
   }
-  h6 {
+  h4 {
     text-align: center;
     margin: 60px auto 30px auto;
     color: white;

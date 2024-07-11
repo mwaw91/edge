@@ -15125,10 +15125,10 @@ footer .container .social-media-menu li {
   padding: 0;
   list-style: none;
 }
-footer .container .social-media-menu li a img {
-  width: 100%;
-  height: auto;
+footer .container .social-media-menu li a:hover svg path {
+  fill: #24f4ab;
 }
+
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
   border-radius: 6px;
   padding: 8px 19px;
@@ -15336,20 +15336,32 @@ footer .container .social-media-menu li a img {
   margin-bottom: 60px;
 }
 #tested .bottom-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 110px;
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
   justify-content: center;
 }
+#tested .bottom-row .grid-item:nth-child(1) {
+  justify-content: flex-end;
+  margin: 0 0 0 0;
+}
+#tested .bottom-row .grid-item:nth-child(2) {
+  justify-content: flex-start;
+  margin: 0 0 0 0;
+}
 #tested .grid-item {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 340px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
 }
+#tested .grid-item video {
+  border-radius: 7px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
 #tested .grid-item div {
+  margin-top: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15382,7 +15394,10 @@ footer .container .social-media-menu li a img {
   flex-direction: column;
   justify-content: center;
 }
-#stat-container h6, #stat-container .h6 {
+#stat-container .stats .stat p {
+  text-align: center;
+}
+#stat-container h4, #stat-container .h4 {
   text-align: center;
   margin: 60px auto 30px auto;
   color: white;

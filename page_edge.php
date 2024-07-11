@@ -118,7 +118,19 @@
                         </video>
                         <div>
                             <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
-                            <span class="font-signs text-h4"><?php echo $row['followers']; ?></span>
+                            <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_169_54)">
+                                        <path d="M7.5 8.68311C9.22589 8.68311 10.625 7.284 10.625 5.55811C10.625 3.83222 9.22589 2.43311 7.5 2.43311C5.77411 2.43311 4.375 3.83222 4.375 5.55811C4.375 7.284 5.77411 8.68311 7.5 8.68311Z" fill="#586373" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165" fill="#586373" />
+                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165H12.5Z" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_169_54">
+                                            <rect width="15" height="15" fill="white" transform="translate(0 0.558105)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <?php echo $row['followers']; ?></span>
                         </div>
                     </div>
             <?php
@@ -140,7 +152,19 @@
                         </video>
                         <div>
                             <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
-                            <span class="font-signs text-h4"><?php echo $bottomrow['followers']; ?></span>
+                            <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_169_54)">
+                                        <path d="M7.5 8.68311C9.22589 8.68311 10.625 7.284 10.625 5.55811C10.625 3.83222 9.22589 2.43311 7.5 2.43311C5.77411 2.43311 4.375 3.83222 4.375 5.55811C4.375 7.284 5.77411 8.68311 7.5 8.68311Z" fill="#586373" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165" fill="#586373" />
+                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165H12.5Z" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_169_54">
+                                            <rect width="15" height="15" fill="white" transform="translate(0 0.558105)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <?php echo $bottomrow['followers']; ?></span>
                         </div>
                     </div>
             <?php
@@ -169,7 +193,7 @@
                 foreach ($stats as $stat) {
                     echo '<div class="stat">
                 <span class="font-signs text-h2">' . $stat['stat'] . '</span>
-                <p>' . $stat['description'] . '</p>
+                <p class="p2">' . $stat['description'] . '</p>
             </div>';
                 }
             }
@@ -178,6 +202,33 @@
         <h4 class="text-h4">Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
                                                                                     ?></h4>
         <div class="logo-container">
+
+
+            <!-- <div class="slider">
+                <div class="slide-track"> -->
+            <?php
+            // $logos = get_field('logos');
+            // if ($logos) {
+            //     foreach ($logos as $logo) {
+            //         echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+            //     }
+            // }
+            ?>
+            <!-- </div>
+            </div> -->
+
+            <!-- <div class="marquee">
+                <ul class="marquee-content"> -->
+            <?php
+            // $logos = get_field('logos');
+            // if ($logos) {
+            //     foreach ($logos as $logo) {
+            //         echo '<li><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></li>';
+            //     }
+            // }
+            ?>
+            <!-- </ul>
+            </div> -->
 
             <div class="slider test-slider">
                 <div class="slide-track">
@@ -238,6 +289,7 @@
                 </div>
             </div>
 
+
             <!-- Slider main container -->
             <div class="swiper trusted-by-swiper">
                 <!-- Additional required wrapper -->
@@ -253,33 +305,6 @@
                     ?>
                 </div>
             </div>
-
-            <!-- <div class="slider">
-                <div class="slide-track"> -->
-            <?php
-            // $logos = get_field('logos');
-            // if ($logos) {
-            //     foreach ($logos as $logo) {
-            //         echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
-            //     }
-            // }
-            ?>
-            <!-- </div>
-            </div> -->
-
-            <!-- <div class="marquee">
-                <ul class="marquee-content"> -->
-            <?php
-            // $logos = get_field('logos');
-            // if ($logos) {
-            //     foreach ($logos as $logo) {
-            //         echo '<li><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></li>';
-            //     }
-            // }
-            ?>
-            <!-- </ul>
-            </div> -->
-
         </div>
     </section>
     <!-- END STAT CONTAINER -->
@@ -461,9 +486,7 @@ CLICK MOVE ONLY 1 SLIDE
             <div class="swiper-button-prev"></div>
         </div>
     </div>
-    <div class="swiper">
-
-
+    <div class="swiper testimonials">
 
         <div class="swiper-wrapper">
             <?php
@@ -572,7 +595,6 @@ CLICK MOVE ONLY 1 SLIDE
     </section>
     <!-- END FAQS -->
 </div>
-
 
 
 <?php include 'edge-page/edge-footer.php'; ?>
