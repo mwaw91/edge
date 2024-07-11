@@ -15726,6 +15726,18 @@ footer .container .social-media-menu li a:hover svg path {
   border: 1px solid #282f39;
   padding: 30px;
 }
+#pricing .tiers-container .tier p.must-be-hidden.show {
+  display: none;
+}
+#pricing .tiers-container .tier p.must-be-hidden.hide {
+  display: none;
+}
+#pricing .tiers-container .tier p.must-be-shown.show {
+  display: block;
+}
+#pricing .tiers-container .tier p.must-be-shown.hide {
+  display: none;
+}
 #pricing .tiers-container .tier ul {
   margin: 0;
   padding: 0;

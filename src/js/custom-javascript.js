@@ -159,20 +159,28 @@ document.addEventListener("DOMContentLoaded", () => {
     function checkBilling() {
       if (team.classList.contains('active')) {
         prices.forEach(element => {
-          if (!element.classList.contains('team')) {
-            element.style.display = "none";
+          if (element.classList.contains('team')) {
+            // element.style.display = "none";
+            element.classList.remove('must-be-hidden');
+            element.classList.add('must-be-shown');
           } else {
-            element.style.display = "block";
+            // element.style.display = "block";
+            element.classList.add('must-be-hidden');
+            element.classList.remove('must-be-shown');
           }
         });
       }
 
       if (individual.classList.contains('active')) {
         prices.forEach(element => {
-          if (!element.classList.contains('individual')) {
-            element.style.display = "none";
+          if (element.classList.contains('individual')) {
+            // element.style.display = "none";
+            element.classList.add('must-be-shown');
+            element.classList.remove('must-be-hidden');
           } else {
-            element.style.display = "block";
+            // element.style.display = "block";
+            element.classList.add('must-be-hidden');
+            element.classList.remove('must-be-shown');
           }
         });
       }
@@ -218,6 +226,32 @@ document.addEventListener("DOMContentLoaded", () => {
     let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
     annualSwitch.forEach(switchBtn => {
 
+      // init
+      const parentDivInit = switchBtn.closest('.tier');
+      const monthElementInit = parentDivInit.querySelectorAll('.month');
+      const yearElementInit = parentDivInit.querySelectorAll('.year');
+      if (switchBtn.classList.contains('active')) {
+        monthElementInit.forEach(monthEl => {
+          // monthEl.style.display = 'none';
+          monthEl.classList.toggle('hide')
+        })
+        yearElementInit.forEach(yearEl => {
+          // yearEl.style.display = 'block';
+          yearEl.classList.toggle('show')
+        })
+      } else {
+        monthElementInit.forEach(monthEl => {
+          // monthEl.style.display = 'block';
+          monthEl.classList.toggle('show')
+        })
+        // yearElement.forEach(yearEl, function () {
+        yearElementInit.forEach(yearEl => {
+          // yearEl.style.display = 'none';
+          yearEl.classList.toggle('hide')
+        })
+      }
+      // end init
+
       switchBtn.addEventListener('click', () => {
         console.log('test');
         switchBtn.classList.toggle('active');
@@ -232,10 +266,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // Toggle visibility of 'month' and 'year' h3 elements
         if (switchBtn.classList.contains('active')) {
           monthElement.forEach(monthEl => {
-            monthEl.style.display = 'none';
+            // monthEl.style.display = 'none';
+            monthEl.classList.toggle('hide')
           })
           yearElement.forEach(yearEl => {
-            yearEl.style.display = 'block';
+            // yearEl.style.display = 'block';
+            yearEl.classList.toggle('show')
           })
           // monthElement.style.display = 'none';
           // yearElement.style.display = 'block';
@@ -244,11 +280,13 @@ document.addEventListener("DOMContentLoaded", () => {
           // yearElement.style.display = 'none';
           //monthElement.forEach(monthEl, function () {
           monthElement.forEach(monthEl => {
-            monthEl.style.display = 'block';
+            // monthEl.style.display = 'block';
+            monthEl.classList.toggle('show')
           })
           // yearElement.forEach(yearEl, function () {
           yearElement.forEach(yearEl => {
-            yearEl.style.display = 'none';
+            // yearEl.style.display = 'none';
+            yearEl.classList.toggle('hide')
           })
         }
       });

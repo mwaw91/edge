@@ -1042,6 +1042,52 @@ footer {
       background-color: $black-1;
       border: 1px solid $black-3;
       padding: 30px;
+      p {
+        &.must-be-hidden {
+          &.show {
+            display: none;
+          }
+          &.hide {
+            display: none;
+          }
+        }
+        &.must-be-shown {
+          &.show {
+            display: block;
+          }
+          &.hide {
+            display: none;
+          }
+        }
+        // &.team {
+        //   .must-be-hidden {
+        //   }
+        //   .must-be-show {
+        //   }
+        //   &.show {
+        //   }
+        //   &.hide {
+        //   }
+        // }
+        // &.individual {
+        //   &.show {
+        //   }
+        //   &.hide {
+        //   }
+        // }
+        // &.year {
+        //   &.show {
+        //   }
+        //   &.hide {
+        //   }
+        // }
+        // &.month {
+        //   &.show {
+        //   }
+        //   &.hide {
+        //   }
+        // }
+      }
       ul {
         margin: 0;
         padding: 0;
