@@ -15100,11 +15100,24 @@ body {
   color: #bababa;
 }
 
+footer {
+  padding: 30px 0 20px 0;
+  border-top: 1px solid #282f39;
+}
 footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
+}
+footer .container .copyright {
+  color: #bababa;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+footer .container .copyright span {
+  font-family: "blinkerregular", sans-serif;
 }
 footer .container .custom-logo-link {
   text-align: center;
