@@ -89,11 +89,38 @@
         <!-- echo $button['url']; -->
         <div class="video-container">
             <span></span>
-            <video controls class="radius green-shadow" width="100%">
-                <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-                <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+            <!-- <video controls class="radius green-shadow" width="100%">
+                <source src="<?php // echo $hero_video['url']; 
+                                ?>" type="video/mp4">
+                <source src="<?php //echo $hero_video['url']; 
+                                ?>" type="video/ogg">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
+            <div class="video-container">
+                <!-- VIDEO ATTRIBUTE poster="video-poster.jpg" -->
+                <video id="myVideo">
+                    <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_196_307)">
+                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="5" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
     <!-- END HERO -->

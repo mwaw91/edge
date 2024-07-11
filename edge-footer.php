@@ -25,7 +25,10 @@ ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
         </div>
         <!-- LOGO -->
 
-        <?php the_custom_logo(); ?>
+
+        <a href="/" class="custom-logo-link">
+            <?php echo '<img src="' . get_field('edge_logo')['url'] . '" class="custom-logo">'; ?>
+        </a>
 
         <!-- TODO - SVG -->
         <ul class="social-media-menu">

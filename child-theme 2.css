@@ -15245,13 +15245,19 @@ footer .container .social-media-menu li a:hover svg path {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-.video-container {
+#hero {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#hero .video-container {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  overflow: hidden;
 }
-.video-container .play-button {
+#hero .video-container .play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15264,20 +15270,6 @@ footer .container .social-media-menu li a:hover svg path {
   width: 150px;
   height: 150px;
 }
-.video-container .play-button.visible {
-  visibility: visible;
-}
-.video-container .play-button.invisible {
-  visibility: invisible;
-}
-
-#hero {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 #hero .hero-logos {
   display: flex;
   flex-direction: row;
@@ -15286,7 +15278,7 @@ footer .container .social-media-menu li a:hover svg path {
   height: 0;
 }
 #hero .hero-logos img {
-  max-width: 60px;
+  max-width: 70px;
   width: 100%;
   height: auto;
   display: block;
@@ -15318,14 +15310,14 @@ footer .container .social-media-menu li a:hover svg path {
   top: 90px;
 }
 #hero .hero-logos .rhs-logos img:nth-child(1) {
-  top: 5px;
+  top: -10px;
 }
 #hero .hero-logos .rhs-logos img:nth-child(2) {
-  right: 220px;
-  top: 26px;
+  right: 180px;
+  top: -41px;
 }
 #hero .hero-logos .rhs-logos img:nth-child(3) {
-  right: 90px;
+  right: 120px;
 }
 #hero .hero-logos .rhs-logos img:nth-child(4) {
   top: 30px;
@@ -15345,11 +15337,11 @@ footer .container .social-media-menu li a:hover svg path {
   max-width: 374px;
   text-align: center;
 }
-#hero .video-section {
+#hero .video-container {
   position: relative;
   margin-top: 60px;
 }
-#hero .video-section span {
+#hero .video-container span {
   width: 0;
   height: 0;
   display: block;
@@ -15358,10 +15350,7 @@ footer .container .social-media-menu li a:hover svg path {
   margin: 0 auto;
   top: 0;
 }
-#hero .video-section .video-container {
-  overflow: hidden;
-}
-#hero .video-section .video-container video {
+#hero .video-container video {
   aspect-ratio: 1.79;
   max-width: 972px;
 }
@@ -15741,36 +15730,59 @@ footer .container .social-media-menu li a:hover svg path {
   width: 100%;
 }
 
-.custom-toggle-switch {
-  border-radius: 9999px;
-  width: 27.45px;
-  padding: 2px;
-  height: 16px;
-  background-color: #3d4653;
-  display: flex;
-  transition: all 0.1s ease-in-out;
+/* The switch - the box around the slider */
+.period-toggle-container {
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
 }
-.custom-toggle-switch:hover {
+.period-toggle-container .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.period-toggle-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.period-toggle-container .slider {
+  position: absolute;
   cursor: pointer;
-}
-.custom-toggle-switch.active {
-  background-color: #24f4ab;
-}
-.custom-toggle-switch.active .slider {
-  position: relative;
-  left: 50%;
-}
-.custom-toggle-switch .slider {
-  transition: all 0.1s ease-in-out;
-  position: relative;
+  top: 0;
   left: 0;
-  border-radius: 9999px;
-  width: 12px;
-  height: 12px;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.period-toggle-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
+  transition: 0.4s;
+}
+.period-toggle-container input:checked + .slider {
+  background-color: #2196f3;
+}
+.period-toggle-container input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.period-toggle-container input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.period-toggle-container .slider.round {
+  border-radius: 34px;
+}
+.period-toggle-container .slider.round:before {
+  border-radius: 50%;
 }
 
-/* The switch - the box around the slider */
 .trusted-by-list {
   transition-timing-function: linear !important;
 }

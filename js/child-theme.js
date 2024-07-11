@@ -6926,56 +6926,91 @@
 
 	  // PRICING ANNUAL MONTHLY
 	  function monthlyAnnually() {
-	    console.log('TEST');
-	    // Get all elements with class 'annual-switch'
-	    const switches = document.querySelectorAll('.annual-switch');
-	    console.log(switches);
-	    // Loop through each switch
-	    switches.forEach(switchInput => {
-	      // Add click event listener to each switch
-	      switchInput.addEventListener('click', function () {
-	        // Get the parent div with class 'tier'
-	        const parentDiv = this.closest('.tier');
+	    console.log('test');
+	    let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
+	    annualSwitch.forEach(switchBtn => {
+	      switchBtn.addEventListener('click', () => {
+	        console.log('test');
+	        //switchBtn.classList.add('active');
+	        switchBtn.classList.toggle('active');
+	        const parentDiv = switchBtn.closest('.tier');
 
 	        // Find the h3 elements inside the parent div
 	        const monthElement = parentDiv.querySelector('.month');
 	        const yearElement = parentDiv.querySelector('.year');
 
+	        // price team year
+	        // price individual month
+
 	        // Toggle visibility of 'month' and 'year' h3 elements
-	        if (this.checked) {
-	          monthElement.style.display = 'block';
+	        if (switchBtn.classList.contains('active')) {
+	          // monthElement.forEach(el, function(){
+	          //   el.style.display = 'none';
+	          // })
+	          monthElement.style.display = 'none';
 	          yearElement.style.display = 'block';
 	        } else {
-	          monthElement.style.display = 'none';
+	          monthElement.style.display = 'block';
 	          yearElement.style.display = 'none';
 	        }
+	        // buttons.forEach(btn => btn.classList.remove('active'));
+	        // button.classList.add('active');
+	        // images.forEach(img => img.classList.remove('active'));
+	        // const correspondingImage = document.getElementById(button.classList[0]);
+	        // if (correspondingImage) {
+	        //   correspondingImage.classList.add('active');
+	        // }
 	      });
 	    });
+
+	    // // Get all elements with class 'annual-switch'
+	    // const switches = document.querySelectorAll('.annual-switch');
+	    // console.log(switches);
+	    // // Loop through each switch
+	    // switches.forEach(switchInput => {
+	    //   // Add click event listener to each switch
+	    //   switchInput.addEventListener('click', function () {
+	    //     // Get the parent div with class 'tier'
+	    //     const parentDiv = this.closest('.tier');
+
+	    //     // Find the h3 elements inside the parent div
+	    //     const monthElement = parentDiv.querySelector('.month');
+	    //     const yearElement = parentDiv.querySelector('.year');
+
+	    //     // Toggle visibility of 'month' and 'year' h3 elements
+	    //     if (this.checked) {
+	    //       monthElement.style.display = 'block';
+	    //       yearElement.style.display = 'block';
+	    //     } else {
+	    //       monthElement.style.display = 'none';
+	    //       yearElement.style.display = 'none';
+	    //     }
+	    //   });
+	    // });
 	  }
+
 	  monthlyAnnually();
 
 	  // CUSTOM PLAY BUTTON FOR VIDEOS
 	  function customPlayButton() {
-	    var playButton = document.querySelectorAll("video");
-	    // Event listener for the play/pause button
-	    playButton.forEach(btn => {
-	      btn.addEventListener("click", function () {
-	        if (video.paused == true) {
-	          // Play the video
-	          video.play();
-
-	          // Update the button text to 'Pause'
-	          playButton.innerHTML = "Pause";
-	        } else {
-	          // Pause the video
-	          video.pause();
-
-	          // Update the button text to 'Play'
-	          playButton.innerHTML = "Play";
-	        }
-	      });
+	    console.log('custom play btn');
+	    const video = document.getElementById("myVideo");
+	    const playButton = document.getElementById("playButton");
+	    playButton.addEventListener("click", function () {
+	      if (video.paused) {
+	        video.play();
+	        playButton.classList.add('invisible');
+	        playButton.classList.remove('visible');
+	      } else {
+	        video.pause();
+	        playButton.classList.remove('invisible');
+	        playButton.classList.add('visible');
+	      }
 	    });
+
+	    // if (document.querySelector('video').playing) {
 	  }
+
 	  customPlayButton();
 	});
 

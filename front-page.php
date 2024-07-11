@@ -84,13 +84,40 @@ get_header();
 
 
         <!-- echo $button['url']; -->
-        <div class="video-container">
+        <div class="video-section">
             <span></span>
-            <video controls class="radius green-shadow" width="100%">
-                <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-                <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+            <!-- <video controls class="radius green-shadow" width="100%">
+                <source src="<?php // echo $hero_video['url']; 
+                                ?>" type="video/mp4">
+                <source src="<?php //echo $hero_video['url']; 
+                                ?>" type="video/ogg">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
+            <div class="video-container radius green-shadow">
+                <!-- VIDEO ATTRIBUTE poster="video-poster.jpg" -->
+                <video id="myVideo">
+                    <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_196_307)">
+                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="5" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
     <!-- END HERO -->
@@ -109,10 +136,15 @@ get_header();
             ?>
                     <div class="grid-item">
                         <video controls class="" width="100%">
-                            <source src="<?php echo $row['video']; ?>" type="video/mp4">
-                            <source src="<?php echo $row['video']; ?>" type="video/ogg">
+                            <source src="<?php echo $row['video'];
+                                            ?>" type="video/mp4">
+                            <source src="<?php echo $row['video'];
+                                            ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
+                        <!--  -->
+
+                        <!--  -->
                         <div>
                             <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
                             <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,10 +175,15 @@ get_header();
             ?>
                     <div class="grid-item">
                         <video controls class="" width="100%">
-                            <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
-                            <source src="<?php echo $bottomrow['video']; ?>" type="video/ogg">
+                            <source src="<?php echo $bottomrow['video'];
+                                            ?>" type="video/mp4">
+                            <source src="<?php echo $bottomrow['video'];
+                                            ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
+                        <!--  -->
+
+                        <!--  -->
                         <div>
                             <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
                             <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,10 +370,13 @@ get_header();
 
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
                         <video controls class="radius" width="100%">
-                            <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
-                            <source src="<?php echo $row['video']['url']; ?>" type="video/ogg">
+                            <source src="<?php echo $row['video']['url'];
+                                            ?>" type="video/mp4">
+                            <source src="<?php echo $row['video']['url'];
+                                            ?>" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
+
                     </div>
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
                         <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
@@ -391,12 +431,16 @@ get_header();
                             <span id="yearly" class="active period-toggle">Billed Yearly</span>
                             <span id="monthly" class="period-toggle">Individual</span>
                         </div> -->
-                        <div class="period-toggle-container">
+                        <div class="custom-toggle-switch">
+                            <div class="slider">
+                            </div>
+                        </div>
+                        <!-- <div class="period-toggle-container">
                             <label class="switch">
                                 <input class="annual-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
-                        </div>
+                        </div> -->
 
                         <ul>
                             <?php
