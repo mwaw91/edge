@@ -19,43 +19,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const mySwiper = new Swiper('.swiper', {
     loop: true,
-    // spaceBetween: 30,
+    slidesPerView: 3.2,
+    slidesPerColumn: 2,
+    slidesPerGroup: 3,
     grid: {
       rows: 2, // your amount of slides
       fill: "row",
     },
-
-
-    slidesPerView: 3.2,
-    slidesPerColumn: 2,
-    slidesPerGroup: 3,
-    // spaceBetween: 30,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  });
 
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    // },
-    // on: {
-    //   init: function () {},
-    //   orientationchange: function(){},
-    //   beforeResize: function(){
-    //     let vw = window.innerWidth;
-    //     if(vw > 1000){
-    //       mySwiper.params.slidesPerView = 3
-    //         mySwiper.params.slidesPerColumn = 3
-    //         mySwiper.params.slidesPerGroup = 3;
-    //     } else {
-    //       mySwiper.params.slidesPerView = 4
-    //         mySwiper.params.slidesPerColumn = 2
-    //         mySwiper.params.slidesPerGroup =4;
-    //     }
-    //     mySwiper.init();
-    //   },
-    // },
+  // LOGO CAROUSEL
+  var logoCarousel = new Swiper(".logo-carousel", {
+    slidesPerView: "auto",
+    grabCursor: true,
+    speed: 5000,
+    spaceBetween: 30,
+    freeMode: true,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: true
+    }
   });
 
 
