@@ -70,11 +70,11 @@ get_header();
         <!-- <h1><?php // echo $title; 
                     ?></h1> -->
         <h1 class="text-h1">Track your CS2 Stats like the Pros</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <button class="btn btn--solid"><?php echo $button['title']; ?></button>
-        <!-- <button class="btn"><?php //echo $button['title']; 
-                                    ?></button>
+        <a href="#" class="btn btn--solid"><?php echo $button['title']; ?></button>
+            <!-- <button class="btn"><?php //echo $button['title']; 
+                                        ?></button>
         <button class="btn btn--solid-white"><?php //echo $button['title']; 
                                                 ?></button>
         <button class="btn btn--solid-grey"><?php //echo $button['title']; 
@@ -83,15 +83,15 @@ get_header();
                                             ?></button> -->
 
 
-        <!-- echo $button['url']; -->
-        <div class="video-container">
-            <span></span>
-            <video class="radius green-shadow" width="100%">
-                <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-                <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+            <!-- echo $button['url']; -->
+            <div class="video-container">
+                <span></span>
+                <video class="radius green-shadow" width="100%">
+                    <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                    <source src="<?php echo $hero_video['url']; ?>" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
     </section>
     <!-- END HERO -->
 
@@ -310,11 +310,11 @@ get_header();
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<button class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
+                echo '<a href="#" class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
                 if ($k == 0) {
                     echo ' active';
                 }
-                echo '">' . $tab['title'] . '</button>';
+                echo '">' . $tab['title'] . '</a>';
                 $k++;
             }
             echo '</div>';
@@ -421,10 +421,10 @@ get_header();
                             } ?>
                         </ul>
 
-                        <button class="btn btn--solid-grey">
+                        <a href="#" class="btn btn--solid-grey">
                             <?php echo $tier['link']['url']; ?>
                             <?php echo $tier['link']['title']; ?>
-                        </button>
+                        </a>
                     </div>
             <?php
                 }
@@ -504,9 +504,9 @@ CLICK MOVE ONLY 1 SLIDE
             <div class="copy">
                 <h2 class="text-h1"><?php echo get_field('cta_title_section')['title']; ?></h2>
                 <p><?php echo get_field('cta_title_section')['description']; ?></p>
-                <button class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
+                <a href="#" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
                     <?php echo get_field('cta_title_section')['button']['title']; ?>
-                </button>
+                </a>
             </div>
             <img class="green-shadow radius" src="<?php echo get_field('cta_image')['url']; ?>" alt="<?php echo get_field('cta_image')['alt']; ?>">
         </div>

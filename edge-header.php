@@ -60,7 +60,7 @@
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </nav>
-                    <button class="btn btn--solid btn--solid-grey">login</button>
+                    <a href="#" class="btn btn--solid btn--solid-grey">login</a>
                 </div> <!-- end .container -->
             </div> <!-- end #sticky_header -->
 
