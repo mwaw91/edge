@@ -375,16 +375,17 @@ CLICK MOVE ONLY 1 SLIDE
 <div class="container">
 
     <!-- CTA -->
-    <section data-aos="fade-up" id="cta">
-        <div>
-
-            <h2><?php echo get_field('cta_title_section')['title']; ?></h2>
-            <p><?php echo get_field('cta_title_section')['description']; ?></p>
-            <button class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
-                <?php echo get_field('cta_title_section')['button']['title']; ?>
-            </button>
+    <section id="cta">
+        <div class="cta" data-aos="fade-up">
+            <div class="copy">
+                <h2><?php echo get_field('cta_title_section')['title']; ?></h2>
+                <p><?php echo get_field('cta_title_section')['description']; ?></p>
+                <button class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
+                    <?php echo get_field('cta_title_section')['button']['title']; ?>
+                </button>
+            </div>
+            <img class="green-shadow radius" src="<?php echo get_field('cta_image')['url']; ?>" alt="<?php echo get_field('cta_image')['alt']; ?>">
         </div>
-        <img src="<?php echo get_field('cta_image')['url']; ?>" alt="<?php echo get_field('cta_image')['alt']; ?>">
     </section>
     <!-- END CTA -->
     <!-- </div> -->
@@ -406,29 +407,10 @@ CLICK MOVE ONLY 1 SLIDE
                         ?></h2> -->
             <p><?php echo get_field('faqs_title')['description']; ?></p>
         </div>
-
-        <!-- CODEPEN -->
-        <div class='faq'>
-
-            <?php
-
-            ?>
-            <!-- <input id='faq-a' type='checkbox'>
-            <label for='faq-a'>
-                <p class="faq-heading">Is this Dropbox upgrade safe?</p>
-                <div class='faq-arrow'></div>
-                <p class="faq-text">It is completely safe and totally legal! There will is no record of this process to your shared Dropbox users.</p>
-            </label> -->
-
-        </div>
-        <!-- CODEPEN -->
-
-
         <!-- NEW CODEPEN -->
         <div class="codepen">
-            <div class="faq-header">Frequently Asked Questions</div>
 
-            <div class="faq-content">
+            <div class="faq-content radius">
 
                 <?php
                 $faqs = get_field('faqs');

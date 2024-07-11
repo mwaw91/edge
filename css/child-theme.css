@@ -15325,21 +15325,30 @@ footer .container .social-media-menu li a img {
 }
 
 #cta {
+  margin-bottom: 90px;
+}
+#cta .cta {
+  padding-top: 80px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
+  background-color: #111619;
+  border: 1px solid #282f39;
+  overflow: hidden;
+}
+#cta .cta .copy {
+  max-width: 374px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+#cta .cta img {
+  width: 130%;
+  top: 60px;
+  margin-right: -60px;
 }
 
 #faq {
   max-width: 500px;
-  margin: 0 auto;
-}
-#faq .faq-heading {
-  font-family: Lato;
-  font-weight: 400;
-  font-size: 19px;
-  -webkit-transition: text-indent 0.2s;
-  text-indent: 20px;
-  color: #333;
+  margin: 0 auto 90px auto;
 }
 #faq .faq-text {
   font-family: Open Sans;
@@ -15423,17 +15432,14 @@ footer .container .social-media-menu li a img {
   display: block;
 }
 
-.codepen .faq-header {
-  font-size: 42px;
-  border-bottom: 1px dotted #ccc;
-  padding: 24px;
-}
 .codepen .faq-content {
   margin: 0 auto;
+  background-color: #111619;
+  border: 1px solid #282f39;
+  padding: 30px;
 }
 .codepen .faq-question {
   padding: 20px 0;
-  border-bottom: 1px dotted #ccc;
 }
 .codepen .panel-title {
   font-size: 24px;
