@@ -42,16 +42,22 @@
 
 
         <header id="masthead" class="site-header" role="banner">
-            <div class='main-tool-bar'></div>
+            <!-- STICKY NAV -->
+            <!-- <div class='main-tool-bar'></div> -->
+
+
             <div id="">
                 <div class="header-content container clearfix">
                     <!-- LOGO  -->
-
-                    <?php echo '<img src="' . get_field('edge_logo')['url'] . '" class="">'; ?>
-                    <nav id="site-navigation" class="main-navigation clearfix" role="navigation" aria-label="">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                    <a href="/" class="custom-logo-link">
+                        <?php echo '<img src="' . get_field('edge_logo')['url'] . '" class="custom-logo">'; ?>
+                    </a>
+                    <nav id="site-navigation" class="nav-menu main-navigation clearfix" role="navigation" aria-label="">
+                        <ul id="primary-menu">
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
                     </nav>
                     <button class="btn btn--solid btn--solid-grey">login</button>
                 </div> <!-- end .container -->

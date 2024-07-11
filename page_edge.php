@@ -154,18 +154,108 @@
         <h4 class="text-h4">Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
                                                                                     ?></h4>
         <div class="logo-container">
-            <div class="slider">
+
+            <div class="slider test-slider">
                 <div class="slide-track">
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider main container -->
+            <div class="swiper trusted-by-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
                     <?php
                     $logos = get_field('logos');
                     if ($logos) {
                         foreach ($logos as $logo) {
-                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                            echo '<div class="swiper-slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /> </div>';
                         }
                     }
                     ?>
                 </div>
             </div>
+
+            <!-- <div class="slider">
+                <div class="slide-track"> -->
+            <?php
+            // $logos = get_field('logos');
+            // if ($logos) {
+            //     foreach ($logos as $logo) {
+            //         echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+            //     }
+            // }
+            ?>
+            <!-- </div>
+            </div> -->
+
+            <!-- <div class="marquee">
+                <ul class="marquee-content"> -->
+            <?php
+            // $logos = get_field('logos');
+            // if ($logos) {
+            //     foreach ($logos as $logo) {
+            //         echo '<li><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></li>';
+            //     }
+            // }
+            ?>
+            <!-- </ul>
+            </div> -->
+
         </div>
     </section>
     <!-- END STAT CONTAINER -->

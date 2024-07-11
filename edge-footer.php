@@ -12,7 +12,8 @@ ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- JS -->
-<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.min.js'></script>
+<!-- <script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.js'></script> -->
+<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript.js'></script>
 
 
 

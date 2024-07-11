@@ -42,7 +42,31 @@ get_header();
         $hero_img = get_field('image');
         $hero_video = get_field('hero-video');
         ?>
+        <div class="hero-logos">
+            <div class="lhs-logos" data-aos="fade-down">
+                <?php
+                $lhs_logos = get_field('lhs_logos');
+                // var_dump($lhs_logos);
+                if ($lhs_logos) {
+                    foreach ($lhs_logos as $lhs) {
+                        echo '<img src="' . $lhs['logo'] . '"/>';
+                    }
+                }
+                ?>
+            </div>
+            <div class="rhs-logos" data-aos="fade-down">
+                <?php
+                $rhs_logos = get_field('rhs_logos');
+                if ($rhs_logos) {
+                    foreach ($rhs_logos as $rhs) {
+                        echo '<img src="' . $rhs['logo'] . '"/>';
+                    }
+                }
+                ?>
+            </div>
 
+
+        </div>
         <!-- <h1><?php // echo $title; 
                     ?></h1> -->
         <h1 class="text-h1">Track your CS2 Stats like the Pros</h1>
@@ -153,22 +177,108 @@ get_header();
         <div class="logo-container">
 
 
-            <div class="slider">
+            <!-- <div class="slider">
+                <div class="slide-track"> -->
+            <?php
+            // $logos = get_field('logos');
+            // if ($logos) {
+            //     foreach ($logos as $logo) {
+            //         echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+            //     }
+            // }
+            ?>
+            <!-- </div>
+            </div> -->
+
+            <!-- <div class="marquee">
+                <ul class="marquee-content"> -->
+            <?php
+            // $logos = get_field('logos');
+            // if ($logos) {
+            //     foreach ($logos as $logo) {
+            //         echo '<li><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></li>';
+            //     }
+            // }
+            ?>
+            <!-- </ul>
+            </div> -->
+
+            <div class="slider test-slider">
                 <div class="slide-track">
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Slider main container -->
+            <div class="swiper trusted-by-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
                     <?php
                     $logos = get_field('logos');
                     if ($logos) {
                         foreach ($logos as $logo) {
-                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                            echo '<div class="swiper-slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /> </div>';
                         }
                     }
                     ?>
                 </div>
             </div>
-
-
         </div>
-
     </section>
     <!-- END STAT CONTAINER -->
 
@@ -349,9 +459,7 @@ CLICK MOVE ONLY 1 SLIDE
             <div class="swiper-button-prev"></div>
         </div>
     </div>
-    <div class="swiper">
-
-
+    <div class="swiper testimonials">
 
         <div class="swiper-wrapper">
             <?php

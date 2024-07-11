@@ -15055,7 +15055,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-#site-navigation #primary-menu {
+#site-navigation #primary-menu,
+#site-navigation .nav-menu {
   width: -moz-min-content;
   width: min-content;
   padding: 0;
@@ -15065,10 +15066,12 @@ body {
   column-gap: 35px;
   margin: 0;
 }
-#site-navigation #primary-menu li {
+#site-navigation #primary-menu li,
+#site-navigation .nav-menu li {
   list-style: none;
 }
-#site-navigation #primary-menu li a {
+#site-navigation #primary-menu li a,
+#site-navigation .nav-menu li a {
   font-family: "Blinker", sans-serif;
   color: white;
   text-decoration: none;
@@ -15195,14 +15198,108 @@ footer .container .social-media-menu li a img {
   grid-template-columns: auto auto;
 }
 
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 #hero {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+#hero .hero-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 0;
+}
+#hero .hero-logos img {
+  max-width: 70px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+#hero .hero-logos img:hover {
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+#hero .hero-logos .lhs-logos img:nth-child(1) {
+  top: -10px;
+}
+#hero .hero-logos .lhs-logos img:nth-child(2) {
+  left: 180px;
+  top: -41px;
+}
+#hero .hero-logos .lhs-logos img:nth-child(3) {
+  left: 120px;
+}
+#hero .hero-logos .lhs-logos img:nth-child(4) {
+  top: 30px;
+}
+#hero .hero-logos .lhs-logos img:nth-child(5) {
+  left: 290px;
+  top: -110px;
+}
+#hero .hero-logos .lhs-logos img:nth-child(6) {
+  top: 90px;
+}
+#hero .hero-logos .rhs-logos img:nth-child(1) {
+  top: -10px;
+}
+#hero .hero-logos .rhs-logos img:nth-child(2) {
+  right: 180px;
+  top: -41px;
+}
+#hero .hero-logos .rhs-logos img:nth-child(3) {
+  right: 120px;
+}
+#hero .hero-logos .rhs-logos img:nth-child(4) {
+  top: 30px;
+}
+#hero .hero-logos .rhs-logos img:nth-child(5) {
+  right: 290px;
+  top: -110px;
+}
+#hero .hero-logos .rhs-logos img:nth-child(6) {
+  top: 90px;
+}
 #hero h1, #hero .h1 {
-  margin-top: 60px;
   max-width: 420px;
   text-align: center;
 }
@@ -15602,47 +15699,37 @@ footer .container .social-media-menu li a img {
   border-radius: 50%;
 }
 
+.trusted-by-list {
+  transition-timing-function: linear !important;
+}
+
+.test-slider {
+  margin-top: 70px;
+  padding: 8em 2em;
+}
+.test-slider img {
+  width: 100px;
+  height: 100px;
+  animation: scroll 60s linear infinite;
+}
+.test-slider .slide {
+  width: 50px;
+}
+.test-slider .slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1750px);
+    transform: translatex(-1000%);
   }
 }
-.slider {
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 960px;
-}
-.slider::before, .slider::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider .slide-track {
-  animation: scroll 40s linear infinite;
-  display: flex;
-  width: 3500px;
-}
-.slider .slide {
-  height: 100px;
-  width: 250px;
-}
-
 #testimonials {
   margin-bottom: 90px;
 }

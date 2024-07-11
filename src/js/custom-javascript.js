@@ -3,22 +3,64 @@ document.addEventListener("DOMContentLoaded", () => {
   // SWIPER
   // import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
-  // const swiper = new Swiper('.swiper', { 
-  // //   loop: true,
-  // slidesPerView: 6,
-  // slidesPerColumn: 2,
-  // slidesPerGroup: 3,
-
-  //   // Navigation arrows
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // });
-
-
-  const mySwiper = new Swiper('.swiper', {
+  // SWIPER CARUSERL
+  var logoCarousel = new Swiper('.trusted-by-swiper', {
+    spaceBetween: 40,
+    grabCursor: false,
+    a11y: false,
+    freeMode: true,
+    speed: 11000,
     loop: true,
+    slidesPerView: "auto",
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      0: { /* when window >=0px - webflow mobile landscape/portriat */
+        spaceBetween: 30,
+      },
+      480: { /* when window >=0px - webflow mobile landscape/portriat */
+        spaceBetween: 30,
+      },
+      767: { /* when window >= 767px - webflow tablet */
+        spaceBetween: 40,
+      },
+      992: { /* when window >= 988px - webflow desktop */
+        spaceBetween: 40,
+      }
+    },
+  });
+  // end SWIPER CARoUSERL
+  // LOGO CAROUSEL
+  // var logoCarousel = new Swiper(".logo-carousel", {
+  //   slidesPerView: "auto",
+  //   grabCursor: true,
+  //   speed: 5000,
+  //   spaceBetween: 30,
+  //   freeMode: true,
+  //   loop: true,
+  //   centeredSlides: true,
+  //   autoplay: {
+  //     delay: 0,
+  //     disableOnInteraction: true
+  //   }
+  // });
+  // test slider
+  // function testSlider() {
+  //   const root = document.documentElement;
+  //   const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+  //   const marqueeContent = document.querySelector("ul.marquee-content");
+
+  //   root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+  //   for (let i = 0; i < marqueeElementsDisplayed; i++) {
+  //     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+  //   }
+  // }
+  // testSlider()
+
+  const testimonials = new Swiper('.testimonials', {
     slidesPerView: 3.2,
     slidesPerColumn: 2,
     slidesPerGroup: 3,
@@ -31,25 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: '.swiper-button-prev',
     },
   });
-
-  // LOGO CAROUSEL
-  var logoCarousel = new Swiper(".logo-carousel", {
-    slidesPerView: "auto",
-    grabCursor: true,
-    speed: 5000,
-    spaceBetween: 30,
-    freeMode: true,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: true
-    }
-  });
-
-
-
-
 
   // AOS
   AOS.init();
