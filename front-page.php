@@ -98,16 +98,8 @@ get_header();
         <!-- echo $button['url']; -->
         <div class="video-section" data-aos="fade-up">
             <span></span>
-            <!-- <video controls class="radius green-shadow" width="100%">
-                <source src="<?php // echo $hero_video['url']; 
-                                ?>" type="video/mp4">
-                <source src="<?php //echo $hero_video['url']; 
-                                ?>" type="video/ogg">
-                Your browser does not support the video tag.
-            </video> -->
+            <!-- VIDEO -->
             <div class="video-container radius green-shadow">
-                <!-- VIDEO ATTRIBUTE poster="video-poster.jpg" -->
-
                 <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_196_307)">
                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
@@ -131,6 +123,7 @@ get_header();
                     Your browser does not support the video tag.
                 </video>
             </div>
+            <!-- END VIDEO -->
         </div>
     </section>
     <!-- END HERO -->
