@@ -313,7 +313,7 @@ get_header();
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('title_section')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('title_section')['title']; ?></h2>
-            <p><?php echo get_field('title_section')['description']; ?></p>
+            <p class="p2"><?php echo get_field('title_section')['description']; ?></p>
         </div>
 
         <?php $image_buttons = get_field('image_buttons');
@@ -381,7 +381,7 @@ get_header();
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
                         <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
                         <h2 class="text-h1"><?php echo $row['title']; ?></h2>
-                        <p><?php echo $row['description']; ?></p>
+                        <p class="p2"><?php echo $row['description']; ?></p>
                     </div>
                 </div>
 
@@ -405,7 +405,7 @@ get_header();
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
             <h2 class="text-h1">start from today</h2>
-            <p><?php echo get_field('pricing_title')['description']; ?></p>
+            <p class="p2"><?php echo get_field('pricing_title')['description']; ?></p>
         </div>
 
         <!-- TOGGLE TEAM INDIVIDUAL -->
@@ -421,34 +421,42 @@ get_header();
                 foreach ($tiers as $tier) {
             ?>
                     <div class="tier radius">
-                        <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
-                        <p class="price team month"><span class="font-signs text-h3">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
-                        <p class="price team year"><span class="font-signs text-h3">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
-                        <p class="price individual month"><span class="font-signs text-h3">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
-                        <p class="price individual year"><span class="font-signs text-h3">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
+                        <div>
+                            <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
+                            <p class="p2 price team month"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
+                            <p class="p2 price team year"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
+                            <p class="p2 price individual month"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
+                            <p class="p2 price individual year"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
 
-                        <!-- <div class="period-toggle-container">
+                            <!-- <div class="period-toggle-container">
                             <span id="yearly" class="active period-toggle">Billed Yearly</span>
                             <span id="monthly" class="period-toggle">Individual</span>
                         </div> -->
-                        <div class="custom-toggle-switch">
-                            <div class="slider">
+                            <div class="custom-toggle-switch-container">
+                                <div class="custom-toggle-switch">
+                                    <div class="slider">
+                                    </div>
+                                </div>
+                                <span class="blinker-semibold p2">BILLED YEARLY</span>
                             </div>
-                        </div>
-                        <!-- <div class="period-toggle-container">
+                            <!-- <div class="period-toggle-container">
                             <label class="switch">
                                 <input class="annual-switch" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
                         </div> -->
 
-                        <ul>
-                            <?php
-                            foreach ($tier['package_includes'] as $item) {
-                                echo '<li>' . $item['item'] . '</li>';
-                            } ?>
-                        </ul>
-
+                            <ul>
+                                <?php
+                                foreach ($tier['package_includes'] as $item) {
+                                    echo '<li class="p2 blinker-regular">
+                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 4.62305L6.75 12.873L3 9.12305" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+' . $item['item'] . '</li>';
+                                } ?>
+                            </ul>
+                        </div>
                         <a href="#" class="btn btn--solid-grey">
                             <?php echo $tier['link']['url']; ?>
                             <?php echo $tier['link']['title']; ?>
@@ -459,7 +467,10 @@ get_header();
             }
             ?>
         </div>
-        <p class="all-features">See all features UPWARDS CHEVRON</p>
+        <p class="all-features p2">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </p>
     </section>
     <!-- END PRICING -->
 
@@ -476,7 +487,7 @@ CLICK MOVE ONLY 1 SLIDE
         <h2 class="text-h1">Take their word for it</h2>
         <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
                     ?></h2> -->
-        <p><?php echo get_field('testimonials_title')['description']; ?></p>
+        <p class="p2"><?php echo get_field('testimonials_title')['description']; ?></p>
     </div>
 
 
@@ -557,7 +568,7 @@ CLICK MOVE ONLY 1 SLIDE
             <h2 class="text-h1">Questions</h2>
             <!-- <h2><?php //echo get_field('faqs_title')['title']; 
                         ?></h2> -->
-            <p><?php echo get_field('faqs_title')['description']; ?></p>
+            <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
         </div>
         <!-- NEW CODEPEN -->
         <div class="faq-container">

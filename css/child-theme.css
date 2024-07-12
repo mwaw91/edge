@@ -15091,6 +15091,7 @@ body {
 }
 .title-section h6, .title-section .h6 {
   color: #24f4ab;
+  text-transform: uppercase;
   filter: drop-shadow(0 0 10px #24f4ab);
 }
 .title-section h2, .title-section .h2 {
@@ -15145,7 +15146,9 @@ footer .container .social-media-menu li a:hover svg path {
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
   border-radius: 6px;
   padding: 8px 19px;
-  font-family: "blinkersemibold", sans-serif;
+  font-family: "blinkerregular", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
   font-weight: 600;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -15719,12 +15722,27 @@ footer .container .social-media-menu li a:hover svg path {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
 }
 #pricing .tiers-container .tier {
+  min-width: 360px;
+  min-height: 469px;
   background-color: #111619;
   border: 1px solid #282f39;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#pricing .tiers-container .tier:nth-child(2) {
+  background: linear-gradient(#282f39 75%, #111619 110%);
+}
+#pricing .tiers-container .tier:nth-child(2) .btn, #pricing .tiers-container .tier:nth-child(2) .wpcf7 input[type=submit], .wpcf7 #pricing .tiers-container .tier:nth-child(2) input[type=submit], #pricing .tiers-container .tier:nth-child(2) .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message #pricing .tiers-container .tier:nth-child(2) a.button, #pricing .tiers-container .tier:nth-child(2) .woocommerce-info a.button, .woocommerce-info #pricing .tiers-container .tier:nth-child(2) a.button {
+  background-color: white;
+  color: #0b0f11;
+}
+#pricing .tiers-container .tier p {
+  margin-bottom: 5px;
 }
 #pricing .tiers-container .tier p.must-be-hidden.show {
   display: none;
@@ -15738,22 +15756,40 @@ footer .container .social-media-menu li a:hover svg path {
 #pricing .tiers-container .tier p.must-be-shown.hide {
   display: none;
 }
+#pricing .tiers-container .tier p span {
+  color: white;
+}
 #pricing .tiers-container .tier ul {
   margin: 0;
   padding: 0;
 }
 #pricing .tiers-container .tier ul li {
   list-style: none;
+  margin-bottom: 9px;
 }
-#pricing .tiers-container .tier ul li:before {
-  content: "&check";
+#pricing .tiers-container .tier ul li svg {
+  margin-right: 7px;
 }
 #pricing .all-features {
+  margin-top: 20px;
   text-align: center;
   width: 100%;
 }
+#pricing .all-features svg {
+  margin-left: 5px;
+}
 
-.custom-toggle-switch {
+.custom-toggle-switch-container {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #586373;
+  margin-bottom: 20px;
+}
+.custom-toggle-switch-container .custom-toggle-switch {
   border-radius: 9999px;
   width: 27.45px;
   padding: 2px;
@@ -15762,17 +15798,17 @@ footer .container .social-media-menu li a:hover svg path {
   display: flex;
   transition: all 0.1s ease-in-out;
 }
-.custom-toggle-switch:hover {
+.custom-toggle-switch-container .custom-toggle-switch:hover {
   cursor: pointer;
 }
-.custom-toggle-switch.active {
+.custom-toggle-switch-container .custom-toggle-switch.active {
   background-color: #24f4ab;
 }
-.custom-toggle-switch.active .slider {
+.custom-toggle-switch-container .custom-toggle-switch.active .slider {
   position: relative;
   left: 50%;
 }
-.custom-toggle-switch .slider {
+.custom-toggle-switch-container .custom-toggle-switch .slider {
   transition: all 0.1s ease-in-out;
   position: relative;
   left: 0;
@@ -15782,7 +15818,6 @@ footer .container .social-media-menu li a:hover svg path {
   background-color: white;
 }
 
-/* The switch - the box around the slider */
 .trusted-by-list {
   transition-timing-function: linear !important;
 }
