@@ -119,7 +119,7 @@ $edge_settings = edge_get_theme_options(); ?>
 					<!-- </nav> -->
 					<!-- end #site-navigation -->
 
-					<button class="btn btn--solid btn--solid-grey">login</button>
+					<a href="#" class="login-btn btn btn--solid btn--solid-grey">login</a>
 				</div> <!-- end .container -->
 			</div> <!-- end #sticky_header -->
 			<?php

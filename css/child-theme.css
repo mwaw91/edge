@@ -14998,27 +14998,6 @@ body {
   border-radius: 17px;
 }
 
-.fade-up {
-  background-color: red;
-  width: 500px;
-  padding: 100px;
-  height: 200px;
-}
-
-.fade-left {
-  background-color: orange;
-  width: 500px;
-  padding: 100px;
-  height: 200px;
-}
-
-.fade-right {
-  background-color: green;
-  width: 500px;
-  padding: 100px;
-  height: 200px;
-}
-
 .main-tool-bar {
   height: 80px;
   background: white;
@@ -15045,7 +15024,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.header-content button {
+.header-content .login-btn {
   justify-self: end;
 }
 
@@ -15074,6 +15053,11 @@ body {
   font-family: "blinkerregular", sans-serif;
   color: white;
   text-decoration: none;
+  transition: all 0.4s;
+}
+#site-navigation #primary-menu li a:hover,
+#site-navigation .nav-menu li a:hover {
+  color: #24f4ab;
 }
 
 .custom-logo-link img {
@@ -15361,6 +15345,7 @@ footer .container .social-media-menu li a:hover svg path {
   position: relative;
   margin: 0 auto;
   top: 0;
+  z-index: 0;
 }
 #hero .video-section .video-container {
   overflow: hidden;
@@ -15381,11 +15366,17 @@ footer .container .social-media-menu li a:hover svg path {
   grid-gap: 110px;
   margin-bottom: 60px;
 }
+#tested .top-row .grid-item span svg {
+  margin-top: -4px;
+}
 #tested .bottom-row {
   display: flex;
   flex-direction: row;
   gap: 110px;
   justify-content: center;
+}
+#tested .bottom-row .grid-item span svg {
+  margin-top: -4px;
 }
 #tested .bottom-row .grid-item:nth-child(1) {
   justify-content: flex-end;
@@ -15609,6 +15600,8 @@ footer .container .social-media-menu li a:hover svg path {
 .tab-image {
   margin: 60px auto 0 auto;
   display: none;
+  width: 100%;
+  min-height: 606px;
 }
 
 .tab-image.active {
@@ -15648,7 +15641,7 @@ footer .container .social-media-menu li a:hover svg path {
 .faq-container .faq-question .panel:checked ~ .panel-content {
   height: auto;
   opacity: 1;
-  padding: 14px 14px 0 35px;
+  padding: 14px 14px 0 22px;
   z-index: 0;
 }
 .faq-container .faq-question .plus .plus-content {
@@ -15854,6 +15847,11 @@ footer .container .social-media-menu li a:hover svg path {
   border: 1px solid #282f39;
   width: 60px;
   height: 60px;
+  transition: all 0.4s;
+}
+#testimonials .swiper-buttons-container .swiper-buttons .swiper-button-next:hover,
+#testimonials .swiper-buttons-container .swiper-buttons .swiper-button-prev:hover {
+  background-color: #282f39;
 }
 #testimonials .swiper-buttons-container .swiper-buttons .swiper-button-next::after,
 #testimonials .swiper-buttons-container .swiper-buttons .swiper-button-prev::after {
@@ -15925,6 +15923,9 @@ footer .container .social-media-menu li a:hover svg path {
   height: 70px;
   -o-object-position: center;
   object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #testimonials .swiper-wrapper .testimonial > div .img-container img {
   max-width: 45px;
@@ -15935,19 +15936,19 @@ footer .container .social-media-menu li a:hover svg path {
 
 @font-face {
   font-family: "signsbold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkerregular";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkersemibold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

@@ -60,26 +60,6 @@ body {
   border-radius: 17px;
 }
 
-// AOS
-.fade-up {
-  background-color: red;
-  width: 500px;
-  padding: 100px;
-  height: 200px;
-}
-.fade-left {
-  background-color: orange;
-  width: 500px;
-  padding: 100px;
-  height: 200px;
-}
-.fade-right {
-  background-color: green;
-  width: 500px;
-  padding: 100px;
-  height: 200px;
-}
-
 // NAV
 .main-tool-bar {
   height: 80px;
@@ -107,7 +87,7 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  button {
+  .login-btn {
     justify-self: end;
   }
 }
@@ -135,6 +115,10 @@ body {
         font-family: "blinkerregular", sans-serif;
         color: white;
         text-decoration: none;
+        transition: all 0.4s;
+        &:hover {
+          color: $green;
+        }
       }
     }
   }
@@ -597,6 +581,7 @@ footer {
       position: relative;
       margin: 0 auto;
       top: 0;
+      z-index: 0;
     }
     .video-container {
       overflow: hidden;
@@ -620,6 +605,13 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 110px;
     margin-bottom: 60px;
+    .grid-item {
+      span {
+        svg {
+          margin-top: -4px;
+        }
+      }
+    }
   }
   .bottom-row {
     display: flex;
@@ -627,6 +619,11 @@ footer {
     gap: 110px;
     justify-content: center;
     .grid-item {
+      span {
+        svg {
+          margin-top: -4px;
+        }
+      }
       &:nth-child(1) {
         justify-content: flex-end;
         margin: 0 0 0 0;
@@ -921,6 +918,8 @@ footer {
 .tab-image {
   margin: 60px auto 0 auto;
   display: none;
+  width: 100%;
+  min-height: 606px;
 }
 .tab-image.active {
   display: block;
@@ -969,7 +968,7 @@ footer {
     .panel:checked ~ .panel-content {
       height: auto;
       opacity: 1;
-      padding: 14px 14px 0 35px;
+      padding: 14px 14px 0 22px;
       z-index: 0;
     }
 
@@ -1364,6 +1363,10 @@ footer {
         border: 1px solid $black-3;
         width: 60px;
         height: 60px;
+        transition: all 0.4s;
+        &:hover {
+          background-color: $black-3;
+        }
         &::after {
           color: white;
           font-size: 20px;
@@ -1430,12 +1433,14 @@ footer {
         .img-container {
           background-color: #1d2329;
           border: 1px solid $black-3;
-          // padding: 20px;
           margin-right: 30px;
           border-radius: 9999px;
           width: 70px;
           height: 70px;
           object-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           img {
             max-width: 45px;
             width: 100%;
