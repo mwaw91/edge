@@ -325,6 +325,7 @@ footer {
     color: $grey-text;
     border: 1px solid $black-3;
     overflow: hidden;
+    transition: all 0.5s;
     &::before {
       --size: 0;
       content: "";
@@ -334,7 +335,12 @@ footer {
       width: var(--size);
       height: var(--size);
       filter: blur(30px);
-      background: radial-gradient(circle closest-side, $green, transparent);
+      background: radial-gradient(
+        circle closest-side,
+        $green 0%,
+        $green 20%,
+        transparent 70%
+      );
       transform: translate(-50%, -50%);
       transition: width 0.2s ease, height 0.2s ease;
     }
@@ -342,7 +348,7 @@ footer {
       --size: 200px;
     }
     &:hover {
-      border: 1px solid white;
+      border: 1px solid $green;
       overflow: hidden;
     }
     &.active {
@@ -352,8 +358,6 @@ footer {
     }
   }
 }
-
-.btn--outline-grey-gradient .btn--outline-grey-gradient
 
 // BTN HOVER GRADIENT
 // .follow-gradient {
@@ -666,38 +670,33 @@ footer {
   }
 }
 #stat-container {
-  // background-color: $black-1;
-  // background: radial-gradient(ellipse at 50% 200%, red 0, green 100%);
-  // background: radial-gradient(ellipse at 50% 200%, #111619 0%, #1e1e1e 100%);
-  // $black: #1e1e1e;
-  // $black-1: #111619;
+  background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 90px auto;
-
   border: 1px solid $black-3;
   gap: 60px;
   overflow: hidden !important;
   position: relative;
-  transform-style: preserve-3d;
-  .stat-gradient {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 650px;
-    height: 650px;
-    border-radius: 100%;
-    background: linear-gradient($black 10%, $grey);
-    filter: blur(250px);
-    transition: all 450ms ease-out;
-    position: fixed;
-    pointer-events: none;
-    right: 0;
-    bottom: 0;
-    transform: translate(calc(-50% + 15px), -50%);
-    // transform: translate(calc(-50% + 15px), 0);
-    z-index: -1;
-  }
+  // transform-style: preserve-3d;
+  // .stat-gradient {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   width: 650px;
+  //   height: 650px;
+  //   border-radius: 100%;
+  //   background: linear-gradient($black 10%, $grey);
+  //   filter: blur(250px);
+  //   transition: all 450ms ease-out;
+  //   position: fixed;
+  //   pointer-events: none;
+  //   right: 0;
+  //   bottom: 0;
+  //   transform: translate(calc(-50% + 15px), -50%);
+  //   // transform: translate(calc(-50% + 15px), 0);
+  //   z-index: -1;
+  // }
 
   .stats {
     display: flex;

@@ -15181,6 +15181,7 @@ footer .container .social-media-menu li a:hover svg path {
   color: #a4aabb;
   border: 1px solid #282f39;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .btn--outline-grey-gradient::before {
   --size: 0;
@@ -15191,7 +15192,7 @@ footer .container .social-media-menu li a:hover svg path {
   width: var(--size);
   height: var(--size);
   filter: blur(30px);
-  background: radial-gradient(circle closest-side, #24f4ab, transparent);
+  background: radial-gradient(circle closest-side, #24f4ab 0%, #24f4ab 20%, transparent 70%);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
 }
@@ -15199,7 +15200,7 @@ footer .container .social-media-menu li a:hover svg path {
   --size: 200px;
 }
 .btn--outline-grey-gradient:hover {
-  border: 1px solid white;
+  border: 1px solid #24f4ab;
   overflow: hidden;
 }
 .btn--outline-grey-gradient.active {
@@ -15208,7 +15209,7 @@ footer .container .social-media-menu li a:hover svg path {
   color: white;
 }
 
-.btn--outline-grey-gradient .btn--outline-grey-gradient #standout-feature-grid {
+#standout-feature-grid {
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -15425,6 +15426,7 @@ footer .container .social-media-menu li a:hover svg path {
   }
 }
 #stat-container {
+  background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 90px auto;
@@ -15432,24 +15434,6 @@ footer .container .social-media-menu li a:hover svg path {
   gap: 60px;
   overflow: hidden !important;
   position: relative;
-  transform-style: preserve-3d;
-}
-#stat-container .stat-gradient {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 650px;
-  height: 650px;
-  border-radius: 100%;
-  background: linear-gradient(#1e1e1e 10%, #bababa);
-  filter: blur(250px);
-  transition: all 450ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  right: 0;
-  bottom: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-  z-index: -1;
 }
 #stat-container .stats {
   display: flex;
