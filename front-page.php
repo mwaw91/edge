@@ -10,6 +10,20 @@ get_header();
 <!-- child-theme.min -->
 <!-- <script type='text/javascript' src='edge-page/child-theme.min'></script> -->
 
+<!-- TODO -->
+<!-- BUTTONS -->
+<!-- SPACING -->
+<!-- VIDEOS -->
+<!-- PRICING GRID -->
+<!-- REPLACE IMAGE CAROUSEL?  GLITCHY -->
+<!-- ALTERNATING COLUMNS NEED CORRECT WIDTHS -->
+<!-- TESTIMONIALS -->
+<!-- FIX ALL BTN LINKS -->
+<!-- CONTENT -->
+<!-- BG GRADIENTS -->
+<!-- DOUBLE CHECK INTERACTIONS -->
+<!-- MOBILE -->
+<!-- ORIGINAL MENU -->
 
 <!-- <div class="green-shadow radius fade-up" data-aos="fade-up"></div>
 <div class="fade-left" data-aos="fade-left"></div>
@@ -550,7 +564,7 @@ CLICK MOVE ONLY 1 SLIDE
             <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
                 <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
                                         ?>" alt="<?php //echo get_field('cta_image')['alt']; 
-                                                                                                ?>"> -->
+                                                    ?>"> -->
             </div>
         </div>
     </section>

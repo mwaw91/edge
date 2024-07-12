@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 3.2,
     slidesPerColumn: 2,
     slidesPerGroup: 3,
+    spaceBetween: 30,
     grid: {
       rows: 2, // your amount of slides
       fill: "row",
