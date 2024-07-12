@@ -10,6 +10,9 @@ get_header();
 <!-- child-theme.min -->
 <!-- <script type='text/javascript' src='edge-page/child-theme.min'></script> -->
 
+<!-- DONE -->
+<!-- TESTIMONIALS -->
+
 <!-- TODO -->
 <!-- BUTTONS -->
 <!-- SPACING -->
@@ -17,7 +20,7 @@ get_header();
 <!-- PRICING GRID -->
 <!-- REPLACE IMAGE CAROUSEL?  GLITCHY -->
 <!-- ALTERNATING COLUMNS NEED CORRECT WIDTHS -->
-<!-- TESTIMONIALS -->
+
 <!-- FIX ALL BTN LINKS -->
 <!-- CONTENT -->
 <!-- BG GRADIENTS -->
@@ -86,15 +89,7 @@ get_header();
         <h1 class="text-h1" data-aos="fade-up">Track your CS2 Stats like the Pros</h1>
         <p class="p2" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <a href="#" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
-        <!-- <button class="btn"><?php //echo $button['title']; 
-                                    ?></button>
-        <button class="btn btn--solid-white"><?php //echo $button['title']; 
-                                                ?></button>
-        <button class="btn btn--solid-grey"><?php //echo $button['title']; 
-                                            ?></button>
-        <button class="btn btn--outline"><?php //echo $button['title']; 
-                                            ?></button> -->
+        <a href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
 
 
         <!-- echo $button['url']; -->
@@ -471,9 +466,7 @@ get_header();
                                 } ?>
                             </ul>
                         </div>
-                        <a href="#" class="btn btn--solid-grey">
-                            <?php echo $tier['link']['url']; ?>
-                            <?php echo $tier['link']['title']; ?>
+                        <a href="<?php echo $tier['link']['url']; ?>" class="btn btn--solid-grey"><?php echo $tier['link']['title']; ?>
                         </a>
                     </div>
             <?php
@@ -562,8 +555,7 @@ CLICK MOVE ONLY 1 SLIDE
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
                     <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
-                    <a href="#" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
-                        <?php echo get_field('cta_title_section')['button']['title']; ?>
+                    <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['title']; ?>
                     </a>
                 </div>
                 <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">

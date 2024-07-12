@@ -15143,14 +15143,27 @@ footer .container .social-media-menu li a:hover svg path {
 .btn--solid {
   background-color: #24f4ab;
   color: #0b0f11;
+  border: 1px solid #282f39;
+}
+.btn--solid:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #24f4ab;
 }
 .btn--solid-white {
   background-color: white;
   color: #0b0f11;
 }
+.btn--solid-white:hover {
+  background-color: #d6d6d6;
+}
 .btn--solid-grey {
   background-color: #282f39;
   color: white;
+}
+.btn--solid-grey:hover {
+  background-color: #424851;
+  border: 1px solid #282f39;
 }
 .btn--outline {
   background-color: transparent;
@@ -15502,7 +15515,7 @@ footer .container .social-media-menu li a:hover svg path {
   margin-bottom: 90px;
 }
 #cta .cta {
-  padding-top: 80px;
+  padding-top: 117px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #111619;

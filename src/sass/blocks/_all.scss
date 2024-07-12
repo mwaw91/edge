@@ -274,16 +274,18 @@ footer {
   &--solid {
     background-color: $green;
     color: $black-text;
+    border: 1px solid $black-3;
     &:hover {
-      // background-color: $green;
-      // border: 1px solid white;
+      background-color: transparent;
+      color: white;
+      border: 1px solid $green;
     }
   }
   &--solid-white {
     background-color: white;
     color: $black-text;
     &:hover {
-      // background-color: $green;
+      background-color: #d6d6d6;
       // border: 1px solid white;
     }
   }
@@ -291,8 +293,8 @@ footer {
     background-color: $black-3;
     color: white;
     &:hover {
-      // background-color: $green;
-      // border: 1px solid white;
+      background-color: #424851;
+      border: 1px solid $black-3;
     }
   }
   &--outline {
@@ -805,7 +807,7 @@ footer {
 #cta {
   margin-bottom: 90px;
   .cta {
-    padding-top: 80px;
+    padding-top: 117px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: $black-1;
