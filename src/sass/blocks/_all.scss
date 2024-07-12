@@ -816,10 +816,12 @@ footer {
       margin: 0 auto;
       padding-bottom: 80px;
     }
-    img {
-      width: 130%;
-      top: 60px;
-      margin-right: -60px;
+    .overlap-img {
+      overflow: hidden;
+      transform: scale(1.1);
+      transform-origin: top left;
+      background-size: cover;
+      background-position: top left;
     }
   }
 }

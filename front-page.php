@@ -539,15 +539,19 @@ CLICK MOVE ONLY 1 SLIDE
 
     <!-- CTA -->
     <section id="cta">
-        <div class="cta" data-aos="fade-up">
+        <div class="cta radius" data-aos="fade-up">
             <div class="copy">
-                <h2 class="text-h1"><?php echo get_field('cta_title_section')['title']; ?></h2>
-                <p><?php echo get_field('cta_title_section')['description']; ?></p>
+                <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
+                <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
                 <a href="#" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
                     <?php echo get_field('cta_title_section')['button']['title']; ?>
                 </a>
             </div>
-            <img class="green-shadow radius" src="<?php echo get_field('cta_image')['url']; ?>" alt="<?php echo get_field('cta_image')['alt']; ?>">
+            <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
+                <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
+                                        ?>" alt="<?php //echo get_field('cta_image')['alt']; 
+                                                                                                ?>"> -->
+            </div>
         </div>
     </section>
     <!-- END CTA -->
