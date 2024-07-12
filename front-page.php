@@ -583,8 +583,15 @@ CLICK MOVE ONLY 1 SLIDE
                 ?>
                         <div class="faq-question">
                             <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
-                            <div class="plus">+</div>
-                            <label for="q<?php echo $j; ?>" class="panel-title p2"><?php echo $faq['question']; ?></label>
+
+                            <label for="q<?php echo $j; ?>" class="panel-title p2">
+                                <div class="plus">
+                                    <div class="plus-content">
+                                        <div class="tall-spoke"></div>
+                                        <div class="spoke"></div>
+                                    </div>
+                                </div> <?php echo $faq['question']; ?>
+                            </label>
                             <div class="panel-content">
                                 <p class="p2"><?php echo $faq['answer']; ?></p>
                             </div>
