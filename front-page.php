@@ -12,21 +12,26 @@ get_header();
 
 <!-- DONE -->
 <!-- TESTIMONIALS -->
+<!-- BUTTONS -->
+<!-- FIX ALL BTN LINKS -->
+
 
 <!-- TODO -->
-<!-- BUTTONS -->
-<!-- SPACING -->
 <!-- VIDEOS -->
+<!-- SPACING -->
+<!-- CHECK ALL FIELDS -->
+
+<!-- CONTENT -->
+<!-- ORIGINAL MENU -->
+
 <!-- PRICING GRID -->
 <!-- REPLACE IMAGE CAROUSEL?  GLITCHY -->
 <!-- ALTERNATING COLUMNS NEED CORRECT WIDTHS -->
 
-<!-- FIX ALL BTN LINKS -->
-<!-- CONTENT -->
 <!-- BG GRADIENTS -->
 <!-- DOUBLE CHECK INTERACTIONS -->
 <!-- MOBILE -->
-<!-- ORIGINAL MENU -->
+
 
 <!-- <div class="green-shadow radius fade-up" data-aos="fade-up"></div>
 <div class="fade-left" data-aos="fade-left"></div>
@@ -84,13 +89,11 @@ get_header();
 
 
         </div>
-        <!-- <h1><?php // echo $title; 
-                    ?></h1> -->
-        <h1 class="text-h1" data-aos="fade-up">Track your CS2 Stats like the Pros</h1>
-        <p class="p2" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <h1 class="text-h1" data-aos="fade-up"><?php echo $title; ?></h1>
+        <p class="p2" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
         <a href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
-
 
         <!-- echo $button['url']; -->
         <div class="video-section" data-aos="fade-up">

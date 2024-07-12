@@ -15354,7 +15354,8 @@ footer .container .social-media-menu li a:hover svg path {
   width: 0;
   height: 0;
   display: block;
-  box-shadow: 0 0 340px 190px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 340px 190px rgba(255, 255, 255, 0.15);
+  filter: blur(200px);
   position: relative;
   margin: 0 auto;
   top: 0;
