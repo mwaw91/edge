@@ -118,7 +118,7 @@ get_header();
                         </defs>
                     </svg>
                 </button>
-                <video id="myVideo">
+                <video id="myVideo" class="feature-video">
                     <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -141,16 +141,39 @@ get_header();
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
-                        <video controls class="" width="100%">
-                            <source src="<?php echo $row['video'];
+                        <!-- <video controls class="" width="100%">
+                            <source src="<?php //echo $row['video'];
                                             ?>" type="video/mp4">
-                            <source src="<?php echo $row['video'];
+                            <source src="<?php //echo $row['video'];
                                             ?>" type="video/ogg">
                             Your browser does not support the video tag.
-                        </video>
-                        <!--  -->
-
-                        <!--  -->
+                        </video> -->
+                        <!--  START NEW VIDEO -->
+                        <div class="video-container">
+                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_196_307)">
+                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset />
+                                            <feGaussianBlur stdDeviation="5" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <video id="myVideo" class="feature-video">
+                                <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- END VIDEO -->
                         <div>
                             <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
                             <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -180,17 +203,43 @@ get_header();
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
-                        <video controls class="" width="100%">
-                            <source src="<?php echo $bottomrow['video'];
+                        <!-- <video controls class="" width="100%">
+                            <source src="<?php //echo $bottomrow['video'];
                                             ?>" type="video/mp4">
-                            <source src="<?php echo $bottomrow['video'];
+                            <source src="<?php //echo $bottomrow['video'];
                                             ?>" type="video/ogg">
                             Your browser does not support the video tag.
-                        </video>
-                        <!--  -->
+                        </video> -->
 
-                        <!--  -->
-                        <div>
+
+
+                        <!--  START NEW VIDEO -->
+                        <div class="video-container">
+                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_196_307)">
+                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset />
+                                            <feGaussianBlur stdDeviation="5" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <video id="myVideo" class="feature-video">
+                                <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- END VIDEO -->
+                        <div class="detail">
                             <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
                             <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_169_54)">
@@ -291,7 +340,7 @@ get_header();
 
 
             <!-- Slider main container -->
-            <div class="swiper trusted-by-swiper">
+            <div class="swiper logo-slider">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->

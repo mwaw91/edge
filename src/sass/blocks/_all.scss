@@ -691,11 +691,18 @@ footer {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    video {
+    div.video-container {
+      width: 100%;
       border-radius: 7px;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      video {
+        width: 100%;
+      }
+      svg {
+        opacity: 0;
+      }
     }
-    div {
+    div.detail {
       margin-top: 12px;
       display: flex;
       flex-direction: row;

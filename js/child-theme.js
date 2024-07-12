@@ -6748,14 +6748,14 @@
 	  // import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 	  // SWIPER CARUSERL
-	  new Swiper('.trusted-by-swiper', {
+	  new Swiper('.logo-slider', {
 	    spaceBetween: 40,
 	    grabCursor: false,
 	    a11y: false,
 	    freeMode: true,
 	    speed: 11000,
 	    loop: true,
-	    slidesPerView: "auto",
+	    slidesPerView: 5,
 	    autoplay: {
 	      delay: 0,
 	      disableOnInteraction: true
@@ -7002,23 +7002,48 @@
 	    console.log('custom play btn');
 
 	    // <button id="playButton" class="play-button">
-	    const video = document.getElementById("myVideo");
+	    //const video = document.getElementById("myVideo");
 	    // const playButton = document.getElementById("playButton");
-	    const playButton = document.querySelector(".play-button");
-	    playButton.addEventListener("click", function () {
-	      console.log('click');
-	      if (video.paused) {
-	        console.log('video was paused now playing');
-	        video.play();
-	        playButton.classList.add('hide');
-	        playButton.classList.remove('show');
-	      } else {
-	        console.log('video was playing now paused');
-	        video.pause();
-	        playButton.classList.remove('hide');
-	        playButton.classList.add('show');
-	      }
+	    //const playButton = document.querySelector(".play-button");
+
+	    // const playButton = document.querySelectorAll(".play-button");
+
+	    document.querySelectorAll(".feature-video");
+	    const playButtons = document.querySelectorAll(".play-button");
+	    playButtons.forEach(playButton => {
+	      const parentDiv = playButton.closest('.video-container');
+	      const siblingVideo = parentDiv.querySelector('.feature-video');
+	      playButton.addEventListener("click", function () {
+	        // if (video.paused) {
+	        if (siblingVideo.paused) {
+	          console.log('video was paused now playing');
+	          // video.play();
+	          siblingVideo.play();
+	          playButton.classList.add('hide');
+	          playButton.classList.remove('show');
+	        } else {
+	          console.log('video was playing now paused');
+	          // video.pause();
+	          siblingVideo.pause();
+	          playButton.classList.remove('hide');
+	          playButton.classList.add('show');
+	        }
+	      });
 	    });
+	    // playButton.addEventListener("click", function () {
+	    //   console.log('click');
+	    //   if (video.paused) {
+	    //     console.log('video was paused now playing');
+	    //     video.play();
+	    //     playButton.classList.add('hide');
+	    //     playButton.classList.remove('show');
+	    //   } else {
+	    //     console.log('video was playing now paused');
+	    //     video.pause();
+	    //     playButton.classList.remove('hide')
+	    //     playButton.classList.add('show')
+	    //   }
+	    // });
 
 	    // if (document.querySelector('video').playing) {
 	  }

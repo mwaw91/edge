@@ -15453,18 +15453,25 @@ footer .container .social-media-menu li a:hover svg path {
   justify-content: center;
   margin: 0 auto;
 }
-#tested .grid-item video {
+#tested .grid-item div.video-container {
+  width: 100%;
   border-radius: 7px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-#tested .grid-item div {
+#tested .grid-item div.video-container video {
+  width: 100%;
+}
+#tested .grid-item div.video-container svg {
+  opacity: 0;
+}
+#tested .grid-item div.detail {
   margin-top: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#tested .grid-item div span {
+#tested .grid-item div.detail span {
   color: #586373;
 }
 
