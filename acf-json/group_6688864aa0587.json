@@ -124,11 +124,11 @@
                     "parent_repeater": "field_668de2c1d7c5c"
                 },
                 {
-                    "key": "field_668de2d8d7c5e",
+                    "key": "field_6691068df2175",
                     "label": "Answer",
-                    "name": "answer",
+                    "name": "faq_answer",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -138,10 +138,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_668de2c1d7c5c"
                 }
             ]
@@ -165,5 +165,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720574695
+    "modified": 1720780506
 }

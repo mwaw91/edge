@@ -738,7 +738,8 @@ footer {
   }
 }
 #stat-container {
-  background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
+  // background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
+  background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 90px auto;
@@ -767,13 +768,17 @@ footer {
   // }
 
   .stats {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 120px;
+    max-width: 70%;
+    margin: 0 auto;
     .stat {
+      margin: 0 auto;
       max-width: max-content;
       display: flex;
       flex-direction: column;
@@ -1039,6 +1044,16 @@ footer {
       -o-transition: 0.4s ease;
       transition: 0.4s ease;
       font-family: "blinkerregular", sans-serif;
+      > * {
+        font-family: "blinkerregular", sans-serif !important;
+        font-size: 15px !important;
+        line-height: 22px !important;
+      }
+      p {
+        font-family: "blinkerregular", sans-serif !important;
+        font-size: 15px !important;
+        line-height: 22px !important;
+      }
     }
 
     .panel:checked ~ .panel-content {

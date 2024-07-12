@@ -15492,7 +15492,7 @@ footer .container .social-media-menu li a:hover svg path {
   }
 }
 #stat-container {
-  background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
+  background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 90px auto;
@@ -15502,14 +15502,17 @@ footer .container .social-media-menu li a:hover svg path {
   position: relative;
 }
 #stat-container .stats {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 120px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 #stat-container .stats .stat {
+  margin: 0 auto;
   max-width: -moz-max-content;
   max-width: max-content;
   display: flex;
@@ -15717,6 +15720,16 @@ footer .container .social-media-menu li a:hover svg path {
   opacity: 0;
   transition: 0.4s ease;
   font-family: "blinkerregular", sans-serif;
+}
+.faq-container .faq-question .panel-content > * {
+  font-family: "blinkerregular", sans-serif !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+}
+.faq-container .faq-question .panel-content p {
+  font-family: "blinkerregular", sans-serif !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
 }
 .faq-container .faq-question .panel:checked ~ .panel-content {
   height: auto;
@@ -16147,7 +16160,7 @@ h6,
 p {
   font-size: 18px;
   line-height: 24px;
-  font-family: "Blinker", sans-serif;
+  font-family: "blinkerregular", sans-serif;
   color: #bababa;
 }
 
@@ -16596,5 +16609,4 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   color: theme-color("danger");
   border: 1px solid #e9ecef;
 }
-
-/*# sourceMappingURL=child-theme.css.map */
+/*# sourceMappingURL=child-theme-10.css.map */

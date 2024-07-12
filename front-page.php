@@ -68,23 +68,27 @@ get_header();
         $hero_video = get_field('hero-video');
         ?>
         <div class="hero-logos">
-            <div class="lhs-logos" data-aos="fade-down">
+            <div class="lhs-logos">
                 <?php
                 $lhs_logos = get_field('lhs_logos');
                 // var_dump($lhs_logos);
                 if ($lhs_logos) {
+                    $lhs_delay = 200;
                     foreach ($lhs_logos as $lhs) {
-                        echo '<img src="' . $lhs['logo'] . '"/>';
+                        echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
+                        $lhs_delay += 200;
                     }
                 }
                 ?>
             </div>
-            <div class="rhs-logos" data-aos="fade-down">
+            <div class="rhs-logos">
                 <?php
                 $rhs_logos = get_field('rhs_logos');
                 if ($rhs_logos) {
+                    $rhs_delay = 200;
                     foreach ($rhs_logos as $rhs) {
-                        echo '<img src="' . $rhs['logo'] . '"/>';
+                        echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
+                        $rhs_delay += 200;
                     }
                 }
                 ?>
@@ -656,7 +660,7 @@ CLICK MOVE ONLY 1 SLIDE
                             <div class="faq-question">
                                 <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
 
-                                <label for="q<?php echo $j; ?>" class="panel-title p2">
+                                <label for="q<?php echo $j; ?>" class="panel-title p2 blinker-semibold">
                                     <div class="plus">
                                         <div class="plus-content">
                                             <div class="tall-spoke"></div>
@@ -665,7 +669,7 @@ CLICK MOVE ONLY 1 SLIDE
                                     </div> <?php echo $faq['question']; ?>
                                 </label>
                                 <div class="panel-content">
-                                    <p class="p2"><?php echo $faq['answer']; ?></p>
+                                    <?php echo $faq['faq_answer']; ?>
                                 </div>
                             </div>
                     <?php
