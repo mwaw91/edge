@@ -6845,19 +6845,8 @@
 	    }
 	    // toggleClass: { className: 'skybox-menu--scrolled', targets: '.video-section' }
 	  });
+	  // statGradient();
 
-	  // FOLLOW GRADIENT
-	  function statGradient() {
-	    var gradient = document.querySelector('.stat-gradient');
-	    document.getElementById('stat-container');
-	    // statConstainer.addEventListener('mousemove', function (e) {
-	    document.addEventListener('mousemove', function (e) {
-	      e.clientX;
-	      e.clientY;
-	      gradient.style.transform = `translate3d(calc(${e.clientX}px), calc(${e.clientY}px), 0)`;
-	    });
-	  }
-	  statGradient();
 	  function btnHoverGradient() {
 	    let btns = document.querySelectorAll('.btn--outline-grey-gradient');
 	    btns.forEach(btn => {
@@ -7011,17 +7000,23 @@
 	  // CUSTOM PLAY BUTTON FOR VIDEOS
 	  function customPlayButton() {
 	    console.log('custom play btn');
+
+	    // <button id="playButton" class="play-button">
 	    const video = document.getElementById("myVideo");
-	    const playButton = document.getElementById("playButton");
+	    // const playButton = document.getElementById("playButton");
+	    const playButton = document.querySelector(".play-button");
 	    playButton.addEventListener("click", function () {
+	      console.log('click');
 	      if (video.paused) {
+	        console.log('video was paused now playing');
 	        video.play();
-	        playButton.classList.add('invisible');
-	        playButton.classList.remove('visible');
+	        playButton.classList.add('hide');
+	        playButton.classList.remove('show');
 	      } else {
+	        console.log('video was playing now paused');
 	        video.pause();
-	        playButton.classList.remove('invisible');
-	        playButton.classList.add('visible');
+	        playButton.classList.remove('hide');
+	        playButton.classList.add('show');
 	      }
 	    });
 

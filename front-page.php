@@ -13,13 +13,15 @@ get_header();
 <!-- BUTTONS -->
 <!-- FIX ALL BTN LINKS -->
 <!-- CHECK ALL FIELDS -->
+<!-- ORIGINAL MENU -->
 
 <!-- TODO -->
+<!-- js line 109 turnstatGradient() back on -->
 <!-- VIDEOS -->
 <!-- SPACING -->
-<!-- LOGIN ACF FIELD -->
-<!-- ORIGINAL MENU -->
 <!-- CONTENT -->
+<!-- LOGIN ACF FIELD -->
+
 
 
 <!-- PRICING GRID -->
@@ -105,10 +107,7 @@ get_header();
             </video> -->
             <div class="video-container radius green-shadow">
                 <!-- VIDEO ATTRIBUTE poster="video-poster.jpg" -->
-                <video id="myVideo">
-                    <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+
                 <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_196_307)">
                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
@@ -127,6 +126,10 @@ get_header();
                         </defs>
                     </svg>
                 </button>
+                <video id="myVideo">
+                    <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
