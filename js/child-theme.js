@@ -6882,7 +6882,7 @@
 	  }
 	  openImageTab();
 
-	  // PRICING TEAM INDIVDUAL
+	  // PRICING INDIVDUAL TEAM
 	  function teamIndividual() {
 	    let team = document.getElementById('team');
 	    let individual = document.getElementById('individual');
