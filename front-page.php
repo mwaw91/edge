@@ -76,7 +76,7 @@ get_header();
                     $lhs_delay = 200;
                     foreach ($lhs_logos as $lhs) {
                         echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
-                        $lhs_delay += 200;
+                        $lhs_delay += 300;
                     }
                 }
                 ?>
@@ -88,7 +88,7 @@ get_header();
                     $rhs_delay = 200;
                     foreach ($rhs_logos as $rhs) {
                         echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
-                        $rhs_delay += 200;
+                        $rhs_delay += 300;
                     }
                 }
                 ?>
@@ -97,14 +97,14 @@ get_header();
 
         </div>
 
-        <h1 class="text-h1" data-aos="fade-up"><?php echo $title; ?></h1>
-        <p class="p2" data-aos="fade-up"><?php echo $subtitle; ?></p>
+        <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
+        <p class="p2" data-aos-delay="200" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
-        <a href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
+        <a data-aos-delay="300" href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
 
         <!-- echo $button['url']; -->
-        <div class="video-section" data-aos="fade-up">
-            <span></span>
+        <div data-aos-delay="500" class="video-section" data-aos="zoom-in">
+            <span data-aos-delay="500" data-aos-duration="2500" data-aos="fade-up"></span>
             <!-- VIDEO -->
             <div class="video-container radius green-shadow">
                 <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -403,7 +403,7 @@ get_header();
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<img data-aos="fade-up" id="' . $tab_title . '" class="';
+                echo '<img data-aos="fade-up" data-aos-delay="50" id="' . $tab_title . '" class="';
                 if ($i == 0) {
                     echo 'active ';
                 }
@@ -426,7 +426,7 @@ get_header();
         ?>
                 <div class="alternating-video-column">
 
-                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
+                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-right' : 'up-left'; ?>">
                         <!--  START NEW VIDEO -->
                         <div class="video-container radius">
                             <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +455,7 @@ get_header();
                         <!-- END VIDEO -->
 
                     </div>
-                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'left' : 'right'; ?>" class="title-section">
+                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-left' : 'up-right'; ?>" class="title-section">
                         <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
                         <h2 class="text-h1"><?php echo $row['title']; ?></h2>
                         <p class="p2"><?php echo $row['description']; ?></p>
@@ -579,7 +579,7 @@ CLICK MOVE ONLY 1 SLIDE
                 $testimonial_delay = 100;
                 foreach ($testimonials as $testimonial) {
             ?>
-                    <div class="swiper-slide testimonial radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
+                    <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
                         <div>
                             <div class="img-container">
                                 <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
