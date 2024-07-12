@@ -34,7 +34,7 @@ get_header();
  -->
 
 <div class="container">
-    <section id="hero" data-aos="fade-up">
+    <section id="hero">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -69,10 +69,10 @@ get_header();
         </div>
         <!-- <h1><?php // echo $title; 
                     ?></h1> -->
-        <h1 class="text-h1">Track your CS2 Stats like the Pros</h1>
-        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h1 class="text-h1" data-aos="fade-up">Track your CS2 Stats like the Pros</h1>
+        <p class="p2" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <a href="#" class="btn btn--solid"><?php echo $button['title']; ?></a>
+        <a href="#" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
         <!-- <button class="btn"><?php //echo $button['title']; 
                                     ?></button>
         <button class="btn btn--solid-white"><?php //echo $button['title']; 
@@ -84,7 +84,7 @@ get_header();
 
 
         <!-- echo $button['url']; -->
-        <div class="video-section">
+        <div class="video-section" data-aos="fade-up">
             <span></span>
             <!-- <video controls class="radius green-shadow" width="100%">
                 <source src="<?php // echo $hero_video['url']; 
@@ -126,12 +126,12 @@ get_header();
     <!-- TESTED AND USED -->
     <section>
         <div id="tested">
-            <h2 class="text-h1"><?php echo get_field('tested-title'); ?></h2>
+            <h2 class="text-h1" data-aos="fade-up"><?php echo get_field('tested-title'); ?></h2>
 
             <?php
             $top_row = get_field('top_row_of_videos');
             if ($top_row) {
-                echo '<div class="top-row">';
+                echo '<div class="top-row" data-aos="fade-up">';
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
@@ -170,7 +170,7 @@ get_header();
             <?php
             $bottom_row = get_field('bottom_row_of_videos');
             if ($bottom_row) {
-                echo '<div class="bottom-row">';
+                echo '<div class="bottom-row" data-aos="fade-up">';
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
@@ -219,8 +219,8 @@ get_header();
 
  HOVER BG FOLLOW GRADIENT WHITE
  -->
-    <section id="stat-container" class="radius">
-        <span class="stat-gradient"></span>
+    <section id="stat-container" class="radius" data-aos="fade-up">
+        <!-- <span class="stat-gradient"></span> -->
         <div class="stats">
             <?php
             $stats = get_field('statistics');
@@ -321,7 +321,7 @@ get_header();
 
             $i = 0;
 
-            echo '<div class="tab-btns">';
+            echo '<div class="tab-btns" data-aos="fade-up">';
             $k = 0;
             foreach ($image_buttons as $tab) {
 
@@ -345,7 +345,7 @@ get_header();
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<img id="' . $tab_title . '" class="';
+                echo '<img data-aos="fade-up" id="' . $tab_title . '" class="';
                 if ($i == 0) {
                     echo 'active ';
                 }
@@ -409,12 +409,12 @@ get_header();
         </div>
 
         <!-- TOGGLE TEAM INDIVIDUAL -->
-        <div class="team-toggle-container">
+        <div class="team-toggle-container" data-aos="fade-up">
             <span id="team" class="active">Team</span>
             <span id="individual">Individual</span>
         </div>
 
-        <div class="tiers-container">
+        <div class="tiers-container" data-aos="fade-up">
             <?php
             $tiers = get_field('tiers');
             if ($tiers) {
@@ -492,7 +492,7 @@ CLICK MOVE ONLY 1 SLIDE
 
 
     <!-- SWIPER -->
-    <div class="container swiper-buttons-container">
+    <div class="container swiper-buttons-container" data-aos="fade-up">
         <div class="swiper-buttons">
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -571,7 +571,7 @@ CLICK MOVE ONLY 1 SLIDE
             <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
         </div>
         <!-- NEW CODEPEN -->
-        <div class="faq-container">
+        <div class="faq-container" data-aos="fade-up">
 
             <div class="faq-content radius">
 
