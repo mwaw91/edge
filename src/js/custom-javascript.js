@@ -61,10 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // testSlider()
 
   const testimonials = new Swiper('.testimonials', {
-    slidesPerView: 3.2,
+    // slidesPerView: 3.2,
+    slidesPerView: 3.6,
     slidesPerColumn: 2,
     slidesPerGroup: 3,
     spaceBetween: 30,
+    // slidesOffsetBefore: 30,
+    // slidesOffsetBefore: 62,
     grid: {
       rows: 2, // your amount of slides
       fill: "row",

@@ -495,6 +495,9 @@ DRAGGABLE WITH ARROW
 CLICK MOVE ONLY 1 SLIDE
  -->
 </div>
+<!--  -->
+</div>
+<!--  -->
 <section id="testimonials">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
@@ -512,9 +515,11 @@ CLICK MOVE ONLY 1 SLIDE
             <div class="swiper-button-prev"></div>
         </div>
     </div>
-    <div class="swiper testimonials">
 
+    <div class="swiper testimonials">
+        <div class="testimonials-gradient"></div>
         <div class="swiper-wrapper">
+
             <?php
 
             $testimonials = get_field('testimonials');
@@ -548,92 +553,92 @@ CLICK MOVE ONLY 1 SLIDE
 
 
 <!-- END TESTIMONIALS -->
+<div class="container clearfix">
+    <div class="container">
 
-<div class="container">
-
-    <!-- CTA -->
-    <section id="cta">
-        <div class="cta radius" data-aos="fade-up">
-            <div class="copy">
-                <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
-                <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
-                <a href="#" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
-                    <?php echo get_field('cta_title_section')['button']['title']; ?>
-                </a>
+        <!-- CTA -->
+        <section id="cta">
+            <div class="cta radius" data-aos="fade-up">
+                <div class="copy">
+                    <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
+                    <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
+                    <a href="#" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
+                        <?php echo get_field('cta_title_section')['button']['title']; ?>
+                    </a>
+                </div>
+                <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
+                    <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
+                                            ?>" alt="<?php //echo get_field('cta_image')['alt']; 
+                                                        ?>"> -->
+                </div>
             </div>
-            <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
-                <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
-                                        ?>" alt="<?php //echo get_field('cta_image')['alt']; 
-                                                    ?>"> -->
-            </div>
-        </div>
-    </section>
-    <!-- END CTA -->
-    <!-- </div> -->
+        </section>
+        <!-- END CTA -->
+        <!-- </div> -->
 
-    <!-- GRADIENT -->
-    <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
+        <!-- GRADIENT -->
+        <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
 
-    <!-- <div class="container"> -->
-    <!-- FAQS -->
-    <!-- 
+        <!-- <div class="container"> -->
+        <!-- FAQS -->
+        <!-- 
         INTERACTION
 + SPIN INTO CROSS
  -->
-    <section id="faq">
-        <div data-aos="fade-up" class="title-section">
-            <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
-            <h2 class="text-h1">Questions</h2>
-            <!-- <h2><?php //echo get_field('faqs_title')['title']; 
-                        ?></h2> -->
-            <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
-        </div>
-        <!-- NEW CODEPEN -->
-        <div class="faq-container" data-aos="fade-up">
-
-            <div class="faq-content radius">
-
-                <?php
-                $faqs = get_field('faqs');
-                if ($faqs) {
-                    $j = 0;
-                    foreach ($faqs as $faq) {
-                ?>
-                        <div class="faq-question">
-                            <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
-
-                            <label for="q<?php echo $j; ?>" class="panel-title p2">
-                                <div class="plus">
-                                    <div class="plus-content">
-                                        <div class="tall-spoke"></div>
-                                        <div class="spoke"></div>
-                                    </div>
-                                </div> <?php echo $faq['question']; ?>
-                            </label>
-                            <div class="panel-content">
-                                <p class="p2"><?php echo $faq['answer']; ?></p>
-                            </div>
-                        </div>
-                <?php
-                        $j++;
-                    }
-                }
-                ?>
-
-
-
-
-
+        <section id="faq">
+            <div data-aos="fade-up" class="title-section">
+                <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
+                <h2 class="text-h1">Questions</h2>
+                <!-- <h2><?php //echo get_field('faqs_title')['title']; 
+                            ?></h2> -->
+                <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
             </div>
-        </div>
-        <!-- END NEW CODEPEN -->
+            <!-- NEW CODEPEN -->
+            <div class="faq-container" data-aos="fade-up">
+
+                <div class="faq-content radius">
+
+                    <?php
+                    $faqs = get_field('faqs');
+                    if ($faqs) {
+                        $j = 0;
+                        foreach ($faqs as $faq) {
+                    ?>
+                            <div class="faq-question">
+                                <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
+
+                                <label for="q<?php echo $j; ?>" class="panel-title p2">
+                                    <div class="plus">
+                                        <div class="plus-content">
+                                            <div class="tall-spoke"></div>
+                                            <div class="spoke"></div>
+                                        </div>
+                                    </div> <?php echo $faq['question']; ?>
+                                </label>
+                                <div class="panel-content">
+                                    <p class="p2"><?php echo $faq['answer']; ?></p>
+                                </div>
+                            </div>
+                    <?php
+                            $j++;
+                        }
+                    }
+                    ?>
 
 
-    </section>
-    <!-- END FAQS -->
-</div>
 
-<!-- 
+
+
+                </div>
+            </div>
+            <!-- END NEW CODEPEN -->
+
+
+        </section>
+        <!-- END FAQS -->
+    </div>
+
+    <!-- 
  FOOTER
 INTERACTION
  
@@ -641,6 +646,6 @@ HOVER GREEN
 ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
  -->
 
-<?php
-get_footer();
-?>
+    <?php
+    get_footer();
+    ?>
