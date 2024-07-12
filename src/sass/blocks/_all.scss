@@ -1601,3 +1601,42 @@ footer {
     // END SWIPER WRAPPER
   }
 }
+
+//  BACK TO TOP
+.back-to-top-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  .back-to-top {
+    z-index: 10000;
+    right: 40px;
+    bottom: 61px;
+    margin-top: -171px;
+    position: fixed;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    &.show {
+      opacity: 1;
+    }
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: $black-1;
+    border: 1px solid $black-3;
+    width: 60px;
+    height: 60px;
+
+    svg {
+      margin: 0 auto;
+    }
+    &:hover {
+      background-color: $black-3;
+      // cursor: pointer;
+    }
+  }
+}

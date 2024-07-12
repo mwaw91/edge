@@ -16030,6 +16030,40 @@ footer .container .social-media-menu li a:hover svg path {
   display: block;
 }
 
+.back-to-top-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.back-to-top-container .back-to-top {
+  z-index: 10000;
+  right: 40px;
+  bottom: 61px;
+  margin-top: -171px;
+  position: fixed;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: #111619;
+  border: 1px solid #282f39;
+  width: 60px;
+  height: 60px;
+}
+.back-to-top-container .back-to-top.show {
+  opacity: 1;
+}
+.back-to-top-container .back-to-top svg {
+  margin: 0 auto;
+}
+.back-to-top-container .back-to-top:hover {
+  background-color: #282f39;
+}
+
 @font-face {
   font-family: "signsbold";
   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");

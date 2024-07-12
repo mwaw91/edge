@@ -6845,6 +6845,22 @@
 	    }
 	    // toggleClass: { className: 'skybox-menu--scrolled', targets: '.video-section' }
 	  });
+
+	  // BACK TO TOP BTN
+	  function backtoTop() {
+	    let mybutton = document.querySelector(".back-to-top");
+	    window.onscroll = function () {
+	      scrollFunction();
+	    };
+	    function scrollFunction() {
+	      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+	        mybutton.classList.add('show');
+	      } else {
+	        mybutton.classList.remove('show');
+	      }
+	    }
+	  }
+	  backtoTop();
 	  // statGradient();
 
 	  function btnHoverGradient() {

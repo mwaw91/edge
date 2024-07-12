@@ -14,10 +14,11 @@ get_header();
 <!-- FIX ALL BTN LINKS -->
 <!-- CHECK ALL FIELDS -->
 <!-- ORIGINAL MENU -->
+<!-- VIDEOS -->
 
 <!-- TODO -->
 <!-- js line 109 turnstatGradient() back on -->
-<!-- VIDEOS -->
+<!-- BACK TO TOP BTN -->
 <!-- SPACING -->
 <!-- CONTENT -->
 <!-- LOGIN ACF FIELD -->
@@ -54,6 +55,8 @@ get_header();
  VIDEO
  ZOOM ON HOVER, FADE IN
  -->
+
+
 
 <div class="container">
     <section id="hero">
@@ -118,13 +121,23 @@ get_header();
                         </defs>
                     </svg>
                 </button>
-                <video id="myVideo" class="feature-video">
+                <video class="feature-video">
                     <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <!-- END VIDEO -->
         </div>
+
+        <!-- BACK TO TOP -->
+        <div class="back-to-top-container">
+            <a class="back-to-top" href="#masthead">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+
     </section>
     <!-- END HERO -->
 
@@ -141,13 +154,6 @@ get_header();
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
-                        <!-- <video controls class="" width="100%">
-                            <source src="<?php //echo $row['video'];
-                                            ?>" type="video/mp4">
-                            <source src="<?php //echo $row['video'];
-                                            ?>" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video> -->
                         <!--  START NEW VIDEO -->
                         <div class="video-container">
                             <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,7 +174,7 @@ get_header();
                                     </defs>
                                 </svg>
                             </button>
-                            <video id="myVideo" class="feature-video">
+                            <video class="feature-video">
                                 <source src="<?php echo $row['video']; ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -203,16 +209,6 @@ get_header();
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
-                        <!-- <video controls class="" width="100%">
-                            <source src="<?php //echo $bottomrow['video'];
-                                            ?>" type="video/mp4">
-                            <source src="<?php //echo $bottomrow['video'];
-                                            ?>" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video> -->
-
-
-
                         <!--  START NEW VIDEO -->
                         <div class="video-container">
                             <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -233,7 +229,7 @@ get_header();
                                     </defs>
                                 </svg>
                             </button>
-                            <video id="myVideo" class="feature-video">
+                            <video class="feature-video">
                                 <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -424,13 +420,6 @@ get_header();
                 <div class="alternating-video-column">
 
                     <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'right' : 'left'; ?>">
-                        <!-- <video controls class="radius" width="100%">
-                            <source src="<?php //echo $row['video']['url'];
-                                            ?>" type="video/mp4">
-                            <source src="<?php //echo $row['video']['url'];
-                                            ?>" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video> -->
                         <!--  START NEW VIDEO -->
                         <div class="video-container radius">
                             <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -451,7 +440,7 @@ get_header();
                                     </defs>
                                 </svg>
                             </button>
-                            <video id="myVideo" class="feature-video">
+                            <video class="feature-video">
                                 <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -508,11 +497,6 @@ get_header();
                             <p class="p2 price team year"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
                             <p class="p2 price individual month"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
                             <p class="p2 price individual year"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
-
-                            <!-- <div class="period-toggle-container">
-                            <span id="yearly" class="active period-toggle">Billed Yearly</span>
-                            <span id="monthly" class="period-toggle">Individual</span>
-                        </div> -->
                             <div class="custom-toggle-switch-container">
                                 <div class="custom-toggle-switch">
                                     <div class="slider">
@@ -520,13 +504,6 @@ get_header();
                                 </div>
                                 <span class="blinker-semibold p2">BILLED YEARLY</span>
                             </div>
-                            <!-- <div class="period-toggle-container">
-                            <label class="switch">
-                                <input class="annual-switch" type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                        </div> -->
-
                             <ul>
                                 <?php
                                 foreach ($tier['package_includes'] as $item) {
