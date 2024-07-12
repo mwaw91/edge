@@ -15415,6 +15415,14 @@ footer .container .social-media-menu li a:hover svg path {
   max-width: 972px;
 }
 
+.play-button svg {
+  transition: all 0.4s;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.play-button:hover svg {
+  filter: drop-shadow(2px 4px 16px black);
+}
+
 #tested h2, #tested .h2 {
   margin-top: 90px;
   margin-bottom: 50px;
@@ -15551,6 +15559,9 @@ footer .container .social-media-menu li a:hover svg path {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 60px;
   align-items: center;
+}
+.alternating-video-column .feature-video {
+  width: 100%;
 }
 .alternating-video-column div {
   max-width: 600px;

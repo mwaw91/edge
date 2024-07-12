@@ -644,7 +644,20 @@ footer {
   }
 }
 
-// TESTED
+// GLOBAL VIDEO STYLING
+.play-button {
+  svg {
+    transition: all 0.4s;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  &:hover {
+    svg {
+      filter: drop-shadow(2px 4px 16px black);
+    }
+  }
+}
+
+// TESTED TODO- RENAME BLOCK AND ACF FIELDS
 #tested {
   h2 {
     margin-top: 90px;
@@ -834,6 +847,9 @@ footer {
 
 // ALTERNATING VIDEO COLUMN
 .alternating-video-column {
+  .feature-video {
+    width: 100%;
+  }
   display: grid;
   // grid-template-columns: repeat(12, 1fr);
   grid-template-columns: 1fr 1fr;
