@@ -15,10 +15,10 @@ get_header();
 <!-- CHECK ALL FIELDS -->
 <!-- ORIGINAL MENU -->
 <!-- VIDEOS -->
+<!-- BACK TO TOP BTN -->
 
 <!-- TODO -->
 <!-- js line 109 turnstatGradient() back on -->
-<!-- BACK TO TOP BTN -->
 <!-- SPACING -->
 <!-- CONTENT -->
 <!-- LOGIN ACF FIELD -->
