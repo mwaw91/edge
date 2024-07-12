@@ -372,8 +372,9 @@ get_header();
 
             $i = 0;
 
-            echo '<div class="tab-btns" data-aos="fade-up">';
+            echo '<div class="tab-btns">';
             $k = 0;
+            $tab_btn_delay = 100;
             foreach ($image_buttons as $tab) {
 
 
@@ -382,13 +383,15 @@ get_header();
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<button class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
+                echo '<button data-aos="fade-up" data-aos-delay="' . $tab_btn_delay . '" class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
                 if ($k == 0) {
                     echo ' active';
                 }
                 echo '">' . $tab['title'] . '</button>';
                 $k++;
+                $tab_btn_delay += 100;
             }
+
             echo '</div>';
             foreach ($image_buttons as $tab_image) {
                 $tab_title = $tab_image['title'];
@@ -484,13 +487,15 @@ get_header();
             <span id="individual">Individual</span>
         </div>
 
-        <div class="tiers-container" data-aos="fade-up">
+        <div class="tiers-container">
             <?php
             $tiers = get_field('tiers');
             if ($tiers) {
+                $tier_delay = 100;
+
                 foreach ($tiers as $tier) {
             ?>
-                    <div class="tier radius">
+                    <div class="tier radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $tier_delay . '"'; ?>>
                         <div>
                             <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
                             <p class="p2 price team month"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
@@ -519,6 +524,7 @@ get_header();
                         </a>
                     </div>
             <?php
+                    $tier_delay += 250;
                 }
             }
             ?>
@@ -566,9 +572,10 @@ CLICK MOVE ONLY 1 SLIDE
 
             $testimonials = get_field('testimonials');
             if ($testimonials) {
+                $testimonial_delay = 100;
                 foreach ($testimonials as $testimonial) {
             ?>
-                    <div class="swiper-slide testimonial radius">
+                    <div class="swiper-slide testimonial radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
                         <div>
                             <div class="img-container">
                                 <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
@@ -582,6 +589,7 @@ CLICK MOVE ONLY 1 SLIDE
                     </div>
             <?php
                 }
+                $testimonial_delay += 100;
             }
             ?>
         </div>
