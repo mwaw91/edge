@@ -88,8 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ScrollTrigger.create({
     //   start: 'top -80',
     start: 'top -1px',
+    // markers: true,
     end: 99999,
-    toggleClass: { className: 'main-tool-bar--scrolled', targets: '.main-tool-bar' }
+    toggleClass: { className: 'skybox-menu--scrolled', targets: '.skybox-menu' }
+    // toggleClass: { className: 'skybox-menu--scrolled', targets: '.video-section' }
   });
 
 

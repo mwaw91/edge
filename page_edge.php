@@ -37,7 +37,7 @@
  -->
 
 <div class="container">
-    <section id="hero" data-aos="fade-up">
+    <section id="hero">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -70,24 +70,14 @@
 
 
         </div>
-        <!-- <h1><?php // echo $title; 
-                    ?></h1> -->
-        <h1 class="text-h1">Track your CS2 Stats like the Pros</h1>
-        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <a href="#" class="btn btn--solid"><?php echo $button['title']; ?></a>
-        <!-- <button class="btn"><?php //echo $button['title']; 
-                                    ?></button>
-        <button class="btn btn--solid-white"><?php //echo $button['title']; 
-                                                ?></button>
-        <button class="btn btn--solid-grey"><?php //echo $button['title']; 
-                                            ?></button>
-        <button class="btn btn--outline"><?php //echo $button['title']; 
-                                            ?></button> -->
+        <h1 class="text-h1" data-aos="fade-up"><?php echo $title; ?></h1>
+        <p class="p2" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
+        <a href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
 
         <!-- echo $button['url']; -->
-        <div class="video-section">
+        <div class="video-section" data-aos="fade-up">
             <span></span>
             <!-- <video controls class="radius green-shadow" width="100%">
                 <source src="<?php // echo $hero_video['url']; 
@@ -129,12 +119,12 @@
     <!-- TESTED AND USED -->
     <section>
         <div id="tested">
-            <h2 class="text-h1"><?php echo get_field('tested-title'); ?></h2>
+            <h2 class="text-h1" data-aos="fade-up"><?php echo get_field('tested-title'); ?></h2>
 
             <?php
             $top_row = get_field('top_row_of_videos');
             if ($top_row) {
-                echo '<div class="top-row">';
+                echo '<div class="top-row" data-aos="fade-up">';
                 foreach ($top_row as $row) {
             ?>
                     <div class="grid-item">
@@ -173,7 +163,7 @@
             <?php
             $bottom_row = get_field('bottom_row_of_videos');
             if ($bottom_row) {
-                echo '<div class="bottom-row">';
+                echo '<div class="bottom-row" data-aos="fade-up">';
                 foreach ($bottom_row as $bottomrow) {
             ?>
                     <div class="grid-item">
@@ -222,8 +212,8 @@
 
  HOVER BG FOLLOW GRADIENT WHITE
  -->
-    <section id="stat-container" class="radius">
-        <span class="stat-gradient"></span>
+    <section id="stat-container" class="radius" data-aos="fade-up">
+        <!-- <span class="stat-gradient"></span> -->
         <div class="stats">
             <?php
             $stats = get_field('statistics');
@@ -324,7 +314,7 @@
 
             $i = 0;
 
-            echo '<div class="tab-btns">';
+            echo '<div class="tab-btns" data-aos="fade-up">';
             $k = 0;
             foreach ($image_buttons as $tab) {
 
@@ -348,7 +338,7 @@
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<img id="' . $tab_title . '" class="';
+                echo '<img data-aos="fade-up" id="' . $tab_title . '" class="';
                 if ($i == 0) {
                     echo 'active ';
                 }
@@ -412,12 +402,12 @@
         </div>
 
         <!-- TOGGLE TEAM INDIVIDUAL -->
-        <div class="team-toggle-container">
+        <div class="team-toggle-container" data-aos="fade-up">
             <span id="team" class="active">Team</span>
             <span id="individual">Individual</span>
         </div>
 
-        <div class="tiers-container">
+        <div class="tiers-container" data-aos="fade-up">
             <?php
             $tiers = get_field('tiers');
             if ($tiers) {
@@ -460,9 +450,7 @@
                                 } ?>
                             </ul>
                         </div>
-                        <a href="#" class="btn btn--solid-grey">
-                            <?php echo $tier['link']['url']; ?>
-                            <?php echo $tier['link']['title']; ?>
+                        <a href="<?php echo $tier['link']['url']; ?>" class="btn btn--solid-grey"><?php echo $tier['link']['title']; ?>
                         </a>
                     </div>
             <?php
@@ -484,6 +472,9 @@ DRAGGABLE WITH ARROW
 CLICK MOVE ONLY 1 SLIDE
  -->
 </div>
+<!--  -->
+</div>
+<!--  -->
 <section id="testimonials">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
@@ -495,15 +486,17 @@ CLICK MOVE ONLY 1 SLIDE
 
 
     <!-- SWIPER -->
-    <div class="container swiper-buttons-container">
+    <div class="container swiper-buttons-container" data-aos="fade-up">
         <div class="swiper-buttons">
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </div>
-    <div class="swiper testimonials">
 
+    <div class="swiper testimonials">
+        <div class="testimonials-gradient"></div>
         <div class="swiper-wrapper">
+
             <?php
 
             $testimonials = get_field('testimonials');
@@ -517,10 +510,10 @@ CLICK MOVE ONLY 1 SLIDE
                             </div>
                             <div class="details">
                                 <h3 class="text-h3"><?php echo $testimonial['name']; ?></h3>
-                                <h5 class="text-h4"><?php echo $testimonial['company']; ?></h5>
+                                <h5 class="text-h4 blinker-semibold"><?php echo $testimonial['company']; ?></h5>
                             </div>
                         </div>
-                        <p><?php echo $testimonial['testimonial']; ?></p>
+                        <p class="blinker-regular p2"><?php echo $testimonial['testimonial']; ?></p>
                     </div>
             <?php
                 }
@@ -537,86 +530,95 @@ CLICK MOVE ONLY 1 SLIDE
 
 
 <!-- END TESTIMONIALS -->
+<div class="container clearfix">
+    <div class="container">
 
-<div class="container">
-
-    <!-- CTA -->
-    <section id="cta">
-        <div class="cta" data-aos="fade-up">
-            <div class="copy">
-                <h2 class="text-h1"><?php echo get_field('cta_title_section')['title']; ?></h2>
-                <p><?php echo get_field('cta_title_section')['description']; ?></p>
-                <a href="#" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['url']; ?>
-                    <?php echo get_field('cta_title_section')['button']['title']; ?>
-                </a>
+        <!-- CTA -->
+        <section id="cta">
+            <div class="cta radius" data-aos="fade-up">
+                <div class="copy">
+                    <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
+                    <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
+                    <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['title']; ?>
+                    </a>
+                </div>
+                <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
+                    <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
+                                            ?>" alt="<?php //echo get_field('cta_image')['alt']; 
+                                                        ?>"> -->
+                </div>
             </div>
-            <img class="green-shadow radius" src="<?php echo get_field('cta_image')['url']; ?>" alt="<?php echo get_field('cta_image')['alt']; ?>">
-        </div>
-    </section>
-    <!-- END CTA -->
-    <!-- </div> -->
+        </section>
+        <!-- END CTA -->
+        <!-- </div> -->
 
-    <!-- GRADIENT -->
-    <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
+        <!-- GRADIENT -->
+        <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
 
-    <!-- <div class="container"> -->
-    <!-- FAQS -->
-    <!-- 
+        <!-- <div class="container"> -->
+        <!-- FAQS -->
+        <!-- 
         INTERACTION
 + SPIN INTO CROSS
  -->
-    <section id="faq">
-        <div data-aos="fade-up" class="title-section">
-            <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
-            <h2 class="text-h1">Questions</h2>
-            <!-- <h2><?php //echo get_field('faqs_title')['title']; 
-                        ?></h2> -->
-            <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
-        </div>
-        <!-- NEW CODEPEN -->
-        <div class="faq-container">
-
-            <div class="faq-content radius">
-
-                <?php
-                $faqs = get_field('faqs');
-                if ($faqs) {
-                    $j = 0;
-                    foreach ($faqs as $faq) {
-                ?>
-                        <div class="faq-question">
-                            <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
-                            <div class="plus">+</div>
-                            <label for="q<?php echo $j; ?>" class="panel-title p2"><?php echo $faq['question']; ?></label>
-                            <div class="panel-content">
-                                <p class="p2"><?php echo $faq['answer']; ?></p>
-                            </div>
-                        </div>
-                <?php
-                        $j++;
-                    }
-                }
-                ?>
-
-
-
-
-
+        <section id="faq">
+            <div data-aos="fade-up" class="title-section">
+                <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
+                <h2 class="text-h1">Questions</h2>
+                <!-- <h2><?php //echo get_field('faqs_title')['title']; 
+                            ?></h2> -->
+                <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
             </div>
-        </div>
-        <!-- END NEW CODEPEN -->
+            <!-- NEW CODEPEN -->
+            <div class="faq-container" data-aos="fade-up">
+
+                <div class="faq-content radius">
+
+                    <?php
+                    $faqs = get_field('faqs');
+                    if ($faqs) {
+                        $j = 0;
+                        foreach ($faqs as $faq) {
+                    ?>
+                            <div class="faq-question">
+                                <input id="q<?php echo $j; ?>" type="checkbox" class="panel">
+
+                                <label for="q<?php echo $j; ?>" class="panel-title p2">
+                                    <div class="plus">
+                                        <div class="plus-content">
+                                            <div class="tall-spoke"></div>
+                                            <div class="spoke"></div>
+                                        </div>
+                                    </div> <?php echo $faq['question']; ?>
+                                </label>
+                                <div class="panel-content">
+                                    <p class="p2"><?php echo $faq['answer']; ?></p>
+                                </div>
+                            </div>
+                    <?php
+                            $j++;
+                        }
+                    }
+                    ?>
 
 
-    </section>
-    <!-- END FAQS -->
-</div>
 
-<!-- 
+
+
+                </div>
+            </div>
+            <!-- END NEW CODEPEN -->
+
+
+        </section>
+        <!-- END FAQS -->
+    </div>
+
+    <!-- 
  FOOTER
 INTERACTION
  
 HOVER GREEN
 ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
  -->
-
-<?php include 'edge-page/edge-footer.php'; ?>
+    <?php include 'edge-page/edge-footer.php'; ?>

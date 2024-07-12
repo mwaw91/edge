@@ -1,5 +1,3 @@
-<!-- DISSAPPEARING MENU -->
-<!-- <div class='main-tool-bar'></div> -->
 <?php
 get_header();
 ?>
@@ -14,15 +12,15 @@ get_header();
 <!-- TESTIMONIALS -->
 <!-- BUTTONS -->
 <!-- FIX ALL BTN LINKS -->
-
+<!-- CHECK ALL FIELDS -->
 
 <!-- TODO -->
 <!-- VIDEOS -->
 <!-- SPACING -->
-<!-- CHECK ALL FIELDS -->
-
-<!-- CONTENT -->
+<!-- LOGIN ACF FIELD -->
 <!-- ORIGINAL MENU -->
+<!-- CONTENT -->
+
 
 <!-- PRICING GRID -->
 <!-- REPLACE IMAGE CAROUSEL?  GLITCHY -->

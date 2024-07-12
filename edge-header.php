@@ -29,7 +29,7 @@
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-5.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-6.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.css"> -->
 
 
@@ -61,7 +61,7 @@
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </nav>
-                    <a href="#" class="btn btn--solid btn--solid-grey">login</a>
+                    <a href="#" class="login-btn btn btn--solid btn--solid-grey">login</a>
                 </div> <!-- end .container -->
             </div> <!-- end #sticky_header -->
 

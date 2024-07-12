@@ -14998,7 +14998,8 @@ body {
   border-radius: 17px;
 }
 
-.main-tool-bar {
+.skybox-menu {
+  overflow: hidden;
   height: 80px;
   background: white;
   text-align: center;
@@ -15012,8 +15013,49 @@ body {
   top: 0;
   transition: ease 0.4s;
 }
-.main-tool-bar--scrolled {
+.skybox-menu--scrolled {
   height: 0px;
+}
+.skybox-menu .container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.skybox-menu .container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.skybox-menu .container ul li {
+  list-style: none;
+}
+.skybox-menu .container ul li a {
+  display: block;
+  text-align: center;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "blinkerregular", sans-serif;
+  color: black;
+}
+.skybox-menu .container ul li a:hover {
+  color: #7075d6;
+}
+.skybox-menu .container ul li a.nav-btn {
+  border-radius: 9999px;
+  padding: 13px 26px;
+  background-color: #7075d6;
+  color: white;
+}
+.skybox-menu .container ul li a.nav-btn:hover {
+  background-color: #e6e7fa;
+  color: black;
 }
 
 .header-content {
@@ -15122,6 +15164,9 @@ footer .container .social-media-menu li {
   height: 21px;
   padding: 0;
   list-style: none;
+}
+footer .container .social-media-menu li a svg path {
+  transition: all 0.4s;
 }
 footer .container .social-media-menu li a:hover svg path {
   fill: #24f4ab;
@@ -15355,7 +15400,6 @@ footer .container .social-media-menu li a:hover svg path {
   height: 0;
   display: block;
   box-shadow: 0 0 340px 190px rgba(255, 255, 255, 0.15);
-  filter: blur(200px);
   position: relative;
   margin: 0 auto;
   top: 0;
@@ -15968,19 +16012,19 @@ footer .container .social-media-menu li a:hover svg path {
 
 @font-face {
   font-family: "signsbold";
-  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkerregular";
-  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff") format("woff");
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkersemibold";
-  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff") format("woff");
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
