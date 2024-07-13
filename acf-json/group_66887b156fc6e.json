@@ -104,6 +104,23 @@
             "mime_types": ""
         },
         {
+            "key": "field_6693024fd6744",
+            "label": "Video link",
+            "name": "video_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_66900279f6886",
             "label": "LHS Logos",
             "name": "lhs_logos",
@@ -222,5 +239,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720715825
+    "modified": 1720910430
 }

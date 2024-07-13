@@ -92,6 +92,24 @@
                     "parent_repeater": "field_668dcf105f279"
                 },
                 {
+                    "key": "field_66930262b0022",
+                    "label": "Video link",
+                    "name": "video_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_668dcf105f279"
+                },
+                {
                     "key": "field_668dcf335f27b",
                     "label": "Nametag",
                     "name": "nametag",
@@ -205,6 +223,24 @@
                     "parent_repeater": "field_668dcf565f27d"
                 },
                 {
+                    "key": "field_66930277b0023",
+                    "label": "Video link",
+                    "name": "video_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_668dcf565f27d"
+                },
+                {
                     "key": "field_668dcf575f27f",
                     "label": "Nametag",
                     "name": "nametag",
@@ -267,5 +303,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720861491
+    "modified": 1720910477
 }
