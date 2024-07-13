@@ -15329,6 +15329,9 @@ footer .container .social-media-menu li a:hover svg path {
   height: 100%;
 }
 .video-container .play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;

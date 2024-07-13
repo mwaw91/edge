@@ -7041,7 +7041,22 @@
 	    playButtons.forEach(playButton => {
 	      const parentDiv = playButton.closest('.video-container');
 	      const siblingVideo = parentDiv.querySelector('.feature-video');
-	      playButton.addEventListener("click", function () {
+
+	      // playButton.addEventListener("click", function () {
+	      //   if (siblingVideo.paused) {
+	      //     console.log('video was paused now playing');
+	      //     siblingVideo.play();
+	      //     siblingVideo.muted = !siblingVideo.muted;
+	      //     playButton.classList.add('hide');
+	      //     playButton.classList.remove('show');
+	      //   } else {
+	      //     console.log('video was playing now paused');
+	      //     siblingVideo.pause();
+	      //     playButton.classList.remove('hide')
+	      //     playButton.classList.add('show')
+	      //   }
+	      // });
+	      playButton.addEventListener("mouseenter", function () {
 	        if (siblingVideo.paused) {
 	          console.log('video was paused now playing');
 	          siblingVideo.play();
@@ -7051,6 +7066,14 @@
 	        } else {
 	          console.log('video was playing now paused');
 	          siblingVideo.pause();
+	          playButton.classList.remove('hide');
+	          playButton.classList.add('show');
+	        }
+	      });
+	      playButton.addEventListener("mouseleave", function () {
+	        if (!siblingVideo.paused) {
+	          siblingVideo.pause();
+	          siblingVideo.muted;
 	          playButton.classList.remove('hide');
 	          playButton.classList.add('show');
 	        }
