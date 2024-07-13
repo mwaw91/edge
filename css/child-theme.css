@@ -16077,6 +16077,36 @@ footer .container .social-media-menu li a:hover svg path {
   background-color: #282f39;
 }
 
+.pricing_table {
+  overflow: auto;
+  width: 100%;
+}
+.pricing_table table {
+  border: 1px solid #dededf;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
+}
+.pricing_table caption {
+  caption-side: top;
+  text-align: left;
+}
+.pricing_table th {
+  border: 1px solid #dededf;
+  background-color: #eceff1;
+  color: #000000;
+  padding: 5px;
+}
+.pricing_table td {
+  border: 1px solid #dededf;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px;
+}
+
 @font-face {
   font-family: "signsbold";
   src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
