@@ -1706,8 +1706,19 @@ footer {
 .pricing_table {
   overflow: auto;
   width: 100%;
+  // 3RD ITEM BG GRADIENT
+  tr {
+    td:nt-child(3) {
+      background-color: orange !important;
+      // background-color: $black-3;
+    }
+    th:nt-child(3) {
+      background-color: orange !important;
+      // background-color: $black-3;
+    }
+  }
+
   table {
-    border: 1px solid #dededf;
     height: 100%;
     width: 100%;
     table-layout: fixed;
@@ -1715,20 +1726,104 @@ footer {
     border-spacing: 1px;
     text-align: left;
   }
-  caption {
-    caption-side: top;
-    text-align: left;
+  div {
+    display: flex;
+  }
+  // COLUMN TITLES
+  tr.tier-titles {
+    th {
+      padding-top: 30px;
+      div {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+  // BTNS
+  .btn {
+    margin-left: 10px;
+    margin-right: 10px;
   }
   th {
-    border: 1px solid #dededf;
-    background-color: #eceff1;
-    color: #000000;
-    padding: 5px;
+    //  border-bottom: 1px solid $black-3;
+    span {
+      &.tier {
+        text-transform: uppercase;
+        color: white;
+        font-family: "signsbold", sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+      }
+    }
+
+    padding: 10px;
   }
+
+  .row-title {
+    td {
+      padding-top: 20px;
+    }
+  }
+  // features
   td {
-    border: 1px solid #dededf;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 5px;
+    div {
+      // ROW TITLE
+      &.category {
+        border-bottom: none;
+        span {
+          font-family: "blinkersemibold", sans-serif;
+          font-size: 18px;
+          line-height: 24px;
+          color: white;
+        }
+      }
+
+      border-bottom: 1px solid $black-3;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      span {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "blinkerregular", sans-serif;
+        color: #7a7a7a;
+
+        &.feature {
+        }
+        &.tick {
+          &::before {
+            content: "";
+            display: inline-block;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
+            margin-right: 10px;
+            background-size: 100% auto;
+            top: 2px;
+          }
+        }
+        &.cross {
+          &::before {
+            content: "";
+            display: inline-block;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
+            margin-right: 10px;
+            background-size: 100% auto;
+            top: 3px;
+          }
+        }
+      }
+    }
   }
 }

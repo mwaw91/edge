@@ -16081,8 +16081,13 @@ footer .container .social-media-menu li a:hover svg path {
   overflow: auto;
   width: 100%;
 }
+.pricing_table tr td:nt-child(3) {
+  background-color: orange !important;
+}
+.pricing_table tr th:nt-child(3) {
+  background-color: orange !important;
+}
 .pricing_table table {
-  border: 1px solid #dededf;
   height: 100%;
   width: 100%;
   table-layout: fixed;
@@ -16090,38 +16095,98 @@ footer .container .social-media-menu li a:hover svg path {
   border-spacing: 1px;
   text-align: left;
 }
-.pricing_table caption {
-  caption-side: top;
-  text-align: left;
+.pricing_table div {
+  display: flex;
+}
+.pricing_table tr.tier-titles th {
+  padding-top: 30px;
+}
+.pricing_table tr.tier-titles th div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.pricing_table .btn, .pricing_table .wpcf7 input[type=submit], .wpcf7 .pricing_table input[type=submit], .pricing_table .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .pricing_table a.button, .pricing_table .woocommerce-info a.button, .woocommerce-info .pricing_table a.button {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .pricing_table th {
-  border: 1px solid #dededf;
-  background-color: #eceff1;
-  color: #000000;
-  padding: 5px;
+  padding: 10px;
 }
-.pricing_table td {
-  border: 1px solid #dededf;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 5px;
+.pricing_table th span.tier {
+  text-transform: uppercase;
+  color: white;
+  font-family: "signsbold", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+}
+.pricing_table .row-title td {
+  padding-top: 20px;
+}
+.pricing_table td div {
+  border-bottom: 1px solid #282f39;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.pricing_table td div.category {
+  border-bottom: none;
+}
+.pricing_table td div.category span {
+  font-family: "blinkersemibold", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+.pricing_table td div span {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "blinkerregular", sans-serif;
+  color: #7a7a7a;
+}
+.pricing_table td div span.tick::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
+  margin-right: 10px;
+  background-size: 100% auto;
+  top: 2px;
+}
+.pricing_table td div span.cross::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
+  margin-right: 10px;
+  background-size: 100% auto;
+  top: 3px;
 }
 
 @font-face {
   font-family: "signsbold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkerregular";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkersemibold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff") format("woff");
+  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

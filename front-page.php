@@ -546,79 +546,153 @@ get_header();
             <table>
                 <!-- <caption>Table 1</caption> -->
                 <thead>
-                    <tr>
+                    <tr class="tier-titles">
                         <th></th>
-                        <th>Tier 3</th>
-                        <th>Tier 2</th>
-                        <th>Tier 2</th>
+                        <th>
+                            <div><span class="tier"> Tier 3</span></div>
+                        </th>
+                        <th>
+                            <div><span class="tier"> Tier 2</span></div>
+                        </th>
+                        <th>
+                            <div><span class="tier"> Tier 2</span></div>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td></td>
-                        <td>BTN</td>
-                        <td>BTN</td>
-                        <td>BTN</td>
+                        <td><a class="btn btn--solid-grey" href="#">Get started</a></td>
+                        <td><a class="btn btn--solid-white" href="#">Get started</a></td>
+                        <td><a class="btn btn--solid-grey" href="#">Get started</a></td>
                     </tr>
-                    <tr>
-                        <td>Category</td>
+                    <tr class="row-title">
+                        <td>
+                            <div class="category"><span>Category</span></div>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="cross">Limited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="cross">Limited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="cross">Limited<span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Category</td>
+                    <tr class="row-title">
+                        <td>
+                            <div class="category"><span>Category</span></div>
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Feature</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
