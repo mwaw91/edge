@@ -16054,6 +16054,19 @@ footer .container .social-media-menu li a:hover svg path {
   overflow: auto;
   width: 100%;
 }
+.pricing_table tr th:nth-child(3) {
+  background-color: #1c2228 !important;
+  border-radius: 17px 17px 0 0;
+  border-bottom: none;
+}
+.pricing_table tr td:nth-child(3) {
+  background-color: #1c2228 !important;
+}
+.pricing_table tr td.bottom:nth-child(3) {
+  height: 40px;
+  background: linear-gradient(#1c2228, #0f1214);
+  border-radius: 0 0 17px 17px;
+}
 .pricing_table table {
   height: 100%;
   width: 100%;
@@ -16105,6 +16118,9 @@ footer .container .social-media-menu li a:hover svg path {
   font-size: 18px;
   line-height: 24px;
   color: white;
+}
+.pricing_table td div.no-border {
+  border-bottom: none;
 }
 .pricing_table td div span {
   font-size: 16px;

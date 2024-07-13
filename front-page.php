@@ -710,6 +710,20 @@ get_header();
                             <div><span class="tick">Unlimited<span></div>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
