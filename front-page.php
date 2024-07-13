@@ -59,7 +59,7 @@ get_header();
 
 
 <div class="container">
-    <section id="hero">
+    <section id="hero" class="space--margin--bottom">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -73,10 +73,10 @@ get_header();
                 $lhs_logos = get_field('lhs_logos');
                 // var_dump($lhs_logos);
                 if ($lhs_logos) {
-                    $lhs_delay = 200;
+                    $lhs_delay = 100;
                     foreach ($lhs_logos as $lhs) {
                         echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
-                        $lhs_delay += 300;
+                        $lhs_delay += 100;
                     }
                 }
                 ?>
@@ -85,10 +85,10 @@ get_header();
                 <?php
                 $rhs_logos = get_field('rhs_logos');
                 if ($rhs_logos) {
-                    $rhs_delay = 200;
+                    $rhs_delay = 100;
                     foreach ($rhs_logos as $rhs) {
                         echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
-                        $rhs_delay += 300;
+                        $rhs_delay += 100;
                     }
                 }
                 ?>
@@ -98,13 +98,13 @@ get_header();
         </div>
 
         <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
-        <p class="p2" data-aos-delay="200" data-aos="fade-up"><?php echo $subtitle; ?></p>
+        <p class="p2" data-aos-delay="150" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
-        <a data-aos-delay="300" href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
+        <a data-aos-delay="200" href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
 
         <!-- echo $button['url']; -->
-        <div data-aos-delay="500" class="video-section" data-aos="zoom-in">
-            <span data-aos-delay="500" data-aos-duration="2500" data-aos="fade-up"></span>
+        <div data-aos-delay="250" class="video-section" data-aos="zoom-in">
+            <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
             <!-- VIDEO -->
             <div class="video-container radius green-shadow">
                 <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,7 +295,7 @@ get_header();
 
  HOVER BG FOLLOW GRADIENT WHITE
  -->
-    <section id="stat-container" class="radius" data-aos="fade-up">
+    <section id="stat-container" class="radius space--margin--top space--margin--bottom" data-aos="fade-up">
         <!-- <span class="stat-gradient"></span> -->
         <div class="stats">
             <?php
@@ -434,7 +434,7 @@ get_header();
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
     <!-- ALTERNATING VIDEO COLUMNS -->
-    <section>
+    <section id="alternating-video-columns" class="space--margin--top space--margin--bottom">
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
@@ -726,7 +726,7 @@ CLICK MOVE ONLY 1 SLIDE
 <!--  -->
 </div>
 <!--  -->
-<section id="testimonials">
+<section id="testimonials" class="space--margin--top space--margin--bottom">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1">Take their word for it</h2>
@@ -787,7 +787,7 @@ CLICK MOVE ONLY 1 SLIDE
     <div class="container">
 
         <!-- CTA -->
-        <section id="cta">
+        <section id="cta" class="space--margin--bottom">
             <div class="cta radius" data-aos="fade-up">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>

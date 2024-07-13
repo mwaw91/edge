@@ -12,7 +12,7 @@ html {
   box-shadow: 0 0 350px 260px #24f4ab;
   opacity: 0.25;
   width: 0;
-  height: 100px;
+  // height: 100px;
   display: block;
   // &--top-left {
   // }
@@ -23,6 +23,26 @@ html {
 
 body {
   background: $black-bg;
+}
+
+// GLOBAL SPACER
+.space {
+  &--padding {
+    &--top {
+      padding-top: 160px;
+    }
+    &--bottom {
+      padding-bottom: 160px;
+    }
+  }
+  &--margin {
+    &--top {
+      margin-top: 160px;
+    }
+    &--bottom {
+      margin-bottom: 160px;
+    }
+  }
 }
 
 // FOLLOW GRADIENT
@@ -142,6 +162,9 @@ body {
       text-decoration: none;
       color: $grey;
       font-family: blinkerregular, sans-serif;
+      &:hover {
+        color: $green;
+      }
     }
   }
 }
@@ -729,7 +752,6 @@ footer {
 // TESTED TODO- RENAME BLOCK AND ACF FIELDS
 #tested {
   h2 {
-    margin-top: 50px;
     margin-bottom: 70px;
     text-align: center;
   }
@@ -812,7 +834,7 @@ footer {
   background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: 160px auto 120px auto;
+  // margin: 160px auto 120px auto;
   border: 1px solid $black-3;
   gap: 60px;
   overflow: hidden !important;
@@ -909,44 +931,49 @@ footer {
 }
 
 // IMPROVE YOUR GAMEPLAY
-#improve-your-gameplay {
-  margin-top: 90px;
-  margin-bottom: 165px;
-}
+// #improve-your-gameplay {
+// }
 
 // ALTERNATING VIDEO COLUMN
-.alternating-video-column {
-  .feature-video {
-    width: 100%;
-  }
-  display: grid;
-  // grid-template-columns: repeat(12, 1fr);
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 73px;
-  // grid-template-rows: 1fr;
-  // grid-column-gap: 0px;
-  // grid-row-gap: 0px;
-  align-items: center;
-
-  div {
-    max-width: 600px;
-    &.title-section {
-      max-width: 383px;
+#alternating-video-columns {
+  .alternating-video-column {
+    &:nth-child(1) {
+      margin-bottom: 73px;
     }
-  }
 
-  &:nth-child(even) {
+    .feature-video {
+      width: 100%;
+    }
+
+    display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr 1fr;
+
+    // grid-template-rows: 1fr;
+    // grid-column-gap: 0px;
+    // grid-row-gap: 0px;
+    align-items: center;
+
     div {
-      order: 2;
+      max-width: 600px;
       &.title-section {
-        order: 1;
+        max-width: 383px;
+      }
+    }
+
+    &:nth-child(even) {
+      div {
+        order: 2;
+        &.title-section {
+          order: 1;
+        }
       }
     }
   }
 }
 
+// CTA
 #cta {
-  margin-bottom: 120px;
   .cta {
     padding-top: 93px;
     display: grid;
@@ -1105,7 +1132,9 @@ footer {
   margin: 60px auto 0 auto;
   display: none;
   width: 100%;
-  min-height: 606px;
+  max-width: 1149px;
+  // min-height: 606px;
+  aspect-ratio: 1.9;
 }
 .tab-image.active {
   display: block;
@@ -1423,8 +1452,6 @@ footer {
 
 // TESTIMONIALS
 #testimonials {
-  margin-top: 140px;
-  margin-bottom: 140px;
   .swiper-buttons-container {
     position: relative;
     top: -81px;

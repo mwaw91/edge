@@ -37,6 +37,7 @@
  -->
 
 
+
 <div class="container">
     <section id="hero">
         <?php
@@ -330,31 +331,27 @@
                     $logos = get_field('logos');
                     if ($logos) {
                         foreach ($logos as $logo) {
-                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                            echo '<img class="slide" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
                         }
                     }
                     ?>
 
+                    <!-- Slider main container -->
+                    <div class="swiper logo-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php
+                            $logos = get_field('logos');
+                            if ($logos) {
+                                foreach ($logos as $logo) {
+                                    echo '<div class="swiper-slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /> </div>';
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-
-            <!-- Slider main container -->
-            <div class="swiper logo-slider">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <?php
-                    $logos = get_field('logos');
-                    if ($logos) {
-                        foreach ($logos as $logo) {
-                            echo '<div class="swiper-slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /> </div>';
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- END STAT CONTAINER -->
 
@@ -789,7 +786,7 @@ CLICK MOVE ONLY 1 SLIDE
         <!-- </div> -->
 
         <!-- GRADIENT -->
-        <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
+        <div class="bg-gradient bg-gradient--bottom-right"></div>
 
         <!-- <div class="container"> -->
         <!-- FAQS -->
@@ -857,5 +854,6 @@ INTERACTION
 HOVER GREEN
 ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
  -->
+    <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
 
     <?php include 'edge-page/edge-footer.php'; ?>
