@@ -156,9 +156,10 @@ $edge_settings = edge_get_theme_options(); ?>
 					?>
 					<!-- </nav> -->
 					<!-- end #site-navigation -->
-
-					<a href="#" class="login-btn btn btn--solid btn--solid-grey">login</a>
-					<a href="#" class="login-btn signup-btn btn btn--solid btn--solid-grey">Sign up</a>
+					<div class="header-btns">
+						<a href="#" class="login-btn btn btn--solid btn--solid-grey">login</a>
+						<a href="#" class="login-btn signup-btn btn btn--solid btn--solid-grey">Sign up</a>
+					</div>
 				</div> <!-- end .container -->
 			</div> <!-- end #sticky_header -->
 			<?php

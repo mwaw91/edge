@@ -15067,8 +15067,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.header-content .login-btn {
-  justify-self: end;
+.header-content .header-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: start;
+  gap: 20px;
 }
 
 #site-navigation {
@@ -15119,7 +15123,7 @@ body {
 .title-section h6, .title-section .h6 {
   color: #24f4ab;
   text-transform: uppercase;
-  filter: drop-shadow(0 0 10px #24f4ab);
+  filter: drop-shadow(0 0 7px rgba(36, 244, 171, 0.3764705882));
 }
 .title-section h2, .title-section .h2 {
   color: white;
@@ -15295,9 +15299,9 @@ footer .container .social-media-menu li a:hover svg path {
 }
 .video-container {
   position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 .video-container .play-button {
   position: absolute;
@@ -15409,6 +15413,9 @@ footer .container .social-media-menu li a:hover svg path {
 }
 #hero .video-section .video-container {
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 543px;
 }
 #hero .video-section .video-container video {
   aspect-ratio: 1.79;
@@ -15463,6 +15470,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 #tested .grid-item div.video-container {
   width: 100%;
+  max-height: 190px;
   border-radius: 7px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -16081,12 +16089,6 @@ footer .container .social-media-menu li a:hover svg path {
   overflow: auto;
   width: 100%;
 }
-.pricing_table tr td:nt-child(3) {
-  background-color: orange !important;
-}
-.pricing_table tr th:nt-child(3) {
-  background-color: orange !important;
-}
 .pricing_table table {
   height: 100%;
   width: 100%;
@@ -16153,7 +16155,7 @@ footer .container .social-media-menu li a:hover svg path {
   height: 15px;
   background-repeat: no-repeat;
   background-position: center;
-  background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
+  background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-tick.png");
   margin-right: 10px;
   background-size: 100% auto;
   top: 2px;
@@ -16166,7 +16168,7 @@ footer .container .social-media-menu li a:hover svg path {
   height: 15px;
   background-repeat: no-repeat;
   background-position: center;
-  background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
+  background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-cross.png");
   margin-right: 10px;
   background-size: 100% auto;
   top: 3px;

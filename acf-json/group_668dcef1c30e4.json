@@ -66,6 +66,32 @@
                     "parent_repeater": "field_668dcf105f279"
                 },
                 {
+                    "key": "field_669242d19cdfb",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "If no video is available, upload an image. A video will always have priority if uploaded.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_668dcf105f279"
+                },
+                {
                     "key": "field_668dcf335f27b",
                     "label": "Nametag",
                     "name": "nametag",
@@ -153,6 +179,32 @@
                     "parent_repeater": "field_668dcf565f27d"
                 },
                 {
+                    "key": "field_6692431f122ee",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "If no video is available, upload an image. A video will always have priority if uploaded.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_668dcf565f27d"
+                },
+                {
                     "key": "field_668dcf575f27f",
                     "label": "Nametag",
                     "name": "nametag",
@@ -215,5 +267,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720723964
+    "modified": 1720861491
 }

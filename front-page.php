@@ -159,30 +159,41 @@ get_header();
             ?>
                     <div class="grid-item">
                         <!--  START NEW VIDEO -->
-                        <div class="video-container">
-                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_d_196_307)">
-                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset />
-                                            <feGaussianBlur stdDeviation="5" />
-                                            <feComposite in2="hardAlpha" operator="out" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </button>
-                            <video class="feature-video">
-                                <source src="<?php echo $row['video']; ?>" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+                        <?php
+                        if (strlen($row['image']['url']) == 0) {
+                        ?>
+                            <div class="video-container">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_196_307)">
+                                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="5" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </button>
+                                <video class="feature-video">
+                                    <source src="<?php echo $row['video']; ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="video-container"><img src="<?php echo $row['image']['url']; ?>"></div>
+                        <?php
+                        }
+                        ?>
+
                         <!-- END VIDEO -->
                         <div class="detail">
                             <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
@@ -214,30 +225,40 @@ get_header();
             ?>
                     <div class="grid-item">
                         <!--  START NEW VIDEO -->
-                        <div class="video-container">
-                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_d_196_307)">
-                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset />
-                                            <feGaussianBlur stdDeviation="5" />
-                                            <feComposite in2="hardAlpha" operator="out" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </button>
-                            <video class="feature-video">
-                                <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+                        <?php
+                        if (strlen($bottomrow['image']['url']) == 0) {
+                        ?>
+                            <div class="video-container">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_196_307)">
+                                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="5" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </button>
+                                <video class="feature-video">
+                                    <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="video-container"><img src="<?php echo $bottomrow['image']['url']; ?>"></div>
+                        <?php
+                        }
+                        ?>
                         <!-- END VIDEO -->
                         <div class="detail">
                             <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
@@ -540,8 +561,7 @@ get_header();
     </section>
 
     <!-- PRICING TABLE -->
-    <section id="pricing-table">
-        </style>
+    <section id="pricing-table" data-aos="fade-up">
         <div class="pricing_table" role="region" tabindex="0">
             <table>
                 <!-- <caption>Table 1</caption> -->
