@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerColumn: 2,
     slidesPerGroup: 3,
     spaceBetween: 30,
+    speed: 1500,
     // slidesOffsetBefore: 30,
     // slidesOffsetBefore: 62,
     grid: {
@@ -319,6 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (siblingVideo.paused) {
           console.log('video was paused now playing');
           siblingVideo.play();
+          siblingVideo.muted = !siblingVideo.muted;
           playButton.classList.add('hide');
           playButton.classList.remove('show');
         } else {

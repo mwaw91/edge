@@ -136,8 +136,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: start;
+    align-items: center;
     gap: 20px;
+    .login-btn {
+      text-decoration: none;
+      color: $grey;
+      font-family: blinkerregular, sans-serif;
+    }
   }
 }
 // EDGE
@@ -214,11 +219,12 @@ footer {
   .container {
     .copyright {
       color: $grey;
-      font-size: 10px;
+      font-size: 16px;
       display: flex;
       flex-direction: column;
       span {
         font-family: "blinkerregular", sans-serif;
+        text-transform: uppercase;
       }
     }
     display: grid;
@@ -964,87 +970,127 @@ footer {
     }
   }
 }
+
 //  FAQ
 #faq {
   max-width: 500px;
   margin: 0 auto 90px auto;
 
-  .faq-text {
-    font-family: Open Sans;
-    font-weight: 400;
-    color: #919191;
-    width: 95%;
-    padding-left: 20px;
-    margin-bottom: 30px;
-  }
+  .faq-container {
+    margin-top: 15px;
+    .faq-content {
+      margin: 0 auto;
+      background-color: $black-1;
+      border: 1px solid $black-3;
+      padding: 5px 30px 25px 30px;
+    }
 
-  .faq {
-    width: 1000px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    position: relative;
-    border: 1px solid #e1e1e1;
-  }
-  .faq label {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    height: 56px;
-    padding-top: 1px;
+    .faq-question {
+      padding-top: 20px;
 
-    background-color: #fafafa;
-    border-bottom: 1px solid #e1e1e1;
-  }
+      .panel-title {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0 60px;
+        display: block;
+        cursor: pointer;
+        font-family: "blinkersemibold", sans-serif;
+      }
 
-  .faq input[type="checkbox"] {
-    display: none;
-  }
+      .panel-content {
+        color: $grey;
+        padding: 14px 14px 0 22px;
+        margin: 0 40px;
+        max-height: 0;
+        overflow: hidden;
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        -webkit-transition: 0.8s ease-out;
+        -moz-transition: 0.8s ease-out;
+        -o-transition: 0.8s ease-out;
+        transition: 0.8s ease-out;
+        font-family: "blinkerregular", sans-serif;
+        > * {
+          font-family: "blinkerregular", sans-serif !important;
+          font-size: 15px !important;
+          line-height: 22px !important;
+        }
+        p {
+          font-family: "blinkerregular", sans-serif !important;
+          font-size: 15px !important;
+          line-height: 22px !important;
+        }
+      }
 
-  .faq .faq-arrow {
-    width: 5px;
-    height: 5px;
-    transition: -webkit-transform 0.8s;
-    transition: transform 0.8s;
-    transition: transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border-top: 2px solid rgba(0, 0, 0, 0.33);
-    border-right: 2px solid rgba(0, 0, 0, 0.33);
-    float: right;
-    position: relative;
-    top: -30px;
-    right: 27px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+      .panel:checked ~ .panel-content {
+        max-height: 800px;
+        height: max-content;
+        opacity: 1;
+        padding: 14px 14px 0 22px;
+        z-index: 0;
+      }
 
-  .faq input[type="checkbox"]:checked + label > .faq-arrow {
-    transition: -webkit-transform 0.8s;
-    transition: transform 0.8s;
-    transition: transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-  .faq input[type="checkbox"]:checked + label {
-    display: block;
-    background: rgba(255, 255, 255, 255) !important;
-    color: #4f7351;
-    height: 225px;
-    transition: height 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
+      .plus {
+        .plus-content {
+          width: 14px;
+          height: 14px;
+          display: block;
+          position: relative;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          -o-user-select: none;
+          user-select: none;
+          -webkit-transition: 0.2s ease;
+          -moz-transition: 0.2s ease;
+          -o-transition: 0.2s ease;
+          transition: 0.2s ease;
+          .tall-spoke {
+            width: 2px;
+            height: 14px;
+            background-color: white;
+            border-radius: 9999px;
+            left: 6px;
+            position: relative;
+          }
+          .spoke {
+            top: -8px;
+            position: relative;
+            width: 14px;
+            height: 2px;
+            background-color: white;
+            transition: all 0.2s;
+            border-radius: 9999px;
+          }
+        }
+      }
+    }
 
-  .faq input[type="checkbox"]:not(:checked) + label {
-    display: block;
-    transition: height 0.8s;
-    height: 60px;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
+    .plus {
+      position: absolute;
+      margin-left: -42px;
+      margin-top: 3px;
+      z-index: 5;
+      line-height: 100%;
+    }
 
-  ::-webkit-scrollbar {
-    display: none;
+    .panel:checked ~ .panel-title {
+      .plus-content {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        .spoke {
+          transform: scale(0);
+        }
+      }
+    }
+
+    .panel {
+      display: none;
+    }
   }
 }
 
@@ -1065,125 +1111,6 @@ footer {
 }
 .tab-image.active {
   display: block;
-}
-
-.faq-container {
-  margin-top: 15px;
-  .faq-content {
-    margin: 0 auto;
-    background-color: $black-1;
-    border: 1px solid $black-3;
-    padding: 5px 30px 25px 30px;
-  }
-
-  .faq-question {
-    padding-top: 20px;
-
-    .panel-title {
-      width: 100%;
-      position: relative;
-      margin: 0;
-      padding: 10px 10px 0 60px;
-      display: block;
-      cursor: pointer;
-      font-family: "blinkersemibold", sans-serif;
-    }
-
-    .panel-content {
-      color: $grey;
-      // font-size: 20px;
-      // padding: 0px 14px;
-      // padding: 0px 14px 0 35px;
-      padding: 14px 14px 0 22px;
-      margin: 0 40px;
-      height: 0;
-      overflow: hidden;
-      z-index: -1;
-      position: relative;
-      opacity: 0;
-      -webkit-transition: 0.4s ease;
-      -moz-transition: 0.4s ease;
-      -o-transition: 0.4s ease;
-      transition: 0.4s ease;
-      font-family: "blinkerregular", sans-serif;
-      > * {
-        font-family: "blinkerregular", sans-serif !important;
-        font-size: 15px !important;
-        line-height: 22px !important;
-      }
-      p {
-        font-family: "blinkerregular", sans-serif !important;
-        font-size: 15px !important;
-        line-height: 22px !important;
-      }
-    }
-
-    .panel:checked ~ .panel-content {
-      height: auto;
-      opacity: 1;
-      padding: 14px 14px 0 22px;
-      z-index: 0;
-    }
-
-    .plus {
-      .plus-content {
-        width: 14px;
-        height: 14px;
-        display: block;
-        position: relative;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-        -webkit-transition: 0.2s ease;
-        -moz-transition: 0.2s ease;
-        -o-transition: 0.2s ease;
-        transition: 0.2s ease;
-        .tall-spoke {
-          width: 2px;
-          height: 14px;
-          background-color: white;
-          border-radius: 9999px;
-          left: 6px;
-          position: relative;
-        }
-        .spoke {
-          top: -8px;
-          position: relative;
-          width: 14px;
-          height: 2px;
-          background-color: white;
-          transition: all 0.4s;
-          border-radius: 9999px;
-        }
-      }
-    }
-  }
-
-  .plus {
-    position: absolute;
-    margin-left: -42px;
-    margin-top: 3px;
-    z-index: 5;
-    line-height: 100%;
-  }
-
-  .panel:checked ~ .panel-title {
-    .plus-content {
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      transform: rotate(90deg);
-      .spoke {
-        transform: scale(0);
-      }
-    }
-  }
-
-  .panel {
-    display: none;
-  }
 }
 
 // PRICING
