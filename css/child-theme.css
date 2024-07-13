@@ -15123,10 +15123,13 @@ body {
 .title-section h6, .title-section .h6 {
   color: #24f4ab;
   text-transform: uppercase;
-  filter: drop-shadow(0 0 7px rgba(36, 244, 171, 0.3764705882));
+  text-shadow: 0 0 10px rgba(36, 244, 171, 0.4392156863);
+  font-family: "blinkerregular", sans-serif;
+  margin-bottom: 0;
 }
 .title-section h2, .title-section .h2 {
   color: white;
+  margin-bottom: 16px;
 }
 .title-section p {
   color: #bababa;
@@ -15392,14 +15395,16 @@ footer .container .social-media-menu li a:hover svg path {
 #hero h1, #hero .h1 {
   width: 440px !important;
   text-align: center;
+  margin-bottom: 14px;
 }
 #hero p {
   max-width: 374px;
   text-align: center;
+  margin-bottom: 14px;
 }
 #hero .video-section {
   position: relative;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 #hero .video-section span {
   width: 0;
@@ -15431,8 +15436,8 @@ footer .container .social-media-menu li a:hover svg path {
 }
 
 #tested h2, #tested .h2 {
-  margin-top: 90px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 70px;
   text-align: center;
 }
 #tested .top-row {
@@ -15447,7 +15452,7 @@ footer .container .social-media-menu li a:hover svg path {
 #tested .bottom-row {
   display: flex;
   flex-direction: row;
-  gap: 110px;
+  gap: 180px;
   justify-content: center;
 }
 #tested .bottom-row .grid-item span svg {
@@ -15503,7 +15508,7 @@ footer .container .social-media-menu li a:hover svg path {
   background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: 90px auto;
+  margin: 160px auto 120px auto;
   border: 1px solid #282f39;
   gap: 60px;
   overflow: hidden !important;
@@ -15562,13 +15567,13 @@ footer .container .social-media-menu li a:hover svg path {
 
 #improve-your-gameplay {
   margin-top: 90px;
-  margin-bottom: 90px;
+  margin-bottom: 165px;
 }
 
 .alternating-video-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 60px;
+  margin-bottom: 73px;
   align-items: center;
 }
 .alternating-video-column .feature-video {
@@ -15588,10 +15593,10 @@ footer .container .social-media-menu li a:hover svg path {
 }
 
 #cta {
-  margin-bottom: 90px;
+  margin-bottom: 120px;
 }
 #cta .cta {
-  padding-top: 117px;
+  padding-top: 93px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #111619;
@@ -15686,6 +15691,7 @@ footer .container .social-media-menu li a:hover svg path {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-top: 5px;
 }
 
 .tab-image {
@@ -15699,11 +15705,14 @@ footer .container .social-media-menu li a:hover svg path {
   display: block;
 }
 
+.faq-container {
+  margin-top: 15px;
+}
 .faq-container .faq-content {
   margin: 0 auto;
   background-color: #111619;
   border: 1px solid #282f39;
-  padding: 15px 30px 25px 30px;
+  padding: 5px 30px 25px 30px;
 }
 .faq-container .faq-question {
   padding-top: 20px;
@@ -15791,6 +15800,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 
 #pricing {
+  margin-top: -55px;
   margin-bottom: 60px;
 }
 #pricing .team-toggle-container {
@@ -15802,7 +15812,7 @@ footer .container .social-media-menu li a:hover svg path {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   overflow: hidden;
   border-radius: 7px;
 }
@@ -15824,14 +15834,14 @@ footer .container .social-media-menu li a:hover svg path {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
+  gap: 25px;
 }
 #pricing .tiers-container .tier {
   min-width: 360px;
   min-height: 469px;
   background-color: #111619;
   border: 1px solid #282f39;
-  padding: 30px;
+  padding: 33px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15842,6 +15852,9 @@ footer .container .social-media-menu li a:hover svg path {
 #pricing .tiers-container .tier:nth-child(2) .btn, #pricing .tiers-container .tier:nth-child(2) .wpcf7 input[type=submit], .wpcf7 #pricing .tiers-container .tier:nth-child(2) input[type=submit], #pricing .tiers-container .tier:nth-child(2) .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message #pricing .tiers-container .tier:nth-child(2) a.button, #pricing .tiers-container .tier:nth-child(2) .woocommerce-info a.button, .woocommerce-info #pricing .tiers-container .tier:nth-child(2) a.button {
   background-color: white;
   color: #0b0f11;
+}
+#pricing .tiers-container .tier h2, #pricing .tiers-container .tier .h2 {
+  margin-bottom: 13px;
 }
 #pricing .tiers-container .tier p {
   margin-bottom: 5px;
@@ -15925,7 +15938,8 @@ footer .container .social-media-menu li a:hover svg path {
 }
 
 #testimonials {
-  margin-bottom: 90px;
+  margin-top: 140px;
+  margin-bottom: 140px;
 }
 #testimonials .swiper-buttons-container {
   position: relative;
@@ -15933,7 +15947,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 #testimonials .swiper-buttons-container .swiper-buttons {
   right: 0;
-  width: 150px;
+  width: 156px;
   height: 100px;
   display: flex;
   flex-direction: row;
