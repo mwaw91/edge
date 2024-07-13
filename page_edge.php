@@ -138,30 +138,41 @@
             ?>
                     <div class="grid-item">
                         <!--  START NEW VIDEO -->
-                        <div class="video-container">
-                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_d_196_307)">
-                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset />
-                                            <feGaussianBlur stdDeviation="5" />
-                                            <feComposite in2="hardAlpha" operator="out" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </button>
-                            <video class="feature-video">
-                                <source src="<?php echo $row['video']; ?>" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+                        <?php
+                        if (strlen($row['image']['url']) == 0) {
+                        ?>
+                            <div class="video-container">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_196_307)">
+                                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="5" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </button>
+                                <video class="feature-video">
+                                    <source src="<?php echo $row['video']; ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="video-container"><img src="<?php echo $row['image']['url']; ?>"></div>
+                        <?php
+                        }
+                        ?>
+
                         <!-- END VIDEO -->
                         <div class="detail">
                             <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
@@ -193,30 +204,40 @@
             ?>
                     <div class="grid-item">
                         <!--  START NEW VIDEO -->
-                        <div class="video-container">
-                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_d_196_307)">
-                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset />
-                                            <feGaussianBlur stdDeviation="5" />
-                                            <feComposite in2="hardAlpha" operator="out" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </button>
-                            <video class="feature-video">
-                                <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+                        <?php
+                        if (strlen($bottomrow['image']['url']) == 0) {
+                        ?>
+                            <div class="video-container">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_196_307)">
+                                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="5" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </button>
+                                <video class="feature-video">
+                                    <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="video-container"><img src="<?php echo $bottomrow['image']['url']; ?>"></div>
+                        <?php
+                        }
+                        ?>
                         <!-- END VIDEO -->
                         <div class="detail">
                             <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
@@ -481,10 +502,10 @@
                     <div class="tier radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $tier_delay . '"'; ?>>
                         <div>
                             <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
-                            <p class="p2 price team month"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_month']; ?></span> /month</p>
-                            <p class="p2 price team year"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_year']; ?></span> /year</p>
-                            <p class="p2 price individual month"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_month']; ?></span> /month</p>
-                            <p class="p2 price individual year"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_year']; ?></span> /year</p>
+                            <p class="p2 price team month"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
+                            <p class="p2 price team year"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
+                            <p class="p2 price individual month"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
+                            <p class="p2 price individual year"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
                             <div class="custom-toggle-switch-container">
                                 <div class="custom-toggle-switch">
                                     <div class="slider">
@@ -516,6 +537,165 @@
                 <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </p>
+    </section>
+
+    <!-- PRICING TABLE -->
+    <section id="pricing-table" data-aos="fade-up">
+        <div class="pricing_table" role="region" tabindex="0">
+            <table>
+                <!-- <caption>Table 1</caption> -->
+                <thead>
+                    <tr class="tier-titles">
+                        <th></th>
+                        <th>
+                            <div><span class="tier"> Tier 3</span></div>
+                        </th>
+                        <th>
+                            <div><span class="tier"> Tier 2</span></div>
+                        </th>
+                        <th>
+                            <div><span class="tier"> Tier 2</span></div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td><a class="btn btn--solid-grey" href="#">Get started</a></td>
+                        <td><a class="btn btn--solid-white" href="#">Get started</a></td>
+                        <td><a class="btn btn--solid-grey" href="#">Get started</a></td>
+                    </tr>
+                    <tr class="row-title">
+                        <td>
+                            <div class="category"><span>Category</span></div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="cross">Limited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="cross">Limited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="cross">Limited<span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                    <tr class="row-title">
+                        <td>
+                            <div class="category"><span>Category</span></div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><span class="feature">Feature<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                        <td>
+                            <div><span class="tick">Unlimited<span></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <!-- END PRICING -->
 

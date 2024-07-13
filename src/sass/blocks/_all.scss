@@ -125,7 +125,7 @@ body {
   }
 }
 .header-content {
-  padding-top: 25px;
+  padding-top: 37px;
   padding-bottom: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -336,6 +336,7 @@ footer {
   transition: all 0.4s;
 
   &--solid {
+    transition: all 0.4s;
     background-color: $green;
     color: $black-text;
     border: 1px solid $black-3;
@@ -624,49 +625,51 @@ footer {
     }
     .lhs-logos {
       img {
-        &:nth-child(1) {
-          top: -10px;
-        }
+        // &:nth-child(1) {
+        //   top: 30px;
+        // }
         &:nth-child(2) {
           left: 180px;
           top: -41px;
         }
         &:nth-child(3) {
           left: 120px;
+          top: 45px;
         }
         &:nth-child(4) {
-          top: 30px;
+          top: 110px;
         }
         &:nth-child(5) {
-          left: 290px;
-          top: -110px;
+          left: 325px;
+          top: -30px;
         }
         &:nth-child(6) {
-          top: 90px;
+          top: 160px;
         }
       }
     }
     .rhs-logos {
       img {
         &:nth-child(1) {
-          top: 5px;
+          top: 30px;
         }
         &:nth-child(2) {
-          right: 220px;
-          top: 26px;
+          right: 240px;
+          top: 46px;
         }
         &:nth-child(3) {
           right: 90px;
+          top: 50px;
         }
         &:nth-child(4) {
-          top: 30px;
+          top: 80px;
         }
         &:nth-child(5) {
-          right: 290px;
-          top: -110px;
+          right: 325px;
+          top: -30px;
         }
         &:nth-child(6) {
-          top: 90px;
+          top: 160px;
         }
       }
     }
@@ -685,7 +688,7 @@ footer {
   }
   .video-section {
     position: relative;
-    margin-top: 70px;
+    margin-top: 84px;
     span {
       width: 0;
       height: 0;
@@ -841,7 +844,7 @@ footer {
     justify-content: center;
     text-align: center;
     gap: 120px;
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
     .stat {
       margin: 0 auto;
@@ -888,17 +891,11 @@ footer {
     // }
     .logo-carousel {
       .slide {
-        width: 50px;
-        // width: max-content;
-        // object-fit: contain;
-        // object-position: center;
-        img {
-          // height: 90px;
-          // width: auto;
-          object-fit: contain;
-          object-position: center center;
-          animation: scroll 30s linear infinite;
-        }
+        max-width: 50px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center center;
+        animation: scroll 30s linear infinite;
       }
       .slide-track {
         width: 100%;
@@ -1589,6 +1586,7 @@ footer {
             border: 1px solid $black-3;
             margin-right: 30px;
             border-radius: 9999px;
+            min-width: 70px;
             width: 70px;
             height: 70px;
             object-position: center;

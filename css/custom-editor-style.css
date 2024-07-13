@@ -413,7 +413,7 @@ progress {
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #5533ff;
+  --bs-purple: #24f4ab;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
@@ -434,7 +434,7 @@ progress {
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #5533ff;
+  --bs-primary: #24f4ab;
   --bs-secondary: #6c757d;
   --bs-success: #24f4ab;
   --bs-info: #0dcaf0;
@@ -442,7 +442,7 @@ progress {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 85, 51, 255;
+  --bs-primary-rgb: 36, 244, 171;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 36, 244, 171;
   --bs-info-rgb: 13, 202, 240;
@@ -473,8 +473,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #5533ff;
-  --bs-link-hover-color: #4429cc;
+  --bs-link-color: #24f4ab;
+  --bs-link-hover-color: #1dc389;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -557,13 +557,13 @@ progress {
 
 .table-primary {
   --bs-table-color: #1e1e1e;
-  --bs-table-bg: #ddd6ff;
-  --bs-table-border-color: #cac4e9;
-  --bs-table-striped-bg: #d3cdf4;
+  --bs-table-bg: #d3fdee;
+  --bs-table-border-color: #c1e7d9;
+  --bs-table-striped-bg: #caf2e4;
   --bs-table-striped-color: #1e1e1e;
-  --bs-table-active-bg: #cac4e9;
+  --bs-table-active-bg: #c1e7d9;
   --bs-table-active-color: #1e1e1e;
-  --bs-table-hover-bg: #cfc8ee;
+  --bs-table-hover-bg: #c5ecde;
   --bs-table-hover-color: #1e1e1e;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -853,7 +853,7 @@ progress {
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #5533ff;
+  --bs-purple: #24f4ab;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
@@ -874,7 +874,7 @@ progress {
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #5533ff;
+  --bs-primary: #24f4ab;
   --bs-secondary: #6c757d;
   --bs-success: #24f4ab;
   --bs-info: #0dcaf0;
@@ -882,7 +882,7 @@ progress {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 85, 51, 255;
+  --bs-primary-rgb: 36, 244, 171;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 36, 244, 171;
   --bs-info-rgb: 13, 202, 240;
@@ -913,8 +913,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #5533ff;
-  --bs-link-hover-color: #4429cc;
+  --bs-link-color: #24f4ab;
+  --bs-link-hover-color: #1dc389;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -926,8 +926,8 @@ progress {
 }
 
 .text-bg-primary {
-  color: #fff !important;
-  background-color: RGBA(85, 51, 255, var(--bs-bg-opacity, 1)) !important;
+  color: #1e1e1e !important;
+  background-color: RGBA(36, 244, 171, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
@@ -966,10 +966,10 @@ progress {
 }
 
 .link-primary {
-  color: #5533ff !important;
+  color: #24f4ab !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #4429cc !important;
+  color: #50f6bc !important;
 }
 
 .link-secondary {
@@ -5125,16 +5125,16 @@ progress {
 
 .has-purple-color,
 .has-purple-color:visited {
-  color: #5533ff;
+  color: #24f4ab;
 }
 
 .has-purple-background-color {
-  background-color: #5533ff;
-  border-color: #5533ff;
+  background-color: #24f4ab;
+  border-color: #24f4ab;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-purple-color {
-  color: #5533ff;
+  color: #24f4ab;
 }
 
 .has-pink-color,
@@ -5293,16 +5293,16 @@ progress {
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #5533ff;
+  color: #24f4ab;
 }
 
 .has-primary-background-color {
-  background-color: #5533ff;
-  border-color: #5533ff;
+  background-color: #24f4ab;
+  border-color: #24f4ab;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-primary-color {
-  color: #5533ff;
+  color: #24f4ab;
 }
 
 .has-secondary-color,
