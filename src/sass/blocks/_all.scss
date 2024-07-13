@@ -866,7 +866,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 120px;
+    // gap: 120px;
     max-width: 80%;
     margin: 0 auto;
     .stat {
@@ -1135,6 +1135,8 @@ footer {
   max-width: 1149px;
   // min-height: 606px;
   aspect-ratio: 1.9;
+  display: none;
+  transition: all 0.6s;
 }
 .tab-image.active {
   display: block;
