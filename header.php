@@ -43,11 +43,11 @@ $edge_settings = edge_get_theme_options(); ?>
 		<!-- Masthead ============================================= -->
 		<header id="masthead" class="site-header" role="banner">
 			<!-- DISSAPPEARING NAV -->
-			<!-- <div class='skybox-menu'>
-				<div class="container"> -->
+			<div class='skybox-menu'>
+				<div class="container">
 
-			<!-- LOGO -->
-			<!-- <div class="nav-logo">
+					<!-- LOGO -->
+					<div class="nav-logo">
 						<svg xmlns="http://www.w3.org/2000/svg" width="176" height="32" viewBox="0 0 176 32" fill="none">
 							<g clip-path="url(#clip0_331_1017)">
 								<path d="M16.9062 9.08413L11.0174 12.5945L9.28532 8.49336C9.21258 8.32177 9.09701 8.17171 8.94969 8.05756C8.83611 7.96699 8.70575 7.89975 8.5661 7.85971C8.42645 7.81967 8.28027 7.80762 8.13594 7.82425C7.99162 7.84087 7.85201 7.88585 7.72513 7.9566C7.59824 8.02735 7.48659 8.12247 7.39657 8.2365L1.23204 16.092L6.26898 0L16.9062 9.08413Z" fill="#7075D6"></path>
@@ -68,9 +68,9 @@ $edge_settings = edge_get_theme_options(); ?>
 								</clipPath>
 							</defs>
 						</svg>
-					</div> -->
-			<!-- NAV -->
-			<!-- <ul>
+					</div>
+					<!-- NAV -->
+					<ul>
 						<li><a href="https://skybox.gg/performance/">Performance</a></li>
 						<li><a href="https://skybox.gg/broadcast/">Broadcast</a></li>
 						<li><a href="https://skybox.gg/publishers/">Publishing</a></li>
@@ -79,7 +79,7 @@ $edge_settings = edge_get_theme_options(); ?>
 						<li><a class="nav-btn" href="https://skybox.gg/contact/">Contact us</a></li>
 					</ul>
 				</div>
-			</div> -->
+			</div>
 			<!-- END DISSAPPEARING NAV -->
 
 			<?php if (function_exists('the_custom_header_markup')) {

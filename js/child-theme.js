@@ -6808,6 +6808,22 @@
 	  // }
 	  // testSlider()
 
+	  // STICKY NAV
+	  // function stickyNav() {
+	  //   let menu = document.getElementById('header');
+	  //   // let offset = menu.offsetHeight;
+	  //   // window.onscroll = function () {
+	  //   //   if (window.scrollY > offset - 10) {
+	  //   //     menu.classList.add("sticky");
+	  //   //   } else if (window.scrollY < offset - 20) {
+	  //   //     menu.classList.remove("sticky");
+	  //   //   }
+	  //   // }
+	  //   // keep track of previous scroll position
+	  //   let prevScrollPos = window.pageYOffset;
+	  // }
+
+	  // TESTIMONIALS
 	  new Swiper('.testimonials', {
 	    // slidesPerView: 3.2,
 	    slidesPerView: 3.6,
@@ -7091,6 +7107,34 @@
 	    });
 	  }
 	  HeroCustomPlayButton();
+
+	  // STICKY NAV
+	  // function stickyNav() {
+	  //   let lastScrollTop = 0;
+
+	  //   window.addEventListener('scroll', function () {
+	  //     let header = document.getElementById('header');
+	  //     let scrollTop = window.scrollY || document.documentElement.scrollTop;
+	  //     // console.log(scrollTop)
+	  //     if (scrollTop >= lastScrollTop) {
+	  //       // Scrolling down
+	  //       header.classList.remove('sticky');
+	  //     } else {
+	  //       // Scrolling up
+	  //       header.classList.add('sticky');
+	  //     }
+
+	  //     // HAS BG IF MORE THAN INITIAL POSITION
+	  //     if (scrollTop > 102) {
+	  //       header.classList.add('has-bg');
+	  //     } else {
+	  //       header.classList.remove('has-bg');
+	  //     }
+
+	  //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+	  //   }, false);
+	  // }
+	  // stickyNav();
 	});
 
 	exports.Alert = alert;

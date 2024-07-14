@@ -15072,8 +15072,9 @@ body {
 }
 
 .header-content {
-  padding-top: 37px;
-  padding-bottom: 25px;
+  transition: all 1.2s ease-out;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -15094,6 +15095,10 @@ body {
 }
 .header-content .header-btns .login-btn:hover {
   color: #24f4ab;
+}
+
+.site-header {
+  position: relative;
 }
 
 #site-navigation {
@@ -15287,11 +15292,6 @@ footer .container .social-media-menu li a:hover svg path {
   cursor: default;
 }
 
-#standout-feature-grid {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
 @keyframes shake {
   0% {
     transform: translate(0px, 0px) rotate(0deg);
@@ -15360,7 +15360,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 
 #hero {
-  margin-top: 60px;
+  margin-top: 182px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15522,11 +15522,16 @@ footer .container .social-media-menu li a:hover svg path {
   margin-top: 12px;
 }
 #tested .grid-item div.detail a {
+  transition: all 0.4s ease-out;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+}
+#tested .grid-item div.detail a:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 #tested .grid-item div.detail a span {
   color: #586373;
@@ -15681,15 +15686,26 @@ footer .container .social-media-menu li a:hover svg path {
   cursor: pointer;
   font-family: "blinkersemibold", sans-serif;
 }
-#faq .faq-container .faq-question .panel-content {
-  color: #bababa;
+#faq .faq-container .faq-question .panel:checked ~ .panel-content {
+  max-height: 800px;
+  opacity: 1;
   padding: 14px 14px 0 22px;
-  margin: 0 40px;
-  max-height: 0;
+  z-index: 0;
+  transition: 0.8s ease-out;
+  visibility: visible;
   overflow: hidden;
-  z-index: -1;
-  position: relative;
+  transition: 0.4s ease-out;
+}
+#faq .faq-container .faq-question .panel-content {
+  max-height: 0;
   opacity: 0;
+  padding: 14px 14px 0 22px;
+  z-index: -1;
+  visibility: hidden;
+  color: #bababa;
+  margin: 0 40px;
+  overflow: hidden;
+  position: relative;
   transition: 0.8s ease-out;
   font-family: "blinkerregular", sans-serif;
 }
@@ -15702,14 +15718,6 @@ footer .container .social-media-menu li a:hover svg path {
   font-family: "blinkerregular", sans-serif !important;
   font-size: 15px !important;
   line-height: 22px !important;
-}
-#faq .faq-container .faq-question .panel:checked ~ .panel-content {
-  max-height: 800px;
-  height: -moz-max-content;
-  height: max-content;
-  opacity: 1;
-  padding: 14px 14px 0 22px;
-  z-index: 0;
 }
 #faq .faq-container .faq-question .plus .plus-content {
   width: 14px;
@@ -15797,7 +15805,7 @@ footer .container .social-media-menu li a:hover svg path {
 
 #pricing {
   padding-top: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
 #pricing .team-toggle-container {
   background-color: #282f39;
@@ -15880,6 +15888,21 @@ footer .container .social-media-menu li a:hover svg path {
 }
 #pricing .tiers-container .tier ul li svg {
   margin-right: 7px;
+}
+#pricing .tiers-container .tier .tier-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#pricing .tiers-container .tier .tier-btn-container p {
+  font-size: 15px;
+  color: #bababa;
+  margin-bottom: 0;
+  padding-left: 12px;
+}
+#pricing .tiers-container .tier .tier-btn-container p a {
+  padding-left: 12px;
+  color: white;
 }
 #pricing .all-features {
   margin-top: 20px;
@@ -16197,24 +16220,6 @@ footer .container .social-media-menu li a:hover svg path {
   top: 3px;
 }
 
-@font-face {
-  font-family: "signsbold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "blinkerregular";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "blinkersemibold";
-  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 @font-face {
   font-family: "signsbold";
   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");

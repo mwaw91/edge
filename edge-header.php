@@ -29,7 +29,7 @@
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-17.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-18.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.css"> -->
 
 
@@ -85,8 +85,8 @@
             </div>
             <!-- END DISSAPPEARING NAV -->
 
+            <div id="header" class="header">
 
-            <div id="">
                 <div class="header-content container clearfix">
                     <!-- LOGO  -->
                     <a href="/" class="custom-logo-link">
