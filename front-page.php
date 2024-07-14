@@ -158,7 +158,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video" preload="none">
+                                <video class="feature-video">
                                     <source src="<?php echo $row['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -224,7 +224,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video" preload="none">
+                                <video class="feature-video">
                                     <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -273,7 +273,6 @@ get_header();
  HOVER BG FOLLOW GRADIENT WHITE
  -->
     <section id="stat-container" class="radius space--margin--top" data-aos="fade-up">
-        <!-- <span class="stat-gradient"></span> -->
         <div class="stats">
             <?php
             $stats = get_field('statistics');
@@ -287,8 +286,7 @@ get_header();
             }
             ?>
         </div>
-        <h4 class="text-h4">Lorum ipsum dolar sit amet. Lorum ipsum dolar sit amet.<?php //echo get_field(''); 
-                                                                                    ?></h4>
+        <h4 class="text-h4"><?php echo get_field('paragraph'); ?></h4>
         <div class="logo-container">
 
 
@@ -327,6 +325,9 @@ get_header();
                     <?php
                     $logos = get_field('logos');
                     if ($logos) {
+                        foreach ($logos as $logo) {
+                            echo '<img class="slide" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
+                        }
                         foreach ($logos as $logo) {
                             echo '<img class="slide" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
                         }
@@ -443,7 +444,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video" preload="none">
+                                <video class="feature-video">
                                     <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -491,7 +492,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video" preload="none">
+                                <video class="feature-video">
                                     <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -520,7 +521,7 @@ get_header();
 
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
-            <h2 class="text-h1">start from today</h2>
+            <h2 class="text-h1"><?php echo get_field('pricing_title')['title']; ?></h2>
             <p class="p2"><?php echo get_field('pricing_title')['description']; ?></p>
         </div>
 
@@ -765,9 +766,7 @@ CLICK MOVE ONLY 1 SLIDE
 <section id="testimonials" class="space--margin--top space--margin--bottom">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
-        <h2 class="text-h1">Take their word for it</h2>
-        <!-- <h2><?php //echo get_field('testimonials_title')['title']; 
-                    ?></h2> -->
+        <h2 class="text-h1"><?php echo get_field('testimonials_title')['title']; ?></h2>
         <p class="p2"><?php echo get_field('testimonials_title')['description']; ?></p>
     </div>
 
@@ -850,9 +849,8 @@ CLICK MOVE ONLY 1 SLIDE
         <section id="faq">
             <div data-aos="fade-up" class="title-section">
                 <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
-                <h2 class="text-h1">Questions</h2>
-                <!-- <h2><?php //echo get_field('faqs_title')['title']; 
-                            ?></h2> -->
+                <h2 class="text-h1"><?php echo get_field('faqs_title')['title'];
+                                    ?></h2>
                 <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
             </div>
             <!-- NEW CODEPEN -->
