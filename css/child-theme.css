@@ -15587,26 +15587,27 @@ footer .container .social-media-menu li a:hover svg path {
 
 #alternating-video-columns .alternating-video-column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
 }
 #alternating-video-columns .alternating-video-column:nth-child(1) {
-  margin-bottom: 73px;
+  margin-bottom: 120px;
 }
 #alternating-video-columns .alternating-video-column .feature-video {
   width: 100%;
 }
 #alternating-video-columns .alternating-video-column div {
-  max-width: 600px;
+  grid-area: 1/1/2/7;
 }
 #alternating-video-columns .alternating-video-column div.title-section {
+  grid-area: 1/8/2/13;
   max-width: 383px;
 }
-#alternating-video-columns .alternating-video-column:nth-child(even) div {
-  order: 2;
+#alternating-video-columns .alternating-video-column.even-row div {
+  grid-area: 1/7/2/13 !important;
 }
-#alternating-video-columns .alternating-video-column:nth-child(even) div.title-section {
-  order: 1;
+#alternating-video-columns .alternating-video-column.even-row div.title-section {
+  grid-area: 1/1/2/6 !important;
 }
 
 #cta .cta {
