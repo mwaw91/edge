@@ -100,7 +100,7 @@ get_header();
         <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
         <p class="p2" data-aos-delay="150" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
-        <a data-aos-delay="200" href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
+        <div data-aos="fade-up" data-aos-delay="200"><a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a></div>
 
         <!-- echo $button['url']; -->
         <div data-aos-delay="250" class="video-section" data-aos="zoom-in">
@@ -851,7 +851,7 @@ CLICK MOVE ONLY 1 SLIDE
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
                     <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
-                    <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['title']; ?>
+                    <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid"><?php echo get_field('cta_title_section')['button']['title']; ?>
                     </a>
                 </div>
                 <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">

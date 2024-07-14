@@ -361,13 +361,13 @@ footer {
   transition: all 0.4s ease-out;
 
   &--solid {
-    // transition: all 0.8s;
     background-color: $green;
     color: $black-text;
     border: 1px solid $black-3;
+    transition: all 0.4s ease-out;
     &:hover {
-      background-color: transparent;
-      color: white;
+      background-color: $green-light;
+      color: $black-text;
       border: 1px solid $green;
     }
   }
@@ -376,7 +376,7 @@ footer {
     color: $black-text;
     &:hover {
       background-color: #d6d6d6;
-      // border: 1px solid white;
+      color: $black-text;
     }
   }
   &--solid-grey {

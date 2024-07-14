@@ -15220,10 +15220,11 @@ footer .container .social-media-menu li a:hover svg path {
   background-color: #24f4ab;
   color: #0b0f11;
   border: 1px solid #282f39;
+  transition: all 0.4s ease-out;
 }
 .btn--solid:hover {
-  background-color: transparent;
-  color: white;
+  background-color: #8af9d6;
+  color: #0b0f11;
   border: 1px solid #24f4ab;
 }
 .btn--solid-white {
@@ -15232,6 +15233,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 .btn--solid-white:hover {
   background-color: #d6d6d6;
+  color: #0b0f11;
 }
 .btn--solid-grey {
   background-color: #282f39;
