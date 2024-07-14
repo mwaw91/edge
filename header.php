@@ -158,7 +158,7 @@ $edge_settings = edge_get_theme_options(); ?>
 					<!-- end #site-navigation -->
 					<div class="header-btns">
 						<a href="<?php echo get_field('edge_login_link')['url']; ?>" class="login-btn">Log in</a>
-						<a href="<?php echo get_field('edge_signup_link')['url']; ?>" class="signup-btn btn btn--solid btn--solid-grey">Sign up</a>
+						<a href="<?php echo get_field('edge_signup_link')['url']; ?>" class="signup-btn btn btn--solid-grey">Sign up</a>
 					</div>
 				</div> <!-- end .container -->
 			</div> <!-- end #sticky_header -->

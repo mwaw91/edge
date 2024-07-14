@@ -383,7 +383,7 @@ footer {
     background-color: $black-3;
     color: white;
     &:hover {
-      background-color: #424851;
+      background-color: #353a41;
       border: 1px solid $black-3;
     }
   }
@@ -834,6 +834,9 @@ footer {
   }
 }
 #stat-container {
+  // compensate for anchor link
+  margin-bottom: 130px;
+
   // background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
   background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 60px;
@@ -935,11 +938,15 @@ footer {
 }
 
 // IMPROVE YOUR GAMEPLAY
-// #improve-your-gameplay {
-// }
+#improve-your-gameplay {
+  padding-top: 30px;
+}
 
 // ALTERNATING VIDEO COLUMN
 #alternating-video-columns {
+  // COMPENSATE FOR ANCHOR LINKS
+  margin-bottom: 130px;
+
   .alternating-video-column {
     &:nth-child(1) {
       margin-bottom: 120px;
@@ -974,6 +981,8 @@ footer {
 
 // CTA
 #cta {
+  // COMPENSATE FOR ANCHOR LINKS
+  margin-bottom: 130px;
   .cta {
     padding-top: 93px;
     display: grid;
@@ -998,6 +1007,7 @@ footer {
 
 //  FAQ
 #faq {
+  padding-top: 30px;
   max-width: 500px;
   margin: 0 auto 90px auto;
 
@@ -1161,7 +1171,8 @@ footer {
 
 // PRICING
 #pricing {
-  margin-top: -55px;
+  padding-top: 30px;
+  // margin-top: -55px;
   margin-bottom: 60px;
   .team-toggle-container {
     background-color: $black-3;

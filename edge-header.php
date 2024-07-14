@@ -29,7 +29,7 @@
 
     <!-- CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-15.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-17.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.css"> -->
 
 
@@ -94,14 +94,14 @@
                     </a>
                     <nav id="site-navigation" class="nav-menu main-navigation clearfix" role="navigation" aria-label="">
                         <ul id="primary-menu">
-                            <li><a href="#features">Features</a></li>
+                            <li><a href="#improve-your-gameplay">Features</a></li>
                             <li><a href="#pricing">Pricing</a></li>
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </nav>
                     <div class="header-btns">
                         <a href="<?php echo get_field('edge_login_link')['url']; ?>" class="login-btn">Log in</a>
-                        <a href="<?php echo get_field('edge_signup_link')['url']; ?>" class="signup-btn btn btn--solid btn--solid-grey">Sign up</a>
+                        <a href="<?php echo get_field('edge_signup_link')['url']; ?>" class="signup-btn btn btn--solid-grey">Sign up</a>
                     </div>
                 </div> <!-- end .container -->
             </div> <!-- end #sticky_header -->

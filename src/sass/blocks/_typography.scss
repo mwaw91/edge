@@ -1,60 +1,60 @@
 // LIVE
-// @font-face {
-//   font-family: "signsbold";
-//   src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2")
-//       format("woff2"),
-//     url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff")
-//       format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: "blinkerregular";
-//   src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2")
-//       format("woff2"),
-//     url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff")
-//       format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: "blinkersemibold";
-//   src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2")
-//       format("woff2"),
-//     url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff")
-//       format("woff");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// STAGING
 @font-face {
   font-family: "signsbold";
-  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2")
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2")
       format("woff2"),
-    url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff")
+    url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkerregular";
-  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2")
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2")
       format("woff2"),
-    url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff")
+    url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkersemibold";
-  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2")
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2")
       format("woff2"),
-    url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff")
+    url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
+// STAGING
+// @font-face {
+//   font-family: "signsbold";
+//   src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2")
+//       format("woff2"),
+//     url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "blinkerregular";
+//   src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2")
+//       format("woff2"),
+//     url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "blinkersemibold";
+//   src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2")
+//       format("woff2"),
+//     url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff")
+//       format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 // TODO
 // TRY AVOID GRADIENT BANDING WITH THE FOLLOWING

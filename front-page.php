@@ -272,7 +272,7 @@ get_header();
 
  HOVER BG FOLLOW GRADIENT WHITE
  -->
-    <section id="stat-container" class="radius space--margin--top space--margin--bottom" data-aos="fade-up">
+    <section id="stat-container" class="radius space--margin--top" data-aos="fade-up">
         <!-- <span class="stat-gradient"></span> -->
         <div class="stats">
             <?php
@@ -413,7 +413,7 @@ get_header();
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
     <!-- ALTERNATING VIDEO COLUMNS -->
-    <section id="alternating-video-columns" class="space--margin--top space--margin--bottom">
+    <section id="alternating-video-columns" class="space--margin--top">
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
@@ -823,7 +823,7 @@ CLICK MOVE ONLY 1 SLIDE
     <div class="container">
 
         <!-- CTA -->
-        <section id="cta" class="space--margin--bottom">
+        <section id="cta">
             <div class="cta radius" data-aos="fade-up">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
