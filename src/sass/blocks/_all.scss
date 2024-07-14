@@ -624,8 +624,8 @@ footer {
 }
 
 #hero {
-  // margin-top: 60px;
-  margin-top: 182px;
+  margin-top: 60px;
+  // margin-top: 182px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -858,9 +858,19 @@ footer {
     div.detail {
       margin-top: 12px;
       a {
+        transition: all 0.4s ease-out;
         &:hover {
           opacity: 0.9;
           cursor: pointer;
+          span {
+            color: $green;
+            svg {
+              path {
+                fill: $green;
+                stroke: $green;
+              }
+            }
+          }
         }
         transition: all 0.4s ease-out;
         display: flex;

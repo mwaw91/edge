@@ -15360,7 +15360,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 
 #hero {
-  margin-top: 182px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15523,6 +15523,7 @@ footer .container .social-media-menu li a:hover svg path {
 }
 #tested .grid-item div.detail a {
   transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15532,6 +15533,13 @@ footer .container .social-media-menu li a:hover svg path {
 #tested .grid-item div.detail a:hover {
   opacity: 0.9;
   cursor: pointer;
+}
+#tested .grid-item div.detail a:hover span {
+  color: #24f4ab;
+}
+#tested .grid-item div.detail a:hover span svg path {
+  fill: #24f4ab;
+  stroke: #24f4ab;
 }
 #tested .grid-item div.detail a span {
   color: #586373;
@@ -16222,19 +16230,19 @@ footer .container .social-media-menu li a:hover svg path {
 
 @font-face {
   font-family: "signsbold";
-  src: url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/signs/signs-bold-webfont.woff") format("woff");
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/signs/signs-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkerregular";
-  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-regular-webfont.woff") format("woff");
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "blinkersemibold";
-  src: url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("/wp-content/themes/understrap-child-main/fonts/blinker/blinker-semibold-webfont.woff") format("woff");
+  src: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff2") format("woff2"), url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/blinker/blinker-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

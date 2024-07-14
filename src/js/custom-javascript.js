@@ -251,7 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // PRICING ANNUAL MONTHLY
   function monthlyAnnually() {
-    console.log('test');
     let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
     annualSwitch.forEach(switchBtn => {
 
@@ -321,6 +320,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
   monthlyAnnually();
+
+
+  // ASSIST OR INIT VIDEOS
+  function clickBody() {
+    let h1 = document.querySelector('h1');
+    document.body.click();
+    h1.click();
+    console.log('window.onload = clickBody;');
+  }
+  clickBody();
 
 
   // CUSTOM PLAY BUTTON FOR VIDEOS

@@ -581,10 +581,11 @@
             }
             ?>
         </div>
-        <p class="all-features p2">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- TODO -->
+        <!-- <p class="all-features p2">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-        </p>
+        </p> -->
     </section>
 
     <!-- PRICING TABLE -->
