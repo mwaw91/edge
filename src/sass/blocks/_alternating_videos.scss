@@ -1,0 +1,36 @@
+// ALTERNATING VIDEO COLUMN
+#alternating-video-columns {
+  // COMPENSATE FOR ANCHOR LINKS
+  margin-bottom: 130px;
+
+  .alternating-video-column {
+    &:nth-child(1) {
+      margin-bottom: 120px;
+    }
+
+    .feature-video {
+      width: 100%;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+
+    div {
+      grid-area: 1 / 1 / 2 / 7;
+      &.title-section {
+        grid-area: 1 / 8 / 2 / 13;
+        max-width: 383px;
+      }
+    }
+    // 2ND BLOCK
+    &.even-row {
+      div {
+        &.title-section {
+          grid-area: 1 / 1 / 2 / 6 !important;
+        }
+        grid-area: 1 / 7 / 2 / 13 !important;
+      }
+    }
+  }
+}

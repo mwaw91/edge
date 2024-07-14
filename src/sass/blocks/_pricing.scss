@@ -1,0 +1,306 @@
+// PRICING
+#pricing {
+  padding-top: 30px;
+  // margin-top: -55px;
+  margin-bottom: 120px;
+  .team-toggle-container {
+    background-color: $black-3;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 7px;
+    span {
+      padding: 7px 21px;
+      background-color: $black-3;
+      color: $white;
+      border-radius: 7px;
+      &:hover {
+        cursor: pointer;
+      }
+      &.active {
+        background-color: $green;
+        color: $black-text;
+      }
+    }
+  }
+
+  .tiers-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+
+    .tier {
+      &:nth-child(2) {
+        background: linear-gradient($black-3 75%, $black-1 110%);
+        .btn {
+          background-color: white;
+          color: $black-text;
+        }
+      }
+      min-width: 360px;
+      min-height: 469px;
+      background-color: $black-1;
+      border: 1px solid $black-3;
+      padding: 33px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        margin-bottom: 13px;
+      }
+      p {
+        margin-bottom: 5px;
+        &.must-be-hidden {
+          &.show {
+            display: none;
+          }
+          &.hide {
+            display: none;
+          }
+        }
+        &.must-be-shown {
+          &.show {
+            display: block;
+          }
+          &.hide {
+            display: none;
+          }
+        }
+        // VALUE
+        span {
+          color: white;
+        }
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          margin-bottom: 9px;
+          svg {
+            margin-right: 7px;
+          }
+        }
+      }
+      .tier-btn-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p {
+          font-size: 15px;
+          color: $grey;
+          margin-bottom: 0;
+
+          padding-left: 12px;
+          a {
+            padding-left: 12px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .all-features {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    svg {
+      margin-left: 5px;
+    }
+  }
+}
+
+// PERIOD TOGGLE CONTAINER YEARLY
+
+// CUSTOM SWITCH
+.custom-toggle-switch-container {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-1;
+  margin-bottom: 20px;
+  .custom-toggle-switch {
+    &:hover {
+      cursor: pointer;
+    }
+    border-radius: 9999px;
+    width: 27.45px;
+    padding: 2px;
+    height: 16px;
+    background-color: #3d4653;
+    display: flex;
+    // justify-content: flex-start;
+    transition: all 0.1s ease-in-out;
+    &.active {
+      // justify-content: flex-end;
+      background-color: $green;
+      .slider {
+        position: relative;
+        left: 50%;
+      }
+    }
+    .slider {
+      transition: all 0.1s ease-in-out;
+      position: relative;
+      left: 0;
+      border-radius: 9999px;
+      width: 12px;
+      height: 12px;
+      background-color: white;
+    }
+  }
+}
+// END TOGGLE
+
+// PRICING TABLE
+.pricing_table {
+  overflow: auto;
+  width: 100%;
+  // 3RD ITEM BG GRADIENT
+
+  tr {
+    th:nth-child(3) {
+      background-color: #1c2228 !important;
+      border-radius: 17px 17px 0 0;
+      // border: 1px solid #1b1e22;
+      border-bottom: none;
+    }
+    td {
+      &:nth-child(3) {
+        background-color: #1c2228 !important;
+        // border-left: 1px solid #1b1e22;
+        // border-right: 1px solid #1b1e22;
+      }
+      &.bottom:nth-child(3) {
+        height: 40px;
+        background: linear-gradient(#1c2228, $black-bg);
+        border-radius: 0 0 17px 17px;
+        // border: 1px solid #1b1e22;
+        // border-top: none;
+      }
+    }
+  }
+
+  table {
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+  }
+  div {
+    display: flex;
+  }
+  // COLUMN TITLES
+  tr.tier-titles {
+    th {
+      padding-top: 30px;
+      div {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+  // BTNS
+  .btn {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  th {
+    span {
+      &.tier {
+        text-transform: uppercase;
+        color: white;
+        font-family: "signsbold", sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+      }
+    }
+
+    padding: 10px;
+  }
+
+  .row-title {
+    td {
+      padding-top: 20px;
+    }
+  }
+  // features
+  td {
+    div {
+      // ROW TITLE
+      &.category {
+        border-bottom: none;
+        span {
+          font-family: "blinkersemibold", sans-serif;
+          font-size: 18px;
+          line-height: 24px;
+          color: white;
+        }
+      }
+
+      &.no-border {
+        border-bottom: none;
+      }
+      border-bottom: 1px solid $black-3;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      span {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "blinkerregular", sans-serif;
+        color: #7a7a7a;
+
+        &.feature {
+        }
+        &.tick {
+          &::before {
+            content: "";
+            display: inline-block;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-tick.png");
+            // background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
+            margin-right: 10px;
+            background-size: 100% auto;
+            top: 2px;
+          }
+        }
+        &.cross {
+          &::before {
+            content: "";
+            display: inline-block;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-cross.png");
+            // background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
+            margin-right: 10px;
+            background-size: 100% auto;
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
+}

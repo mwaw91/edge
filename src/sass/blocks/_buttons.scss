@@ -1,0 +1,146 @@
+.btn {
+  border-radius: 6px;
+  padding: 8px 19px;
+  // font-family: "Blinker", sans-serif;
+  //font-family: "blinkersemibold", sans-serif;
+  font-family: "blinkerregular", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  max-width: max-content;
+  // display: inline-block;
+  display: block;
+  position: relative;
+  text-align: center;
+  // border: 3px solid #1a1a1a;
+  transition: all 0.4s ease-out;
+
+  &--solid {
+    background-color: $green;
+    color: $black-text;
+    border: 1px solid $black-3;
+    transition: all 0.4s ease-out;
+    &:hover {
+      background-color: $green-light;
+      color: $black-text;
+      border: 1px solid $green;
+    }
+  }
+  &--solid-white {
+    background-color: white;
+    color: $black-text;
+    &:hover {
+      background-color: #d6d6d6;
+      color: $black-text;
+    }
+  }
+  &--solid-grey {
+    background-color: $black-3;
+    color: white;
+    &:hover {
+      background-color: #353a41;
+      border: 1px solid $black-3;
+    }
+  }
+  &--outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid $green;
+    &:hover {
+      // background-color: $green;
+      border: 1px solid white;
+    }
+  }
+  &--outline-grey-gradient {
+    background-color: transparent;
+    color: $grey-text;
+    border: 1px solid $black-3;
+    overflow: hidden;
+    transition: all 0.8s;
+    &:not(.active) {
+      &::before {
+        --size: 0;
+        content: "";
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        width: var(--size);
+        height: var(--size);
+        filter: blur(30px);
+        background: radial-gradient(
+          circle closest-side,
+          $green 0%,
+          $green 20%,
+          transparent 70%
+        );
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+      }
+      &:hover::before {
+        --size: 200px;
+      }
+      &:hover {
+        border: 1px solid $green;
+        overflow: hidden;
+      }
+    }
+    &.active {
+      background-color: $green-dark;
+      border: 1px solid $green;
+      color: white;
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}
+
+// BTN HOVER GRADIENT
+// .follow-gradient {
+//   height: 500px;
+//   overflow: hidden;
+//   background-color: $black-1;
+//   .blob {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 650px;
+//     height: 650px;
+//     border-radius: 100%;
+//     background: linear-gradient($green 10%, transparent);
+//     filter: blur(250px);
+//     transition: all 450ms ease-out;
+//     position: fixed;
+//     pointer-events: none;
+//     right: 0;
+//     bottom: 0;
+//     // transform: translate(calc(-50% + 15px), -50%);
+//     // transform: translate(calc(-50% + 15px), 0);
+//     z-index: -1;
+//   }
+// }
+
+// FOLLOW GRADIENT
+// .follow-gradient {
+//   height: 500px;
+//   overflow: hidden;
+//   background-color: $black-1;
+//   .blob, stat-gradient {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 650px;
+//     height: 650px;
+//     border-radius: 100%;
+//     background: linear-gradient($green 10%, transparent);
+//     filter: blur(250px);
+//     transition: all 450ms ease-out;
+//     position: fixed;
+//     pointer-events: none;
+//     right: 0;
+//     bottom: 0;
+//     // transform: translate(calc(-50% + 15px), -50%);
+//     // transform: translate(calc(-50% + 15px), 0);
+//     z-index: -1;
+//   }
+// }

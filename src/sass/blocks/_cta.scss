@@ -1,0 +1,25 @@
+// CTA
+#cta {
+  // COMPENSATE FOR ANCHOR LINKS
+  margin-bottom: 130px;
+  .cta {
+    padding-top: 93px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $black-1;
+    border: 1px solid $black-3;
+    overflow: hidden;
+    .copy {
+      max-width: 374px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+    .overlap-img {
+      overflow: hidden;
+      transform: scale(1.1);
+      transform-origin: top left;
+      background-size: cover;
+      background-position: top left;
+    }
+  }
+}
