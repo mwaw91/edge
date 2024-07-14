@@ -1603,6 +1603,7 @@ footer {
   }
   .testimonials {
     position: relative;
+
     .testimonials-gradient {
       display: block;
       background: linear-gradient(to right, transparent 0%, $black-bg 100%);
@@ -1621,6 +1622,7 @@ footer {
       margin-top: 40px;
 
       .testimonial {
+        height: 382px !important;
         // max-width: 360px;
         // &:nth-child(3n-1) {
         //   margin-top: -55px !important;
