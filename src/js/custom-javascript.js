@@ -308,28 +308,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // CUSTOM PLAY BUTTON FOR VIDEOS
   function customPlayButton() {
 
-    const video = document.querySelectorAll(".feature-video");
     const playButtons = document.querySelectorAll(".play-button");
 
     playButtons.forEach(playButton => {
 
       const parentDiv = playButton.closest('.video-container');
       const siblingVideo = parentDiv.querySelector('.feature-video');
-
-      // playButton.addEventListener("click", function () {
-      //   if (siblingVideo.paused) {
-      //     console.log('video was paused now playing');
-      //     siblingVideo.play();
-      //     siblingVideo.muted = !siblingVideo.muted;
-      //     playButton.classList.add('hide');
-      //     playButton.classList.remove('show');
-      //   } else {
-      //     console.log('video was playing now paused');
-      //     siblingVideo.pause();
-      //     playButton.classList.remove('hide')
-      //     playButton.classList.add('show')
-      //   }
-      // });
       playButton.addEventListener("mouseenter", function () {
         if (siblingVideo.paused) {
           console.log('video was paused now playing');
@@ -355,4 +339,32 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   customPlayButton();
+
+  // HERO
+  function HeroCustomPlayButton() {
+
+    const playButtons = document.querySelectorAll(".hero-play-button");
+
+    playButtons.forEach(playButton => {
+
+      const parentDiv = playButton.closest('.video-container');
+      const siblingVideo = parentDiv.querySelector('.feature-video');
+
+      playButton.addEventListener("click", function () {
+        if (siblingVideo.paused) {
+          console.log('video was paused now playing');
+          siblingVideo.play();
+          siblingVideo.muted = !siblingVideo.muted;
+          playButton.classList.add('hide');
+          playButton.classList.remove('show');
+        } else {
+          console.log('video was playing now paused');
+          siblingVideo.pause();
+          playButton.classList.remove('hide')
+          playButton.classList.add('show')
+        }
+      });
+    })
+  }
+  HeroCustomPlayButton();
 });

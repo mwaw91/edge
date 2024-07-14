@@ -79,12 +79,11 @@ get_header();
 
         <div data-aos="fade-up" data-aos-delay="200"><a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a></div>
 
-        <!-- echo $button['url']; -->
         <div data-aos-delay="250" class="video-section" data-aos="zoom-in">
             <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
             <!-- VIDEO -->
             <div class="video-container radius green-shadow">
-                <a href="<?php echo get_field('video_link'); ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button id="playButton" class="hero-play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_196_307)">
                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                         </g>
@@ -101,7 +100,7 @@ get_header();
                             </filter>
                         </defs>
                     </svg>
-                </a>
+                </button>
                 <video class="feature-video">
                     <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
                     Your browser does not support the video tag.
@@ -140,7 +139,7 @@ get_header();
                         if (strlen($row['image']['url']) == 0) {
                         ?>
                             <div class="video-container">
-                                <a href="<?php echo $row['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -157,7 +156,7 @@ get_header();
                                             </filter>
                                         </defs>
                                     </svg>
-                                </a>
+                                </button>
                                 <video class="feature-video">
                                     <source src="<?php echo $row['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -166,27 +165,29 @@ get_header();
                         <?php
                         } else {
                         ?>
-                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img loading="lazy" src="<?php echo $row['image']['url']; ?>"></a></div>
+                            <div class="video-container"><img loading="lazy" src="<?php echo $row['image']['url']; ?>"></div>
                         <?php
                         }
                         ?>
 
                         <!-- END VIDEO -->
                         <div class="detail">
-                            <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
-                            <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_169_54)">
-                                        <path d="M7.5 8.68311C9.22589 8.68311 10.625 7.284 10.625 5.55811C10.625 3.83222 9.22589 2.43311 7.5 2.43311C5.77411 2.43311 4.375 3.83222 4.375 5.55811C4.375 7.284 5.77411 8.68311 7.5 8.68311Z" fill="#586373" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165" fill="#586373" />
-                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165H12.5Z" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_169_54">
-                                            <rect width="15" height="15" fill="white" transform="translate(0 0.558105)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <?php echo $row['followers']; ?></span>
+                            <a href="<?php echo $row['video_link']; ?>" target="_blank">
+                                <span class="font-signs text-h4"><?php echo $row['nametag']; ?></span>
+                                <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_169_54)">
+                                            <path d="M7.5 8.68311C9.22589 8.68311 10.625 7.284 10.625 5.55811C10.625 3.83222 9.22589 2.43311 7.5 2.43311C5.77411 2.43311 4.375 3.83222 4.375 5.55811C4.375 7.284 5.77411 8.68311 7.5 8.68311Z" fill="#586373" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165" fill="#586373" />
+                                            <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165H12.5Z" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_169_54">
+                                                <rect width="15" height="15" fill="white" transform="translate(0 0.558105)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <?php echo $row['followers']; ?></span>
+                            </a>
                         </div>
                     </div>
             <?php
@@ -206,7 +207,7 @@ get_header();
                         if (strlen($bottomrow['image']['url']) == 0) {
                         ?>
                             <div class="video-container">
-                                <a href="<?php echo $bottomrow['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -223,7 +224,7 @@ get_header();
                                             </filter>
                                         </defs>
                                     </svg>
-                                </a>
+                                </button>
                                 <video class="feature-video">
                                     <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -232,26 +233,27 @@ get_header();
                         <?php
                         } else {
                         ?>
-                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img loading="lazy" src="<?php echo $bottomrow['image']['url']; ?>"></a></div>
+                            <div class="video-container"><img loading="lazy" src="<?php echo $bottomrow['image']['url']; ?>"></div>
                         <?php
                         }
                         ?>
                         <!-- END VIDEO -->
                         <div class="detail">
-                            <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
-                            <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_169_54)">
-                                        <path d="M7.5 8.68311C9.22589 8.68311 10.625 7.284 10.625 5.55811C10.625 3.83222 9.22589 2.43311 7.5 2.43311C5.77411 2.43311 4.375 3.83222 4.375 5.55811C4.375 7.284 5.77411 8.68311 7.5 8.68311Z" fill="#586373" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165" fill="#586373" />
-                                        <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165H12.5Z" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_169_54">
-                                            <rect width="15" height="15" fill="white" transform="translate(0 0.558105)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <?php echo $bottomrow['followers']; ?></span>
+                            <a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"> <span class="font-signs text-h4"><?php echo $bottomrow['nametag']; ?></span>
+                                <span class="font-signs text-h4"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_169_54)">
+                                            <path d="M7.5 8.68311C9.22589 8.68311 10.625 7.284 10.625 5.55811C10.625 3.83222 9.22589 2.43311 7.5 2.43311C5.77411 2.43311 4.375 3.83222 4.375 5.55811C4.375 7.284 5.77411 8.68311 7.5 8.68311Z" fill="#586373" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165" fill="#586373" />
+                                            <path d="M12.5 14.5165C12.5 13.1904 11.9732 11.9186 11.0355 10.9809C10.0979 10.0433 8.82608 9.51648 7.5 9.51648C6.17392 9.51648 4.90215 10.0433 3.96447 10.9809C3.02678 11.9186 2.5 13.1904 2.5 14.5165H12.5Z" stroke="#586373" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_169_54">
+                                                <rect width="15" height="15" fill="white" transform="translate(0 0.558105)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <?php echo $bottomrow['followers']; ?></span>
+                            </a>
                         </div>
                     </div>
             <?php

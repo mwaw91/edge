@@ -552,7 +552,8 @@ footer {
   width: 100%;
   height: 100%;
 
-  .play-button {
+  .play-button,
+  .hero-play-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -741,7 +742,8 @@ footer {
 }
 
 // GLOBAL VIDEO STYLING
-.play-button {
+.play-button,
+.hero-play-button {
   svg {
     transition: all 0.4s;
     filter: drop-shadow(2px 4px 6px black);
