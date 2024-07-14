@@ -815,12 +815,15 @@ footer {
     }
     div.detail {
       margin-top: 12px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      span {
-        color: $grey-1;
+      a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        span {
+          color: $grey-1;
+        }
       }
     }
   }

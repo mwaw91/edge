@@ -15251,14 +15251,14 @@ footer .container .social-media-menu li a:hover svg path {
 .btn--outline:hover {
   border: 1px solid white;
 }
-.btn--outline-green-gradient {
+.btn--outline-grey-gradient {
   background-color: transparent;
   color: #a4aabb;
   border: 1px solid #282f39;
   overflow: hidden;
   transition: all 0.8s;
 }
-.btn--outline-green-gradient::before {
+.btn--outline-grey-gradient::before {
   --size: 0;
   content: "";
   position: absolute;
@@ -15271,14 +15271,14 @@ footer .container .social-media-menu li a:hover svg path {
   transform: translate(-50%, -50%);
   transition: width 0.4s ease, height 0.4s ease;
 }
-.btn--outline-green-gradient:hover::before {
+.btn--outline-grey-gradient:hover::before {
   --size: 200px;
 }
-.btn--outline-green-gradient:hover {
+.btn--outline-grey-gradient:hover {
   border: 1px solid #24f4ab;
   overflow: hidden;
 }
-.btn--outline-green-gradient.active {
+.btn--outline-grey-gradient.active {
   background-color: #0d231e;
   border: 1px solid #24f4ab;
   color: white;
@@ -15523,6 +15523,7 @@ footer .container .social-media-menu li a:hover svg path {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 }
 #tested .grid-item div.detail a span {
   color: #586373;
