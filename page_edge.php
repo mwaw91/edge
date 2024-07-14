@@ -37,9 +37,8 @@
  -->
 
 
-
 <div class="container">
-    <section id="hero">
+    <section id="hero" class="space--margin--bottom">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -53,10 +52,10 @@
                 $lhs_logos = get_field('lhs_logos');
                 // var_dump($lhs_logos);
                 if ($lhs_logos) {
-                    $lhs_delay = 200;
+                    $lhs_delay = 100;
                     foreach ($lhs_logos as $lhs) {
                         echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
-                        $lhs_delay += 300;
+                        $lhs_delay += 100;
                     }
                 }
                 ?>
@@ -65,10 +64,10 @@
                 <?php
                 $rhs_logos = get_field('rhs_logos');
                 if ($rhs_logos) {
-                    $rhs_delay = 200;
+                    $rhs_delay = 100;
                     foreach ($rhs_logos as $rhs) {
                         echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
-                        $rhs_delay += 300;
+                        $rhs_delay += 100;
                     }
                 }
                 ?>
@@ -78,16 +77,16 @@
         </div>
 
         <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
-        <p class="p2" data-aos-delay="200" data-aos="fade-up"><?php echo $subtitle; ?></p>
+        <p class="p2" data-aos-delay="150" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
-        <a data-aos-delay="300" href="<?php echo $button['url']; ?>" class="btn btn--solid" data-aos="fade-up"><?php echo $button['title']; ?></a>
+        <div data-aos="fade-up" data-aos-delay="200"><a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a></div>
 
         <!-- echo $button['url']; -->
-        <div data-aos-delay="500" class="video-section" data-aos="zoom-in">
-            <span data-aos-delay="500" data-aos-duration="2500" data-aos="fade-up"></span>
+        <div data-aos-delay="250" class="video-section" data-aos="zoom-in">
+            <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
             <!-- VIDEO -->
             <div class="video-container radius green-shadow">
-                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="<?php echo get_field('video_link'); ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_196_307)">
                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                         </g>
@@ -104,7 +103,7 @@
                             </filter>
                         </defs>
                     </svg>
-                </button>
+                </a>
                 <video class="feature-video">
                     <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
                     Your browser does not support the video tag.
@@ -143,7 +142,7 @@
                         if (strlen($row['image']['url']) == 0) {
                         ?>
                             <div class="video-container">
-                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a href="<?php echo $row['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -160,8 +159,8 @@
                                             </filter>
                                         </defs>
                                     </svg>
-                                </button>
-                                <video class="feature-video">
+                                </a>
+                                <video class="feature-video" preload="none">
                                     <source src="<?php echo $row['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -169,7 +168,7 @@
                         <?php
                         } else {
                         ?>
-                            <div class="video-container"><img src="<?php echo $row['image']['url']; ?>"></div>
+                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img loading="lazy" src="<?php echo $row['image']['url']; ?>"></a></div>
                         <?php
                         }
                         ?>
@@ -209,7 +208,7 @@
                         if (strlen($bottomrow['image']['url']) == 0) {
                         ?>
                             <div class="video-container">
-                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a href="<?php echo $bottomrow['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -226,8 +225,8 @@
                                             </filter>
                                         </defs>
                                     </svg>
-                                </button>
-                                <video class="feature-video">
+                                </a>
+                                <video class="feature-video" preload="none">
                                     <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -235,7 +234,7 @@
                         <?php
                         } else {
                         ?>
-                            <div class="video-container"><img src="<?php echo $bottomrow['image']['url']; ?>"></div>
+                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img loading="lazy" src="<?php echo $bottomrow['image']['url']; ?>"></a></div>
                         <?php
                         }
                         ?>
@@ -275,7 +274,7 @@
 
  HOVER BG FOLLOW GRADIENT WHITE
  -->
-    <section id="stat-container" class="radius" data-aos="fade-up">
+    <section id="stat-container" class="radius space--margin--top space--margin--bottom" data-aos="fade-up">
         <!-- <span class="stat-gradient"></span> -->
         <div class="stats">
             <?php
@@ -394,19 +393,21 @@
             }
 
             echo '</div>';
+            echo '<div class="tab-image-container green-shadow radius" data-aos="fade-up">';
             foreach ($image_buttons as $tab_image) {
                 $tab_title = $tab_image['title'];
                 $tab_title = strtolower($tab_title);
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<img data-aos="fade-up" data-aos-delay="50" id="' . $tab_title . '" class="';
+                echo '<div id="' . $tab_title . '" class="';
                 if ($i == 0) {
                     echo 'active ';
                 }
-                echo 'tab-image green-shadow radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '"/>';
+                echo 'tab-image" style="background-image: url(' .  $tab_image["image"]["url"] . ');"></div>';
                 $i++;
             }
+            echo '</div>';
         }
 
         ?>
@@ -414,52 +415,95 @@
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
     <!-- ALTERNATING VIDEO COLUMNS -->
-    <section>
+    <section id="alternating-video-columns" class="space--margin--top space--margin--bottom">
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
             $l = 0;
             foreach ($alternating_videos as $row) {
+                if ($l % 2 == 0) {
         ?>
-                <div class="alternating-video-column">
+                    <div class="alternating-video-column odd-row">
+                        <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-right' : 'up-left'; ?>">
+                            <!--  START NEW VIDEO -->
+                            <div class="video-container radius">
+                                <a href="<?php echo $row['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_196_307)">
+                                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="5" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <video class="feature-video" preload="none">
+                                    <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <!-- END VIDEO -->
 
-                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-right' : 'up-left'; ?>">
-                        <!--  START NEW VIDEO -->
-                        <div class="video-container radius">
-                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#filter0_d_196_307)">
-                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset />
-                                            <feGaussianBlur stdDeviation="5" />
-                                            <feComposite in2="hardAlpha" operator="out" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </button>
-                            <video class="feature-video">
-                                <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
                         </div>
-                        <!-- END VIDEO -->
 
+                        <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-left' : 'up-right'; ?>" class="title-section">
+                            <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
+                            <h2 class="text-h1"><?php echo $row['title']; ?></h2>
+                            <p class="p2"><?php echo $row['description']; ?></p>
+                        </div>
                     </div>
-                    <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-left' : 'up-right'; ?>" class="title-section">
-                        <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
-                        <h2 class="text-h1"><?php echo $row['title']; ?></h2>
-                        <p class="p2"><?php echo $row['description']; ?></p>
-                    </div>
-                </div>
 
+                <?php
+                } else {
+                ?>
+                    <div class="alternating-video-column even-row">
+
+                        <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-left' : 'up-right'; ?>" class="title-section">
+                            <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
+                            <h2 class="text-h1"><?php echo $row['title']; ?></h2>
+                            <p class="p2"><?php echo $row['description']; ?></p>
+                        </div>
+                        <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-right' : 'up-left'; ?>">
+
+                            <!--  START NEW VIDEO -->
+                            <div class="video-container radius">
+                                <a href="<?php echo $row['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_196_307)">
+                                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="5" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <video class="feature-video" preload="none">
+                                    <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <!-- END VIDEO -->
+
+                        </div>
+                    </div>
         <?php
+                }
                 $l++;
             }
         }
@@ -690,6 +734,20 @@
                             <div><span class="tick">Unlimited<span></div>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                        <td class="bottom">
+                            <div class="no-border"></div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -706,7 +764,7 @@ CLICK MOVE ONLY 1 SLIDE
 <!--  -->
 </div>
 <!--  -->
-<section id="testimonials">
+<section id="testimonials" class="space--margin--top space--margin--bottom">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1">Take their word for it</h2>
@@ -738,7 +796,7 @@ CLICK MOVE ONLY 1 SLIDE
                     <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
                         <div>
                             <div class="img-container">
-                                <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
+                                <img loading="lazy" src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
                             </div>
                             <div class="details">
                                 <h3 class="text-h3"><?php echo $testimonial['name']; ?></h3>
@@ -767,18 +825,15 @@ CLICK MOVE ONLY 1 SLIDE
     <div class="container">
 
         <!-- CTA -->
-        <section id="cta">
+        <section id="cta" class="space--margin--bottom">
             <div class="cta radius" data-aos="fade-up">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
                     <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
-                    <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid btn--solid-green"><?php echo get_field('cta_title_section')['button']['title']; ?>
+                    <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid"><?php echo get_field('cta_title_section')['button']['title']; ?>
                     </a>
                 </div>
-                <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
-                    <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
-                                            ?>" alt="<?php //echo get_field('cta_image')['alt']; 
-                                                        ?>"> -->
+                <div class="overlap-img green-shadow radius" loading="lazy" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
                 </div>
             </div>
         </section>

@@ -16,47 +16,24 @@ get_header();
 <!-- ORIGINAL MENU -->
 <!-- VIDEOS -->
 <!-- BACK TO TOP BTN -->
-
-<!-- TODO -->
-<!-- js line 109 turnstatGradient() back on -->
 <!-- SPACING -->
 <!-- CONTENT -->
 <!-- LOGIN ACF FIELD -->
 <!-- PRICING GRID -->
-
-
-
-<!-- REPLACE IMAGE CAROUSEL?  GLITCHY -->
 <!-- ALTERNATING COLUMNS NEED CORRECT WIDTHS -->
-
-<!-- BG GRADIENTS -->
 <!-- DOUBLE CHECK INTERACTIONS -->
-<!-- MOBILE -->
 
+<!-- TODO -->
+<!-- REPLACE IMAGE CAROUSEL?  GLITCHY -->
+<!-- BG GRADIENTS -->
+
+<!-- MOBILE -->
 
 <!-- <div class="green-shadow radius fade-up" data-aos="fade-up"></div>
 <div class="fade-left" data-aos="fade-left"></div>
 <div class="fade-right" data-aos="fade-right"></div> -->
 
 <!-- INTERACTIONS -->
-<!-- 
- FADE IN UP AND LEFT RIGHT
- SMOOTHLY  
- 
- BTNS
- HOVER, GRADIENT FOLLOW CURSOR
- -->
-
-<!-- HERO -->
-<!-- INTERACTIONS -->
-<!-- 
- LOGOS
- ENTER FROM TOP, SLOW JIGGLE/WOBBLE ON HOVER
- VIDEO
- ZOOM ON HOVER, FADE IN
- -->
-
-
 
 <div class="container">
     <section id="hero" class="space--margin--bottom">
@@ -181,7 +158,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video">
+                                <video class="feature-video" preload="none">
                                     <source src="<?php echo $row['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -189,7 +166,7 @@ get_header();
                         <?php
                         } else {
                         ?>
-                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img src="<?php echo $row['image']['url']; ?>"></a></div>
+                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img loading="lazy" src="<?php echo $row['image']['url']; ?>"></a></div>
                         <?php
                         }
                         ?>
@@ -247,7 +224,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video">
+                                <video class="feature-video" preload="none">
                                     <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -255,7 +232,7 @@ get_header();
                         <?php
                         } else {
                         ?>
-                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img src="<?php echo $bottomrow['image']['url']; ?>"></a></div>
+                            <div class="video-container"><a href="<?php echo $bottomrow['video_link']; ?>" target="_blank"><img loading="lazy" src="<?php echo $bottomrow['image']['url']; ?>"></a></div>
                         <?php
                         }
                         ?>
@@ -466,7 +443,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video">
+                                <video class="feature-video" preload="none">
                                     <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -514,7 +491,7 @@ get_header();
                                         </defs>
                                     </svg>
                                 </a>
-                                <video class="feature-video">
+                                <video class="feature-video" preload="none">
                                     <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -817,7 +794,7 @@ CLICK MOVE ONLY 1 SLIDE
                     <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
                         <div>
                             <div class="img-container">
-                                <img src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
+                                <img loading="lazy" src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
                             </div>
                             <div class="details">
                                 <h3 class="text-h3"><?php echo $testimonial['name']; ?></h3>
@@ -854,10 +831,7 @@ CLICK MOVE ONLY 1 SLIDE
                     <a href="<?php echo get_field('cta_title_section')['button']['url']; ?>" class="btn btn--solid"><?php echo get_field('cta_title_section')['button']['title']; ?>
                     </a>
                 </div>
-                <div class="overlap-img green-shadow radius" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
-                    <!-- <img class="" src="<?php //echo get_field('cta_image')['url']; 
-                                            ?>" alt="<?php //echo get_field('cta_image')['alt']; 
-                                                        ?>"> -->
+                <div class="overlap-img green-shadow radius" loading="lazy" style="background-image: url(<?php echo get_field('cta_image')['url']; ?>)">
                 </div>
             </div>
         </section>
