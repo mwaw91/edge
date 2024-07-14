@@ -414,19 +414,21 @@ get_header();
             }
 
             echo '</div>';
+            echo '<div class="tab-image-container green-shadow radius" data-aos="fade-up">';
             foreach ($image_buttons as $tab_image) {
                 $tab_title = $tab_image['title'];
                 $tab_title = strtolower($tab_title);
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<img data-aos="fade-up" data-aos-delay="50" id="' . $tab_title . '" class="';
+                echo '<div id="' . $tab_title . '" class="';
                 if ($i == 0) {
                     echo 'active ';
                 }
-                echo 'tab-image green-shadow radius" src="' .  $tab_image["image"]["url"] . '" alt="' . $tab_image['image']['alt'] . '"/>';
+                echo 'tab-image" style="background-image: url(' .  $tab_image["image"]["url"] . ');"></div>';
                 $i++;
             }
+            echo '</div>';
         }
 
         ?>
