@@ -338,20 +338,20 @@
                     ?>
 
                     <!-- Slider main container -->
-                    <div class="swiper logo-slider">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <?php
-                            $logos = get_field('logos');
-                            if ($logos) {
-                                foreach ($logos as $logo) {
-                                    echo '<div class="swiper-slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /> </div>';
-                                }
-                            }
-                            ?>
-                        </div>
-                    </div>
+                    <!-- <div class="swiper logo-slider"> -->
+                    <!-- Additional required wrapper -->
+                    <!-- <div class="swiper-wrapper"> -->
+                    <!-- Slides -->
+                    <?php
+                    // $logos = get_field('logos');
+                    // if ($logos) {
+                    //     foreach ($logos as $logo) {
+                    //         echo '<div class="swiper-slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /> </div>';
+                    //     }
+                    // }
+                    ?>
+                    <!-- </div>
+                    </div> -->
                 </div>
     </section>
     <!-- END STAT CONTAINER -->
