@@ -15090,6 +15090,7 @@ body {
   text-decoration: none;
   color: #bababa;
   font-family: blinkerregular, sans-serif;
+  transition: all 0.4s;
 }
 .header-content .header-btns .login-btn:hover {
   color: #24f4ab;
@@ -15213,10 +15214,9 @@ footer .container .social-media-menu li a:hover svg path {
   display: block;
   position: relative;
   text-align: center;
-  transition: all 0.4s;
+  transition: all 0.4s ease-out;
 }
 .btn--solid {
-  transition: all 0.4s;
   background-color: #24f4ab;
   color: #0b0f11;
   border: 1px solid #282f39;
@@ -15254,7 +15254,7 @@ footer .container .social-media-menu li a:hover svg path {
   color: #a4aabb;
   border: 1px solid #282f39;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: all 0.8s;
 }
 .btn--outline-grey-gradient::before {
   --size: 0;
@@ -15267,7 +15267,7 @@ footer .container .social-media-menu li a:hover svg path {
   filter: blur(30px);
   background: radial-gradient(circle closest-side, #24f4ab 0%, #24f4ab 20%, transparent 70%);
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.4s ease, height 0.4s ease;
 }
 .btn--outline-grey-gradient:hover::before {
   --size: 200px;

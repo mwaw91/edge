@@ -162,6 +162,7 @@ body {
       text-decoration: none;
       color: $grey;
       font-family: blinkerregular, sans-serif;
+      transition: all 0.4s;
       &:hover {
         color: $green;
       }
@@ -357,10 +358,10 @@ footer {
   position: relative;
   text-align: center;
   // border: 3px solid #1a1a1a;
-  transition: all 0.4s;
+  transition: all 0.4s ease-out;
 
   &--solid {
-    transition: all 0.4s;
+    // transition: all 0.8s;
     background-color: $green;
     color: $black-text;
     border: 1px solid $black-3;
@@ -400,7 +401,7 @@ footer {
     color: $grey-text;
     border: 1px solid $black-3;
     overflow: hidden;
-    transition: all 0.5s;
+    transition: all 0.8s;
     &::before {
       --size: 0;
       content: "";
@@ -417,7 +418,7 @@ footer {
         transparent 70%
       );
       transform: translate(-50%, -50%);
-      transition: width 0.2s ease, height 0.2s ease;
+      transition: width 0.4s ease, height 0.4s ease;
     }
     &:hover::before {
       --size: 200px;
