@@ -7044,7 +7044,7 @@
 	        if (siblingVideo.paused) {
 	          console.log('video was paused now playing');
 	          siblingVideo.play();
-	          siblingVideo.muted = !siblingVideo.muted;
+	          // siblingVideo.muted = !siblingVideo.muted;
 	          playButton.classList.add('hide');
 	          playButton.classList.remove('show');
 	        } else {
@@ -7057,7 +7057,8 @@
 	      playButton.addEventListener("mouseleave", function () {
 	        if (!siblingVideo.paused) {
 	          siblingVideo.pause();
-	          siblingVideo.muted;
+	          siblingVideo.currentTime = 0;
+	          // siblingVideo.muted;
 	          playButton.classList.remove('hide');
 	          playButton.classList.add('show');
 	        }
@@ -7076,12 +7077,13 @@
 	        if (siblingVideo.paused) {
 	          console.log('video was paused now playing');
 	          siblingVideo.play();
-	          siblingVideo.muted = !siblingVideo.muted;
+	          // siblingVideo.muted = !siblingVideo.muted;
 	          playButton.classList.add('hide');
 	          playButton.classList.remove('show');
 	        } else {
 	          console.log('video was playing now paused');
 	          siblingVideo.pause();
+	          siblingVideo.currentTime = 0;
 	          playButton.classList.remove('hide');
 	          playButton.classList.add('show');
 	        }
