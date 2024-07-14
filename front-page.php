@@ -83,7 +83,7 @@ get_header();
             <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
             <!-- VIDEO -->
             <div class="video-container radius green-shadow">
-                <button id="playButton" class="hero-play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_196_307)">
                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                         </g>
@@ -428,7 +428,10 @@ get_header();
                         <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-right' : 'up-left'; ?>">
                             <!--  START NEW VIDEO -->
                             <div class="video-container radius">
-                                <a href="<?php echo $row['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <a href="<?php // echo $row['video_link']; 
+                                                ?>" target="_blank" -->
+
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -445,7 +448,7 @@ get_header();
                                             </filter>
                                         </defs>
                                     </svg>
-                                </a>
+                                </button>
                                 <video class="feature-video">
                                     <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -476,7 +479,7 @@ get_header();
 
                             <!--  START NEW VIDEO -->
                             <div class="video-container radius">
-                                <a href="<?php echo $row['video_link']; ?>" target="_blank" id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -493,7 +496,7 @@ get_header();
                                             </filter>
                                         </defs>
                                     </svg>
-                                </a>
+                                </button>
                                 <video class="feature-video">
                                     <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -798,6 +801,23 @@ CLICK MOVE ONLY 1 SLIDE
                 $testimonial_delay = 100;
                 foreach ($testimonials as $testimonial) {
             ?>
+                    <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
+                        <div>
+                            <div class="img-container">
+                                <img loading="lazy" src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
+                            </div>
+                            <div class="details">
+                                <h3 class="text-h3"><?php echo $testimonial['name']; ?></h3>
+                                <h5 class="text-h4 blinker-semibold"><?php echo $testimonial['company']; ?></h5>
+                            </div>
+                        </div>
+                        <p class="blinker-regular p2"><?php echo $testimonial['testimonial']; ?></p>
+                    </div>
+                <?php
+                    $testimonial_delay += 100;
+                }
+                foreach ($testimonials as $testimonial) {
+                ?>
                     <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
                         <div>
                             <div class="img-container">

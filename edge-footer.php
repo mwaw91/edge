@@ -14,7 +14,7 @@ ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
 <!-- JS -->
 <!-- <script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.js'></script> -->
 <!-- <script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript.js'></script> -->
-<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript-22.js'></script>
+<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript-25.js'></script>
 
 
 

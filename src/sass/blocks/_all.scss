@@ -852,7 +852,8 @@ footer {
         width: 100%;
       }
       svg {
-        opacity: 0;
+        // opacity: 0;
+        width: 40px;
       }
     }
     div.detail {
@@ -860,7 +861,6 @@ footer {
       a {
         transition: all 0.4s ease-out;
         &:hover {
-          opacity: 0.9;
           cursor: pointer;
           span {
             color: $green;
@@ -880,6 +880,12 @@ footer {
         text-decoration: none;
         span {
           color: $grey-1;
+          transition: all 0.4s ease-out;
+          svg {
+            path {
+              transition: all 0.4s ease-out;
+            }
+          }
         }
       }
     }
