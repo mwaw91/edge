@@ -50,10 +50,10 @@ get_header();
                 $lhs_logos = get_field('lhs_logos');
                 // var_dump($lhs_logos);
                 if ($lhs_logos) {
-                    $lhs_delay = 100;
+                    $lhs_delay = 50;
                     foreach ($lhs_logos as $lhs) {
-                        echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
-                        $lhs_delay += 100;
+                        echo '<img data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
+                        $lhs_delay += 50;
                     }
                 }
                 ?>
@@ -62,10 +62,10 @@ get_header();
                 <?php
                 $rhs_logos = get_field('rhs_logos');
                 if ($rhs_logos) {
-                    $rhs_delay = 100;
+                    $rhs_delay = 50;
                     foreach ($rhs_logos as $rhs) {
-                        echo '<img data-aos="fade-down" data-aos-duration="1000" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
-                        $rhs_delay += 100;
+                        echo '<img data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
+                        $rhs_delay += 50;
                     }
                 }
                 ?>
