@@ -39,7 +39,28 @@
         <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
         <p class="p2" data-aos-delay="150" data-aos="fade-up"><?php echo $subtitle; ?></p>
 
-        <div data-aos="fade-up" data-aos-delay="200"><a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a></div>
+        <div class="hero-btn-container" data-aos="fade-up" data-aos-delay="200">
+
+            <?php
+            $rhs_logos = get_field('rhs_logos');
+            if ($rhs_logos) {
+                echo '<div class="hide-desktop">';
+                echo '<img class="" data-aos="fade-down" data-aos-duration="500" src="' . $rhs_logos[0]['logo'] . '"/>';
+                echo '</div>';
+            }
+            ?>
+
+            <a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a>
+
+            <?php
+            if ($rhs_logos) {
+                echo '<div class="hide-desktop">';
+                echo '<img class="" data-aos="fade-down" data-aos-duration="500" src="' . $rhs_logos[1]['logo'] . '"/>';
+                echo '</div>';
+            }
+            ?>
+
+        </div>
 
         <div data-aos-delay="250" class="video-section" data-aos="zoom-in">
             <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
