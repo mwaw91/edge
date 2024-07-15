@@ -15537,7 +15537,8 @@ footer .container .custom-logo-link {
   }
 }
 footer .container .social-media-menu {
-  padding: 10px 0 20px 0;
+  order: 2;
+  padding: 20px 0 30px 0;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -15549,6 +15550,7 @@ footer .container .social-media-menu {
 @media only screen and (min-width: 768px) {
   footer .container .social-media-menu {
     padding: 0 0;
+    order: 3;
   }
 }
 footer .container .social-media-menu li {
@@ -15719,14 +15721,21 @@ footer .container .social-media-menu li a:hover svg path {
 }
 #site-navigation #primary-menu,
 #site-navigation .nav-menu {
+  -moz-column-gap: 15px;
+  column-gap: 15px;
   width: -moz-min-content;
   width: min-content;
   padding: 0;
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 35px;
-  column-gap: 35px;
   margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  #site-navigation #primary-menu,
+  #site-navigation .nav-menu {
+    -moz-column-gap: 35px;
+    column-gap: 35px;
+  }
 }
 #site-navigation #primary-menu li,
 #site-navigation .nav-menu li {
