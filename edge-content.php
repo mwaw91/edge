@@ -442,7 +442,7 @@
 </div>
 
 <!-- GRADIENT -->
-<div class="bg-gradient bg-gradient--top-left hide-mobile"></div>
+<div class="bg-gradient bg-gradient--top-left"></div>
 
 <div class="container">
     <!-- PRICING -->
@@ -905,7 +905,7 @@
         <!-- END CTA -->
 
         <!-- GRADIENT -->
-        <div class="bg-gradient bg-gradient--bottom-right hide-mobile"></div>
+        <div class="bg-gradient bg-gradient--bottom-right"></div>
 
         <!-- FAQS -->
         <section id="faq">
