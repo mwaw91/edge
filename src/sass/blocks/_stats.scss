@@ -7,6 +7,7 @@
     transform: translatex(-10000%);
   }
 }
+
 #stat-container {
   // compensate for anchor link
   margin-bottom: 130px;
@@ -38,12 +39,17 @@
   // }
 
   .stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 80%;
+    }
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: 80%;
+
     margin: 0 auto;
     // gap: 120px;
     .stat {
