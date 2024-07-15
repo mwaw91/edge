@@ -62,11 +62,17 @@
   }
 }
 .header-content {
+  @media only screen and (min-width: 480px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  display: flex;
+
+  width: 100%;
   transition: all 1.2s ease-out;
   padding-top: 20px;
   padding-bottom: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
   align-items: center;
   justify-content: space-between;
 
@@ -76,13 +82,16 @@
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    .login-btn {
-      text-decoration: none;
-      color: $grey;
-      font-family: blinkerregular, sans-serif;
-      transition: all 0.4s;
-      &:hover {
-        color: $green;
+    a {
+      text-wrap: nowrap;
+      &.login-btn {
+        text-decoration: none;
+        color: $grey;
+        font-family: blinkerregular, sans-serif;
+        transition: all 0.4s;
+        &:hover {
+          color: $green;
+        }
       }
     }
   }
@@ -92,7 +101,11 @@
   position: relative;
 }
 #site-navigation {
-  display: flex;
+  @media only screen and (min-width: 480px) {
+    display: flex;
+  }
+
+  display: none;
   justify-content: center;
   align-items: center;
 

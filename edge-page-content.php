@@ -1,5 +1,5 @@
 <div class="container">
-    <section id="hero" class="space--margin--bottom">
+    <section id="hero" class="space--margin--bottom remove">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
@@ -413,7 +413,7 @@
 </div>
 
 <!-- GRADIENT -->
-<div class="bg-gradient bg-gradient--top-left"></div>
+<!-- <div class="bg-gradient bg-gradient--top-left"></div> -->
 
 <div class="container">
     <!-- PRICING -->
@@ -738,7 +738,7 @@
         <!-- END CTA -->
 
         <!-- GRADIENT -->
-        <div class="bg-gradient bg-gradient--bottom-right"></div>
+        <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
 
         <!-- FAQS -->
         <section id="faq" class="remove">

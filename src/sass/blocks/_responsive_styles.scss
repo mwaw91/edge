@@ -1,0 +1,23 @@
+.text-center {
+  text-align: center;
+}
+
+.hide-mobile {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.hide-desktop {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.container {
+  @media only screen and (max-width: 768px) {
+    width: unset !important;
+  }
+  @media only screen and (max-width: 480px) {
+    width: unset !important;
+  }
+}

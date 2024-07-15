@@ -12,7 +12,8 @@
 <footer id="colophon" class="site-footer clearfix" role="contentinfo">
 	<div class="container">
 		<div class="copyright">
-			<span>Skybox Technologies ApSHQ Copenhagen</span> <span>DenmarkBus Reg: DK-39429063</span>
+			<span class="hide-mobile">Skybox Technologies ApSHQ Copenhagen</span> <span class="hide-mobile">DenmarkBus Reg: DK-39429063</span>
+			<span class="hide-desktop text-center">Skybox Technologies ApSHQ Copenhagen DenmarkBus Reg: DK-39429063</span>
 		</div>
 		<!-- LOGO -->
 
