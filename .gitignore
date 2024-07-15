@@ -4,3 +4,9 @@ css/*
 css/child-theme.css
 css/child-theme.css.map
 css/child-theme.min.css.map
+/js/*
+js/*
+js/child-theme.js
+js/child-theme.min.js
+js/child-theme.min.js.map
+js/child-theme.js.map

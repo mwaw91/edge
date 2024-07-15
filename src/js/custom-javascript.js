@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // SWIPER
-  // import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+  // import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'; ?
 
   // SWIPER CARUSERL
   var logoCarousel = new Swiper('.logo-slider', {
