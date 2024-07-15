@@ -1,5 +1,6 @@
 node_modules
 /css/*
 css/*
+css/child-theme.css
 css/child-theme.css.map
 css/child-theme.min.css.map
