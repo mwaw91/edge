@@ -1,3 +1,11 @@
+<!-- DONE -->
+
+
+<!-- TODO -->
+<!-- GRADIENTS -->
+<!-- TYPOGRAPHY -->
+<!-- SPACING -->
+
 <div class="container">
     <section id="hero" class="space--margin--bottom">
         <?php
@@ -105,7 +113,7 @@
     <!-- END HERO -->
 
     <!-- TESTED AND USED -->
-    <section class="remove">
+    <section>
         <div id="tested">
             <h2 class="text-h1" data-aos="fade-up"><?php echo get_field('tested-title'); ?></h2>
 
@@ -118,7 +126,7 @@
                     <div class="grid-item">
                         <!--  START NEW VIDEO -->
                         <?php
-                        if (strlen($row['image']['url']) == 0) {
+                        if (strlen($row['video']) > 0) {
                         ?>
                             <div class="video-container">
                                 <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +194,7 @@
                     <div class="grid-item">
                         <!--  START NEW VIDEO -->
                         <?php
-                        if (strlen($bottomrow['image']['url']) == 0) {
+                        if (strlen($bottomrow['video']) > 0) {
                         ?>
                             <div class="video-container">
                                 <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
