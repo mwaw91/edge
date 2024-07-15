@@ -345,7 +345,7 @@
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
     <!-- ALTERNATING VIDEO COLUMNS -->
-    <section id="alternating-video-columns" class="space--margin--top remove">
+    <section id="alternating-video-columns" class="space--margin--top">
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
