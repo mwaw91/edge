@@ -42,8 +42,8 @@ $edge_settings = edge_get_theme_options(); ?>
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'edge'); ?></a>
 		<!-- Masthead ============================================= -->
 		<header id="masthead" class="site-header" role="banner">
-			<!-- DISSAPPEARING NAV -->
-			<div class='skybox-menu'>
+			<!-- DISAPPEARING NAV -->
+			<div class='skybox-menu remove'>
 				<div class="container">
 
 					<!-- LOGO -->
@@ -80,7 +80,7 @@ $edge_settings = edge_get_theme_options(); ?>
 					</ul>
 				</div>
 			</div>
-			<!-- END DISSAPPEARING NAV -->
+			<!-- END DISAPPEARING NAV -->
 
 			<?php if (function_exists('the_custom_header_markup')) {
 				if (is_header_video_active() && (has_header_video() || is_customize_preview())) {

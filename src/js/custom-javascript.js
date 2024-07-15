@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // GSAP
   gsap.registerPlugin(ScrollTrigger);
 
-  // DISSAPPEARING NAV
+  // DISAPPEARING NAV
   ScrollTrigger.create({
     //   start: 'top -80',
     start: 'top -1px',

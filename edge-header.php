@@ -42,7 +42,7 @@
 
         <header id="masthead" class="site-header" role="banner">
             <!-- STICKY NAV -->
-            <!-- DISSAPPEARING NAV -->
+            <!-- DISAPPEARING NAV -->
             <div class='skybox-menu'>
                 <div class="container">
 
@@ -80,7 +80,7 @@
                     </ul>
                 </div>
             </div>
-            <!-- END DISSAPPEARING NAV -->
+            <!-- END DISAPPEARING NAV -->
 
             <div id="header" class="header">
 
