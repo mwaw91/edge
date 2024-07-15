@@ -256,7 +256,7 @@
     <!-- END TESTED AND USED -->
 
     <!-- STAT CONTAINER -->
-    <section id="stat-container" class="remove radius space--margin--top" data-aos="fade-up">
+    <section id="stat-container" class="radius space--margin--top" data-aos="fade-up">
         <div class="stats">
             <?php
             $stats = get_field('statistics');
