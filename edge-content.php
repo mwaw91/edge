@@ -22,7 +22,7 @@
                 if ($lhs_logos) {
                     $lhs_delay = 50;
                     foreach ($lhs_logos as $lhs) {
-                        echo '<img data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $lhs_delay . '" src="' . $lhs['logo'] . '"/>';
+                        echo '<div class="lhs-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $lhs_delay . '"><img src="' . $lhs['logo'] . '"/></div>';
                         $lhs_delay += 50;
                     }
                 }
@@ -34,7 +34,7 @@
                 if ($rhs_logos) {
                     $rhs_delay = 50;
                     foreach ($rhs_logos as $rhs) {
-                        echo '<img data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $rhs_delay . '" src="' . $rhs['logo'] . '"/>';
+                        echo '<div class="rhs-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $rhs_delay . '"><img src="' . $rhs['logo'] . '"/></div>';
                         $rhs_delay += 50;
                     }
                 }
@@ -278,10 +278,10 @@
                     $logos = get_field('logos');
                     if ($logos) {
                         foreach ($logos as $logo) {
-                            echo '<img class="slide" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
+                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
                         }
                         foreach ($logos as $logo) {
-                            echo '<img class="slide" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" />';
+                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
                         }
                     }
                     ?>

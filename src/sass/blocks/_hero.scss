@@ -80,7 +80,8 @@
         margin-bottom: 30px;
       }
 
-      img {
+      // img {
+      .lhs-img-container {
         position: relative;
         &:nth-child(1) {
           top: 10px;
@@ -130,7 +131,9 @@
       }
       display: none;
 
-      img {
+      // img {
+      .rhs-img-container {
+        position: relative;
         &:nth-child(1) {
           top: 30px;
         }
