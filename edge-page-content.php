@@ -290,7 +290,7 @@
     <!-- END STAT CONTAINER -->
 
     <!-- IMPROVE YOUR GAMEPLAY -->
-    <section id="improve-your-gameplay" class="remove">
+    <section id="improve-your-gameplay">
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('title_section')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('title_section')['title']; ?></h2>
@@ -313,11 +313,11 @@
                 $tab_title = str_replace(' ', '_', $tab_title);
                 $tab_title = preg_replace('/[^a-z0-9_]/', '', $tab_title);
 
-                echo '<button data-aos="fade-up" data-aos-delay="' . $tab_btn_delay . '" class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
+                echo '<div class="tab-btn-container"><button data-aos="fade-up" data-aos-delay="' . $tab_btn_delay . '" class="' . $tab_title . ' image-toggle btn btn--outline-grey-gradient';
                 if ($k == 0) {
                     echo ' active';
                 }
-                echo '">' . $tab['title'] . '</button>';
+                echo '">' . $tab['title'] . '</button></div>';
                 $k++;
                 $tab_btn_delay += 100;
             }
