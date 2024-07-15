@@ -62,7 +62,7 @@
   }
 }
 .header-content {
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -101,7 +101,7 @@
   position: relative;
 }
 #site-navigation {
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 768px) {
     display: flex;
   }
 

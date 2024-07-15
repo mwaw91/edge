@@ -1,8 +1,7 @@
 <!-- DONE -->
-
+<!-- GRADIENTS -->
 
 <!-- TODO -->
-<!-- GRADIENTS -->
 <!-- TYPOGRAPHY -->
 <!-- SPACING -->
 
