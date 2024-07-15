@@ -1,22 +1,8 @@
-<!-- 
- FOOTER
-INTERACTION
- 
-HOVER GREEN
-ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
- -->
-
-
-
 <!-- SWIPER -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- JS -->
-<!-- <script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme.js'></script> -->
-<!-- <script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript.js'></script> -->
-<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript-25.js'></script>
-
-
+<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript-32.js'></script>
 
 <!-- Footer Start ============================================= -->
 <footer id="colophon" class="site-footer clearfix" role="contentinfo">
@@ -25,13 +11,10 @@ ON CLICK, STAY GREEN FOR A SEOND THEN REDIRECT
             <span>Skybox Technologies ApSHQ Copenhagen</span> <span>DenmarkBus Reg: DK-39429063</span>
         </div>
         <!-- LOGO -->
-
-
         <a href="/" class="custom-logo-link">
             <?php echo '<img src="' . get_field('edge_logo')['url'] . '" class="custom-logo">'; ?>
         </a>
 
-        <!-- TODO - SVG -->
         <ul class="social-media-menu">
             <li>
                 <a class="sm-icon sm-x" href="<?php echo get_field('x'); ?>" target="_blank">

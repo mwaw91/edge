@@ -84,7 +84,7 @@
     <!-- END HERO -->
 
     <!-- TESTED AND USED -->
-    <section>
+    <section class="remove">
         <div id="tested">
             <h2 class="text-h1" data-aos="fade-up"><?php echo get_field('tested-title'); ?></h2>
 
@@ -227,7 +227,7 @@
     <!-- END TESTED AND USED -->
 
     <!-- STAT CONTAINER -->
-    <section id="stat-container" class="radius space--margin--top" data-aos="fade-up">
+    <section id="stat-container" class="remove radius space--margin--top" data-aos="fade-up">
         <div class="stats">
             <?php
             $stats = get_field('statistics');
@@ -261,7 +261,7 @@
     <!-- END STAT CONTAINER -->
 
     <!-- IMPROVE YOUR GAMEPLAY -->
-    <section id="improve-your-gameplay">
+    <section id="improve-your-gameplay" class="remove">
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('title_section')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('title_section')['title']; ?></h2>
@@ -316,7 +316,7 @@
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
     <!-- ALTERNATING VIDEO COLUMNS -->
-    <section id="alternating-video-columns" class="space--margin--top">
+    <section id="alternating-video-columns" class="space--margin--top remove">
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
@@ -417,7 +417,7 @@
 
 <div class="container">
     <!-- PRICING -->
-    <section id="pricing">
+    <section id="pricing" class="remove">
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('pricing_title')['title']; ?></h2>
@@ -483,7 +483,7 @@
     </section>
 
     <!-- PRICING TABLE -->
-    <section id="pricing-table" data-aos="fade-up">
+    <section id="pricing-table" data-aos="fade-up" class="remove">
         <div class="pricing_table" role="region" tabindex="0">
             <table>
                 <thead>
@@ -658,7 +658,7 @@
     <!-- TESTIMONIALS -->
 </div>
 </div>
-<section id="testimonials" class="space--margin--top space--margin--bottom">
+<section id="testimonials" class="space--margin--top space--margin--bottom remove">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1"><?php echo get_field('testimonials_title')['title']; ?></h2>
@@ -723,7 +723,7 @@
 <div class="container clearfix">
     <div class="container">
         <!-- CTA -->
-        <section id="cta">
+        <section id="cta" class="remove">
             <div class="cta radius" data-aos="fade-up">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
@@ -741,7 +741,7 @@
         <div class="bg-gradient bg-gradient--bottom-right"></div>
 
         <!-- FAQS -->
-        <section id="faq">
+        <section id="faq" class="remove">
             <div data-aos="fade-up" class="title-section">
                 <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
                 <h2 class="text-h1"><?php echo get_field('faqs_title')['title'];
