@@ -30,7 +30,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-35.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-36.css">
 
 </head>
 
