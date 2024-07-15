@@ -442,11 +442,11 @@
 </div>
 
 <!-- GRADIENT -->
-<!-- <div class="bg-gradient bg-gradient--top-left"></div> -->
+<div class="bg-gradient bg-gradient--top-left hide-mobile"></div>
 
 <div class="container">
     <!-- PRICING -->
-    <section id="pricing" class="remove">
+    <section id="pricing">
         <div data-aos="fade-up" class="title-section">
             <h6 class="text-h6"><?php echo get_field('pricing_title')['small_text']; ?></h6>
             <h2 class="text-h1"><?php echo get_field('pricing_title')['title']; ?></h2>
@@ -687,12 +687,13 @@
     <!-- TESTIMONIALS -->
 </div>
 </div>
-<section id="testimonials" class="space--margin--top space--margin--bottom remove">
+<section id="testimonials" class="space--margin--top space--margin--bottom">
     <div data-aos="fade-up" class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1"><?php echo get_field('testimonials_title')['title']; ?></h2>
         <p class="p2"><?php echo get_field('testimonials_title')['description']; ?></p>
     </div>
+
     <!-- SWIPER -->
     <div class="container swiper-buttons-container" data-aos="fade-up">
         <div class="swiper-buttons">
@@ -746,13 +747,14 @@
             ?>
         </div>
     </div>
+
 </section>
 <!-- END TESTIMONIALS -->
 
 <div class="container clearfix">
     <div class="container">
         <!-- CTA -->
-        <section id="cta" class="remove">
+        <section id="cta" class="hide-mobile">
             <div class="cta radius" data-aos="fade-up">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
@@ -767,10 +769,10 @@
         <!-- END CTA -->
 
         <!-- GRADIENT -->
-        <!-- <div class="bg-gradient bg-gradient--bottom-right"></div> -->
+        <div class="bg-gradient bg-gradient--bottom-right hide-mobile"></div>
 
         <!-- FAQS -->
-        <section id="faq" class="remove">
+        <section id="faq">
             <div data-aos="fade-up" class="title-section">
                 <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
                 <h2 class="text-h1"><?php echo get_field('faqs_title')['title'];

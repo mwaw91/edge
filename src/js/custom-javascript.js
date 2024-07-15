@@ -79,19 +79,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // TESTIMONIALS
   const testimonials = new Swiper('.testimonials', {
-    slidesPerView: 3.6,
-    slidesPerColumn: 2,
-    slidesPerGroup: 3,
-    spaceBetween: 30,
+    // slidesPerView: 3.6,
+    // slidesPerColumn: 2,
+    // slidesPerGroup: 3,
+    // spaceBetween: 30,
+    // speed: 1500,
+    // grid: {
+    //   rows: 2, // your amount of slides
+    //   fill: "row",
+    // },
+    spaceBetween: 20,
+    slidesPerView: 1.2,
     speed: 1500,
-    grid: {
-      rows: 2, // your amount of slides
-      fill: "row",
-    },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+    // BREAKPOINTS
+    breakpoints: {
+      // >=
+      // 320: {
+      //   slidesPerColumn: 1,
+      //   slidesPerGroup: 1,
+      //   slidesPerView: 1,
+      //   spaceBetween: 20
+      // },
+
+      639: {
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        grid: {
+          rows: 1, // your amount of slides
+          fill: "row",
+        },
+      },
+      640: {
+        slidesPerColumn: 2,
+        slidesPerGroup: 3,
+        slidesPerView: 4,
+        spaceBetween: 40,
+        grid: {
+          rows: 2, // your amount of slides
+          fill: "row",
+        },
+      },
+      1024: {
+        slidesPerView: 3.6,
+        slidesPerColumn: 2,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+        grid: {
+          rows: 2, // your amount of slides
+          fill: "row",
+        },
+      }
+    }
+    // END BREAKPOINTS
   });
 
   // AOS
