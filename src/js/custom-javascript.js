@@ -17,48 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: true,
     },
     breakpoints: {
-      0: { /* when window >=0px - webflow mobile landscape/portriat */
+      0: {
         spaceBetween: 30,
       },
-      480: { /* when window >=0px - webflow mobile landscape/portriat */
+      480: {
         spaceBetween: 30,
       },
-      767: { /* when window >= 767px - webflow tablet */
+      767: {
         spaceBetween: 40,
       },
-      992: { /* when window >= 988px - webflow desktop */
+      992: {
         spaceBetween: 40,
       }
     },
   });
-  // end SWIPER CARoUSERL
-  // LOGO CAROUSEL
-  // var logoCarousel = new Swiper(".logo-carousel", {
-  //   slidesPerView: "auto",
-  //   grabCursor: true,
-  //   speed: 5000,
-  //   spaceBetween: 30,
-  //   freeMode: true,
-  //   loop: true,
-  //   centeredSlides: true,
-  //   autoplay: {
-  //     delay: 0,
-  //     disableOnInteraction: true
-  //   }
-  // });
-  // test slider
-  // function testSlider() {
-  //   const root = document.documentElement;
-  //   const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-  //   const marqueeContent = document.querySelector("ul.marquee-content");
+  // END SWIPER CAROUSERL
 
-  //   root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-  //   for (let i = 0; i < marqueeElementsDisplayed; i++) {
-  //     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-  //   }
-  // }
-  // testSlider()
 
   // STICKY NAV
   // function stickyNav() {
@@ -75,18 +49,41 @@ document.addEventListener("DOMContentLoaded", () => {
   //   let prevScrollPos = window.pageYOffset;
   // }
 
+  // function stickyNav() {
+  //   let lastScrollTop = 0;
+
+  //   window.addEventListener('scroll', function () {
+  //     let header = document.getElementById('header');
+  //     let scrollTop = window.scrollY || document.documentElement.scrollTop;
+  //     // console.log(scrollTop)
+  //     if (scrollTop >= lastScrollTop) {
+  //       // Scrolling down
+  //       header.classList.remove('sticky');
+  //     } else {
+  //       // Scrolling up
+  //       header.classList.add('sticky');
+  //     }
+
+  //     // HAS BG IF MORE THAN INITIAL POSITION
+  //     if (scrollTop > 102) {
+  //       header.classList.add('has-bg');
+  //     } else {
+  //       header.classList.remove('has-bg');
+  //     }
+
+  //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  //   }, false);
+  // }
+  // stickyNav();
 
 
   // TESTIMONIALS
   const testimonials = new Swiper('.testimonials', {
-    // slidesPerView: 3.2,
     slidesPerView: 3.6,
     slidesPerColumn: 2,
     slidesPerGroup: 3,
     spaceBetween: 30,
     speed: 1500,
-    // slidesOffsetBefore: 30,
-    // slidesOffsetBefore: 62,
     grid: {
       rows: 2, // your amount of slides
       fill: "row",
@@ -99,26 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // AOS
   AOS.init({
-    // Global settings:
     // disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    // startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-    // initClassName: 'aos-init', // class applied after initialization
-    // animatedClassName: 'aos-animate', // class applied on animation
-    // useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-    // disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    // debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    // throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-    // // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     // offset: 120, // offset (in px) from the original trigger point
     // delay: 0, // values from 0 to 3000, with step 50ms
     duration: 600, // values from 0 to 3000, with step 50ms
     easing: 'ease-out', // default easing for AOS animations
-    // once: false, // whether animation should happen only once - while scrolling down
-    // mirror: false, // whether elements should animate out while scrolling past them
-    // anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
   });
 
   // GSAP
@@ -151,18 +133,19 @@ document.addEventListener("DOMContentLoaded", () => {
   backtoTop();
 
   // FOLLOW GRADIENT
-  function statGradient() {
-    var gradient = document.querySelector('.stat-gradient');
-    var statConstainer = document.getElementById('stat-container');
-    // statConstainer.addEventListener('mousemove', function (e) {
-    document.addEventListener('mousemove', function (e) {
-      var x = e.clientX;
-      var y = e.clientY;
-      gradient.style.transform = `translate3d(calc(${e.clientX}px), calc(${e.clientY}px), 0)`
-    });
-  }
+  // function statGradient() {
+  //   var gradient = document.querySelector('.stat-gradient');
+  //   var statConstainer = document.getElementById('stat-container');
+  //   // statConstainer.addEventListener('mousemove', function (e) {
+  //   document.addEventListener('mousemove', function (e) {
+  //     var x = e.clientX;
+  //     var y = e.clientY;
+  //     gradient.style.transform = `translate3d(calc(${e.clientX}px), calc(${e.clientY}px), 0)`
+  //   });
+  // }
   // statGradient();
 
+  // BTN HOVER GRADIENT
   function btnHoverGradient() {
 
     let btns = document.querySelectorAll('.btn--outline-grey-gradient');
@@ -178,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   btnHoverGradient();
 
+  // IMAGE TABS
   function openImageTab() {
     const buttons = document.querySelectorAll('.image-toggle');
     const images = document.querySelectorAll('.tab-image');
@@ -321,51 +305,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   monthlyAnnually();
 
-
   // ASSIST OR INIT VIDEOS
-  function clickBody() {
-    let h1 = document.querySelector('h1');
-    document.body.click();
-    h1.click();
-    console.log('window.onload = clickBody;');
-  }
-  clickBody();
+  // function clickBody() {
+  //   let h1 = document.querySelector('h1');
+  //   document.body.click();
+  //   h1.click();
+  //   console.log('window.onload = clickBody;');
+  // }
+  // clickBody();
 
 
   // CUSTOM PLAY BUTTON FOR VIDEOS
-  function customPlayButton() {
+  // function customPlayButton() {
 
-    const playButtons = document.querySelectorAll(".play-button");
+  //   const playButtons = document.querySelectorAll(".play-button");
 
-    playButtons.forEach(playButton => {
+  //   playButtons.forEach(playButton => {
 
-      const parentDiv = playButton.closest('.video-container');
-      const siblingVideo = parentDiv.querySelector('.feature-video');
-      playButton.addEventListener("mouseenter", function () {
-        if (siblingVideo.paused) {
-          console.log('video was paused now playing');
-          siblingVideo.play();
-          // siblingVideo.muted = !siblingVideo.muted;
-          playButton.classList.add('hide');
-          playButton.classList.remove('show');
-        } else {
-          console.log('video was playing now paused');
-          siblingVideo.pause();
-          playButton.classList.remove('hide')
-          playButton.classList.add('show')
-        }
-      });
-      playButton.addEventListener("mouseleave", function () {
-        if (!siblingVideo.paused) {
-          siblingVideo.pause();
-          siblingVideo.currentTime = 0;
-          // siblingVideo.muted;
-          playButton.classList.remove('hide')
-          playButton.classList.add('show')
-        }
-      });
-    })
-  }
+  //     const parentDiv = playButton.closest('.video-container');
+  //     const siblingVideo = parentDiv.querySelector('.feature-video');
+  //     playButton.addEventListener("mouseenter", function () {
+  //       if (siblingVideo.paused) {
+  //         console.log('video was paused now playing');
+  //         siblingVideo.play();
+  //         // siblingVideo.muted = !siblingVideo.muted;
+  //         playButton.classList.add('hide');
+  //         playButton.classList.remove('show');
+  //       } else {
+  //         console.log('video was playing now paused');
+  //         siblingVideo.pause();
+  //         playButton.classList.remove('hide')
+  //         playButton.classList.add('show')
+  //       }
+  //     });
+  //     playButton.addEventListener("mouseleave", function () {
+  //       if (!siblingVideo.paused) {
+  //         siblingVideo.pause();
+  //         siblingVideo.currentTime = 0;
+  //         // siblingVideo.muted;
+  //         playButton.classList.remove('hide')
+  //         playButton.classList.add('show')
+  //       }
+  //     });
+  //   })
+  // }
   // customPlayButton();
 
   // HERO
@@ -396,36 +379,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   HeroCustomPlayButton();
-
-  // STICKY NAV
-  // function stickyNav() {
-  //   let lastScrollTop = 0;
-
-  //   window.addEventListener('scroll', function () {
-  //     let header = document.getElementById('header');
-  //     let scrollTop = window.scrollY || document.documentElement.scrollTop;
-  //     // console.log(scrollTop)
-  //     if (scrollTop >= lastScrollTop) {
-  //       // Scrolling down
-  //       header.classList.remove('sticky');
-  //     } else {
-  //       // Scrolling up
-  //       header.classList.add('sticky');
-  //     }
-
-  //     // HAS BG IF MORE THAN INITIAL POSITION
-  //     if (scrollTop > 102) {
-  //       header.classList.add('has-bg');
-  //     } else {
-  //       header.classList.remove('has-bg');
-  //     }
-
-  //     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-  //   }, false);
-  // }
-  // stickyNav();
-
-
 
 });
 

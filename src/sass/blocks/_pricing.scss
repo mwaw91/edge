@@ -1,7 +1,6 @@
 // PRICING
 #pricing {
   padding-top: 30px;
-  // margin-top: -55px;
   margin-bottom: 120px;
   .team-toggle-container {
     background-color: $black-3;
@@ -117,8 +116,6 @@
   }
 }
 
-// PERIOD TOGGLE CONTAINER YEARLY
-
 // CUSTOM SWITCH
 .custom-toggle-switch-container {
   color: white;
@@ -139,10 +136,8 @@
     height: 16px;
     background-color: #3d4653;
     display: flex;
-    // justify-content: flex-start;
     transition: all 0.1s ease-in-out;
     &.active {
-      // justify-content: flex-end;
       background-color: $green;
       .slider {
         position: relative;
@@ -237,7 +232,7 @@
       padding-top: 20px;
     }
   }
-  // features
+  // FEATURES
   td {
     div {
       // ROW TITLE

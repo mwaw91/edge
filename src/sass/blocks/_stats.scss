@@ -10,12 +10,9 @@
 #stat-container {
   // compensate for anchor link
   margin-bottom: 130px;
-
-  // background: radial-gradient(ellipse at 50% 167%, #262c33 0%, #111619 70%);
   background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 60px;
   padding-bottom: 60px;
-  // margin: 160px auto 120px auto;
   border: 1px solid $black-3;
   gap: 60px;
   overflow: hidden !important;
@@ -43,13 +40,12 @@
   .stats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    // flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
-    // gap: 120px;
     max-width: 80%;
     margin: 0 auto;
+    // gap: 120px;
     .stat {
       margin: 0 auto;
       max-width: max-content;
@@ -75,24 +71,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    // .swiper-slide {
-    //   text-align: center;
-    //   // font-size: 18px;
-    //   // background: #fff;
-    //   /* Center slide text vertically */
-    //   display: -webkit-box;
-    //   display: -ms-flexbox;
-    //   display: -webkit-flex;
-    //   display: flex;
-    //   -webkit-box-pack: center;
-    //   -ms-flex-pack: center;
-    //   -webkit-justify-content: center;
-    //   justify-content: center;
-    //   -webkit-box-align: center;
-    //   -ms-flex-align: center;
-    //   -webkit-align-items: center;
-    //   align-items: center;
-    // }
     .logo-carousel {
       .slide {
         max-width: 50px;
