@@ -1,5 +1,5 @@
 <div class="container">
-    <section id="hero" class="space--margin--bottom remove">
+    <section id="hero" class="space--margin--bottom">
         <?php
         $title = get_field('title');
         $subtitle = get_field('subtitle');
