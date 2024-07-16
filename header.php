@@ -82,6 +82,11 @@ $edge_settings = edge_get_theme_options(); ?>
 
 					<!-- NAV -->
 					<div class="nav-toggle-item">
+						<!-- SPACER -->
+						<div>
+						</div>
+						<!-- SPACER -->
+
 						<ul>
 							<li><a href="https://skybox.gg/performance/">Performance</a></li>
 							<li><a href="https://skybox.gg/broadcast/">Broadcast</a></li>
@@ -93,7 +98,7 @@ $edge_settings = edge_get_theme_options(); ?>
 
 						<!-- SOCIAL NAV -->
 						<div class="social-nav hide-desktop">
-							<h6>Follow us!</h6>
+							<h6 class="text-h6">Follow us!</h6>
 							<ul class="social-media-menu">
 								<li>
 									<a class="sm-icon sm-x" href="<?php echo get_field('x'); ?>" target="_blank">

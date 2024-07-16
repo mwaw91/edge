@@ -3,9 +3,12 @@
 .nav-opened {
   .skybox-menu {
     height: 100vh;
-    .nav-toggle-item {
-      @media only screen and (max-width: 768px) {
-        max-height: 100%;
+    .container {
+      // height: 100%;
+      .nav-toggle-item {
+        @media only screen and (max-width: 768px) {
+          max-height: 100%;
+        }
       }
     }
   }
@@ -39,6 +42,8 @@
   transition: ease 0.4s;
 
   .container {
+    height: 100%;
+    transition: all 0.4s ease-out;
     @media only screen and (min-width: 768px) {
       flex-direction: row;
       justify-content: space-between;
@@ -112,7 +117,7 @@
       }
     }
     .nav-toggle-item {
-      transition: all 0.4s ease-out;
+      // transition: all 0.4s ease-out;
 
       @media only screen and (max-width: 768px) {
         height: 100%;
@@ -149,6 +154,12 @@
             }
 
             &.nav-btn {
+              min-width: 123px;
+              @media only screen and (min-width: 768px) {
+                margin-top: 0;
+              }
+              margin-top: 15px;
+
               border-radius: 9999px;
               padding: 13px 26px;
               background-color: #7075d6;
@@ -165,16 +176,18 @@
     }
     .social-nav {
       h6 {
-        font-size: 16px;
-        line-height: 20px;
+        margin-bottom: 0;
+        // font-size: 16px;
+        // line-height: 20px;
         // font-family: "signsbold", sans-serif;
-        font-family: "blinkerregular", sans-serif;
+        font-family: "blinkersemibold", sans-serif;
         color: black;
         text-transform: uppercase;
         text-align: center;
       }
       .social-media-menu {
-        padding: 20px 0 30px 0;
+        padding-bottom: 30px;
+        padding-top: 13px;
         margin: 0;
         display: flex;
         flex-direction: row;
@@ -187,7 +200,9 @@
           padding: 0;
           list-style: none;
           a {
+            padding: 0;
             svg {
+              width: 18px;
               path {
                 fill: black;
                 transition: all 0.4s;
