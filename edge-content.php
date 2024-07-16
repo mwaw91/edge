@@ -470,37 +470,44 @@
                 $tier_loop_count = 1;
                 foreach ($tiers as $tier) {
             ?>
-                    <div class="tier radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $tier_delay . '"'; ?>>
-                        <div>
-                            <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
-                            <p class="p2 price team month"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
-                            <p class="p2 price team year"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
-                            <p class="p2 price individual month"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
-                            <p class="p2 price individual year"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
-                            <div class="custom-toggle-switch-container">
-                                <div class="custom-toggle-switch">
-                                    <div class="slider">
+                    <div>
+                        <div class="tier radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $tier_delay . '"'; ?>>
+                            <div>
+                                <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
+                                <p class="p2 price team month"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
+                                <p class="p2 price team year"><span class="blinker-semibold text-h3">€<?php echo $tier['team_price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
+                                <p class="p2 price individual month"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
+                                <p class="p2 price individual year"><span class="blinker-semibold text-h3">€<?php echo $tier['individual_price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
+                                <div class="custom-toggle-switch-container">
+                                    <div class="custom-toggle-switch">
+                                        <div class="slider">
+                                        </div>
                                     </div>
+                                    <span class="blinker-semibold p2">BILLED YEARLY</span>
                                 </div>
-                                <span class="blinker-semibold p2">BILLED YEARLY</span>
-                            </div>
-                            <ul>
-                                <?php
-                                foreach ($tier['package_includes'] as $item) {
-                                    echo '<li class="p2 blinker-regular">
+                                <ul>
+                                    <?php
+                                    foreach ($tier['package_includes'] as $item) {
+                                        echo '<li class="p2 blinker-regular">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 4.62305L6.75 12.873L3 9.12305" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 ' . $item['item'] . '</li>';
-                                } ?>
-                            </ul>
+                                    } ?>
+                                </ul>
+                            </div>
+                            <div class="tier-btn-container">
+                                <a href="<?php echo $tier['link']['url']; ?>" class="btn btn--solid-grey"><?php echo $tier['link']['title']; ?>
+                                </a><?php if ($tier_loop_count == 3) {
+                                        echo '<p>or <a href="/contact">contact sales</a></p>';
+                                    } ?>
+                            </div>
                         </div>
-                        <div class="tier-btn-container">
-                            <a href="<?php echo $tier['link']['url']; ?>" class="btn btn--solid-grey"><?php echo $tier['link']['title']; ?>
-                            </a><?php if ($tier_loop_count == 3) {
-                                    echo '<p>or <a href="/contact">contact sales</a></p>';
-                                } ?>
-                        </div>
+                        <!-- ALL TIERS BTN -->
+                        <p class="all-features p2 hide-desktop">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </p>
                     </div>
             <?php
                     $tier_delay += 250;
@@ -510,319 +517,21 @@
             ?>
         </div>
         <!-- TODO -->
-        <!-- <p class="all-features p2">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <p class="all-features p2 hide-mobile">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-        </p> -->
+        </p>
     </section>
 
-    <!-- PRICING TABLE -->
-    <section id="pricing-table" data-aos="fade-up" class="hide-mobile">
-        <div class="pricing_table" role="region" tabindex="0">
-            <table>
-                <thead>
-                    <tr class="tier-titles">
-                        <th></th>
-                        <th>
-                            <div><span class="tier"> Tier 3</span></div>
-                        </th>
-                        <th>
-                            <div><span class="tier"> Tier 2</span></div>
-                        </th>
-                        <th>
-                            <div><span class="tier"> Tier 2</span></div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td>
-                        <td><a class="btn btn--solid-white" href="#">Sign Up</a></td>
-                        <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td>
-                    </tr>
-                    <!-- SECTION -->
-                    <tr class="row-title">
-                        <td>
-                            <div class="category"><span>Stats & Demos</span></div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Player Stats<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Core<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Core<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Pro Level Stats & Filters<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Team Stats<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Core<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Core<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Pro Level Stats & Filters<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Leaderboards<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Core<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Advanced<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Pro Level Leaderboards<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Public Demos & POV Demos<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited + Full Support<span></div>
-                        </td>
-                    </tr>
-                    <!-- END SECTION -->
-                    <!-- SECTION -->
-                    <tr class="row-title">
-                        <td>
-                            <div class="category"><span>Advanced Features</span></div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">2D Replayer<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Core<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Advanced<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Full Access<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Pattern Finder<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Full Access<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Playbook & Match Prep<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Full Team Onboarding<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Veto Simulation<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">24/7 Support<span></div>
-                        </td>
-                    </tr>
-                    <!-- END SECTION -->
-                    <!-- SECTION -->
-                    <tr class="row-title">
-                        <td>
-                            <div class="category"><span>Other</span></div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Access to Filters Across Platform<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Very Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Full Access<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Early Access to New Features (beta)<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">None<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">None<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Full Access<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Onboarding<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Full Team Onboarding<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Customer Support<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Limited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">24/7 Support<span></div>
-                        </td>
-                    </tr>
-                    <!-- END SECTION -->
-                    <!-- SECTION -->
-                    <!-- <tr class="row-title">
-                        <td>
-                            <div class="category"><span>Category</span></div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Feature<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Feature<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Feature<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div><span class="feature">Feature<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                        <td>
-                            <div><span class="tick">Unlimited<span></div>
-                        </td>
-                    </tr> -->
-                    <!-- END SECTION -->
-                    <tr>
-                        <td class="bottom">
-                            <div class="no-border"></div>
-                        </td>
-                        <td class="bottom">
-                            <div class="no-border"></div>
-                        </td>
-                        <td class="bottom">
-                            <div class="no-border"></div>
-                        </td>
-                        <td class="bottom">
-                            <div class="no-border"></div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    <!-- DESKTOP PRICING TABLE -->
+    <?php include 'pricing-table-desktop.php';
+    ?>
+    <?php //include 'pricing-table-tier-1.php'; 
+    ?>
+    <?php // include 'pricing-table-tier-2.php'; 
+    ?>
+    <?php // include 'pricing-table-tier-3.php'; 
+    ?>
     <!-- END PRICING -->
 
     <!-- TESTIMONIALS -->
