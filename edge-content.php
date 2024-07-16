@@ -838,16 +838,15 @@
         </div>
     </div>
 
-    <div class="swiper testimonials">
+    <div class="swiper testimonials" data-aos="flip-down">
         <div class="testimonials-gradient"></div>
         <div class="swiper-wrapper">
             <?php
             $testimonials = get_field('testimonials');
             if ($testimonials) {
-                $testimonial_delay = 100;
                 foreach ($testimonials as $testimonial) {
             ?>
-                    <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
+                    <div class="swiper-slide testimonial radius">
                         <div>
                             <div class="img-container">
                                 <img loading="lazy" src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
@@ -860,11 +859,10 @@
                         <p class="blinker-regular p2"><?php echo $testimonial['testimonial']; ?></p>
                     </div>
                 <?php
-                    $testimonial_delay += 100;
                 }
                 foreach ($testimonials as $testimonial) {
                 ?>
-                    <div class="swiper-slide testimonial radius" data-aos="flip-up" <?php echo 'data-aos-delay="' . $testimonial_delay . '"'; ?>>
+                    <div class="swiper-slide testimonial radius">
                         <div>
                             <div class="img-container">
                                 <img loading="lazy" src="<?php echo $testimonial['company_logo']['url']; ?>" alt="<?php echo $testimonial['company_logo']['alt']; ?>">
@@ -877,7 +875,6 @@
                         <p class="blinker-regular p2"><?php echo $testimonial['testimonial']; ?></p>
                     </div>
             <?php
-                    $testimonial_delay += 100;
                 }
             }
             ?>
