@@ -427,5 +427,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   HeroCustomPlayButton();
 
+  function hamburgerNav() {
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', () => {
+      console.log('I CLICK!');
+      hamburger.classList.toggle('active')
+      document.body.classList.toggle('nav-opened');
+    })
+  }
+  hamburgerNav()
+
+
 });
 
