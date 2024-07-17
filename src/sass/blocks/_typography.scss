@@ -122,12 +122,16 @@ h6,
 }
 .text-h2 {
   @media only screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 46px;
   }
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 32px;
+  line-height: 40px;
 }
 .text-h3 {
   @media only screen and (min-width: 768px) {
+    font-size: 21px;
+    line-height: 27px;
   }
   font-size: 24px;
   line-height: 30px;
