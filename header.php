@@ -71,7 +71,7 @@ $edge_settings = edge_get_theme_options(); ?>
 							</svg>
 						</div>
 						<!-- HAMBURGER -->
-						<div class="hamburger-container hide-desktop">
+						<div class="hamburger-container">
 							<div class="hamburger">
 								<span></span>
 								<span></span>
@@ -97,7 +97,7 @@ $edge_settings = edge_get_theme_options(); ?>
 						</ul>
 
 						<!-- SOCIAL NAV -->
-						<div class="social-nav hide-desktop">
+						<div class="social-nav">
 							<h6 class="text-h6">Follow us!</h6>
 							<ul class="social-media-menu">
 								<li>
@@ -194,7 +194,7 @@ $edge_settings = edge_get_theme_options(); ?>
 			<!-- <div id="sticky_header"> -->
 			<div id="">
 
-				<div class="header-content container clearfix">
+				<div class="header-content container">
 					<!-- LOGO  -->
 					<?php do_action('edge_site_branding'); ?>
 

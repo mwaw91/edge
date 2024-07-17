@@ -1,9 +1,9 @@
 <!-- DONE -->
 <!-- PLAY BTN SIZING -->
+<!-- SPACING -->
 
 <!-- TODO -->
 <!-- TYPOGRAPHY -->
-<!-- SPACING -->
 <!-- MOBILE SLIDER SPACING -->
 <!-- META INFORMATION -->
 
@@ -285,9 +285,9 @@
                         foreach ($logos as $logo) {
                             echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
                         }
-                        foreach ($logos as $logo) {
-                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
-                        }
+                        // foreach ($logos as $logo) {
+                        //     echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                        // }
                     }
                     ?>
                 </div>

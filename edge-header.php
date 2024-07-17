@@ -43,7 +43,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-46.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-48.css">
 
 </head>
 
@@ -86,7 +86,7 @@
                             </svg>
                         </div>
                         <!-- HAMBURGER -->
-                        <div class="hamburger-container hide-desktop">
+                        <div class="hamburger-container">
                             <div class="hamburger">
                                 <span></span>
                                 <span></span>
