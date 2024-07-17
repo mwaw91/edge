@@ -13,15 +13,22 @@
       margin: 0 auto;
       background-color: $black-1;
       border: 1px solid $black-3;
-      padding: 5px 30px 25px 30px;
+      padding: 5px 10px 25px 12px;
       @media only screen and (min-width: 768px) {
         padding: 5px 10px 25px 10px;
       }
     }
-
     .faq-question {
       padding-top: 20px;
-
+      &:nth-child(1) {
+        @media only screen and (min-width: 768px) {
+          padding-top: 20px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        padding-top: 10px;
+        padding-left: 20px;
+      }
       .panel-title {
         width: 100%;
         position: relative;
@@ -35,7 +42,11 @@
       .panel:checked ~ .panel-content {
         max-height: 800px;
         opacity: 1;
-        padding: 14px 14px 0 22px;
+
+        @media only screen and (min-width: 768px) {
+          padding: 14px 14px 0 22px;
+        }
+        padding: 14px 0px 0 22px;
         z-index: 0;
         transition: 0.8s ease-out;
         visibility: visible;
