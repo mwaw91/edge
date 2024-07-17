@@ -82,26 +82,27 @@
           // background-color: rgba(0, 0, 0, 0.2);
           // LINES
           span {
-            width: 18px;
-            height: 1px;
+            width: 21px;
+            height: 2px;
             background: black;
             position: relative;
+            transform-origin: 50% 50%;
             &:nth-child(1) {
-              transition: all 0.4s ease-out;
+              top: 0;
             }
             &:nth-child(2) {
               margin-top: 5px;
               margin-bottom: 5px;
             }
             &:nth-child(3) {
-              transition: all 0.4s ease-out;
+              top: 0;
             }
           }
           &.active {
             span {
               &:nth-child(1) {
                 transform: rotate(-45deg);
-                top: 5px;
+                top: 7px;
               }
               &:nth-child(2) {
                 visibility: hidden;
@@ -154,7 +155,7 @@
             }
 
             &.nav-btn {
-              min-width: 123px;
+              min-width: 132px;
               @media only screen and (min-width: 768px) {
                 margin-top: 0;
               }
