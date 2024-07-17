@@ -676,13 +676,13 @@
 
         <!-- FAQS -->
         <section id="faq">
-            <div data-aos="fade-up" class="title-section">
+            <div class="title-section">
                 <h6 class="text-h6"><?php echo get_field('faqs_title')['small_text']; ?></h6>
                 <h2 class="text-h1"><?php echo get_field('faqs_title')['title'];
                                     ?></h2>
                 <p class="p2"><?php echo get_field('faqs_title')['description']; ?></p>
             </div>
-            <div class="faq-container" data-aos="fade-up">
+            <div class="faq-container">
                 <div class="faq-content radius">
                     <?php
                     $faqs = get_field('faqs');
