@@ -16,7 +16,20 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
     <!-- TODO - META INFORMATION -->
+    <title>EDGE </title> <!-- ˜60 chars -->
+    <meta name="description" content="The Description"> <!-- ˜150 chars -->
+    <meta property="og:title" content="The content">
+    <meta property="og:description" content="The Description"> <!-- ˜300 chars -->
+    <meta property="og:site_name" content="Sfida Blog">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.sfidastudios.com">
+    <meta property="og:image" content="http://www.sfidastudios.com/logo.png"> <!-- 200x200px - 1200x1200px -->
+
+
     <?php //wp_head(); 
     ?>
 
@@ -30,7 +43,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-40.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-46.css">
 
 </head>
 
@@ -160,7 +173,7 @@
 
             <div id="header" class="header">
 
-                <div class="header-content container clearfix">
+                <div class="header-content container">
                     <!-- LOGO  -->
                     <a href="/" class="custom-logo-link">
                         <?php echo '<img src="' . get_field('edge_logo')['url'] . '" class="custom-logo">'; ?>
