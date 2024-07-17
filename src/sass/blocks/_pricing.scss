@@ -366,6 +366,7 @@
           color: #7a7a7a;
 
           &.tick {
+            display: flex;
             &::before {
               content: "";
               display: inline-block;
@@ -378,10 +379,12 @@
               // background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
               margin-right: 10px;
               background-size: 100% auto;
+              background-repeat: no-repeat;
               top: 2px;
             }
           }
           &.cross {
+            display: flex;
             &::before {
               content: "";
               display: inline-block;
@@ -394,6 +397,7 @@
               // background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
               margin-right: 10px;
               background-size: 100% auto;
+              background-repeat: no-repeat;
               top: 3px;
             }
           }
