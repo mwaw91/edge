@@ -113,34 +113,53 @@ h6,
   font-family: "signsbold", sans-serif;
 }
 .text-h1 {
-  font-size: 48px;
-  line-height: 60px;
+  @media only screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  font-size: 40px;
+  line-height: 46px;
 }
 .text-h2 {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 40px;
   line-height: 46px;
 }
 .text-h3 {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 24px;
   line-height: 30px;
 }
 .text-h4 {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 16px;
   line-height: 22px;
 }
 .text-h5 {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 16px;
   line-height: 20px;
 }
 .text-h6 {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 12px;
   line-height: 16px;
 }
 .p2 {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 15px;
   line-height: 22px;
+  letter-spacing: 3%;
 }
 p {
+  @media only screen and (min-width: 768px) {
+  }
   font-size: 18px;
   line-height: 24px;
   font-family: "blinkerregular", sans-serif;
