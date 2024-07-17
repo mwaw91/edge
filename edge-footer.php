@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- JS -->
-<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript-48.js'></script>
+<script type='text/javascript' src='https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/custom-javascript-50.js'></script>
 
 <!-- Footer Start ============================================= -->
 <footer id="colophon" class="site-footer clearfix" role="contentinfo">

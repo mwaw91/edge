@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   window.addEventListener('scroll', function () {
   //     let header = document.getElementById('header');
   //     let scrollTop = window.scrollY || document.documentElement.scrollTop;
-  //     // console.log(scrollTop)
+
   //     if (scrollTop >= lastScrollTop) {
   //       // Scrolling down
   //       header.classList.remove('sticky');
@@ -312,7 +312,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // end init
 
       switchBtn.addEventListener('click', () => {
-        console.log('test');
         switchBtn.classList.toggle('active');
 
         const parentDiv = switchBtn.closest('.tier');
@@ -320,8 +319,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Find the h3 elements inside the parent div
         const monthElement = parentDiv.querySelectorAll('.month');
         const yearElement = parentDiv.querySelectorAll('.year');
-        console.log(monthElement)
-        console.log(yearElement)
+        // console.log(monthElement)
+        // console.log(yearElement)
         // Toggle visibility of 'month' and 'year' h3 elements
         if (switchBtn.classList.contains('active')) {
           monthElement.forEach(monthEl => {
@@ -373,13 +372,13 @@ document.addEventListener("DOMContentLoaded", () => {
   //     const siblingVideo = parentDiv.querySelector('.feature-video');
   //     playButton.addEventListener("mouseenter", function () {
   //       if (siblingVideo.paused) {
-  //         console.log('video was paused now playing');
+  //         // console.log('video was paused now playing');
   //         siblingVideo.play();
   //         // siblingVideo.muted = !siblingVideo.muted;
   //         playButton.classList.add('hide');
   //         playButton.classList.remove('show');
   //       } else {
-  //         console.log('video was playing now paused');
+  //         // console.log('video was playing now paused');
   //         siblingVideo.pause();
   //         playButton.classList.remove('hide')
   //         playButton.classList.add('show')
@@ -410,13 +409,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       playButton.addEventListener("click", function () {
         if (siblingVideo.paused) {
-          console.log('video was paused now playing');
+          // console.log('video was paused now playing');
           siblingVideo.play();
           // siblingVideo.muted = !siblingVideo.muted;
           playButton.classList.add('hide');
           playButton.classList.remove('show');
         } else {
-          console.log('video was playing now paused');
+          // console.log('video was playing now paused');
           siblingVideo.pause();
           siblingVideo.currentTime = 0;
           playButton.classList.remove('hide')
@@ -430,7 +429,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function hamburgerNav() {
     const hamburger = document.querySelector('.hamburger');
     hamburger.addEventListener('click', () => {
-      console.log('I CLICK!');
       hamburger.classList.toggle('active')
       document.body.classList.toggle('nav-opened');
     })

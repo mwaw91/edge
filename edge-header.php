@@ -43,7 +43,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-48.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-50.css">
 
 </head>
 
@@ -112,7 +112,7 @@
                         </ul>
 
                         <!-- SOCIAL NAV -->
-                        <div class="social-nav hide-desktop">
+                        <div class="social-nav">
                             <h6 class="text-h6">Follow us!</h6>
                             <ul class="social-media-menu">
                                 <li>
