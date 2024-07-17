@@ -107,21 +107,21 @@ document.addEventListener("DOMContentLoaded", () => {
       //   spaceBetween: 20
       // },
 
-      639: {
-        slidesPerColumn: 1,
-        slidesPerGroup: 1,
-        slidesPerView: 1,
-        spaceBetween: 40,
-        grid: {
-          rows: 1, // your amount of slides
-          fill: "row",
-        },
-      },
-      640: {
+      // 639: {
+      //   slidesPerView: 1,
+      //   slidesPerColumn: 1,
+      //   slidesPerGroup: 1,
+      //   spaceBetween: 40,
+      //   grid: {
+      //     rows: 1, // your amount of slides
+      //     fill: "row",
+      //   },
+      // },
+      768: {
+        slidesPerView: 2.4,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
-        slidesPerView: 4,
-        spaceBetween: 40,
+        spaceBetween: 30,
         grid: {
           rows: 2, // your amount of slides
           fill: "row",
