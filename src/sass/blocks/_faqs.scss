@@ -1,8 +1,11 @@
 //  FAQ
 #faq {
+  @media only screen and (min-width: 768px) {
+    margin: 0 auto 90px auto;
+  }
   padding-top: 30px;
   max-width: 500px;
-  margin: 0 auto 90px auto;
+  margin: 60px auto 90px auto;
 
   .faq-container {
     margin-top: 15px;

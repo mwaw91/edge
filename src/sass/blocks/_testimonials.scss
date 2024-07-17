@@ -23,9 +23,12 @@
 
     position: relative;
     height: 113px;
+
     @media only screen and (min-width: 768px) {
-      top: -81px;
       height: 0;
+    }
+    @media only screen and (min-width: 991px) {
+      top: -81px;
     }
 
     .swiper-buttons {
