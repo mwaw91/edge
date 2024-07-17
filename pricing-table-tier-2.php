@@ -1,5 +1,5 @@
   <!-- TIER 2 PRICING TABLE -->
-  <section id="pricing-table" data-aos="fade-up" class="hide-desktop">
+  <section data-aos="fade-up" class="pricing-table-container hide-desktop">
       <div class="pricing_table" role="region" tabindex="0">
           <table>
               <thead>

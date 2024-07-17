@@ -437,6 +437,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   hamburgerNav()
 
+  // MOBILE PRICING TABLES
+  function viewMobilePricingFeatures() {
+    const allFeaturesBtns = document.querySelectorAll('.all-features-mobile-btn');
+    allFeaturesBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+      })
+    })
+  }
+  viewMobilePricingFeatures()
+
+  // DESKTOP PRICING TABLE
+  function viewDesktopPricingFeatures() {
+    const allFeaturesBtn = document.querySelector('.all-features-desktop-btn');
+    const pricingTableDesktop = document.getElementById('pricing-table-desktop');
+    allFeaturesBtn.addEventListener('click', () => {
+      allFeaturesBtn.classList.toggle('active');
+      pricingTableDesktop.classList.toggle('show');
+    })
+  }
+  viewDesktopPricingFeatures()
+
 
 });
 

@@ -40,18 +40,21 @@
     gap: 25px;
 
     .tier {
-      &:nth-child(2) {
-        background: linear-gradient($black-3 75%, $black-1 110%);
-        .btn {
-          background-color: white;
-          color: $black-text;
+      @media only screen and (min-width: 768px) {
+        &:nth-child(2) {
+          background: linear-gradient($black-3 75%, $black-1 110%);
+          .btn {
+            background-color: white;
+            color: $black-text;
+          }
         }
+        min-width: 360px;
+        min-height: 469px;
+        background-color: $black-1;
+        border: 1px solid $black-3;
+        padding: 33px;
       }
-      min-width: 360px;
-      min-height: 469px;
-      background-color: $black-1;
-      border: 1px solid $black-3;
-      padding: 33px;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -110,17 +113,6 @@
       }
     }
   }
-  .all-features {
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-    &:hover {
-      cursor: pointer;
-    }
-    svg {
-      margin-left: 5px;
-    }
-  }
 }
 
 // CUSTOM SWITCH
@@ -164,144 +156,214 @@
 }
 // END TOGGLE
 
-// PRICING TABLE
-.pricing_table {
-  overflow: auto;
+// ALL FEATURES BTN
+.all-features {
+  margin-top: 20px;
+  text-align: center;
   width: 100%;
-  // 3RD ITEM BG GRADIENT
 
-  tr {
-    th:nth-child(3) {
-      background-color: #1c2228 !important;
-      border-radius: 17px 17px 0 0;
-      // border: 1px solid #1b1e22;
-      border-bottom: none;
+  &.all-features-desktop-btn {
+    svg {
+      transform: scaleY(-1);
     }
-    td {
-      &:nth-child(3) {
-        background-color: #1c2228 !important;
-        // border-left: 1px solid #1b1e22;
-        // border-right: 1px solid #1b1e22;
+    &.active {
+      svg {
+        transform: scaleY(1);
       }
-      &.bottom:nth-child(3) {
-        height: 40px;
-        background: linear-gradient(#1c2228, $black-bg);
-        border-radius: 0 0 17px 17px;
-        // border: 1px solid #1b1e22;
-        // border-top: none;
+    }
+  }
+  &.all-features-mobile-btn {
+    svg {
+      transform: scaleY(-1);
+    }
+    &.active {
+      svg {
+        transform: scaleY(1);
       }
     }
   }
 
-  table {
+  svg {
+    margin-left: 5px;
+    transition: all 0.4s ease-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// TOGGLE PRICING TABLE
+.all-features {
+  & + .pricing-table-container {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  &.active {
+    & + .pricing-table-container {
+      max-height: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+// PRICING TABLE
+#pricing-table-desktop {
+  height: 0%;
+  max-height: 0;
+  opacity: 0;
+  &.show {
     height: 100%;
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+
+.pricing-table-container {
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+
+  .pricing_table {
+    overflow: auto;
     width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 1px;
-    text-align: left;
-  }
-  div {
-    display: flex;
-  }
-  // COLUMN TITLES
-  tr.tier-titles {
-    th {
-      padding-top: 30px;
-      div {
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-    }
-  }
-  // BTNS
-  .btn {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  th {
-    span {
-      &.tier {
-        text-transform: uppercase;
-        color: white;
-        font-family: "signsbold", sans-serif;
-        font-size: 18px;
-        line-height: 25px;
-        font-weight: bold;
-      }
-    }
+    // 3RD ITEM BG GRADIENT
 
-    padding: 10px;
-  }
-
-  .row-title {
-    td {
-      padding-top: 20px;
-    }
-  }
-  // FEATURES
-  td {
-    div {
-      // ROW TITLE
-      &.category {
-        border-bottom: none;
-        span {
-          font-family: "blinkersemibold", sans-serif;
-          font-size: 18px;
-          line-height: 24px;
-          color: white;
+    tr {
+      @media only screen and (min-width: 768px) {
+        th:nth-child(3) {
+          background-color: #1c2228 !important;
+          border-radius: 17px 17px 0 0;
+          // border: 1px solid #1b1e22;
+          border-bottom: none;
         }
-      }
-
-      &.no-border {
-        border-bottom: none;
-      }
-      border-bottom: 1px solid $black-3;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      span {
-        font-size: 16px;
-        line-height: 20px;
-        font-family: "blinkerregular", sans-serif;
-        color: #7a7a7a;
-
-        &.feature {
-        }
-        &.tick {
-          &::before {
-            content: "";
-            display: inline-block;
-            position: relative;
-            width: 15px;
-            height: 15px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-tick.png");
-            // background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
-            margin-right: 10px;
-            background-size: 100% auto;
-            top: 2px;
+        td {
+          &:nth-child(3) {
+            background-color: #1c2228 !important;
+            // border-left: 1px solid #1b1e22;
+            // border-right: 1px solid #1b1e22;
+          }
+          &.bottom:nth-child(3) {
+            height: 40px;
+            background: linear-gradient(#1c2228, $black-bg);
+            border-radius: 0 0 17px 17px;
+            // border: 1px solid #1b1e22;
+            // border-top: none;
           }
         }
-        // &.cross {
-        //   &::before {
-        //     content: "";
-        //     display: inline-block;
-        //     position: relative;
-        //     width: 15px;
-        //     height: 15px;
-        //     background-repeat: no-repeat;
-        //     background-position: center;
-        //     background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-cross.png");
-        //     // background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
-        //     margin-right: 10px;
-        //     background-size: 100% auto;
-        //     top: 3px;
-        //   }
-        // }
+      }
+    }
+
+    table {
+      height: 100%;
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      border-spacing: 1px;
+      text-align: left;
+    }
+    div {
+      display: flex;
+    }
+    // COLUMN TITLES
+    tr.tier-titles {
+      th {
+        padding-top: 30px;
+        div {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+    // BTNS
+    .btn {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    th {
+      span {
+        &.tier {
+          text-transform: uppercase;
+          color: white;
+          font-family: "signsbold", sans-serif;
+          font-size: 18px;
+          line-height: 25px;
+          font-weight: bold;
+        }
+      }
+
+      padding: 10px;
+    }
+
+    .row-title {
+      td {
+        padding-top: 20px;
+      }
+    }
+    // FEATURES
+    td {
+      div {
+        // ROW TITLE
+        &.category {
+          border-bottom: none;
+          span {
+            font-family: "blinkersemibold", sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+            color: white;
+          }
+        }
+
+        &.no-border {
+          border-bottom: none;
+        }
+        border-bottom: 1px solid $black-3;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        span {
+          font-size: 16px;
+          line-height: 20px;
+          font-family: "blinkerregular", sans-serif;
+          color: #7a7a7a;
+
+          &.feature {
+          }
+          &.tick {
+            &::before {
+              content: "";
+              display: inline-block;
+              position: relative;
+              width: 15px;
+              height: 15px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-tick.png");
+              // background: url("/wp-content/themes/understrap-child-main/src/img/feature-tick.png");
+              margin-right: 10px;
+              background-size: 100% auto;
+              top: 2px;
+            }
+          }
+          // &.cross {
+          //   &::before {
+          //     content: "";
+          //     display: inline-block;
+          //     position: relative;
+          //     width: 15px;
+          //     height: 15px;
+          //     background-repeat: no-repeat;
+          //     background-position: center;
+          //     background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-cross.png");
+          //     // background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
+          //     margin-right: 10px;
+          //     background-size: 100% auto;
+          //     top: 3px;
+          //   }
+          // }
+        }
       }
     }
   }
