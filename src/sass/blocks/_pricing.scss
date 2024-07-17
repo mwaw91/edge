@@ -198,12 +198,20 @@
   & + .pricing-table-container {
     max-height: 0;
     opacity: 0;
+    .pricing_table {
+      max-height: 0;
+      opacity: 0;
+    }
   }
 
   &.active {
     & + .pricing-table-container {
-      max-height: 100%;
+      max-height: 9999px;
       opacity: 1;
+      .pricing_table {
+        max-height: 9999px;
+        opacity: 1;
+      }
     }
   }
 }
@@ -225,6 +233,7 @@
   transition: all 0.4s ease-out;
 
   .pricing_table {
+    transition: all 0.4s ease-out;
     overflow: auto;
     width: 100%;
     // 3RD ITEM BG GRADIENT
