@@ -1,22 +1,20 @@
 // TESTED TODO- RENAME BLOCK AND ACF FIELDS
 #tested {
   h2 {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 480px) {
       margin-bottom: 70px;
     }
     margin-bottom: 60px;
     text-align: center;
   }
   .top-row {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
+      margin-bottom: 60px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 110px;
-      margin-bottom: 60px;
       gap: 20px;
-      margin-bottom: 20px;
     }
-    margin-bottom: 30px;
     gap: 30px;
     display: flex;
     flex-direction: column;
@@ -31,10 +29,14 @@
     }
   }
   .bottom-row {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
+      margin-top: 60px;
       flex-direction: row;
+    }
+    @media only screen and (min-width: 1400px) {
       gap: 180px;
     }
+    margin-top: 30px;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -46,7 +48,7 @@
           margin-top: -4px;
         }
       }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 480px) {
         &:nth-child(1) {
           justify-content: flex-end;
           margin: 0 0 0 0;
@@ -59,21 +61,21 @@
     }
   }
   .grid-item {
-    max-width: 340px;
+    @media only screen and (min-width: 1024px) {
+      max-width: 340px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     div.video-container {
       width: 100%;
-      max-height: 190px;
       border-radius: 7px;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       video {
         width: 100%;
       }
       svg {
-        // opacity: 0;
         width: 40px;
       }
     }
