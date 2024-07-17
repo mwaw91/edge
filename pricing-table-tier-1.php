@@ -6,13 +6,13 @@
                   <tr class="tier-titles">
                       <th></th>
                       <th>
-                          <div><span class="tier"> Tier 1</span></div>
+                          <div><span class="tier-title"> Tier 1</span></div>
                       </th>
                       <!-- <th>
-                          <div><span class="tier"> Tier 2</span></div>
+                          <div><span class="tier-title"> Tier 2</span></div>
                       </th>
                       <th>
-                          <div><span class="tier"> Tier 2</span></div>
+                          <div><span class="tier-title"> Tier 2</span></div>
                       </th> -->
                   </tr>
               </thead>

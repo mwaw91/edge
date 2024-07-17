@@ -48,12 +48,14 @@
             color: $black-text;
           }
         }
+      }
+      @media only screen and (min-width: 768px) {
         min-width: 360px;
         min-height: 469px;
-        background-color: $black-1;
-        border: 1px solid $black-3;
-        padding: 33px;
       }
+      background-color: $black-1;
+      border: 1px solid $black-3;
+      padding: 33px;
 
       display: flex;
       flex-direction: column;
@@ -291,7 +293,7 @@
     }
     th {
       span {
-        &.tier {
+        &.tier-title {
           text-transform: uppercase;
           color: white;
           font-family: "signsbold", sans-serif;
@@ -338,8 +340,6 @@
           font-family: "blinkerregular", sans-serif;
           color: #7a7a7a;
 
-          &.feature {
-          }
           &.tick {
             &::before {
               content: "";
@@ -356,22 +356,6 @@
               top: 2px;
             }
           }
-          // &.cross {
-          //   &::before {
-          //     content: "";
-          //     display: inline-block;
-          //     position: relative;
-          //     width: 15px;
-          //     height: 15px;
-          //     background-repeat: no-repeat;
-          //     background-position: center;
-          //     background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-cross.png");
-          //     // background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
-          //     margin-right: 10px;
-          //     background-size: 100% auto;
-          //     top: 3px;
-          //   }
-          // }
         }
       }
     }
