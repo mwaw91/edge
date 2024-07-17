@@ -1,6 +1,8 @@
 // IMPROVE YOUR GAMEPLAY
 #improve-your-gameplay {
-  padding-top: 30px;
+  @media only screen and (min-width: 768px) {
+    padding-top: 30px;
+  }
 }
 
 // TABS

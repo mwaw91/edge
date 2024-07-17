@@ -1,6 +1,9 @@
 // PRICING
 #pricing {
-  padding-top: 30px;
+  @media only screen and (min-width: 768px) {
+    padding-top: 30px;
+  }
+  padding-top: 0;
   margin-bottom: 120px;
   .team-toggle-container {
     background-color: $black-3;

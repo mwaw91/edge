@@ -1,11 +1,14 @@
 <!-- DONE -->
-
+<!-- PLAY BTN SIZING -->
 
 <!-- TODO -->
 <!-- TYPOGRAPHY -->
 <!-- SPACING -->
 <!-- MOBILE SLIDER SPACING -->
 <!-- META INFORMATION -->
+
+
+<!-- CHANGE VIDEOS TO EMBED LINKS WITH CONTROL? -->
 
 
 <div class="container">

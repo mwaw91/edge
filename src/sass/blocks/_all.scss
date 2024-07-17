@@ -49,13 +49,13 @@ body {
       @media only screen and (min-width: 768px) {
         padding-top: 160px;
       }
-      padding-top: 110px;
+      padding-top: 60px;
     }
     &--bottom {
       @media only screen and (min-width: 768px) {
         padding-bottom: 160px;
       }
-      padding-bottom: 110px;
+      padding-bottom: 60px;
     }
   }
   &--margin {
@@ -63,13 +63,13 @@ body {
       @media only screen and (min-width: 768px) {
         margin-top: 160px;
       }
-      margin-top: 110px;
+      margin-top: 60px;
     }
     &--bottom {
       @media only screen and (min-width: 768px) {
         margin-bottom: 160px;
       }
-      margin-bottom: 110px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -99,7 +99,10 @@ body {
     text-transform: uppercase;
     text-shadow: 0 0 10px #24f4ab70;
     font-family: "blinkerregular", sans-serif;
-    margin-bottom: 0;
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+    margin-bottom: 10px;
   }
   h2 {
     color: white;
@@ -147,6 +150,9 @@ body {
     svg {
       transition: all 0.4s;
       filter: drop-shadow(2px 4px 6px black);
+      @media only screen and (max-width: 768px) {
+        width: 40px;
+      }
     }
     &:hover {
       svg {

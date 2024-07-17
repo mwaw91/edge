@@ -1,12 +1,18 @@
 // ALTERNATING VIDEO COLUMN
 #alternating-video-columns {
   overflow: hidden;
-  // COMPENSATE FOR ANCHOR LINKS
-  margin-bottom: 130px;
+  @media only screen and (min-width: 768px) {
+    // COMPENSATE FOR ANCHOR LINKS
+    margin-bottom: 130px;
+  }
+  margin-bottom: 60px;
 
   .alternating-video-column {
     &:nth-child(1) {
-      margin-bottom: 120px;
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 120px;
+      }
+      margin-bottom: 60px;
     }
 
     .feature-video {
@@ -28,7 +34,9 @@
       &.title-section {
         @media only screen and (min-width: 768px) {
           grid-area: 1 / 8 / 2 / 13;
+          margin-bottom: 0;
         }
+        margin-bottom: 30px;
         max-width: 383px;
       }
     }
