@@ -183,10 +183,10 @@
                           <div><span class="feature">Early Access to New Features (beta)<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">None<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <!-- <td>
-                          <div><span class="tick">None<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Full Access<span></div>

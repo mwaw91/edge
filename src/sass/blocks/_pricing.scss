@@ -356,6 +356,22 @@
               top: 2px;
             }
           }
+          &.cross {
+            &::before {
+              content: "";
+              display: inline-block;
+              position: relative;
+              width: 15px;
+              height: 15px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background: url("https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/img/feature-cross.png");
+              // background: url("/wp-content/themes/understrap-child-main/src/img/feature-cross.png");
+              margin-right: 10px;
+              background-size: 100% auto;
+              top: 3px;
+            }
+          }
         }
       }
     }
