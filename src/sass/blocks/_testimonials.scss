@@ -1,6 +1,9 @@
 // TESTIMONIALS
 #testimonials {
   overflow: hidden;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 0;
+  }
 
   .title-section {
     padding-left: 15px;
