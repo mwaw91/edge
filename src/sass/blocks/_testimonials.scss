@@ -8,6 +8,16 @@
   }
 
   .swiper-buttons-container {
+    h6 {
+      margin-bottom: 0;
+      margin-right: 15px;
+      color: $grey;
+      font-family: "blinkerregular", sans-serif;
+    }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
     position: relative;
     height: 113px;
     @media only screen and (min-width: 768px) {
@@ -16,16 +26,30 @@
     }
 
     .swiper-buttons {
+      @media only screen and (min-width: 768px) {
+        position: absolute;
+        height: 100px;
+        // flex-direction: row;
+        width: 156px;
+      }
+      height: 60px;
+      // flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      width: 128px;
+
       right: 0;
-      width: 156px;
-      height: 100px;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      position: absolute;
+
       .swiper-button-next,
       .swiper-button-prev {
+        @media only screen and (max-width: 768px) {
+          position: relative;
+          top: 0;
+          margin: 0;
+          left: 0;
+        }
         border-radius: 9999px;
         background-color: $black-1;
         border: 1px solid $black-3;

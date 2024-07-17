@@ -1,12 +1,12 @@
 <!-- DONE -->
 <!-- GRADIENTS -->
 <!-- SEE ALL FEATURES FOR PRICING GRID -->
+<!-- TAB BTNS GRID TO FLEX -->
 
 <!-- TODO -->
 <!-- TYPOGRAPHY -->
 <!-- SPACING -->
 <!-- SKYBOX NAV ANIMATION -->
-<!-- TAB BTNS GRID TO FLEX -->
 <!-- ALTERNATING COLUMNS NEED FADE IN ON MOBILE -->
 
 <!-- TESTIMONIAL CONTROLS -->
@@ -350,8 +350,8 @@
     </section>
     <!-- END IMPROVE YOUR GAMEPLAY -->
 
-    <!-- ALTERNATING VIDEO COLUMNS -->
-    <section id="alternating-video-columns" class="space--margin--top">
+    <!-- ALTERNATING VIDEO COLUMNS DESKTOP -->
+    <section id="alternating-video-columns" class="space--margin--top hide-mobile">
         <?php
         $alternating_videos = get_field('alternating_videos');
         if ($alternating_videos) {
@@ -443,7 +443,60 @@
         }
         ?>
     </section>
-    <!-- END ALTERNATING VIDEO COLUMNS -->
+    <!-- END ALTERNATING VIDEO COLUMNS DESKTOP -->
+
+    <!-- ALTERNATING VIDEO COLUMNS MOBILE -->
+    <section id="alternating-video-columns" class="space--margin--top hide-desktop">
+        <?php
+        $alternating_videos = get_field('alternating_videos');
+        if ($alternating_videos) {
+            $l = 0;
+            foreach ($alternating_videos as $row) {
+
+        ?>
+                <div class="alternating-video-column even-row">
+                    <div data-aos="fade-up" class="title-section">
+                        <h6 class="text-h6"><?php echo $row['small_text']; ?></h6>
+                        <h2 class="text-h1"><?php echo $row['title']; ?></h2>
+                        <p class="p2"><?php echo $row['description']; ?></p>
+                    </div>
+                    <div data-aos="fade-up">
+
+                        <div class="video-container radius">
+                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_196_307)">
+                                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset />
+                                            <feGaussianBlur stdDeviation="5" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <video class="feature-video">
+                                <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- END VIDEO -->
+                    </div>
+
+                </div>
+
+        <?php
+            }
+        }
+        ?>
+    </section>
+    <!-- END ALTERNATING VIDEO COLUMNS MOBILE -->
 
 </div>
 
@@ -547,6 +600,7 @@
 
     <!-- SWIPER -->
     <div class="container swiper-buttons-container" data-aos="fade-up">
+        <h6 class="p2 hide-desktop">Swipe to see more</h6>
         <div class="swiper-buttons">
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
