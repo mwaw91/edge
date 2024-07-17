@@ -1,15 +1,11 @@
 <!-- DONE -->
-<!-- GRADIENTS -->
-<!-- SEE ALL FEATURES FOR PRICING GRID -->
-<!-- TAB BTNS GRID TO FLEX -->
-<!-- ALTERNATING COLUMNS NEED FADE IN ON MOBILE -->
-<!-- TESTIMONIAL CONTROLS -->
+
 
 <!-- TODO -->
 <!-- TYPOGRAPHY -->
 <!-- SPACING -->
-<!-- SKYBOX NAV ANIMATION -->
-
+<!-- MOBILE SLIDER SPACING -->
+<!-- META INFORMATION -->
 
 
 <div class="container">

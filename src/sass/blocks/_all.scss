@@ -3,6 +3,11 @@
   display: none !important;
 }
 
+// DOCUMENT OVERFLOW
+#content {
+  overflow: hidden;
+}
+
 // ANCHOR LINK
 html {
   scroll-behavior: smooth;

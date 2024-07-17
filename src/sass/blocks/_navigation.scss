@@ -2,7 +2,7 @@
 // HAMBURGER OPENED
 .nav-opened {
   .skybox-menu {
-    height: 100vh;
+    height: 100dvh;
     .container {
       // height: 100%;
       .nav-toggle-item {
@@ -264,8 +264,9 @@
 #site-navigation {
   @media only screen and (min-width: 768px) {
     display: flex;
+    visibility: visible;
   }
-
+  visibility: hidden;
   display: none;
   justify-content: center;
   align-items: center;
