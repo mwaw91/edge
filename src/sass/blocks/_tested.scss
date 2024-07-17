@@ -83,14 +83,16 @@
       margin-top: 12px;
       a {
         transition: all 0.4s ease-out;
-        &:hover {
-          cursor: pointer;
-          span {
-            color: $green;
-            svg {
-              path {
-                fill: $green;
-                stroke: $green;
+        @media only screen and (min-width: 768) {
+          &:hover {
+            cursor: pointer;
+            span {
+              color: $green;
+              svg {
+                path {
+                  fill: $green;
+                  stroke: $green;
+                }
               }
             }
           }
