@@ -2,9 +2,19 @@
 #testimonials {
   overflow: hidden;
 
+  .title-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .swiper-buttons-container {
     position: relative;
-    top: -81px;
+    height: 113px;
+    @media only screen and (min-width: 768px) {
+      top: -81px;
+      height: 0;
+    }
+
     .swiper-buttons {
       right: 0;
       width: 156px;
@@ -105,9 +115,9 @@
           &:nth-child(24) {
             margin-top: -74px !important;
           }
+          margin-top: 52px;
         }
 
-        margin-top: 52px;
         background: $black-1;
         border: 1px solid $black-3;
         padding: 30px;
