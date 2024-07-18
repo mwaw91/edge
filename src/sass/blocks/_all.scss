@@ -99,9 +99,6 @@ body {
     text-transform: uppercase;
     text-shadow: 0 0 10px #24f4ab70;
     font-family: "blinkerregular", sans-serif;
-    @media only screen and (min-width: 768px) {
-      margin-bottom: 0;
-    }
     margin-bottom: 10px;
   }
   h2 {
