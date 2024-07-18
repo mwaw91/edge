@@ -568,7 +568,7 @@
     <div class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1"><?php echo get_field('testimonials_title')['title']; ?></h2>
-        <p class="p2"><?php echo get_field('testimonials_title')['description']; ?></p>
+        <p class=""><?php echo get_field('testimonials_title')['description']; ?></p>
     </div>
 
     <!-- SWIPER -->
