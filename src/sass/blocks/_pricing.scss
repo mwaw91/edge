@@ -44,11 +44,27 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
-    .tier-item {
-      @media only screen and (max-width: 768px) {
-        width: 100%;
+
+    // FIRST ITEM HAS STYLES
+    &.tiers-container-individual {
+      .tier-item {
+        &:nth-child(1) {
+          .tier {
+            background: linear-gradient($black-3 75%, $black-1 110%);
+            .btn {
+              background-color: white;
+              color: $black-text;
+            }
+          }
+        }
+        @media only screen and (min-width: 768px) {
+          max-width: 364px !important;
+        }
       }
-      @media only screen and (min-width: 768px) {
+    }
+    // MIDDLE OR 2ND ITEM HAS STYLES
+    &.tiers-container-team {
+      .tier-item {
         &:nth-child(2) {
           .tier {
             background: linear-gradient($black-3 75%, $black-1 110%);
@@ -58,10 +74,18 @@
             }
           }
         }
+        @media only screen and (min-width: 768px) {
+          max-width: 364px !important;
+        }
       }
+    }
+    .tier-item {
+      width: 100% !important;
+
       .tier {
         @media only screen and (min-width: 1199px) {
-          min-width: 360px;
+          max-width: 364px;
+          width: 100%;
           min-height: 469px;
         }
         background-color: $black-1;
@@ -295,7 +319,7 @@
   @media only screen and (min-width: 768px) {
     margin-top: 80px;
   }
-  margin-top: 64px;
+  margin-top: 34px;
   overflow: hidden !important;
   transition: all 0.4s ease-out;
 
@@ -303,38 +327,89 @@
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    .pricing_table {
+      tr {
+        @media only screen and (min-width: 768px) {
+          th:nth-child(2) {
+            background-color: #1c2228 !important;
+            border-radius: 17px 17px 0 0;
+            // border: 1px solid #1b1e22;
+            border-bottom: none;
+          }
+          td {
+            &:nth-child(2) {
+              background-color: #1c2228 !important;
+              // border-left: 1px solid #1b1e22;
+              // border-right: 1px solid #1b1e22;
+            }
+            &.bottom:nth-child(2) {
+              background: linear-gradient(#1c2228, $black-bg);
+              border-radius: 0 0 17px 17px;
+              // border: 1px solid #1b1e22;
+              // border-top: none;
+            }
+          }
+        }
+      }
+    }
   }
-
+  &.pricing-table-container-desktop-team {
+    .pricing_table {
+      tr {
+        @media only screen and (min-width: 768px) {
+          th:nth-child(3) {
+            background-color: #1c2228 !important;
+            border-radius: 17px 17px 0 0;
+            // border: 1px solid #1b1e22;
+            border-bottom: none;
+          }
+          td {
+            &:nth-child(3) {
+              background-color: #1c2228 !important;
+              // border-left: 1px solid #1b1e22;
+              // border-right: 1px solid #1b1e22;
+            }
+            &.bottom:nth-child(3) {
+              background: linear-gradient(#1c2228, $black-bg);
+              border-radius: 0 0 17px 17px;
+              // border: 1px solid #1b1e22;
+              // border-top: none;
+            }
+          }
+        }
+      }
+    }
+  }
   .pricing_table {
     transition: all 0.4s ease-out;
     overflow: auto;
     width: 100%;
     // 3RD ITEM BG GRADIENT
 
-    tr {
-      @media only screen and (min-width: 768px) {
-        th:nth-child(3) {
-          background-color: #1c2228 !important;
-          border-radius: 17px 17px 0 0;
-          // border: 1px solid #1b1e22;
-          border-bottom: none;
-        }
-        td {
-          &:nth-child(3) {
-            background-color: #1c2228 !important;
-            // border-left: 1px solid #1b1e22;
-            // border-right: 1px solid #1b1e22;
-          }
-          &.bottom:nth-child(3) {
-            height: 40px;
-            background: linear-gradient(#1c2228, $black-bg);
-            border-radius: 0 0 17px 17px;
-            // border: 1px solid #1b1e22;
-            // border-top: none;
-          }
-        }
-      }
-    }
+    // tr {
+    //   @media only screen and (min-width: 768px) {
+    //     th:nth-child(3) {
+    //       background-color: #1c2228 !important;
+    //       border-radius: 17px 17px 0 0;
+    //       // border: 1px solid #1b1e22;
+    //       border-bottom: none;
+    //     }
+    //     td {
+    //       &:nth-child(3) {
+    //         background-color: #1c2228 !important;
+    //         // border-left: 1px solid #1b1e22;
+    //         // border-right: 1px solid #1b1e22;
+    //       }
+    //       &.bottom:nth-child(3) {
+    //         height: 40px;
+    //         background: linear-gradient(#1c2228, $black-bg);
+    //         border-radius: 0 0 17px 17px;
+    //         // border: 1px solid #1b1e22;
+    //         // border-top: none;
+    //       }
+    //     }
+    //   }
+    // }
 
     table {
       height: 100%;

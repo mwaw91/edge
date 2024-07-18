@@ -41,7 +41,7 @@
                           <div><span class="tick">Core<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Core<span></div>
+                          <div><span class="tick">Advanced<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Pro Level Stats & Filters<span></div>
@@ -55,7 +55,7 @@
                           <div><span class="tick">Core<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Core<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Pro Level Stats & Filters<span></div>
@@ -77,13 +77,13 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Public Demos & POV Demos<span></div>
+                          <div><span class="feature">Match Reports<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Unlimited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Unlimited<span></div>
+                          <div><span class="tick">Advanced<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Unlimited + Full Support<span></div>
@@ -107,7 +107,7 @@
                           <div><span class="tick">Core<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Advanced<span></div>
+                          <div><span class="tick">Core<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Full Access<span></div>
@@ -121,7 +121,7 @@
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Full Access<span></div>
@@ -135,7 +135,7 @@
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Full Team Onboarding<span></div>
@@ -143,13 +143,13 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Veto Simulation<span></div>
+                          <div><span class="feature">Get Scouted Feature<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="tick">Full Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">24/7 Support<span></div>
@@ -187,7 +187,7 @@
                           <div><span class="none">None<span></div>
                       </td> -->
                       <td>
-                          <div><span class="none">None<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Full Access<span></div>
@@ -201,7 +201,7 @@
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Full Team Onboarding<span></div>
@@ -215,7 +215,7 @@
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="tick">Discord<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">24/7 Support<span></div>

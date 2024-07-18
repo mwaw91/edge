@@ -52,7 +52,7 @@
                           <div><span class="feature">Team Stats<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Core<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Core<span></div>
@@ -77,10 +77,10 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Public Demos & POV Demos<span></div>
+                          <div><span class="feature">Match Reports<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Unlimited<span></div>
+                          <div><span class="tick">Core<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Unlimited<span></div>
@@ -118,7 +118,7 @@
                           <div><span class="feature">Pattern Finder<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
@@ -132,7 +132,7 @@
                           <div><span class="feature">Playbook & Match Prep<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
@@ -143,10 +143,10 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Veto Simulation<span></div>
+                          <div><span class="feature">Get Scouted Features<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
@@ -198,7 +198,7 @@
                           <div><span class="feature">Onboarding<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
@@ -212,7 +212,7 @@
                           <div><span class="feature">Customer Support<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="tick">Discord<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>

@@ -40,7 +40,7 @@
                      </div>
                      <div class="tier-btn-container">
                          <a href="<?php echo $tier['link']['url']; ?>" class="btn btn--solid-grey"><?php echo $tier['link']['title']; ?>
-                         </a><?php if ($tier_loop_count == 3) {
+                         </a><?php if ($tier_loop_count == 2) {
                                     echo '<p>or <a href="/contact">contact sales</a></p>';
                                 } ?>
                      </div>

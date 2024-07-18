@@ -6,10 +6,10 @@
                   <tr class="tier-titles">
                       <th></th>
                       <th>
-                          <div><span class="tier-title"> Tier 2</span></div>
+                          <div><span class="tier-title"> FREE</span></div>
                       </th>
                       <th>
-                          <div><span class="tier-title"> Tier 2</span></div>
+                          <div><span class="tier-title"> PRO</span></div>
                       </th>
                   </tr>
               </thead>
@@ -35,7 +35,7 @@
                           <div><span class="tick">Core<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Pro Level Stats & Filters<span></div>
+                          <div><span class="tick">Advanced<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -43,10 +43,10 @@
                           <div><span class="feature">Team Stats<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Core<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Pro Level Stats & Filters<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -54,21 +54,21 @@
                           <div><span class="feature">Leaderboards<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Advanced<span></div>
+                          <div><span class="tick">Core<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Pro Level Leaderboards<span></div>
+                          <div><span class="tick">Advanced<span></div>
                       </td>
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Public Demos & POV Demos<span></div>
+                          <div><span class="feature">Match Reports<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Unlimited<span></div>
+                          <div><span class="tick">Core<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Unlimited + Full Support<span></div>
+                          <div><span class="tick">Advanced<span></div>
                       </td>
                   </tr>
                   <!-- END SECTION -->
@@ -85,10 +85,10 @@
                           <div><span class="feature">2D Replayer<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Advanced<span></div>
+                          <div><span class="tick">Core<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Access<span></div>
+                          <div><span class="tick">Core<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -96,10 +96,10 @@
                           <div><span class="feature">Pattern Finder<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Access<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -107,21 +107,21 @@
                           <div><span class="feature">Playbook & Match Prep<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Team Onboarding<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Veto Simulation<span></div>
+                          <div><span class="feature">Get Scouted Feature<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">No Access<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">24/7 Support<span></div>
+                          <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
                   <!-- END SECTION -->
@@ -138,10 +138,10 @@
                           <div><span class="feature">Access to Filters Across Platform<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="tick">Very Limited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Access<span></div>
+                          <div><span class="tick">Limited<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -152,7 +152,7 @@
                           <div><span class="cross">None<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Access<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -160,10 +160,10 @@
                           <div><span class="feature">Onboarding<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Team Onboarding<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -171,10 +171,10 @@
                           <div><span class="feature">Customer Support<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="tick">Discord<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">24/7 Support<span></div>
+                          <div><span class="tick">Discord<span></div>
                       </td>
                   </tr>
                   <!-- END SECTION -->
