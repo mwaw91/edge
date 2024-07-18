@@ -443,6 +443,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const individualTiers = document.querySelector('.tiers-container-individual');
     const teamTiers = document.querySelector('.tiers-container-team');
 
+    // TOGGLABLE FEATURE TABLES
+    const individualFeatureTable = document.querySelector('.pricing-table-container-desktop-individual');
+    const teamFeatureTable = document.querySelector('.pricing-table-container-desktop-team');
+
     // CHECK WHICH ONE I CLICKED
     function toggleActive(clickedSpan, otherSpan) {
       if (!clickedSpan.classList.contains('active')) {
@@ -454,6 +458,11 @@ document.addEventListener("DOMContentLoaded", () => {
     individual.addEventListener('click', function () {
       toggleActive(individual, team);
 
+      individualFeatureTable.classList.add('show');
+      individualFeatureTable.classList.remove('hide');
+      teamFeatureTable.classList.add('hide');
+      teamFeatureTable.classList.remove('show');
+
       if (individualTiers.classList.contains('active')) {
         teamTiers.classList.remove('active');
       } else {
@@ -464,6 +473,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     team.addEventListener('click', function () {
       toggleActive(team, individual);
+
+      teamFeatureTable.classList.add('show');
+      teamFeatureTable.classList.remove('hide');
+      individualFeatureTable.classList.add('hide');
+      individualFeatureTable.classList.remove('show');
 
       if (teamTiers.classList.contains('active')) {
         individualTiers.classList.remove('active');

@@ -250,6 +250,13 @@
   }
 }
 
+.pricing-table-container {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
 // PRICING TABLE
 #pricing-table-desktop {
   // height: 0%;
