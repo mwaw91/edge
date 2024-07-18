@@ -292,6 +292,10 @@
 }
 
 .pricing-table-container {
+  @media only screen and (min-width: 768px) {
+    margin-top: 80px;
+  }
+  margin-top: 64px;
   overflow: hidden !important;
   transition: all 0.4s ease-out;
 
