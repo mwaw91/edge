@@ -43,100 +43,102 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
-
-    .tier {
-      @media only screen and (min-width: 768px) {
-        &:nth-child(2) {
-          background: linear-gradient($black-3 75%, $black-1 110%);
-          .btn {
-            background-color: white;
-            color: $black-text;
-          }
-        }
-      }
-      @media only screen and (min-width: 1199px) {
-        min-width: 360px;
-        min-height: 469px;
-      }
-      background-color: $black-1;
-      border: 1px solid $black-3;
-      padding: 33px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h2 {
-        margin-bottom: 13px;
-      }
-      p {
-        margin-bottom: 5px;
-        &.must-be-hidden {
-          &.show {
-            display: none;
-          }
-          &.hide {
-            display: none;
-          }
-        }
-        &.must-be-shown {
-          &.show {
-            display: block;
-          }
-          &.hide {
-            display: none;
-          }
-        }
-        // VALUE
-        span {
-          color: white;
-        }
-      }
-      ul {
-        margin: 0;
-        padding: 0;
-        li {
-          display: flex;
-          list-style: none;
-          margin-bottom: 9px;
-          svg {
-            margin-right: 7px;
-          }
-        }
-      }
-      .tier-btn-container {
+    .tier-item {
+      width: 100%;
+      .tier {
         @media only screen and (min-width: 768px) {
-          flex-direction: column;
-          align-items: start;
+          &:nth-child(2) {
+            background: linear-gradient($black-3 75%, $black-1 110%);
+            .btn {
+              background-color: white;
+              color: $black-text;
+            }
+          }
         }
         @media only screen and (min-width: 1199px) {
-          flex-direction: row;
-          align-items: center;
-          // justify-content: start;
+          min-width: 360px;
+          min-height: 469px;
         }
-        justify-content: start;
-        // justify-content: center;
-        flex-direction: row;
+        background-color: $black-1;
+        border: 1px solid $black-3;
+        padding: 33px;
+
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        h2 {
+          margin-bottom: 13px;
+        }
         p {
+          margin-bottom: 5px;
+          &.must-be-hidden {
+            &.show {
+              display: none;
+            }
+            &.hide {
+              display: none;
+            }
+          }
+          &.must-be-shown {
+            &.show {
+              display: block;
+            }
+            &.hide {
+              display: none;
+            }
+          }
+          // VALUE
+          span {
+            color: white;
+          }
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            display: flex;
+            list-style: none;
+            margin-bottom: 9px;
+            svg {
+              margin-right: 7px;
+            }
+          }
+        }
+        .tier-btn-container {
           @media only screen and (min-width: 768px) {
-            padding-left: 0;
-            margin-top: 10px;
+            flex-direction: column;
+            align-items: start;
           }
           @media only screen and (min-width: 1199px) {
-            padding-left: 12px;
-            margin-top: 0;
+            flex-direction: row;
+            align-items: center;
+            // justify-content: start;
           }
-          margin-top: 0;
-          padding-left: 12px;
-
-          font-size: 15px;
-          color: $grey;
-          margin-bottom: 0;
-
-          a {
+          justify-content: start;
+          // justify-content: center;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          p {
+            @media only screen and (min-width: 768px) {
+              padding-left: 0;
+              margin-top: 10px;
+            }
+            @media only screen and (min-width: 1199px) {
+              padding-left: 12px;
+              margin-top: 0;
+            }
+            margin-top: 0;
             padding-left: 12px;
-            color: white;
+
+            font-size: 15px;
+            color: $grey;
+            margin-bottom: 0;
+
+            a {
+              padding-left: 12px;
+              color: white;
+            }
           }
         }
       }
@@ -225,21 +227,25 @@
 // TOGGLE PRICING TABLE
 .all-features {
   & + .pricing-table-container {
-    max-height: 0;
-    opacity: 0;
+    // max-height: 0;
+    // opacity: 0;
+    display: none;
     .pricing_table {
-      max-height: 0;
-      opacity: 0;
+      // max-height: 0;
+      // opacity: 0;
+      display: none;
     }
   }
 
   &.active {
     & + .pricing-table-container {
-      max-height: 9999px;
-      opacity: 1;
+      // max-height: 9999px;
+      // opacity: 1;
+      display: block;
       .pricing_table {
-        max-height: 9999px;
-        opacity: 1;
+        // max-height: 9999px;
+        // opacity: 1;
+        display: block;
       }
     }
   }
