@@ -18,8 +18,8 @@
                 <div class="tier radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $tier_delay . '"'; ?>>
                     <div>
                         <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
-                        <p class="p2 price month"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
-                        <p class="p2 price year"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
+                        <p class="p2 price month show"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
+                        <p class="p2 price year hide"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
                         <div class="custom-toggle-switch-container">
                             <div class="custom-toggle-switch">
                                 <div class="slider">
@@ -78,8 +78,8 @@
                 <div class="tier radius" data-aos="fade-up" <?php echo 'data-aos-delay="' . $tier_delay . '"'; ?>>
                     <div>
                         <h2 class="text-h3"><?php echo $tier['name']; ?></h2>
-                        <p class="p2 price month"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
-                        <p class="p2 price year"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
+                        <p class="p2 price month show"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_month']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/month</p>
+                        <p class="p2 price year hide"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
                         <div class="custom-toggle-switch-container">
                             <div class="custom-toggle-switch">
                                 <div class="slider">

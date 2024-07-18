@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
     checkBilling();
 
   }
-  teamIndividual();
+  // teamIndividual();
 
   // PRICING ANNUAL MONTHLY
   function monthlyAnnually() {
@@ -355,8 +355,83 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   }
-  monthlyAnnually();
+  // monthlyAnnually();
 
+  // NEW MONTHLY ANNUALLY TOGGLE
+  function monthlyAnnuallyPriceToggle() {
+
+
+    // get toggle button 
+    // on click hide the other one
+    // activate relavant feature grid
+    // hide other grid
+    let annualSwitch = document.querySelectorAll('.custom-toggle-switch');
+    annualSwitch.forEach(switchBtn => {
+
+      // init
+      // const parentDivInit = switchBtn.closest('.tier');
+      // const monthElementInit = parentDivInit.querySelectorAll('.month');
+      // const yearElementInit = parentDivInit.querySelectorAll('.year');
+      // if (switchBtn.classList.contains('active')) {
+      //   monthElementInit.forEach(monthEl => {
+      //     // monthEl.style.display = 'none';
+      //     monthEl.classList.toggle('hide')
+      //   })
+      //   yearElementInit.forEach(yearEl => {
+      //     // yearEl.style.display = 'block';
+      //     yearEl.classList.toggle('show')
+      //   })
+      // } else {
+      //   monthElementInit.forEach(monthEl => {
+      //     // monthEl.style.display = 'block';
+      //     monthEl.classList.toggle('show')
+      //   })
+      //   // yearElement.forEach(yearEl, function () {
+      //   yearElementInit.forEach(yearEl => {
+      //     // yearEl.style.display = 'none';
+      //     yearEl.classList.toggle('hide')
+      //   })
+      // }
+      // end init
+
+      switchBtn.addEventListener('click', () => {
+        switchBtn.classList.toggle('active');
+
+        const parentDiv = switchBtn.closest('.tier');
+
+        // Find the h3 elements inside the parent div
+        const monthElement = parentDiv.querySelectorAll('.month');
+        const yearElement = parentDiv.querySelectorAll('.year');
+        // console.log(monthElement)
+        // console.log(yearElement)
+        // Toggle visibility of 'month' and 'year' h3 elements
+        if (switchBtn.classList.contains('active')) {
+          monthElement.forEach(monthEl => {
+            // monthEl.style.display = 'none';
+            monthEl.classList.toggle('hide')
+            monthEl.classList.toggle('show')
+          })
+          yearElement.forEach(yearEl => {
+            // yearEl.style.display = 'block';
+            yearEl.classList.toggle('show')
+            yearEl.classList.toggle('hide')
+          })
+        } else {
+          monthElement.forEach(monthEl => {
+            // monthEl.style.display = 'block';
+            monthEl.classList.toggle('show')
+            monthEl.classList.toggle('hide')
+          })
+          yearElement.forEach(yearEl => {
+            // yearEl.style.display = 'none';
+            yearEl.classList.toggle('hide')
+            yearEl.classList.toggle('show')
+          })
+        }
+      });
+    });
+  }
+  monthlyAnnuallyPriceToggle()
 
   // NEW PRICING TEAM INDIVIDUAL TOGGLE
   function teamIndividualToggle() {

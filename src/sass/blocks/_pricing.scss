@@ -76,22 +76,22 @@
         }
         p {
           margin-bottom: 5px;
-          &.must-be-hidden {
-            &.show {
-              display: none;
-            }
-            &.hide {
-              display: none;
-            }
+          // &.must-be-hidden {
+          &.show {
+            display: block;
           }
-          &.must-be-shown {
-            &.show {
-              display: block;
-            }
-            &.hide {
-              display: none;
-            }
+          &.hide {
+            display: none;
           }
+          // }
+          // &.must-be-shown {
+          //   &.show {
+          //     display: block;
+          //   }
+          //   &.hide {
+          //     display: none;
+          //   }
+          // }
           // VALUE
           span {
             color: white;
