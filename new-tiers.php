@@ -52,8 +52,10 @@
                 </p>
 
                 <!-- MOBILE PRICING TABLES -->
-                <?php include 'pricing-tables/pricing-table-tier-' . $tier_loop_count . '.php';
+                <?php
+                include 'pricing-tables/mobile-pricing-table-tier-' . $tier_loop_count . '-individual.php';
                 ?>
+
                 <!-- MOBILE PRICING TABLES -->
 
             </div>
@@ -112,7 +114,8 @@
                 </p>
 
                 <!-- MOBILE PRICING TABLES -->
-                <?php include 'pricing-tables/pricing-table-tier-' . $team_tier_loop_count . '.php';
+                <?php
+                include 'pricing-tables/mobile-pricing-table-tier-' . $team_tier_loop_count . '-team.php';
                 ?>
                 <!-- MOBILE PRICING TABLES -->
 

@@ -232,8 +232,35 @@
 }
 
 // TOGGLE PRICING TABLE
+@media only screen and (min-width: 768px) {
+  .all-features {
+    & + #pricing-table-container {
+      display: none;
+      .pricing_table {
+        display: none;
+      }
+    }
+
+    &.active {
+      & + #pricing-table-container {
+        display: block;
+        .pricing_table {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .pricing-table-container {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+}
+
 .all-features {
-  & + #pricing-table-container {
+  & + .pricing-table-container {
     display: none;
     .pricing_table {
       display: none;
@@ -241,19 +268,12 @@
   }
 
   &.active {
-    & + #pricing-table-container {
+    & + .pricing-table-container {
       display: block;
       .pricing_table {
         display: block;
       }
     }
-  }
-}
-
-.pricing-table-container {
-  display: none;
-  &.show {
-    display: block;
   }
 }
 
@@ -423,13 +443,15 @@
   }
 }
 
-.tiers-container-individual {
+.tiers-container-individual,
+.pricing-table-container-individual {
   display: none;
   &.active {
     display: flex;
   }
 }
-.tiers-container-team {
+.tiers-container-team,
+.pricing-table-container-team {
   display: none;
   &.active {
     display: flex;

@@ -1,5 +1,6 @@
   <!-- TIER 3 PRICING TABLE -->
-  <section class="pricing-table-container hide-desktop">
+  <!-- TEAM -->
+  <section class="pricing-table-container pricing-table-container-team hide-desktop">
       <div class="pricing_table" role="region" tabindex="0">
           <table>
               <thead>
@@ -12,7 +13,7 @@
                           <div><span class="tier-title"> Tier 2</span></div>
                       </th> -->
                       <th>
-                          <div><span class="tier-title"> Tier 2</span></div>
+                          <div><span class="tier-title"> Tier 3 team</span></div>
                       </th>
                   </tr>
               </thead>
