@@ -591,7 +591,7 @@
                         </p>
 
                         <!-- MOBILE PRICING TABLES -->
-                        <?php include 'pricing-table-tier-' . $tier_loop_count . '.php';
+                        <?php include 'pricing-tables/pricing-table-tier-' . $tier_loop_count . '.php';
                         ?>
                         <!-- MOBILE PRICING TABLES -->
 
@@ -608,12 +608,18 @@
                 <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </p>
+
+        <!-- DESKTOP PRICING TABLE -->
+        <div id="pricing-table-container">
+            <?php include 'pricing-tables/pricing-table-desktop-team.php';
+            ?>
+            <?php include 'pricing-tables/pricing-table-desktop-individual.php'; ?>
+        </div>
+        <!-- END PRICING -->
+
     </section>
 
-    <!-- DESKTOP PRICING TABLE -->
-    <?php include 'pricing-table-desktop.php';
-    ?>
-    <!-- END PRICING -->
+
 
     <!-- TESTIMONIALS -->
 </div>

@@ -455,10 +455,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // DESKTOP PRICING TABLE
   function viewDesktopPricingFeatures() {
     const allFeaturesBtn = document.querySelector('.all-features-desktop-btn');
-    const pricingTableDesktop = document.getElementById('pricing-table-desktop');
+    const pricingTablesDesktop = document.querySelectorAll('pricing-table-container-desktop');
     allFeaturesBtn.addEventListener('click', () => {
       allFeaturesBtn.classList.toggle('active');
-      pricingTableDesktop.classList.toggle('show');
+
+      pricingTablesDesktop.forEach(table => {
+        table.classList.toggle('show');
+      })
+
+      // pricingTableDesktop.classList.toggle('show');
     })
   }
   viewDesktopPricingFeatures()

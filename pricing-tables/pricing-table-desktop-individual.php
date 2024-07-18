@@ -1,13 +1,10 @@
   <!-- DESKTOP PRICING TABLE -->
-  <section id="pricing-table-desktop" class="pricing-table-container hide-mobile" data-aos="fade-up">
+  <section class="pricing-table-container pricing-table-container-desktop hide-mobile">
       <div class="pricing_table" role="region" tabindex="0">
           <table>
               <thead>
                   <tr class="tier-titles">
                       <th></th>
-                      <th>
-                          <div><span class="tier-title"> Tier 3</span></div>
-                      </th>
                       <th>
                           <div><span class="tier-title"> Tier 2</span></div>
                       </th>
@@ -19,7 +16,6 @@
               <tbody>
                   <tr>
                       <td></td>
-                      <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td>
                       <td><a class="btn btn--solid-white" href="#">Sign Up</a></td>
                       <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td>
                   </tr>
@@ -30,14 +26,10 @@
                       </td>
                       <td></td>
                       <td></td>
-                      <td></td>
                   </tr>
                   <tr>
                       <td>
                           <div><span class="feature">Player Stats<span></div>
-                      </td>
-                      <td>
-                          <div><span class="tick">Core<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Core<span></div>
@@ -54,18 +46,12 @@
                           <div><span class="tick">Core<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Core<span></div>
-                      </td>
-                      <td>
                           <div><span class="tick">Pro Level Stats & Filters<span></div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div><span class="feature">Leaderboards<span></div>
-                      </td>
-                      <td>
-                          <div><span class="tick">Core<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Advanced<span></div>
@@ -82,9 +68,6 @@
                           <div><span class="tick">Unlimited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Unlimited<span></div>
-                      </td>
-                      <td>
                           <div><span class="tick">Unlimited + Full Support<span></div>
                       </td>
                   </tr>
@@ -96,14 +79,10 @@
                       </td>
                       <td></td>
                       <td></td>
-                      <td></td>
                   </tr>
                   <tr>
                       <td>
                           <div><span class="feature">2D Replayer<span></div>
-                      </td>
-                      <td>
-                          <div><span class="tick">Core<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Advanced<span></div>
@@ -120,18 +99,12 @@
                           <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
-                      </td>
-                      <td>
                           <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div><span class="feature">Playbook & Match Prep<span></div>
-                      </td>
-                      <td>
-                          <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Limited<span></div>
@@ -148,9 +121,6 @@
                           <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
-                      </td>
-                      <td>
                           <div><span class="tick">24/7 Support<span></div>
                       </td>
                   </tr>
@@ -162,14 +132,10 @@
                       </td>
                       <td></td>
                       <td></td>
-                      <td></td>
                   </tr>
                   <tr>
                       <td>
                           <div><span class="feature">Access to Filters Across Platform<span></div>
-                      </td>
-                      <td>
-                          <div><span class="tick">Very Limited<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Limited<span></div>
@@ -186,9 +152,6 @@
                           <div><span class="cross">None<span></div>
                       </td>
                       <td>
-                          <div><span class="cross">None<span></div>
-                      </td>
-                      <td>
                           <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
@@ -200,18 +163,12 @@
                           <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
-                      </td>
-                      <td>
                           <div><span class="tick">Full Team Onboarding<span></div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div><span class="feature">Customer Support<span></div>
-                      </td>
-                      <td>
-                          <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Limited<span></div>
@@ -288,9 +245,6 @@
                     </tr> -->
                   <!-- END SECTION -->
                   <tr>
-                      <td class="bottom">
-                          <div class="no-border"></div>
-                      </td>
                       <td class="bottom">
                           <div class="no-border"></div>
                       </td>

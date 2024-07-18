@@ -230,25 +230,17 @@
 
 // TOGGLE PRICING TABLE
 .all-features {
-  & + .pricing-table-container {
-    // max-height: 0;
-    // opacity: 0;
+  & + #pricing-table-container {
     display: none;
     .pricing_table {
-      // max-height: 0;
-      // opacity: 0;
       display: none;
     }
   }
 
   &.active {
-    & + .pricing-table-container {
-      // max-height: 9999px;
-      // opacity: 1;
+    & + #pricing-table-container {
       display: block;
       .pricing_table {
-        // max-height: 9999px;
-        // opacity: 1;
         display: block;
       }
     }
