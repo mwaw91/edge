@@ -623,7 +623,7 @@
                             </div>
                             <div class="details">
                                 <h3 class="text-h3"><?php echo $testimonial['name']; ?></h3>
-                                <h5 class="text-h4 blinker-semibold"><?php echo $testimonial['company']; ?></h5>
+                                <p class="blinker-semibold"><?php echo $testimonial['company']; ?></p>
                             </div>
                         </div>
                         <p class="blinker-regular p2"><?php echo $testimonial['testimonial']; ?></p>
