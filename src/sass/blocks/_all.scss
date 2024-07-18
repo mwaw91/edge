@@ -97,7 +97,8 @@ body {
   h6 {
     color: $green;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #24f4ab70;
+    // text-shadow: 0 0 10px #24f4ab70;
+    filter: drop-shadow(0 0 10px $green);
     font-family: "blinkerregular", sans-serif;
     margin-bottom: 10px;
   }

@@ -69,8 +69,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      span {
-      }
       p {
         text-align: center;
       }
@@ -91,18 +89,32 @@
     display: flex;
     flex-direction: row;
     .track {
-      animation: ticker 20s linear infinite;
+      @media only screen and (min-width: 768px) {
+        animation: ticker 120s linear infinite;
+      }
+      animation: ticker 100s linear infinite;
+
       display: flex;
       flex-direction: row;
       align-items: center;
       .track-item {
+        @media only screen and (min-width: 768px) {
+          padding: 0 50px;
+          height: 64px;
+        }
+        padding: 0 20px;
+        height: 45px;
+
         width: max-content;
-        padding: 0 25px;
         display: flex;
         align-items: center;
-        height: 64px;
+
         img {
-          max-height: 64px;
+          @media only screen and (min-width: 768px) {
+            max-height: 64px;
+          }
+          max-height: 45px;
+
           height: 100%;
         }
       }
