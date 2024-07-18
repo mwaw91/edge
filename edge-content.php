@@ -514,8 +514,8 @@
         </div>
         <!-- TOGGLE TEAM INDIVIDUAL -->
         <div class="team-toggle-container" data-aos="fade-up">
-            <span id="team" class="active">Team</span>
-            <span id="individual">Individual</span>
+            <span id="individual" class="active">Individual</span>
+            <span id="team">Team</span>
         </div>
         <div class="tiers-container">
             <?php
@@ -578,10 +578,10 @@
             ?>
         </div>
         <!-- DESKTOP FEATURES ONLY -->
-        <!-- <p class="all-features all-features-desktop-btn p2 hide-mobile active">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <p class="all-features all-features-desktop-btn p2 hide-mobile">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-        </p> -->
+        </p>
     </section>
 
     <!-- DESKTOP PRICING TABLE -->
@@ -593,14 +593,14 @@
 </div>
 </div>
 <section id="testimonials" class="space--margin--top space--margin--bottom">
-    <div data-aos="fade-up" class="title-section">
+    <div class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
         <h2 class="text-h1"><?php echo get_field('testimonials_title')['title']; ?></h2>
         <p class="p2"><?php echo get_field('testimonials_title')['description']; ?></p>
     </div>
 
     <!-- SWIPER -->
-    <div class="container swiper-buttons-container" data-aos="fade-up">
+    <div class="container swiper-buttons-container">
         <h6 class="p2 hide-desktop">Swipe to see more</h6>
         <div class="swiper-buttons">
             <div class="swiper-button-next"></div>
@@ -608,7 +608,7 @@
         </div>
     </div>
 
-    <div class="swiper testimonials" data-aos="flip-down">
+    <div class="swiper testimonials">
         <div class="testimonials-gradient"></div>
         <div class="swiper-wrapper">
             <?php
@@ -658,7 +658,7 @@
     <div class="container">
         <!-- CTA -->
         <section id="cta" class="hide-mobile">
-            <div class="cta radius" data-aos="fade-up">
+            <div class="cta radius">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>
                     <p class="p2"><?php echo get_field('cta_title_section')['description']; ?></p>
