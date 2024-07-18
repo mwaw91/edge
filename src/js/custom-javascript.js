@@ -357,6 +357,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   monthlyAnnually();
 
+
+  // NEW PRICING TEAM INDIVIDUAL TOGGLE
+  function teamIndividualToggle() {
+    // TOGGLE BUTTONS
+    let team = document.getElementById('team');
+    let individual = document.getElementById('individual');
+
+    // TOGGLABLE TIER CONTAINERS
+    const individualTiers = document.querySelector('.tiers-container-individual');
+    const teamTiers = document.querySelector('.tiers-container-team');
+
+    // CHECK WHICH ONE I CLICKED
+    function toggleActive(clickedSpan, otherSpan) {
+      if (!clickedSpan.classList.contains('active')) {
+        clickedSpan.classList.add('active');
+        otherSpan.classList.remove('active');
+      }
+    }
+    // ON CLICK
+    individual.addEventListener('click', function () {
+      toggleActive(individual, team);
+
+      if (individualTiers.classList.contains('active')) {
+        teamTiers.classList.remove('active');
+      } else {
+        teamTiers.classList.remove('active');
+        individualTiers.classList.add('active');
+      }
+    });
+
+    team.addEventListener('click', function () {
+      toggleActive(team, individual);
+
+      if (teamTiers.classList.contains('active')) {
+        individualTiers.classList.remove('active');
+      } else {
+        teamTiers.classList.add('active');
+        individualTiers.classList.remove('active');
+      }
+    });
+
+  }
+  teamIndividualToggle()
+
   // ASSIST OR INIT VIDEOS
   // function clickBody() {
   //   let h1 = document.querySelector('h1');
