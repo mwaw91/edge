@@ -88,12 +88,12 @@
           top: 10px;
         }
         &:nth-child(2) {
-          top: 20px;
+          top: 30px;
         }
         &:nth-child(3) {
         }
         &:nth-child(4) {
-          top: 20px;
+          top: 40px;
         }
         &:nth-child(5) {
           display: none;
@@ -236,7 +236,9 @@
   h1 {
     @media only screen and (min-width: 768px) {
       max-width: 440px !important;
+      margin-top: 0;
     }
+    margin-top: 15px;
 
     width: 100%;
     text-align: center;
@@ -276,7 +278,10 @@
     width: 100%;
     max-width: 972px;
     position: relative;
-    margin-top: 84px;
+    @media only screen and (min-width: 768px) {
+      margin-top: 84px;
+    }
+    margin-top: 58px;
     span {
       width: 0;
       height: 0;
