@@ -447,15 +447,15 @@ document.addEventListener("DOMContentLoaded", () => {
   viewMobilePricingFeatures()
 
   // DESKTOP PRICING TABLE
-  // function viewDesktopPricingFeatures() {
-  //   const allFeaturesBtn = document.querySelector('.all-features-desktop-btn');
-  //   const pricingTableDesktop = document.getElementById('pricing-table-desktop');
-  //   allFeaturesBtn.addEventListener('click', () => {
-  //     allFeaturesBtn.classList.toggle('active');
-  //     pricingTableDesktop.classList.toggle('show');
-  //   })
-  // }
-  // viewDesktopPricingFeatures()
+  function viewDesktopPricingFeatures() {
+    const allFeaturesBtn = document.querySelector('.all-features-desktop-btn');
+    const pricingTableDesktop = document.getElementById('pricing-table-desktop');
+    allFeaturesBtn.addEventListener('click', () => {
+      allFeaturesBtn.classList.toggle('active');
+      pricingTableDesktop.classList.toggle('show');
+    })
+  }
+  viewDesktopPricingFeatures()
 
 
 });

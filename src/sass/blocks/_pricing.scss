@@ -191,16 +191,16 @@
   text-align: center;
   width: 100%;
 
-  // &.all-features-desktop-btn {
-  //   svg {
-  //     transform: scaleY(-1);
-  //   }
-  //   &.active {
-  //     svg {
-  //       transform: scaleY(1);
-  //     }
-  //   }
-  // }
+  &.all-features-desktop-btn {
+    svg {
+      transform: scaleY(-1);
+    }
+    &.active {
+      svg {
+        transform: scaleY(1);
+      }
+    }
+  }
   &.all-features-mobile-btn {
     svg {
       transform: scaleY(-1);
@@ -246,16 +246,18 @@
 }
 
 // PRICING TABLE
-// #pricing-table-desktop {
-//   height: 0%;
-//   max-height: 0;
-//   opacity: 0;
-//   &.show {
-//     height: 100%;
-//     max-height: 100%;
-//     opacity: 1;
-//   }
-// }
+#pricing-table-desktop {
+  // height: 0%;
+  // max-height: 0;
+  // opacity: 0;
+  display: none;
+  &.show {
+    // height: 100%;
+    // max-height: 100%;
+    // opacity: 1;
+    display: block;
+  }
+}
 
 .pricing-table-container {
   overflow: hidden !important;
