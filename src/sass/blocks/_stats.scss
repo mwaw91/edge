@@ -1,12 +1,4 @@
 // STAT CONTAINER
-// @keyframes scroll {
-//   0% {
-//     transform: translateX(0);
-//   }
-//   100% {
-//     transform: translatex(-10000%);
-//   }
-// }
 @keyframes ticker {
   0% {
     transform: translateX(0%);
@@ -120,28 +112,4 @@
       }
     }
   }
-
-  // .logo-container {
-  //   gap: 30px;
-  //   display: flex;
-  //   flex-direction: row;
-  //   align-items: center;
-  //   justify-content: center;
-  //   .logo-carousel {
-  //     .slide-track {
-  //       width: 100%;
-  //       display: flex;
-  //       // gap: 120px;
-  //       overflow: hidden;
-  //       .slide {
-  //         max-width: 50px;
-  //         width: 50px;
-  //         height: 50px;
-  //         object-fit: contain;
-  //         object-position: center center;
-  //         animation: scroll 120s linear infinite;
-  //       }
-  //     }
-  //   }
-  // }
 }
