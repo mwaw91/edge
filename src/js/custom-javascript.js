@@ -88,9 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //   rows: 2, // your amount of slides
     //   fill: "row",
     // },
+    grabCursor: true,
     spaceBetween: 20,
     slidesPerView: 1.2,
     speed: 1500,
+
 
     navigation: {
       nextEl: '.swiper-button-next',
@@ -100,12 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // BREAKPOINTS
     breakpoints: {
       // >=
-      // 320: {
-      //   slidesPerColumn: 1,
-      //   slidesPerGroup: 1,
-      //   slidesPerView: 1,
-      //   spaceBetween: 20
-      // },
+      320: {
+        // autoplay: {
+        //   delay: 10000,
+        //   speed: 1000,
+        // },
+      },
 
       // 639: {
       //   slidesPerView: 1,
@@ -126,6 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
           rows: 2, // your amount of slides
           fill: "row",
         },
+        // autoplay: {
+        //   delay: 45000,
+        //   speed: 3000,
+        // },
       },
       1024: {
         slidesPerView: 3.6,
