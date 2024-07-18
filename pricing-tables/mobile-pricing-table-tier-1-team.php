@@ -7,7 +7,7 @@
                   <tr class="tier-titles">
                       <th></th>
                       <th>
-                          <div><span class="tier-title"> Tier 1 team</span></div>
+                          <div><span class="tier-title"> Tier 3</span></div>
                       </th>
                       <!-- <th>
                           <div><span class="tier-title"> Tier 2</span></div>

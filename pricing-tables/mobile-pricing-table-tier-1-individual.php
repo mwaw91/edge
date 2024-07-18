@@ -7,7 +7,7 @@
                   <tr class="tier-titles">
                       <th></th>
                       <th>
-                          <div><span class="tier-title"> Tier 1 ind</span></div>
+                          <div><span class="tier-title"> FREE</span></div>
                       </th>
                       <!-- <th>
                           <div><span class="tier-title"> Tier 2</span></div>

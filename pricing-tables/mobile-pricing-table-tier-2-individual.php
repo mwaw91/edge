@@ -10,7 +10,7 @@
                           <div><span class="tier-title"> Tier 3</span></div>
                       </th> -->
                       <th>
-                          <div><span class="tier-title"> Tier 2 ind</span></div>
+                          <div><span class="tier-title"> PRO</span></div>
                       </th>
                       <!-- <th>
                           <div><span class="tier-title"> Tier 2</span></div>

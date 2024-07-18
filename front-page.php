@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<?php include 'edge-content.php'; ?>
+<?php include 'edge-page-content.php'; ?>
 
     <?php
     get_footer();
