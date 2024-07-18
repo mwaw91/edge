@@ -1,10 +1,18 @@
 // STAT CONTAINER
-@keyframes scroll {
+// @keyframes scroll {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translatex(-10000%);
+//   }
+// }
+@keyframes ticker {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translatex(-10000%);
+    transform: translateX(-100%);
   }
 }
 
@@ -76,27 +84,52 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  .logo-container {
-    gap: 30px;
+
+  // TICKER
+  .logo-ticker-container {
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    .logo-carousel {
-      .slide-track {
-        width: 100%;
+    .track {
+      animation: ticker 20s linear infinite;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .track-item {
+        width: max-content;
+        padding: 0 25px;
         display: flex;
-        gap: 120px;
-        overflow: hidden;
-        .slide {
-          max-width: 50px;
-          width: 50px;
-          height: 50px;
-          object-fit: contain;
-          object-position: center center;
-          animation: scroll 120s linear infinite;
+        align-items: center;
+        height: 64px;
+        img {
+          max-height: 64px;
+          height: 100%;
         }
       }
     }
   }
+
+  // .logo-container {
+  //   gap: 30px;
+  //   display: flex;
+  //   flex-direction: row;
+  //   align-items: center;
+  //   justify-content: center;
+  //   .logo-carousel {
+  //     .slide-track {
+  //       width: 100%;
+  //       display: flex;
+  //       // gap: 120px;
+  //       overflow: hidden;
+  //       .slide {
+  //         max-width: 50px;
+  //         width: 50px;
+  //         height: 50px;
+  //         object-fit: contain;
+  //         object-position: center center;
+  //         animation: scroll 120s linear infinite;
+  //       }
+  //     }
+  //   }
+  // }
 }

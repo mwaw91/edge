@@ -278,21 +278,47 @@
             ?>
         </div>
         <h4 class="text-h4"><?php echo get_field('paragraph'); ?></h4>
-        <div class="logo-container">
+        <!-- <div class="logo-container">
             <div class="logo-carousel">
-                <div class="slide-track">
-                    <?php
-                    $logos = get_field('logos');
-                    if ($logos) {
-                        foreach ($logos as $logo) {
-                            echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
-                        }
-                        // foreach ($logos as $logo) {
-                        //     echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
-                        // }
+                <div class="slide-track"> -->
+        <?php
+        // $logos = get_field('logos');
+        // if ($logos) {
+        //     foreach ($logos as $logo) {
+        //         echo '<div class="slide"><img loading="eager" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+        //     }
+        // foreach ($logos as $logo) {
+        //     echo '<div class="slide"><img src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+        // }
+        // }
+        ?>
+        <!-- </div>
+            </div>
+        </div> -->
+
+        <!-- LOGO TICKER -->
+        <div class="logo-ticker-container">
+            <div class="track">
+                <?php
+                $logos = get_field('logos');
+                if ($logos) {
+                    foreach ($logos as $logo) {
+                        echo '<div class="track-item"><img loading="eager" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
                     }
-                    ?>
-                </div>
+                }
+                ?>
+            </div>
+            <div class="track">
+                <?php
+                $logos = get_field('logos');
+                if ($logos) {
+                    foreach ($logos as $logo) {
+                        echo '<div class="track-item"><img loading="eager" src="' . $logo['logo']['url'] . '" alt="' . $logo['logo']['alt'] . '" /></div>';
+                    }
+                }
+                ?>
+            </div>
+        </div>
     </section>
     <!-- END STAT CONTAINER -->
 
