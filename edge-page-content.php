@@ -154,7 +154,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <video class="feature-video">
+                                <video class="feature-video" webkit-playsinline playsinline>
                                     <source src="<?php echo $row['video']; ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
