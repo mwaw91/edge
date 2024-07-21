@@ -268,7 +268,7 @@
             if ($stats) {
                 foreach ($stats as $stat) {
                     echo '<div class="stat">
-                <span class="font-signs text-h2">' . $stat['stat'] . '</span>
+                <span class="font-signs">' . $stat['stat'] . '</span>
                 <p class="p2">' . $stat['description'] . '</p>
             </div>';
                 }
@@ -625,7 +625,7 @@
 <div class="container clearfix">
     <div class="container">
         <!-- CTA -->
-        <section id="cta" class="hide-mobile">
+        <section id="cta">
             <div class="cta radius">
                 <div class="copy">
                     <h2 class="text-h2"><?php echo get_field('cta_title_section')['title']; ?></h2>

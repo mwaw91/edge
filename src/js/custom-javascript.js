@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleActions: "play pause reverse reset",
       start: "top 120%",
       end: "top -20%",
-      markers: true,
+      // markers: true,
       toggleClass: 'enable'
     },
   });

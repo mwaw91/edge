@@ -1,5 +1,10 @@
 // CTA
 #cta {
+  @media only screen and (min-width: 991px) {
+    display: block;
+  }
+  display: none;
+
   // COMPENSATE FOR ANCHOR LINKS
   margin-bottom: 130px;
   .cta {
