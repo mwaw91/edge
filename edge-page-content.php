@@ -99,8 +99,7 @@
                         </defs>
                     </svg>
                 </button>
-                <video class="feature-video">
-                    <source src="<?php echo $hero_video['url']; ?>" type="video/mp4">
+                <video poster="<?php echo get_field('video_poster_image'); ?>" preload="auto" class="feature-video" src="<?php echo $hero_video['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -154,8 +153,8 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <video class="feature-video" webkit-playsinline playsinline>
-                                    <source src="<?php echo $row['video']; ?>" type="video/mp4">
+
+                                <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -222,8 +221,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <video class="feature-video">
-                                    <source src="<?php echo $bottomrow['video']; ?>" type="video/mp4">
+                                <video poster="<?php echo $bottomrow['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $bottomrow['video']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -408,8 +406,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <video class="feature-video">
-                                    <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                                <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -454,8 +451,7 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <video class="feature-video">
-                                    <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                                <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -508,8 +504,7 @@
                                     </defs>
                                 </svg>
                             </button>
-                            <video class="feature-video">
-                                <source src="<?php echo $row['video']['url']; ?>" type="video/mp4">
+                            <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                 Your browser does not support the video tag.
                             </video>
                         </div>

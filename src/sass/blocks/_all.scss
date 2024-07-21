@@ -3,6 +3,11 @@
   display: none !important;
 }
 
+// CATCH ALL VIDEO POSTER SIZING
+video {
+  object-fit: cover;
+}
+
 // DOCUMENT OVERFLOW
 #content {
   overflow: hidden;
