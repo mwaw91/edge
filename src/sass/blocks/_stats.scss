@@ -80,12 +80,18 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    .track {
-      @media only screen and (min-width: 768px) {
-        animation: ticker 120s linear infinite;
-      }
-      animation: ticker 100s linear infinite;
 
+    // GSAP CLASS
+    &.enable {
+      .track {
+        @media only screen and (min-width: 768px) {
+          animation: ticker 120s linear infinite;
+        }
+        animation: ticker 100s linear infinite;
+      }
+    }
+
+    .track {
       display: flex;
       flex-direction: row;
       align-items: center;

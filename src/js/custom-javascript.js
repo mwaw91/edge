@@ -161,12 +161,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // DISAPPEARING NAV
   ScrollTrigger.create({
-    //   start: 'top -80',
     start: 'top -1px',
     // markers: true,
     end: 99999,
     toggleClass: { className: 'skybox-menu--scrolled', targets: '.skybox-menu' }
-    // toggleClass: { className: 'skybox-menu--scrolled', targets: '.video-section' }
+  });
+
+  // LOGO CAROUSEL STARTS WHEN IN VIEW
+  gsap.to("#stat-container", {
+    scrollTrigger: {
+      trigger: ".logo-ticker-container",
+      toggleActions: "play pause reverse reset",
+      start: "top 120%",
+      end: "top -20%",
+      markers: true,
+      toggleClass: 'enable'
+    },
   });
 
   // BACK TO TOP BTN
