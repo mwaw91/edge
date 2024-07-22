@@ -1,11 +1,14 @@
 // ALTERNATING VIDEO COLUMN
 #alternating-video-columns {
   overflow: hidden;
+  // COMPENSATE FOR ANCHOR LINKS
+  margin-bottom: 30px;
   @media only screen and (min-width: 768px) {
-    // COMPENSATE FOR ANCHOR LINKS
+    margin-bottom: 50px;
+  }
+  @media only screen and (min-width: 991px) {
     margin-bottom: 130px;
   }
-  margin-bottom: 60px;
 
   .alternating-video-column {
     &:nth-child(1) {

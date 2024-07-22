@@ -10,12 +10,15 @@
 
 #stat-container {
   // compensate for anchor link
+  margin-bottom: 60px;
   @media only screen and (min-width: 768px) {
-    margin-bottom: 130px;
+    margin-bottom: 50px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  margin-bottom: 60px;
+  @media only screen and (min-width: 991px) {
+    margin-bottom: 130px;
+  }
 
   background: radial-gradient(ellipse at 50% 105%, #262c33 0%, #111619 80%);
   padding-top: 38px;
@@ -49,6 +52,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       max-width: 80%;
+      align-items: flex-start;
     }
     display: flex;
     flex-direction: column;
@@ -62,9 +66,13 @@
       max-width: max-content;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+
+      @media only screen and (min-width: 991px) {
+        justify-content: center;
+      }
+      justify-content: flex-start;
       span {
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 991px) {
           font-size: 40px;
           line-height: 46px;
         }

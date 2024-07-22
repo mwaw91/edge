@@ -51,42 +51,42 @@ body {
 .space {
   &--padding {
     &--top {
-      @media only screen and (min-width: 991px) {
-        padding-top: 160px;
-      }
+      padding-top: 60px;
       @media only screen and (min-width: 768px) {
         padding-top: 80px;
       }
-      padding-top: 60px;
+      @media only screen and (min-width: 991px) {
+        padding-top: 160px;
+      }
     }
     &--bottom {
-      @media only screen and (min-width: 991px) {
-        padding-bottom: 160px;
-      }
+      padding-bottom: 60px;
       @media only screen and (min-width: 768px) {
         padding-bottom: 80px;
       }
-      padding-bottom: 60px;
+      @media only screen and (min-width: 991px) {
+        padding-bottom: 160px;
+      }
     }
   }
   &--margin {
     &--top {
-      @media only screen and (min-width: 991px) {
-        margin-top: 160px;
-      }
+      margin-top: 60px;
       @media only screen and (min-width: 768px) {
         margin-top: 80px;
       }
-      margin-top: 60px;
+      @media only screen and (min-width: 991px) {
+        margin-top: 160px;
+      }
     }
     &--bottom {
-      @media only screen and (min-width: 991px) {
-        margin-bottom: 160px;
-      }
+      margin-bottom: 60px;
       @media only screen and (min-width: 768px) {
         margin-bottom: 80px;
       }
-      margin-bottom: 60px;
+      @media only screen and (min-width: 991px) {
+        margin-bottom: 160px;
+      }
     }
   }
 }

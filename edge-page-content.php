@@ -560,7 +560,6 @@
 
     <!-- TESTIMONIALS -->
 </div>
-</div>
 <section id="testimonials" class="space--margin--top space--margin--bottom">
     <div class="title-section">
         <h6 class="text-h6"><?php echo get_field('testimonials_title')['small_text']; ?></h6>
