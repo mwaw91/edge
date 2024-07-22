@@ -12,112 +12,113 @@
 
 <!-- CHANGE VIDEOS TO EMBED LINKS WITH CONTROL? -->
 
+</div>
+<!-- <div class="container"> -->
+<section id="hero" class="space--margin--bottom">
 
-<div class="container">
-    <section id="hero" class="space--margin--bottom">
-        <?php
-        $title = get_field('title');
-        $subtitle = get_field('subtitle');
-        $button = get_field('button');
-        $hero_img = get_field('image');
-        $hero_video = get_field('hero-video');
-        ?>
-        <div class="hero-logos">
-            <div class="lhs-logos">
-                <?php
-                $lhs_logos = get_field('lhs_logos');
-                if ($lhs_logos) {
-                    $lhs_delay = 50;
-                    foreach ($lhs_logos as $lhs) {
-                        echo '<div class="lhs-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $lhs_delay . '"><img src="' . $lhs['logo'] . '"/></div>';
-                        $lhs_delay += 50;
-                    }
+    <?php
+    $title = get_field('title');
+    $subtitle = get_field('subtitle');
+    $button = get_field('button');
+    $hero_img = get_field('image');
+    $hero_video = get_field('hero-video');
+    ?>
+    <div class="hero-logos">
+        <div class="lhs-logos">
+            <?php
+            $lhs_logos = get_field('lhs_logos');
+            if ($lhs_logos) {
+                $lhs_delay = 50;
+                foreach ($lhs_logos as $lhs) {
+                    echo '<div class="lhs-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $lhs_delay . '"><img src="' . $lhs['logo'] . '"/></div>';
+                    $lhs_delay += 50;
                 }
-                ?>
-            </div>
-            <div class="rhs-logos">
-                <?php
-                $rhs_logos = get_field('rhs_logos');
-                if ($rhs_logos) {
-                    $rhs_delay = 50;
-                    foreach ($rhs_logos as $rhs) {
-                        echo '<div class="rhs-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $rhs_delay . '"><img src="' . $rhs['logo'] . '"/></div>';
-                        $rhs_delay += 50;
-                    }
-                }
-                ?>
-            </div>
-
-
+            }
+            ?>
         </div>
-
-        <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
-        <p class="p2" data-aos-delay="150" data-aos="fade-up"><?php echo $subtitle; ?></p>
-
-        <div class="hero-btn-container" data-aos="fade-up" data-aos-delay="200">
-
+        <div class="rhs-logos">
             <?php
             $rhs_logos = get_field('rhs_logos');
             if ($rhs_logos) {
-                echo '<div class="hide-desktop">';
-                echo '<img class="" data-aos="fade-down" data-aos-duration="500" src="' . $rhs_logos[0]['logo'] . '"/>';
-                echo '</div>';
+                $rhs_delay = 50;
+                foreach ($rhs_logos as $rhs) {
+                    echo '<div class="rhs-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="' . $rhs_delay . '"><img src="' . $rhs['logo'] . '"/></div>';
+                    $rhs_delay += 50;
+                }
             }
             ?>
-
-            <a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a>
-
-            <?php
-            if ($rhs_logos) {
-                echo '<div class="hide-desktop">';
-                echo '<img class="" data-aos="fade-down" data-aos-duration="500" src="' . $rhs_logos[1]['logo'] . '"/>';
-                echo '</div>';
-            }
-            ?>
-
         </div>
 
-        <div data-aos-delay="250" class="video-section" data-aos="zoom-in">
-            <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
-            <!-- VIDEO -->
-            <div class="video-container radius green-shadow">
-                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_196_307)">
-                            <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
-                        </g>
-                        <defs>
-                            <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset />
-                                <feGaussianBlur stdDeviation="5" />
-                                <feComposite in2="hardAlpha" operator="out" />
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
-                            </filter>
-                        </defs>
-                    </svg>
-                </button>
-                <video poster="<?php echo get_field('video_poster_image'); ?>" preload="auto" class="feature-video" src="<?php echo $hero_video['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <!-- END VIDEO -->
-        </div>
 
-        <!-- BACK TO TOP -->
-        <div class="back-to-top-container">
-            <a class="back-to-top" href="#masthead">
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </div>
+
+    <h1 class="text-h1" data-aos-delay="100" data-aos="fade-up"><?php echo $title; ?></h1>
+    <p class="p2" data-aos-delay="150" data-aos="fade-up"><?php echo $subtitle; ?></p>
+
+    <div class="hero-btn-container" data-aos="fade-up" data-aos-delay="200">
+
+        <?php
+        $rhs_logos = get_field('rhs_logos');
+        if ($rhs_logos) {
+            echo '<div class="hide-desktop">';
+            echo '<img class="" data-aos="fade-down" data-aos-duration="500" src="' . $rhs_logos[0]['logo'] . '"/>';
+            echo '</div>';
+        }
+        ?>
+
+        <a href="<?php echo $button['url']; ?>" class="btn btn--solid"><?php echo $button['title']; ?></a>
+
+        <?php
+        if ($rhs_logos) {
+            echo '<div class="hide-desktop">';
+            echo '<img class="" data-aos="fade-down" data-aos-duration="500" src="' . $rhs_logos[1]['logo'] . '"/>';
+            echo '</div>';
+        }
+        ?>
+
+    </div>
+
+    <div data-aos-delay="250" class="video-section container" data-aos="zoom-in">
+        <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
+        <!-- VIDEO -->
+        <div class="video-container radius green-shadow">
+            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_196_307)">
+                        <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_196_307" x="0" y="0" width="94" height="141" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset />
+                            <feGaussianBlur stdDeviation="5" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_196_307" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_196_307" result="shape" />
+                        </filter>
+                    </defs>
                 </svg>
-            </a>
+            </button>
+            <video poster="<?php echo get_field('video_poster_image'); ?>" preload="auto" class="feature-video" src="<?php echo $hero_video['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
+                Your browser does not support the video tag.
+            </video>
         </div>
+        <!-- END VIDEO -->
+    </div>
 
-    </section>
-    <!-- END HERO -->
+    <!-- BACK TO TOP -->
+    <div class="back-to-top-container">
+        <a class="back-to-top" href="#masthead">
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+    </div>
 
+</section>
+<!-- END HERO -->
+<div class="container">
     <!-- TESTED AND USED -->
     <section>
         <div id="tested">
