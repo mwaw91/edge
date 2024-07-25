@@ -259,7 +259,14 @@
 }
 
 // TOGGLE PRICING TABLE
-@media only screen and (min-width: 768px) {
+
+.all-features-desktop-btn {
+  @media only screen and (min-width: 767px) {
+    display: block;
+  }
+  display: none;
+}
+@media only screen and (min-width: 767px) {
   .all-features {
     & + #pricing-table-container {
       display: none;
@@ -329,6 +336,9 @@
   &.pricing-table-container-desktop-individual {
     @media only screen and (min-width: 1024px) {
       max-width: 80%;
+    }
+    @media only screen and (max-width: 767px) {
+      display: none;
     }
     margin-left: auto;
     margin-right: auto;

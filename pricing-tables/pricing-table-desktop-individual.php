@@ -1,5 +1,5 @@
   <!-- DESKTOP PRICING TABLE -->
-  <section class="pricing-table-container pricing-table-container-desktop pricing-table-container-desktop-individual show hide-mobile">
+  <section class="pricing-table-container pricing-table-container-desktop pricing-table-container-desktop-individual show">
       <div class="pricing_table" role="region" tabindex="0">
           <table>
               <thead>

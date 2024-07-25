@@ -540,7 +540,7 @@
         ?>
 
         <!-- DESKTOP FEATURES ONLY -->
-        <p class="all-features all-features-desktop-btn p2 hide-mobile">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <p class="all-features all-features-desktop-btn p2">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </p>
