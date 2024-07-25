@@ -27,11 +27,27 @@ footer {
       flex-direction: row;
 
       color: $grey;
-      font-size: 16px;
 
       span {
+        @media only screen and (min-width: 768px) {
+          white-space: nowrap;
+        }
+
+        font-size: 10px;
         font-family: "blinkerregular", sans-serif;
         text-transform: uppercase;
+
+        display: none;
+        @media only screen and (min-width: 768px) {
+          display: block;
+        }
+
+        &.text-center {
+          display: block;
+          @media only screen and (min-width: 768px) {
+            display: none;
+          }
+        }
       }
     }
 
@@ -42,6 +58,10 @@ footer {
       order: 3;
 
       text-align: center;
+
+      max-width: 103px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .social-media-menu {
       @media only screen and (min-width: 768px) {

@@ -1,14 +1,9 @@
 // PRICING
 #pricing {
-  //   @media only screen and (min-width: 991px) {
-  // margin-bottom: 120px;
-  //   }
-  // @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
   padding-top: 30px;
-  // margin-bottom: 120px;
-  // }
-  // padding-top: 0;
-  // margin-bottom: 80px;
 
   .team-toggle-container,
   .team-toggle-container-new {
