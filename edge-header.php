@@ -28,7 +28,7 @@
     <meta property="og:url" content="http://www.skybox.gg">
 
     <!-- TODO - OG TAG -->
-    <meta property="og:image" content="http://http://www.skybox.gg/wp-content/themes/hello-elementor-child/edge-page/edge-og-image.jpg">
+    <meta property="og:image" content="http://www.skybox.gg/wp-content/themes/hello-elementor-child/edge-page/edge-og-image.jpg">
     <!-- 200x200px - 1200x1200px -->
 
 
@@ -45,7 +45,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-79.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-82.css">
 
 </head>
 
