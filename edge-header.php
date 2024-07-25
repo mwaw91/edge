@@ -17,17 +17,19 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <!-- TODO - META INFORMATION -->
-    <title>EDGE </title> <!-- ˜60 chars -->
-    <meta name="description" content="The Description"> <!-- ˜150 chars -->
-    <meta property="og:title" content="The content">
-    <meta property="og:description" content="The Description"> <!-- ˜300 chars -->
-    <meta property="og:site_name" content="Sfida Blog">
+    <!-- META -->
+    <title>CS2 Stats - Track Your Stats Like the Pro's | Skybox EDGE</title>
+    <meta name="description" content="90% of Pro CS2 Teams use Skybox EDGE - Get access to automatic analysis & stats of your best roles, weapons, buy types & much more - Try for free today">
+    <meta property="og:title" content="CS2 Stats - Track Your Stats Like the Pro's | Skybox EDGE">
+    <meta property="og:description" content="90% of Pro CS2 Teams use Skybox EDGE - Get access to automatic analysis & stats of your best roles, weapons, buy types & much more - Try for free today">
+    <meta property="og:site_name" content="SKYBOX.GG">
     <meta property="og:locale" content="es_AR">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.sfidastudios.com">
-    <meta property="og:image" content="http://www.sfidastudios.com/logo.png"> <!-- 200x200px - 1200x1200px -->
+    <meta property="og:url" content="http://www.skybox.gg">
+
+    <!-- TODO - OG TAG -->
+    <meta property="og:image" content="http://http://www.skybox.gg/wp-content/themes/hello-elementor-child/edge-page/edge-og-image.jpg">
+    <!-- 200x200px - 1200x1200px -->
 
 
     <?php //wp_head(); 
@@ -43,7 +45,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-78.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-79.css">
 
 </head>
 
