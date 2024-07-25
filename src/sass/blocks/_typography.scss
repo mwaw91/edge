@@ -113,7 +113,7 @@ h6,
   font-family: "signsbold", sans-serif;
 }
 .text-h1 {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
     font-size: 48px;
     line-height: 60px;
   }
@@ -121,7 +121,7 @@ h6,
   line-height: 46px;
 }
 .text-h2 {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
     font-size: 40px;
     line-height: 46px;
   }
@@ -129,7 +129,7 @@ h6,
   line-height: 40px;
 }
 .text-h3 {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
     font-size: 24px;
     line-height: 30px;
   }
@@ -137,19 +137,19 @@ h6,
   line-height: 27px;
 }
 .text-h4 {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
   }
   font-size: 16px;
   line-height: 22px;
 }
 .text-h5 {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
   }
   font-size: 16px;
   line-height: 20px;
 }
 .text-h6 {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
   }
   font-size: 12px;
   line-height: 16px;
@@ -162,7 +162,7 @@ h6,
   letter-spacing: 3%;
 }
 p {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 991px) {
   }
   font-size: 18px;
   line-height: 24px;
