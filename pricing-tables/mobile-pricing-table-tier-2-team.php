@@ -21,7 +21,7 @@
                   <tr>
                       <td></td>
                       <!-- <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td> -->
-                      <td><a class="btn btn--solid-white" href="#">Sign Up</a></td>
+                      <td><a class="btn btn--solid-white" href="<?php echo get_field('register_link')['url']; ?>">Sign Up</a></td>
                       <!-- <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td> -->
                   </tr>
                   <!-- SECTION -->

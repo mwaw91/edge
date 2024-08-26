@@ -1,5 +1,5 @@
   <!-- DESKTOP PRICING TABLE -->
-  <section class="pricing-table-container pricing-table-container-desktop pricing-table-container-desktop-team hide">
+  <section class="pricing-table-container pricing-table-container-desktop pricing-table-container-desktop-team hide hide-mobile">
       <div class="pricing_table" role="region" tabindex="0">
           <table>
               <thead>
@@ -19,9 +19,9 @@
               <tbody>
                   <tr>
                       <td></td>
-                      <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td>
-                      <td><a class="btn btn--solid-white" href="#">Sign Up</a></td>
-                      <td><a class="btn btn--solid-grey" href="#">Sign Up</a></td>
+                      <td><a class="btn btn--solid-grey" href="<?php echo get_field('register_link')['url']; ?>">Sign Up</a></td>
+                      <td><a class="btn btn--solid-white" href="<?php echo get_field('register_link')['url']; ?>">Sign Up</a></td>
+                      <td><a class="btn btn--solid-grey" href="<?php echo get_field('register_link')['url']; ?>">Sign Up</a></td>
                   </tr>
                   <!-- SECTION -->
                   <tr class="row-title">

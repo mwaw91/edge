@@ -105,9 +105,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "post_template",
                 "operator": "==",
-                "value": "2672"
+                "value": "page_edge.php"
             }
         ]
     ],
@@ -120,5 +120,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721301211
+    "modified": 1723063048
 }

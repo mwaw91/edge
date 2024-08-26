@@ -105,7 +105,7 @@
                         <!-- SPACER -->
 
                         <ul>
-                            <li><a href="https://skybox.gg/performance/">Performance</a></li>
+                            <li><a href="https://skybox.gg/edge/">Edge</a></li>
                             <li><a href="https://skybox.gg/broadcast/">Broadcast</a></li>
                             <li><a href="https://skybox.gg/publishers/">Publishing</a></li>
                             <li><a href="https://skybox.gg/pricing/">Pricing</a></li>
@@ -189,7 +189,7 @@
                     </nav>
                     <div class="header-btns">
                         <a href="<?php echo get_field('edge_login_link')['url']; ?>" class="login-btn">Log in</a>
-                        <a href="<?php echo get_field('edge_signup_link')['url']; ?>" class="signup-btn btn btn--solid-grey">Sign up</a>
+                        <a href="<?php echo get_field('register_link')['url']; ?>" class="signup-btn btn btn--solid-grey">Sign up</a>
                     </div>
                 </div> <!-- end .container -->
             </div> <!-- end #sticky_header -->
