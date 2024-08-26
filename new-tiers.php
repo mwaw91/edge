@@ -22,15 +22,18 @@
                          <p class="p2 price year hide"><span class="blinker-semibold text-h3">€<?php echo $tier['price_per_year']; ?></span>&nbsp;&nbsp;&nbsp;&nbsp;/year</p>
 
                          <div class="custom-toggle-switch-container">
-                             <div class="custom-toggle-switch-sub-container">
-                                 <div class="custom-toggle-switch">
-                                     <div class="slider">
+                             <?php if ($tier_loop_count !== 1) { ?>
+                                 <div class="custom-toggle-switch-sub-container">
+                                     <div class="custom-toggle-switch">
+                                         <div class="slider">
+                                         </div>
                                      </div>
+                                     <span class="blinker-semibold p2">BILLED YEARLY</span>
                                  </div>
-                                 <span class="blinker-semibold p2">BILLED YEARLY</span>
-                             </div>
-                             <p class="discount p2 price year hide"><?php echo round(100 * ((12 * $tier['price_per_month']) - $tier['price_per_year']) / (12 * $tier['price_per_month'])) ?>% discount</p>
+                                 <p class="discount p2 price year hide"><?php echo round(100 * ((12 * $tier['price_per_month']) - $tier['price_per_year']) / (12 * $tier['price_per_month'])) ?>% discount</p>
+                             <?php }; ?>
                          </div>
+
 
 
                          <ul>
