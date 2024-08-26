@@ -138,7 +138,7 @@
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">Full Team Onboarding<span></div>
+                          <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -152,7 +152,7 @@
                           <div><span class="tick">Limited<span></div>
                       </td> -->
                       <td>
-                          <div><span class="tick">24/7 Support<span></div>
+                          <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
                   <!-- END SECTION -->

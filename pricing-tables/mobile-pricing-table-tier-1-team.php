@@ -132,7 +132,7 @@
                           <div><span class="feature">Playbook & Match Prep<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
@@ -146,7 +146,7 @@
                           <div><span class="feature">Veto Simulation<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>

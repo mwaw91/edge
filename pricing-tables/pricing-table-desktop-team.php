@@ -12,7 +12,7 @@
                           <div><span class="tier-title"> Tier 2</span></div>
                       </th>
                       <th>
-                          <div><span class="tier-title"> Tier 2</span></div>
+                          <div><span class="tier-title"> Tier 1</span></div>
                       </th>
                   </tr>
               </thead>
@@ -131,13 +131,13 @@
                           <div><span class="feature">Playbook & Match Prep<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Full Team Onboarding<span></div>
+                          <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
                   <tr>
@@ -145,13 +145,13 @@
                           <div><span class="feature">Veto Simulation<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">Limited<span></div>
+                          <div><span class="cross">None<span></div>
                       </td>
                       <td>
                           <div><span class="tick">Limited<span></div>
                       </td>
                       <td>
-                          <div><span class="tick">24/7 Support<span></div>
+                          <div><span class="tick">Full Access<span></div>
                       </td>
                   </tr>
                   <!-- END SECTION -->
