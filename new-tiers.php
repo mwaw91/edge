@@ -40,9 +40,10 @@
                              <?php
                                 foreach ($tier['package_includes'] as $item) {
                                     echo '<li class="p2 blinker-regular">
+                                    <div class="tick">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 4.62305L6.75 12.873L3 9.12305" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+</svg></div>
 ' . $item['item'] . '</li>';
                                 } ?>
                          </ul>
@@ -105,22 +106,23 @@
                              <?php
                                 foreach ($tier['package_includes'] as $item) {
                                     echo '<li class="p2 blinker-regular">
-                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <div class="tick"> <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 4.62305L6.75 12.873L3 9.12305" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+</svg></div>
 ' . $item['item'] . '</li>';
                                 } ?>
                          </ul>
                      </div>
                      <div class="tier-btn-container">
                          <a href="<?php echo $tier['link']['url']; ?>" class="btn btn--solid-grey"><?php echo $tier['link']['title']; ?>
-                         </a><?php if ($team_tier_loop_count == 3) {
+                         </a><?php if ($team_tier_loop_count == 2 || $team_tier_loop_count == 3) {
                                     echo '<p>or <a href="/contact">contact sales</a></p>';
                                 } ?>
                      </div>
                  </div>
                  <!-- ALL TIERS BTN -->
-                 <p class="all-features all-features-mobile-btn p2 hide-desktop">See all features <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <p class="all-features all-features-mobile-btn p2 hide-desktop">See all features
+                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path d="M10.5 6.37305L6 1.87305L1.5 6.37305" stroke="#BABABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                      </svg>
                  </p>

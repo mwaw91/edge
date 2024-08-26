@@ -126,8 +126,11 @@
             display: flex;
             list-style: none;
             margin-bottom: 9px;
-            svg {
+            .tick {
               margin-right: 7px;
+              width: 18px !important;
+              height: 19px !important;
+              display: block;
             }
           }
         }
