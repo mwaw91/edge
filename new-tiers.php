@@ -30,7 +30,7 @@
                                      </div>
                                      <span class="blinker-semibold p2">BILLED YEARLY</span>
                                  </div>
-                                 <p class="discount p2 price year hide"><?php echo round(100 * ((12 * $tier['price_per_month']) - $tier['price_per_year']) / (12 * $tier['price_per_month'])) ?>% discount</p>
+                                 <p class="discount p2 price year hide"><?php echo round(100 * ((12 * $tier['price_per_month']) - $tier['price_per_year']) / (12 * $tier['price_per_month']), 1) ?>% discount</p>
                              <?php }; ?>
                          </div>
 
@@ -100,7 +100,7 @@
                                  </div>
                                  <span class="blinker-semibold p2">BILLED YEARLY</span>
                              </div>
-                             <p class="discount p2 price year hide"><?php echo round(100 * ((12 * $tier['price_per_month']) - $tier['price_per_year']) / (12 * $tier['price_per_month'])) ?>% discount</p>
+                             <p class="discount p2 price year hide"><?php echo round(100 * ((12 * $tier['price_per_month']) - $tier['price_per_year']) / (12 * $tier['price_per_month']), 1) ?>% discount</p>
                          </div>
                          <ul>
                              <?php
