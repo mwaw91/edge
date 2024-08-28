@@ -67,8 +67,8 @@
                 },
                 {
                     "key": "field_669242d19cdfb",
-                    "label": "Image",
-                    "name": "image",
+                    "label": "Video poster image",
+                    "name": "video_poster_image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "If no video is available, upload an image. A video will always have priority if uploaded.",
@@ -79,7 +79,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -198,8 +198,8 @@
                 },
                 {
                     "key": "field_6692431f122ee",
-                    "label": "Image",
-                    "name": "image",
+                    "label": "Video poster image",
+                    "name": "video_poster_image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "If no video is available, upload an image. A video will always have priority if uploaded.",
@@ -210,7 +210,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -303,5 +303,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723063130
+    "modified": 1724850981
 }

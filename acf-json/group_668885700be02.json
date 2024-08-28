@@ -86,7 +86,7 @@
             "name": "individual_tiers",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Please notify the developer if any reordering or additional tiers are needed. The current setup is for changing information of the currently added tiers only.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -239,7 +239,7 @@
             "name": "team_tiers",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Please notify the developer if any reordering or additional tiers are needed. The current setup is for changing information of the currently added tiers only.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -405,5 +405,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723063104
+    "modified": 1721749998
 }

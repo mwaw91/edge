@@ -59,31 +59,6 @@
             "return_format": "array"
         },
         {
-            "key": "field_66887b41853eb",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
             "key": "field_668dcc81f92a9",
             "label": "Video",
             "name": "hero-video",
@@ -104,7 +79,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_669a63fd4e9ba",
+            "key": "field_669a638fed66f",
             "label": "Video poster image",
             "name": "video_poster_image",
             "aria-label": "",
@@ -232,7 +207,7 @@
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "page_template",
                 "operator": "==",
                 "value": "page_edge.php"
             }
@@ -247,5 +222,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723063076
+    "modified": 1721749932
 }

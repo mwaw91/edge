@@ -8,7 +8,7 @@
             "name": "edge_login_link",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
+            "instructions": "Note that only the URL is needed, the Link Text is redundant.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -24,7 +24,7 @@
             "name": "register_link",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
+            "instructions": "Note that only the URL is needed, the Link Text is redundant.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -53,5 +53,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723063092
+    "modified": 1721750308
 }
