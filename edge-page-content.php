@@ -81,7 +81,7 @@
         <span data-aos-delay="250" data-aos-duration="1500" data-aos="fade-up"></span>
         <!-- VIDEO -->
         <div class="video-container radius green-shadow">
-            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_196_307)">
                         <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                     </g>
@@ -98,8 +98,8 @@
                         </filter>
                     </defs>
                 </svg>
-            </button>
-            <video poster="<?php echo get_field('video_poster_image'); ?>" preload="auto" class="feature-video" src="<?php echo $hero_video['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
+            </button> -->
+            <video controls poster="<?php echo get_field('video_poster_image'); ?>" preload="auto" class="feature-video" src="<?php echo $hero_video['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -135,7 +135,7 @@
                         if (strlen($row['video']) > 0) {
                         ?>
                             <div class="video-container">
-                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -152,9 +152,9 @@
                                             </filter>
                                         </defs>
                                     </svg>
-                                </button>
+                                </button> -->
 
-                                <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']; ?>" type="video/mp4" webkit-playsinline playsinline>
+                                <video controls poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -203,7 +203,7 @@
                         if (strlen($bottomrow['video']) > 0) {
                         ?>
                             <div class="video-container">
-                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -220,8 +220,8 @@
                                             </filter>
                                         </defs>
                                     </svg>
-                                </button>
-                                <video poster="<?php echo $bottomrow['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $bottomrow['video']; ?>" type="video/mp4" webkit-playsinline playsinline>
+                                </button> -->
+                                <video controls poster="<?php echo $bottomrow['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $bottomrow['video']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -388,7 +388,7 @@
                         <div data-aos="fade-<?php echo ($l % 2 == 0) ? 'up-right' : 'up-left'; ?>">
                             <!--  START NEW VIDEO -->
                             <div class="video-container radius">
-                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -405,8 +405,8 @@
                                             </filter>
                                         </defs>
                                     </svg>
-                                </button>
-                                <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
+                                </button> -->
+                                <video controls poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -433,7 +433,7 @@
 
                             <!--  START NEW VIDEO -->
                             <div class="video-container radius">
-                                <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_196_307)">
                                             <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                         </g>
@@ -450,8 +450,8 @@
                                             </filter>
                                         </defs>
                                     </svg>
-                                </button>
-                                <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
+                                </button> -->
+                                <video controls poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -486,7 +486,7 @@
                     <div data-aos="fade-up">
 
                         <div class="video-container radius">
-                            <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- <button id="playButton" class="play-button"><svg width="94" height="141" viewBox="0 0 94 141" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g filter="url(#filter0_d_196_307)">
                                         <path d="M84 70.5L9.99999 131L10 10L84 70.5Z" fill="white" />
                                     </g>
@@ -503,8 +503,8 @@
                                         </filter>
                                     </defs>
                                 </svg>
-                            </button>
-                            <video poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
+                            </button> -->
+                            <video controls poster="<?php echo $row['video_poster_image']; ?>" preload="auto" class="feature-video" src="<?php echo $row['video']['url']; ?>" type="video/mp4" webkit-playsinline playsinline>
                                 Your browser does not support the video tag.
                             </video>
                         </div>
