@@ -115,7 +115,7 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Get Scouted Feature<span></div>
+                          <div><span class="feature">Buy Type & Match Filter<span></div>
                       </td>
                       <td>
                           <div><span class="cross">No Access<span></div>
@@ -146,13 +146,13 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Early Access to New Features (beta)<span></div>
+                          <div><span class="feature">Public Demo's<span></div>
                       </td>
                       <td>
-                          <div><span class="cross">None<span></div>
+                          <div><span class="tick">1 month delay<span></div>
                       </td>
                       <td>
-                          <div><span class="cross">None<span></div>
+                          <div><span class="tick">Instant Access<span></div>
                       </td>
                   </tr>
                   <tr>

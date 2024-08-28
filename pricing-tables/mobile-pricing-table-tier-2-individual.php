@@ -143,7 +143,7 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Get Scouted Feature<span></div>
+                          <div><span class="feature">Buy Type & Match Filter<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Limited<span></div>
@@ -181,13 +181,13 @@
                   </tr>
                   <tr>
                       <td>
-                          <div><span class="feature">Early Access to New Features (beta)<span></div>
+                          <div><span class="feature">Public Demo's<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="none">None<span></div>
                       </td> -->
                       <td>
-                          <div><span class="cross">None<span></div>
+                          <div><span class="tick">Instant Access<span></div>
                       </td>
                       <!-- <td>
                           <div><span class="tick">Full Access<span></div>
