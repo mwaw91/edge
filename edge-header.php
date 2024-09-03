@@ -45,7 +45,7 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-86.css">
+    <link rel="stylesheet" type="text/css" href="https://skybox.gg/wp-content/themes/hello-elementor-child/edge-page/child-theme-87.css">
 
 </head>
 
